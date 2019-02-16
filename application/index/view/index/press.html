@@ -1,0 +1,174 @@
+{include file="common/header" /}
+
+    <div class="content">
+        <div>
+            <div class="contactModal" id="global-contactusform">
+                <div class="modal-container">
+                </div>
+                <div class='formWrapper'>
+            <div class="form-group has-feedback required-form-section w-row">
+                <label for="globalcontactform-name" class="control-label">Name:*</label>
+                <div class="contact-form-input">
+                    <input type="text" class="form-control" id="globalcontactform-name" name="globalcontactform-name" />
+                </div>
+                <div class="form-control-feedback" aria-hidden="true"></div>
+            </div>
+            <div class="form-group has-feedback required-form-section w-row">
+                <label for="globalcontactform-phone" class="control-label">Phone:*</label>
+                <div class="contact-form-input">
+                    <input type="tel" class="form-control" id="globalcontactform-phone" name="globalcontactform-phone" />
+                </div>
+                <div class="form-control-feedback" aria-hidden="true"></div>
+            </div>
+            <div class="form-group has-feedback required-form-section w-row">
+                <label for="globalcontactform-email" class=" control-label">Email:*</label>
+                <div class="contact-form-input">
+                    <input type="email" class="form-control" id="globalcontactform-email" name="globalcontactform-email" />
+                </div>
+                <div class="form-control-feedback" aria-hidden="true"></div>
+            </div>
+            <div class="form-group has-feedback required-form-section w-row">
+                <label for="globalcontactform-zip" class=" control-label">Postal Code:*</label>
+                <div class="contact-form-input">
+                    <input type="text" class="form-control" id="globalcontactform-zip" name="globalcontactform-zip" />
+                </div>
+                <div class="form-control-feedback" aria-hidden="true"></div>
+            </div>
+            <hr />
+            <div class="form-group w-row">
+                <label for="globalcontactform-address" class=" control-label">Address:</label>
+                <div class="contact-form-input">
+                    <input type="text" class="form-control" id="globalcontactform-address" name="globalcontactform-address" />
+                </div>
+            </div>
+            <div class="form-group w-row">
+                <label for="globalcontactform-city" class="control-label">City:</label>
+                <div class="contact-form-input">
+                    <input type="text" class="form-control" id="globalcontactform-city" name="globalcontactform-city" />
+                </div>
+            </div>
+            <div class="form-group w-row">
+                <label for="globalcontactform-state" class="control-label">State:</label>
+                <div class="contact-form-input">
+                    <input type="text" class="form-control" id="globalcontactform-state" name="globalcontactform-state" />
+                </div>
+            </div>
+            <div class="form-group w-row input-comment">
+                <label for="globalcontactform-comment" class="control-label">Comments:</label>
+                <div class="contact-form-input">
+                    <textarea class="form-control" id="globalcontactform-comment" name="globalcontactform-comment"></textarea>
+                </div>
+            </div>
+            <div class="form-group w-row flex-column">
+                <label class="control-label">Interested in:</label>
+                <div>
+                    <div class="w-col w-col-4">
+                        <input type="checkbox" name="interest" value="AL" class="interestCheckBox"><span>Alignment Systems</span><br>
+                        <input type="checkbox" name="interest" value="TC" class="interestCheckBox"><span>Tire Changers</span><br>
+                        <input type="checkbox" name="interest" value="BL" class="interestCheckBox"><span>Brake Lathes</span><br>
+                    </div>
+                    <div class="w-col w-col-4">
+                        <input type="checkbox" name="interest" value="HD" class="interestCheckBox"><span>Heavy-Duty</span><br>
+                        <input type="checkbox" name="interest" value="WB" class="interestCheckBox"><span>Wheel Balancers</span><br>
+                        <input type="checkbox" name="interest" value="LR" class="interestCheckBox"><span>Lift Rack</span><br>
+                    </div>
+                    <div class="w-col w-col-4">
+                        <input type="checkbox" name="interest" value="QC" class="interestCheckBox"><span>Inspection</span><br>
+                        <input type="checkbox" name="interest" value="OT" class="interestCheckBox"><span>Other</span><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <input id="globalcontactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                <input type="hidden" id="HiddenRepNumber" value="" />
+                <input type="hidden" id="HiddenRepEmail" value="" />
+                <input type="hidden" id="IsDistributor" value="" />
+                <input type="hidden" id="ContactType" value="" />
+                <input type="hidden" id="Origin" value="" />
+                <input type="hidden" id="Country" value="" />
+                <input type="hidden" id="GatherFormInfo" value="true" />
+                <input type="hidden" id="HiddenZipCode" value="" />
+            </div>
+        </div>
+    </div>
+                    </div>
+            <div class="w-row expanded">
+                <div id="dnn_LeftPane75" class="left-pane-75 w-col w-col-9 w-col-medium-12">
+                    <div class="DnnModule DnnModule-DNN_HTML DnnModule-4502"><a name="4502"></a>
+                    <div class="C_Container">
+                        <h1>
+                            <span id="dnn_ctr4502_dnnTITLE_titleLabel" class="TitleText">{$content.title}</span>
+                        </h1>
+                        <div id="dnn_ctr4502_contentPane" class="containerContent">
+                            <div id="dnn_ctr4502_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                            <div id="dnn_ctr4502_HtmlModule_lblContent" class="Normal">
+                                <p><strong>{$content.time|date='Y-M-D,h:i'}</strong></p>
+                                <br>
+                                <p>{$content.zuozhe ? $content.zuozhe : 'admin'} - </p>
+                                <br>
+                                <p>{$content.content| raw}</p>
+                                <!--<div style="text-align: center;">
+                                    <img src="/portals/0/Images/performance-tool-qcd-4.jpg" style="margin: 0 0 15px 0;" alt="Performance Driven Tool Quick Check Drive">
+                                </div>-->
+                            </div>
+                        </div></div>
+                    </div></div></div>
+                <div id="dnn_RightPane25" class="right-pane-25 w-col w-col-3 w-col-medium-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-4503"><a name="4503"></a>
+                    <div class="C_Container">
+                        <div id="dnn_ctr4503_contentPane" class="containerContent"><div id="dnn_ctr4503_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                        </div></div>
+                    </div></div></div>
+            </div>
+            <div class="w-row expanded">
+                <div id="dnn_ContentPane2" class="content-pane-2 w-col-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row expanded">
+                <div id="dnn_LeftPane25" class="left-pane-25 w-col w-col-3 w-col-small-12 DNNEmptyPane"></div>
+                <div id="dnn_RightPane75" class="right-pane-75 w-col w-col-9 w-col-small-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row expanded">
+                <div id="dnn_ContentPane3" class="content-pane-3 w-col w-col-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row expanded">
+                <div id="dnn_LeftPane33" class="left-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                <div id="dnn_CenterPane33" class="center-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                <div id="dnn_RightPane33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row expanded">
+                <div id="dnn_ContentPane4" class="content-pane-4 w-col w-col-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row">
+                <div class="left-pane-66 w-col w-col-8 w-col-small-12">
+                    <div class="w-row">
+                        <div id="dnn_LeftCol66" class="left-col-66 w-col-12 DNNEmptyPane"></div>
+                        <div id="dnn_HalfColumnLeft" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                        <div id="dnn_HalfColumnRight" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                        <div id="dnn_LeftCol66Middle" class="left-col-66 w-col w-col-12 DNNEmptyPane"></div>
+                        <div id="dnn_HalfColumnLeft2" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                        <div id="dnn_HalfColumnRight2" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                    </div>
+                </div>
+                <div id="dnn_RightCol33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row">
+                <div id="dnn_ContentPane5" class="content-pane-5 w-col w-col-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row">
+                <div id="dnn_LeftCol33" class="left-col-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                <div id="dnn_RightCol66" class="right-col-66 w-col w-col-8 w-col-small-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row">
+                <div id="dnn_ContentPane6" class="content-pane-6 w-col w-col-12 w-col-small-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row">
+                <div id="dnn_LeftPane50" class="left-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                <div id="dnn_RightPane50" class="right-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row">
+                <div id="dnn_ContentPane7" class="content-pane-7 w-col-12 DNNEmptyPane"></div>
+            </div>
+        </div>
+    </div>
+
+  {include file="common/footer" /}

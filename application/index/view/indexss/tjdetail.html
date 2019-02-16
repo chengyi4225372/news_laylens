@@ -1,0 +1,268 @@
+{include file='public:head'/}
+<div class="inContent">
+		<div class="main">
+			<!-- 内容 -->
+			<div class="crumbs">
+				<h5>您当前所在的位置：</h5>
+				<a href="{:url('index/index')}">主页</a> > <a>团建详情</a>
+			</div>
+			<div class="training" id="training">
+				<div class="t-title">
+					<h3>{$good.name}</h3>
+				</div>
+				<div id="slideBox" class="tBanner">
+				    <div class="bd">
+				    <ul>
+                                        {volist name="$good.banner" id="banner"}
+                                            <li><img src="{$banner}" /></li>
+                                            {/volist}
+				    </ul>
+				  </div>
+				  <div class="hd">
+				  	<ul>
+				  		<li></li>
+				  		<li></li>
+				  		<li></li>
+				  	</ul>
+				  </div>
+				</div>
+				<div class="tab">
+					<div class="heat">
+						<ul>
+							<li>
+								<span>{$good.nandud}</span>
+								<p>难度</p>
+							</li>
+							<li>
+								<span>{$good.tesed}</span>
+								<p>特色</p>
+							</li>
+							<li>
+								<span>{$good.tuijiand}</span>
+								<p>推荐</p>
+							</li>
+						</ul>
+					</div>
+					<div class="part02">
+						<div class="text">
+							<span>产品经理说</span>
+							<p>
+                                                            <a style="width: 50px;height: 25px;line-height: 25px;border-radius: 5px;background: #38414c;text-align: center;color: #fff;">团建介绍</a> {$good.liangdian}
+							</p>
+						</div>
+						<div class="features">
+							<p>本单关键词：</p>
+							 <div>
+							 	<b>{$good.liyou}</b>
+							 </div>
+						</div>
+						<div class="xx">
+							<ul>
+								<li>
+									<p>人数：</p>
+									<span>{$good.reshu}人</span>
+								</li>
+								<li>
+									<p>天数：</p>
+									<span>{$good.tianshu}天</span>
+								</li>
+								<li>
+									<p>车程：</p>
+									<span>{$good.cheshu}</span>
+								</li>
+								<li>
+									<p>编号：</p>
+									<span>{$good.bushu}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="price">
+						<p>
+							{$good.price}
+						</p>
+						<span>元/人</span>
+					</div>
+					<a href="{:url('index/dingzhi')}"><input class="btn" type="button" value="立即定制"></a>
+				</div>
+				<div class="t-left">
+					<div class="list" id="inList">
+						<ul>
+							<li>
+								<a href="#top1">项目详情</a>
+							</li>
+							<li>
+								<a href="#top2">行程安排</a>
+							</li>
+							<li>
+								<a href="#top3">费用安排</a>
+							</li>
+							<li>
+								<a href="#top4">温馨提示</a>
+							</li>
+						</ul>
+					</div>
+                    <div class="cont_content">
+                                <p style="line-height:400%"><span style="text-decoration: underline; font-size: 19px; line-height: 400%; font-family: 微软雅黑; color: red;"><a name="top1"></a></span><span style="font-size: 19px; line-height: 400%; font-family: 微软雅黑; color: red; text-decoration: underline;">项目详情</span></p>{:htmlspecialchars_decode($good.content1)}
+                                <p style="line-height:400%"><span style="text-decoration: underline; font-size: 19px; line-height: 400%; font-family: 微软雅黑; color: red;"><a name="top2"></a></span><span style="font-size: 19px; line-height: 400%; font-family: 微软雅黑; color: red; text-decoration: underline;">行程安排</span></p>{:htmlspecialchars_decode($good.content2)}
+                                <p style="line-height:400%"><span style="text-decoration: underline; font-size: 19px; line-height: 400%; font-family: 微软雅黑; color: red;"><a name="top3"></a></span><span style="font-size: 19px; line-height: 400%; font-family: 微软雅黑; color: red; text-decoration: underline;">费用安排</span></p>{:htmlspecialchars_decode($good.content3)}
+                                <p style="line-height:400%"><span style="text-decoration: underline; font-size: 19px; line-height: 400%; font-family: 微软雅黑; color: red;"><a name="top4"></a></span><span style="font-size: 19px; line-height: 400%; font-family: 微软雅黑; color: red; text-decoration: underline;">温馨提示</span></p>{:htmlspecialchars_decode($good.content4)}
+                                <p><br/></p></div>
+				</div>
+				<div class="t-right">
+					<div class="fx">
+						<p>
+							 每一次<span>分享</span>
+						</p>
+						<p>
+							都将成为一种正能量！
+						</p>
+						<div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_1" data-bd-bind="1545962968322">
+							<a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+							<a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+							<a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+							<a class="bds_qzone" data-cmd="qzone" href="#" title="分享到QQ空间"></a>
+						</div>
+					</div>
+					<div class="hot">
+						<div class="tit">
+							<p>最新上线</p>
+						</div>
+						<ul>
+                                                    {volist name="hots" id="hot"}
+                                                         <li>
+								<a href="{:url('index/tjdetail')}?id={$hot.id}">
+									<img src="{$hot.img}" alt="{$hot.name}">
+									<div>
+										<p>
+											{$hot.name}
+										</p>
+										<div class="day">天数：{$hot.tianshu}天</div>
+										<div class="jg">￥<span>{$hot.price}</span>/人</div>
+									</div>
+								</a>
+							</li>  
+                                                        {/volist}
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+
+		 
+			<!-- 内容结束 -->
+		</div>
+        
+{include file='public:partner'/}
+	<div class="slogan">
+		<div class="main">
+			<ul>
+				<li>
+					<img src="/static/index/images/bz01.png" alt="拓展保障">
+					<div>
+						<p>质量保证</p>
+						<span>以专业的团队来保证品质！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz02.png" alt="拓展安全">
+					<div>
+						<p>安全第一</p>
+						<span>以安全因素为前提的活动！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz03.png" alt="拓展价格">
+					<div>
+						<p>价格优惠</p>
+						<span>将不定时的推出优惠方案！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz04.png" alt="拓展服务">
+					<div>
+						<p>24小时服务</p>
+						<span>24小时有人为您提供咨询服务！</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div> 
+<script>
+		jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,easing:"easeOutCirc",delayTime:1000});
+		jQuery(".tBanner").slide({mainCell:".bd ul",autoPlay:true,easing:"easeOutCirc",delayTime:1000});
+
+		var inList = document.getElementById('inList');
+		var training = document.getElementById('training');
+		var inLi = document.getElementById('inList').getElementsByTagName('li');
+
+		for(var i = 0 ; i<inLi.length;i++){
+
+			   inLi[i].onclick=function(){
+
+			   		     for(var j = 0 ; j<inLi.length; j++){
+
+			   		   	    inLi[j].style.borderBottom = '';
+			   		 	    inLi[j].children[0].style.color = "#333";
+			   		  }
+
+			   	      this.style.borderBottom = "2px solid #e50012"
+			   	      this.children[0].style.color = "#e50012";
+			   	      
+			   }
+		}
+		var h = inList.offsetTop + training.offsetTop
+ 
+		window.onscroll =function(){
+
+				var scroll = document.body.scrollTop || document.documentElement.scrollTop;
+				 
+			   if(scroll <= h){
+
+
+			   		 inList.style.position = "initial";
+			   		 inList.style.top = '0';
+
+			    	 
+			    }
+			    else{
+
+			    	 
+			    	inList.style.position = "fixed";
+			    	inList.style.top = '0';
+			    	inList.style.marginTop = '0';
+			    	 	 
+			    	 
+			    	 
+			    }
+		}
+
+
+		 
+		window._bd_share_config = {
+			 
+			share : [{
+				"bdSize" : 106,
+
+			}],
+			slide : [{	   
+				bdImg : 0,
+				bdPos : "right",
+				bdTop : 100
+			}],
+			image : [{
+				viewType : 'list',
+				viewPos : 'top',
+				viewColor : 'black',
+				viewSize : '35',
+				viewList : ['qzone','tsina','huaban','tqq','renren']
+			}],
+			selectShare : [{
+				"bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
+			}]
+		}
+		with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+	 	
+	 	 
+	</script>
+	 {include file='public:foot'/}

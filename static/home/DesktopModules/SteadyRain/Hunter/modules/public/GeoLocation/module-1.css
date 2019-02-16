@@ -1,0 +1,377 @@
+.content .steadyrain.geolocation {
+    background-color: #fff;
+    border: 1px solid #888;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 15px
+}
+
+.content .steadyrain.geolocation.findarepmodule {
+    border: none;
+}
+
+.content .steadyrain.geolocation .location {
+    background-color: #940505;
+    background: -webkit-gradient(linear,left top,left bottom,from(#940505),to(#c00));
+    background: -webkit-linear-gradient(top,#940505,#c00);
+    background: -moz-linear-gradient(top,#940505,#c00);
+    background: -ms-linear-gradient(top,#940505,#c00);
+    background: -o-linear-gradient(top,#940505,#c00);
+    border: 1px solid #000;
+    margin-bottom: 15px;
+    padding-top: 10px
+}
+
+.content .steadyrain.geolocation .location p {
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center
+}
+
+.content .steadyrain.geolocation .location p.heading {
+    font-size: 18px;
+    font-weight: 700
+}
+
+.content .steadyrain.geolocation .location p.city {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize
+}
+
+.content .steadyrain.geolocation .location a.black-button {
+    cursor: pointer;
+    display: block
+}
+
+.content .steadyrain.geolocation .location a.black-button label {
+    text-transform: capitalize
+}
+
+.content .steadyrain.geolocation .location a.black-button:hover label {
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.content .steadyrain.geolocation .location a.black-button:after {
+    border-right: 0
+}
+
+.content .steadyrain.geolocation .location .select-location {
+    display: none;
+    padding: 10px 0
+}
+
+.content .steadyrain.geolocation .location .select-location:after {
+    clear: both;
+    content: '';
+    display: table
+}
+
+.content .steadyrain.geolocation .location .select-location div {
+    margin-bottom: 8px;
+    padding: 0 3%
+}
+
+.content .steadyrain.geolocation .location .select-location div:after {
+    clear: both;
+    content: '';
+    display: table
+}
+
+.content .steadyrain.geolocation .location .select-location div label {
+    color: #fff;
+    display: block;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: uppercase
+}
+
+.content .steadyrain.geolocation .location .select-location div select,.content .steadyrain.geolocation .location .select-location div input {
+    border: 1px solid #000;
+    display: block;
+    height: 26px;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    width: 100%
+}
+
+.content .steadyrain.geolocation .location .select-location div input {
+    padding: 0 4px
+}
+
+.content .steadyrain.geolocation .location .select-location .state,.content .steadyrain.geolocation .location .select-location .city {
+    display: none
+}
+
+.content .steadyrain.geolocation .location .select-location .black-button {
+    cursor: pointer;
+    float: right;
+    margin-right: 3%
+}
+
+.content .steadyrain.geolocation .representative {
+    margin-top: 25px;
+    margin-bottom: 25px
+}
+
+.content .steadyrain.geolocation .representative .type {
+    font-size: 18px;
+    font-weight: 700
+}
+
+.content .steadyrain.geolocation .representative img {
+    max-width: 114px;
+}
+
+.content .steadyrain.geolocation .representative .right .contact-info {
+    margin-bottom: 10px
+}
+
+.content .steadyrain.geolocation .representative .right .contact-info p {
+    margin-bottom: 0
+}
+
+.content .steadyrain.geolocation .representative .right a.black-button {
+    width: 100%
+}
+
+.content .steadyrain.geolocation .distributor {
+    margin-bottom: 25px;
+    margin-top: 25px
+}
+
+.content .steadyrain.geolocation .distributor .type {
+    font-size: 18px;
+    font-weight: 700
+}
+
+.content .steadyrain.geolocation .distributor img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%
+}
+
+.content .steadyrain.geolocation .distributor .right .contact-info {
+    margin-bottom: 10px
+}
+
+.content .steadyrain.geolocation .distributor .right .contact-info p {
+    margin-bottom: 0
+}
+
+.content .steadyrain.geolocation .distributor .right a.black-button {
+    width: 100%
+}
+
+.content .steadyrain.geolocation .logo {
+    clear: both;
+    text-align: center
+}
+
+.content .steadyrain.geolocation .logo img {
+    max-width: 100%
+}
+
+.content .steadyrain.geolocation .unactiveLocationBox{
+	background: #777;
+}
+
+.fillerImage{
+	float:right;
+	text-align: center;
+	font-weight: 700;
+}
+
+.fillerImage div{
+	padding: 28px 0;
+}
+
+.findRepSection .black-button{
+float: none !important;
+}
+
+.findRepSection a.black-button{
+display:inline-block !important;
+width: 150px;
+
+}
+
+.distributorInfo {
+    clear: both;
+}
+
+.zipError{
+	color: #fff;
+	display: none;
+}
+
+@media (max-width:767px) {
+.content .steadyrain.geolocation .representative {
+    float: none;
+    margin-right: 0;
+    width: auto
+}
+
+.content .steadyrain.geolocation .representative .type {
+    font-size: 16px
+}
+
+.content .steadyrain.geolocation .representative .left {
+    text-align: center;
+    width: 100%
+}
+
+.content .steadyrain.geolocation .representative .right {
+    text-align: center;
+    width: 100%
+}
+}
+
+@media (min-width:768px) {
+.content .steadyrain.geolocation .representative {
+    float: left;
+    margin-right: 4%;
+    width: 48%
+}
+
+.content .steadyrain.geolocation .representative:nth-child(even) {
+    margin-right: 0
+}
+
+.content .steadyrain.geolocation .representative .left {
+    width: auto
+}
+
+.content .steadyrain.geolocation .representative .right {
+    width: auto
+}
+
+.steadyrain.geolocation .modal.contactusform .modal-dialog .modal-body .form .form-group:after {
+    clear: both;
+    content: '';
+    display: table
+}
+
+.steadyrain.geolocation .modal.contactusform .modal-dialog .modal-body .form .form-group label {
+    float: left;
+    width: 40%
+}
+
+.steadyrain.geolocation .modal.contactusform .modal-dialog .modal-body .form .form-group .controls {
+    float: right;
+    width: 60%
+}
+
+.steadyrain.geolocation .modal.contactusform .modal-dialog .modal-footer {
+    text-align: center
+}
+}
+
+
+
+@media (min-width:992px) {
+.findRepUS,
+.findRepCA,
+.findRepWorldwide {
+    width: 100%;
+	max-height: 180px;
+}
+
+.fillerImage img{
+	width: 615px;
+}
+
+.findRepSection{
+	width: 30%;
+}
+
+.findRepSection  #zipcode{
+	max-height: 25px;
+}
+
+.findRepSection  #location-picker{
+	max-height: 87px;
+}
+
+.findarep {
+    float: right;
+    width: 67%;
+    clear: none;
+}
+
+.content .steadyrain.geolocation .representative {
+    float: left;
+    margin-right: 35px;
+    width: 264px;
+}
+/*.content .steadyrain.geolocation .CAReps .representative {
+    float: left;
+    margin-right: 30%;
+    width: 30%;
+}
+
+.content .steadyrain.geolocation .USReps .representative:nth-child(4) {
+    margin-left: 15%;
+}
+
+.content .steadyrain.geolocation .USReps .representative:nth-child(5) .left {
+    height: 180px;
+}
+
+.content .steadyrain.geolocation .USReps .representative:nth-child(5) .right{
+    padding-top: 73px;
+}
+
+.content .steadyrain.geolocation .representative:nth-child(even) {
+    margin-right: 43px;
+}
+
+ .content .steadyrain.geolocation .representative {
+    float: none;
+    margin-right: 0;
+    width: auto
+} */
+
+.content .steadyrain.geolocation .representative .type {
+    font-size: 16px
+}
+
+.content .steadyrain.geolocation .representative .left {
+    text-align: center;
+    width: 100%
+}
+
+.content .steadyrain.geolocation .representative .right {
+    text-align: center;
+    width: 100%
+}
+}
+
+@media (min-width:1200px) {
+
+.fillerImage img{
+	width: 745px;
+}
+
+.content .steadyrain.geolocation .representative {
+	float: left;
+    margin-right: 43px;
+    width: 325px;
+}
+
+.content .steadyrain.geolocation .representative .type {
+    font-size: 18px
+}
+
+.content .steadyrain.geolocation .representative .left {
+    width: auto
+}
+
+.content .steadyrain.geolocation .representative .right {
+    text-align: left;
+    width: 180px
+}
+}

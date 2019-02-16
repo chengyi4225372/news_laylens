@@ -1,0 +1,2 @@
+$(document).ready(function(){var countries;countries=$('.international-slider .bxslider').bxSlider({pager:false,slideWidth:165,minSlides:1,maxSlides:4,moveSlides:1,slideMargin:25});var brands;brands=$('.oem-slider .bxslider').bxSlider({pager:false,slideWidth:175,minSlides:1,maxSlides:4,moveSlides:1,slideMargin:25});$('.toolbar .equipment').click(function(){if($('.international-slider').is(':visible')){$('.international-slider').slideUp('fast');}
+$('.oem-slider').slideToggle('fast');if($('.oem-slider').is(':visible')){brands.reloadSlider();}});});

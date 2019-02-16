@@ -1,0 +1,841 @@
+{include file="common/header" /}
+
+    <div class="content">
+        <div>
+            <div class="contactModal" id="global-contactusform">
+                <div class="modal-container">
+                    <div class="modal-content">
+                        <div class="modal-top w-clearfix">
+                            <button type="button" class="close modal-close">x</button>
+                            <h4 class="modal-title">Contact Us</h4>
+                        </div>
+                        <div class="modal-body form-horizontal">
+                            <div class="modal-rep-section"></div>
+
+                            <div>
+                                For a price quote, or on-site demo, contact our representative directly using zip code or country search.<br>
+                            </div>
+                            <hr />
+                            <div class='formWrapper'>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-name" class="control-label">Name:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-name" name="globalcontactform-name" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-phone" class="control-label">Phone:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="tel" class="form-control" id="globalcontactform-phone" name="globalcontactform-phone" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-email" class=" control-label">Email:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="email" class="form-control" id="globalcontactform-email" name="globalcontactform-email" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-zip" class=" control-label">Postal Code:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-zip" name="globalcontactform-zip" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <hr />
+                                <div class="form-group w-row">
+                                    <label for="globalcontactform-address" class=" control-label">Address:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-address" name="globalcontactform-address" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="globalcontactform-city" class="control-label">City:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-city" name="globalcontactform-city" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="globalcontactform-state" class="control-label">State:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-state" name="globalcontactform-state" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row input-comment">
+                                    <label for="globalcontactform-comment" class="control-label">Comments:</label>
+                                    <div class="contact-form-input">
+                                        <textarea class="form-control" id="globalcontactform-comment" name="globalcontactform-comment"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group w-row flex-column">
+                                    <label class="control-label">Interested in:</label>
+                                    <div>
+                                        <div class="w-col w-col-4">
+                                            <input type="checkbox" name="interest" value="AL" class="interestCheckBox"><span>Alignment Systems</span><br>
+                                            <input type="checkbox" name="interest" value="TC" class="interestCheckBox"><span>Tire Changers</span><br>
+                                            <input type="checkbox" name="interest" value="BL" class="interestCheckBox"><span>Brake Lathes</span><br>
+                                        </div>
+                                        <div class="w-col w-col-4">
+                                            <input type="checkbox" name="interest" value="HD" class="interestCheckBox"><span>Heavy-Duty</span><br>
+                                            <input type="checkbox" name="interest" value="WB" class="interestCheckBox"><span>Wheel Balancers</span><br>
+                                            <input type="checkbox" name="interest" value="LR" class="interestCheckBox"><span>Lift Rack</span><br>
+                                        </div>
+                                        <div class="w-col w-col-4">
+                                            <input type="checkbox" name="interest" value="QC" class="interestCheckBox"><span>Inspection</span><br>
+                                            <input type="checkbox" name="interest" value="OT" class="interestCheckBox"><span>Other</span><br>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input id="globalcontactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                                    <input type="hidden" id="HiddenRepNumber" value="" />
+                                    <input type="hidden" id="HiddenRepEmail" value="" />
+                                    <input type="hidden" id="IsDistributor" value="" />
+                                    <input type="hidden" id="ContactType" value="" />
+                                    <input type="hidden" id="Origin" value="" />
+                                    <input type="hidden" id="Country" value="" />
+                                    <input type="hidden" id="GatherFormInfo" value="true" />
+                                    <input type="hidden" id="HiddenZipCode" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactModal" id="trainer-contactusform">
+                <div class="modal-container">
+                    <div class="modal-content">
+                        <div class="modal-top w-clearfix">
+                            <button type="button" class="close modal-close">x</button>
+                            <h4 class="modal-title">Contact Us</h4>
+                        </div>
+                        <div class="modal-body form-horizontal">
+                            <div class="modal-rep-section"></div>
+                            <hr />
+                            <div class='formWrapper'>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="trainer-contactform-name" class="control-label">Name: *</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-name" name="trainer-contactform-name" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="trainer-contactform-email" class=" control-label">Email:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="email" class="form-control" id="trainer-contactform-email" name="trainer-contactform-email" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <hr />
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-phone" class="control-label">Phone:</label>
+                                    <div class="contact-form-input">
+                                        <input type="tel" class="form-control" id="trainer-contactform-phone" name="trainer-contactform-phone" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-address" class=" control-label">Address:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-address" name="trainer-contactform-address" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-city" class="control-label">City:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-city" name="trainer-contactform-city" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-state" class="control-label">State:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-state" name="trainer-contactform-state" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-zip" class=" control-label">Postal Code:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-zip" name="trainer-contactform-zip" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-comment" class="control-label">Comments:</label>
+                                    <div class="contact-form-input">
+                                        <textarea class="form-control" id="trainer-contactform-comment" name="trainer-contactform-comment"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input id="trainer-contactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                                    <input type="hidden" id="HiddenRepEmail" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-row">
+                <div id="dnn_ContentPane" class="content-pane w-col w-col-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-3127"><a name="3127"></a>
+                    <div class="C_Container">
+                        <div id="dnn_ctr3127_contentPane" class="containerContent"><div id="dnn_ctr3127_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                            <div id="dnn_ctr3127_HtmlModule_lblContent" class="Normal">
+                                <script type="text/javascript" Src="/DesktopModules/SteadyRain/Hunter/Resources/js/jquery.helpers.js"></script>
+                                <script type='text/javascript' '>
+                                $('.DnnModule-DNN_HTML h2').first().hide();
+                                $(document).ready(function() {
+                                $('.hiddenCategory').attr('category','lift-racks');
+                                $('.hiddenSubCategory').attr('subcategory','lift-racks.scissor-lift');
+                                $('.hiddenPageType').attr('pagetype','product-detail');
+                                $('.hiddenPageName').attr('pagename','lift-racks.product-detail.scissor-lift');
+                                });
+                                </script>
+                                </div>
+                                </div></div>
+                                </div></div></div>
+                                </div>
+                                <div class="w-row expanded">
+                                        <div id="dnn_LeftPane75" class="left-pane-75 w-col w-col-9 w-col-medium-12 DNNEmptyPane"></div>
+                                        <div id="dnn_RightPane25" class="right-pane-25 w-col w-col-3 w-col-medium-12 DNNEmptyPane"></div>
+                                        </div>
+                                        <div class="w-row expanded">
+                                        <div id="dnn_ContentPane2" class="content-pane-2 w-col-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-4015"><a name="4015"></a>
+                                        <div class="C_Container">
+                                        <div id="dnn_ctr4015_contentPane" class="containerContent"><div id="dnn_ctr4015_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                        <div id="dnn_ctr4015_HtmlModule_lblContent" class="Normal">
+                                        <div class="product-hero-section scissor-lift">
+                                        <h1 class="product-hero-text" data-ix="scroll-reveal">Scissor Lift Family</h1>
+                                <div class="product-cta-section"></div>
+                                        </div>
+                                        </div>
+                                        </div></div>
+                                        </div></div><div class="DnnModule DnnModule-SteadyRainProductDescriptionModule DnnModule-4017"><a name="4017"></a>
+                                        <div class="C_Container">
+                                        <div id="dnn_ctr4017_contentPane" class="containerContent"><div id="dnn_ctr4017_ModuleContent" class="DNNModuleContent ModSteadyRainProductDescriptionModuleC">
+                                        <div class="product-section-gray">
+                                        <h1 class="heading-1 main-color" data-ix="scroll-reveal">Scissor Lift Family</h1>
+                                <div class="text">Including extra-wide runways, two swing air jacks and best-in-class drive-on height!</div>
+                                </div>
+                                </div></div>
+                                </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4016"><a name="4016"></a>
+                                        <div class="C_Container">
+                                        <div id="dnn_ctr4016_contentPane" class="containerContent"><div id="dnn_ctr4016_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                        <div id="dnn_ctr4016_HtmlModule_lblContent" class="Normal">
+                                        <div class="no-padding product-landing product-section-white">
+                                        <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1" data-infinite="1">
+                                        <div class="w-slider-mask">
+                                        <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="slider-image-wrapper"><a href="/lift-racks/rx16-scissor"><img src="/portals/0/Images/rx16-splash-image-2.jpg" class="slider-image"></a>
+                                        </div>
+                                        <div>
+                                        <a class="main-button w-button" href="/lift-racks/rx16-scissor">RX16 Scissor Lift</a>
+                                </div>
+                                <div class="product slider-description-wrapper">
+                                        <p>The flush mount RX16 offers maximum capacity in a low profile, compact package. Extra wide runways, swing-air jacks, and a multitude of productivity features make this rack the most capable available.</p>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="slider-image-wrapper"><a href="/lift-racks/rx14-scissor"><img src="/portals/0/Images/rx16-splash-image-2.jpg" class="slider-image"></a>
+                                        </div>
+                                        <div>
+                                        <a class="main-button w-button" href="/lift-racks/rx14-scissor">RX14 Scissor Lift</a>
+                                </div>
+                                <div class="product slider-description-wrapper">
+                                        <p>The surface mount RX14 offers a high capacity rack for existing service bays. Extra wide runways, swing-air jacks, and a multitude of productivity features make this rack the most capable surface mount rack available.</p>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="slider-image-wrapper"><a href="/lift-racks/rx12-scissor"><img src="/portals/0/Images/rx10-12-splash-image-4-2018.jpg" class="slider-image"></a>
+                                        </div>
+                                        <div>
+                                        <a class="main-button w-button" href="/lift-racks/rx12-scissor">RX12 Scissor Lifts</a>
+                                </div>
+                                <div class="product slider-description-wrapper">
+                                        <p>The RX wheel alignment scissor lift series features extra-wide 24&rdquo; runways, along with best-in-class drive-on height.</p>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="slider-image-wrapper"><a href="/lift-racks/rx10-rx12-scissor"><img src="/portals/0/Images/rx10-12-splash-image-4-2018.jpg" class="slider-image"></a>
+                                        </div>
+                                        <div>
+                                        <a class="main-button w-button" href="/lift-racks/rx10-rx12-scissor">RX10 Scissor Lifts</a>
+                                </div>
+                                <div class="product slider-description-wrapper">
+                                        <p>The Hunter&nbsp;RX10 car scissor lift series&nbsp;maximizes productivity while utilizing limited space.</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="w-slider-arrow-left">
+                                        <div class="left slider-navigation w-icon-slider-left"></div>
+                                        </div>
+                                        <div class="w-slider-arrow-right">
+                                        <div class="right slider-navigation w-icon-slider-right"></div>
+                                        </div>
+                                        <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div></div>
+                                        </div></div><div class="DnnModule DnnModule-SteadyRainProductDetailsModule DnnModule-3319"><a name="3319"></a><div id="dnn_ctr3319_ContentPane">
+                                        <div id="dnn_ctr3319_ModuleContent" class="DNNModuleContent ModSteadyRainProductDetailsModuleC">
+                                        <link rel="stylesheet" href="/Portals/_default/Skins/Hunter/includes/Testing Animated Content Slider/AnimatedSlider.css">
+                                        <div class="containerForStickemContainer">
+                                        <div id="tabs" class="steadyrain additional-info stickem-container">
+
+
+                                        <div class="cta-section-mobile"></div>
+                                        <div id="description" class="product-section-gray">
+                                        <div class="row" style="margin-top: 10px">
+                                        <h1 id="dnn_ctr3319_View_h2ProductTitle" class="heading-1 main-color" data-ix="scroll-reveal">Scissor Lift Family</h1>
+                                </div>
+                                <div class="row">
+                                        <div class="text">
+                                        Including extra-wide runways, two swing air jacks and best-in-class drive-on height!
+                                </div>
+                                </div>
+                                </div>
+                                <hr id="dnn_ctr3319_View_awardRule"></hr>
+                                        <div class="product-section-gray" id="awardSection">
+                                        <div class="row" style="margin-top: 10px">
+                                        <h2 id="dnn_ctr3319_View_awardHeader" class="heading-1 main-color" data-ix="scroll-reveal">Awards</h2>
+                                        </div>
+                                        <div id="animatedContentSlider" class="text w-slider-mask ">
+                                        <div class="slideContainer">
+
+                                        <div class="contentContainer">
+                                        <div class="award">
+                                        <img id="dnn_ctr3319_View_rAwards_imgAward_0" src="/Portals/0/Media/ef3724af-2245-437e-81d7-36f1e0b9f43a.png" /><br />
+
+                                        </div>
+                                        </div>
+                                        <div class="contentContainer">
+                                        <div class="award">
+                                        <img id="dnn_ctr3319_View_rAwards_imgAward_1" src="/Portals/0/Media/e656b759-a6f3-4224-a232-9f822bdb4e2d.png" /><br />
+
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="slider-arrow" id="left">
+                                        <div class="left slider-navigation w-icon-slider-left"></div>
+                                        </div>
+                                        <div class="slider-arrow" id="right">
+                                        <div class="right slider-navigation w-icon-slider-right"></div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div id="videos" class="no-padding product-section-white slider-section">
+                                        <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Featured Videos</h2>
+                                <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                        <div class="w-slider-mask">
+                                        <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('-14JnpOn5w0', 'Hunters Scissor and Four Post Lift Racks');">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rVideos_imgVideo_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/Hunter_s-Scissor-and-Four-Post-Lift-Racks.jpg" /><br />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <div class="name heading-2">Hunters Scissor and Four Post Lift Racks</div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('eTNO0yiJldw', 'New Swing Air Jack - At A Glance');">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rVideos_imgVideo_1" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/New-Swing-Air-Jack---At-A-Glance.jpg" /><br />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <div class="name heading-2">New Swing Air Jack - At A Glance</div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="w-slider-arrow-left">
+                                        <div class="left slider-navigation w-icon-slider-left"></div>
+                                        </div>
+                                        <div class="w-slider-arrow-right">
+                                        <div class="right slider-navigation w-icon-slider-right"></div>
+                                        </div>
+                                        <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                                        </div>
+                                        </div>
+                                        <div id="features" class="slider-section">
+                                        <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Features</h2>
+                                        <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                        <div class="w-slider-mask">
+                                        <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/3f7782fd-33dd-45cf-b0c7-9778f55fb8a0.jpeg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Drive-On Height - RX10/RX12</h3>
+                                <p class="text">Best in class drive on height minimizes clearance issues</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_1" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/swing-air-jackfeature-image.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Two Swing Air Jacks - RX14/RX16</h3>
+                                <p class="text">9,000-lb. capacity & Technicians' favorite</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_2" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/8160d6fd-fa01-436f-a67f-97210beaea5c.jpeg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Two Movable Work Steps</h3>
+                                <p class="text">12 secure positions & Lightweight design</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_3" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/49915540-39f0-460f-acb8-0abe997134b2.jpeg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Louvered Ramps</h3>
+                                <p class="text">Prevent wheel spin in wet conditions & More effective than diamond tread or abrasive strips</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_4" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/console-4-12-2018.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Control Panel</h3>
+                                <p class="text">Complete operation from console & Optional PowerSlide, Inflation Station and FIA control</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_5" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/149dfcc2-5458-4a8b-9e68-d64f10d8ddec.jpeg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Optional Inflation Station</h3>
+                                <p class="text">Automatically fills or bleeds each tire & No hanging air lines</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_6" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/da0a485d-b0d0-4583-aa2e-d433a16f4bd1.jpeg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Velocity Safety Fuses</h3>
+                                <p class="text">Instantaneous shutdown in event of hydraulic failure</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_7" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/7d591e9f-84ee-4285-a3ad-298fd77560c6.jpeg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Sensor Feedback System</h3>
+                                <p class="text">Sensor keep runway level & Safety stops if obstructed</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_8" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/5a49dc4f-ad3f-4d9f-ac4a-fb328db080c1.jpeg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Integrated Air Line Kit</h3>
+                                <p class="text">Convenient air source for tools at front and rear</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_9" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/rx10-12-extra-wide-feature-image.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Extra-Wide Runways - RX10/RX12</h3>
+                                <p class="text">24 in. runways accept wide vehicles</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_10" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/b1b29ee5-5603-4712-b898-77995c90ea2e.jpeg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Safety Locks</h3>
+                                <p class="text">Precision-fit teeth lock runways at 16 level positions</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_11" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/rx14-rx16-ex-wide.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Extra-Wide Runways - RX14/RX16</h3>
+                                <p class="text">26" runways accept wide, heavy vehicles</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_12" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/a0ef3c75-f25b-4638-ac2c-138a41d3ae2b.jpeg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Two Swing Air Jacks - RX10/RX12</h3>
+                                <p class="text">6,000-lb. capacity & technician's favorite</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_13" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/standard-equipment.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Standard Equipment</h3>
+                                <p class="text">Stainless steel turnplate and flush-mounted; full-floating slipplates (PowerSlide<sup>&reg;</sup> slipplates on PS and IS models).</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_14" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/fast-descent-speed-feature-with-graphics-4-2018-2.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Fast Descent Speed</h3>
+                                <p class="text">The hydraulic system speeds lowering times by 50%. The system automatically slows the descent in the last several inches to ensure a soft landing </p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_15" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/flushmount-installation-hump-4-2018-.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Flush-Mount Installation</h3>
+                                <p class="text">Lifts may be flush-mounted in a shallow recess. No more worries about lowered vehicles or expensive spoilers! This tidy installation is ideal for “showcase” shops. </p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_16" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/alignlights-system.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">AlignLights System - Optional</h3>
+                                <p class="text">Hunter’s integrated AlignLights LED lighting system provides a bright and efficient light source underneath the vehicle. </p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_17" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/made-in-usa-no-logo.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Designed and built in the USA</h3>
+                                <p class="text">Hunter products are engineered in the USA by 75+ technical staff, and built in four manufacturing facilities in the USA employing 1000+</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                        <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                        <img id="dnn_ctr3319_View_rFeatures_imgFeature_18" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="/Portals/0/Media/hunter-service-feature.jpg" />
+                                        </div>
+                                        <div class="descriptionContainer slider-description-wrapper">
+                                        <h3 class="heading-2">Hunter Service</h3>
+                                <p class="text">Hunter Engineering deploys the largest service force in the industry with more
+                                    than 390+ highly-qualified, independent representatives</p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="w-slider-arrow-left">
+                                        <div class="left slider-navigation w-icon-slider-left"></div>
+                                        </div>
+                                        <div class="w-slider-arrow-right">
+                                        <div class="right slider-navigation w-icon-slider-right"></div>
+                                        </div>
+                                        <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                                        </div>
+                                        </div>
+                                        <div id="benefits">
+                                        </div>
+
+                                        <div id="productLinkSection"></div>
+
+                                        <div id="documents" class="product-section-white">
+                                        <div class="row">
+                                        <h2 class="heading-1 main-color" data-ix="scroll-reveal">documents</h2>
+                                        <p style="line-height:.5;">&nbsp;</p>
+                                </div>
+                                <div class="section-text section-padding document-wrapper">
+                                        <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3319_View_rDocs_docLink_0" href="/Portals/0/Media/5262-T.pdf" target="_blank"><div class="doc-icon"><img src="/portals/0/Images/download-icon.svg" /></div>Lift Accessories Brochure</a>
+                                <p>For Hunter Wheel Alignment Lift Racks</p>
+                                </div>
+                                <div class="doc-breakdown" id="brochure">
+                                        <div class="doc-content-wrapper">
+                                        <div class=" heading-2 doc-section-heading">brochure</div>
+                                        <div class="documents"></div>
+                                        </div>
+                                        </div>
+                                        <div class="doc-breakdown " id="specsheet">
+                                        <div class="doc-content-wrapper">
+                                        <div class=" heading-2 doc-section-heading">spec sheet</div>
+                                <div class="documents"></div>
+                                        </div>
+                                        </div>
+                                        <div class="doc-breakdown" id="other">
+                                        <div class="doc-content-wrapper">
+                                        <div class=" heading-2 doc-section-heading">other</div>
+                                        <div class="documents"></div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div id="productOEMSection"></div>
+                                        <div id="newTestimonialSection"></div>
+
+                                        </div>
+                                        </div>
+                                        <div id="newAwardSection"></div>
+                                        <div id="displayVideoModal" class="modal-wrapper" data-ix="modal-display">
+                                        <div class="modal-container">
+                                        <div class="modal-top w-clearfix">
+                                        <div class="modal-title"></div>
+                                        <div class="modal-close" data-ix="modal-close" style="transition: all 0.3s ease 0s;">x</div>
+                                        </div>
+                                        <div class="modal-video-wrapper">
+                                        <iframe class="video-embed" name="preview-youtube" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                </div>
+                                </div>
+
+                                <script type="text/javascript" Src="/Portals/_default/Skins/Hunter/includes/Testing Animated Content Slider/AnimatedSlider.js"></script>
+                            </div></div>
+                        </div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4280"><a name="4280"></a>
+                        <div class="C_Container">
+                            <div id="dnn_ctr4280_contentPane" class="containerContent"><div id="dnn_ctr4280_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                <div id="dnn_ctr4280_HtmlModule_lblContent" class="Normal">
+
+                                    <div id="comm100-button-dynamic"></div>
+                                    <script type="text/javascript">
+                                        var Comm100API=Comm100API||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({div_id:"comm100-button-dynamic"}),t.site_id=1000335,t.dynamic=true,e("https://ent.comm100.com/chatserver/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://entmax.comm100.com/chatserver/livechat.ashx?siteId=")},5e3)})(Comm100API||{})
+                                    </script>
+
+                                </div>
+                            </div></div>
+                        </div></div></div>
+                </div>
+                    <div class="w-row expanded">
+                        <div id="dnn_LeftPane25" class="left-pane-25 w-col w-col-3 w-col-small-12 DNNEmptyPane"></div>
+                        <div id="dnn_RightPane75" class="right-pane-75 w-col w-col-9 w-col-small-12 DNNEmptyPane"></div>
+                    </div>
+                    <div class="w-row expanded">
+                        <div id="dnn_ContentPane3" class="content-pane-3 w-col w-col-12 DNNEmptyPane"></div>
+                    </div>
+                    <div class="w-row expanded">
+                        <div id="dnn_LeftPane33" class="left-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                        <div id="dnn_CenterPane33" class="center-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                        <div id="dnn_RightPane33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                    </div>
+                    <div class="w-row expanded">
+                        <div id="dnn_ContentPane4" class="content-pane-4 w-col w-col-12 DNNEmptyPane"></div>
+                    </div>
+                    <div class="w-row">
+                        <div class="left-pane-66 w-col w-col-8 w-col-small-12">
+                            <div class="w-row">
+                                <div id="dnn_LeftCol66" class="left-col-66 w-col-12 DNNEmptyPane"></div>
+                                <div id="dnn_HalfColumnLeft" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                                <div id="dnn_HalfColumnRight" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                                <div id="dnn_LeftCol66Middle" class="left-col-66 w-col w-col-12 DNNEmptyPane"></div>
+                                <div id="dnn_HalfColumnLeft2" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                                <div id="dnn_HalfColumnRight2" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                            </div>
+                        </div>
+                        <div id="dnn_RightCol33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                    </div>
+                    <div class="w-row">
+                        <div id="dnn_ContentPane5" class="content-pane-5 w-col w-col-12 DNNEmptyPane"></div>
+                    </div>
+                    <div class="w-row">
+                        <div id="dnn_LeftCol33" class="left-col-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                        <div id="dnn_RightCol66" class="right-col-66 w-col w-col-8 w-col-small-12 DNNEmptyPane"></div>
+                    </div>
+                    <div class="w-row">
+                        <div id="dnn_ContentPane6" class="content-pane-6 w-col w-col-12 w-col-small-12 DNNEmptyPane"></div>
+                    </div>
+                    <div class="w-row">
+                        <div id="dnn_LeftPane50" class="left-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                        <div id="dnn_RightPane50" class="right-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                    </div>
+                    <div class="w-row">
+                        <div id="dnn_ContentPane7" class="content-pane-7 w-col-12 DNNEmptyPane"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div id="slideoutButton" class="rep-icon-wrapper w-hidden-small w-hidden-tiny" data-ix="rep-slideout-modal">-->
+                <!--<img class="rep-icon" data-ix="rep-slideout-modal" src="/portals/0/Images/rep-icon.svg">-->
+                <!--<div class="rep-icon-text" data-ix="rep-slideout-modal">Service, Sales, Pricing</div></div>-->
+            <div id="slideoutWrapper" class="slideout-wrapper w-hidden-small w-hidden-tiny">
+                <div class="slideout-container">
+                    <div class="connect-wrapper">
+                        <div id="slideoutClose" class="rep-slideout-close" data-ix="close-rep-slideout-modal">
+                            X
+                        </div>
+                        <div class="center section-text">
+                            SERVICE, SALES, PRICING<br>
+                            CONNECT WITH YOUR HUNTER TEAM<br>
+                            <div class="price-text">
+                                For a price quote, or on-site demo, contact one of our representatives<br> directly using zip code or country search.<br>
+                            </div>
+                        </div>
+                        <div class="bold center section-text display-zip">
+                            63044
+                        </div>
+                        <div class="change-location-link-wrapper ">
+                            <a id="change-location-link" class="cta-button w-button"><span class="change-location-text">ENTER LOCATION</span><span class="w-icon-dropdown-toggle"></span></a>
+                        </div>
+                        <div class="location ">
+                            <div id="location-picker" class="select-location">
+                                <div>
+                                    <select class="change-location-input w-select" id="country-select"></select>
+                                </div>
+                                <div>
+                                    <input class="change-location-input w-input" type="text" id="zipcode-input" placeholder="ZIP CODE" />
+                                </div>
+                                <div class="zipError">
+                                    * Please Enter a Valid Postal Code
+                                </div>
+                                <div id="submit">
+                                    <button class="change-location-submit w-button" type="button" id="location-submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rep-wrapper">
+                        <div class="rep-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="slideoutButton" class="rep-icon-wrapper-mobile w-hidden-main w-hidden-medium" " data-ix="rep-slideup-modal"><img class="rep-icon" data-ix="rep-slideup-modal" src="/portals/0/Images/rep-icon.svg"><div class="rep-icon-text" data-ix="rep-slideup-modal">hunter team</div></div>
+        <div id="slideoutWrapper" class="slideout-wrapper-mobile w-hidden-main w-hidden-medium">
+            <div class="slideout-container">
+                <div class="connect-wrapper">
+                    <div id="slideoutClose" class="rep-slideout-close" data-ix="close-rep-slideout-modal-mobile">
+                        X
+                    </div>
+                    <div class="center section-text">
+                        CONNECT WITH YOUR HUNTER TEAM
+                    </div>
+                    <div class="bold center section-text display-zip">
+                        63044
+                    </div>
+                    <div class="change-location-link-wrapper ">
+                        <a id="change-location-link" class="cta-button w-button"><span class="change-location-text">ENTER LOCATION</span><span class="w-icon-dropdown-toggle"></span></a>
+                    </div>
+                    <div class="location ">
+                        <div id="location-picker" class="select-location">
+                            <div>
+                                <select class="change-location-input w-select" id="country-select"></select>
+                            </div>
+                            <div>
+                                <input class="change-location-input w-input" type="text" id="zipcode-input" placeholder="ZIP CODE" />
+                            </div>
+                            <div class="zipError">
+                                * Please Enter a Valid Postal Code
+                            </div>
+                            <div id="submit">
+                                <button class="change-location-submit w-button" type="button" id="location-submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rep-wrapper">
+                </div>
+            </div>
+        </div>
+
+{include file="common/footer"/}

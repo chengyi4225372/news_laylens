@@ -1,0 +1,57 @@
+{include file='public:head'/}
+<div class="inBanner">
+		<img src="/static/index/images/b-team.png" alt="">
+		<!-- 搜索 -->
+		<div class="tit">
+			<img src="/static/index/images/in-title03.png" alt="">
+		</div>
+	</div>
+	<div class="inContent">
+		<div class="main">
+			<div class="crumbs">
+				<h5>您当前所在的位置：</h5>
+				<a href="{:url('index/index')}">主页</a> > <a href="{:url('index/fwteam')}">{$listname}</a>
+			</div>
+			<!-- 内容 -->
+			 <div class="lecturer">
+			 	<div class="ly_left"><img src='{$team.img}' /><p>{$team.name}</p></div>
+             <div class="ly_right"><p style="white-space: normal; line-height: 3em;"><strong><span style="font-family: 微软雅黑, " microsoft="">个人简介</span></strong></p><p style="white-space: normal; line-height: 3em;"><span style="font-family: 微软雅黑, " microsoft="">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-family: 微软雅黑, " microsoft="">{:htmlspecialchars_decode($team.jianjie)}</span></p><p style="white-space: normal; line-height: 3em;"><strong><span style="font-family: 微软雅黑, " microsoft="">主要服务品牌</span></strong></p><p style="white-space: normal; line-height: 3em;"><span style="font-family: 微软雅黑, " microsoft="">&nbsp; &nbsp; &nbsp; &nbsp;{$team.pingpai}</span></p><p><span style="font-family: 微软雅黑, " microsoft=""><br/></span></p><p><br/></p></div>
+			 </div>
+			<!-- 内容结束 -->
+		</div>
+            {include file='public:partner'/}
+	<div class="slogan">
+		<div class="main">
+			<ul>
+				<li>
+					<img src="/static/index/images/bz01.png" alt="拓展保障">
+					<div>
+						<p>质量保证</p>
+						<span>以专业的团队来保证品质！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz02.png" alt="拓展安全">
+					<div>
+						<p>安全第一</p>
+						<span>以安全因素为前提的活动！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz03.png" alt="拓展价格">
+					<div>
+						<p>价格优惠</p>
+						<span>将不定时的推出优惠方案！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz04.png" alt="拓展服务">
+					<div>
+						<p>24小时服务</p>
+						<span>24小时有人为您提供咨询服务！</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div> 
+	 {include file='public:foot'/}

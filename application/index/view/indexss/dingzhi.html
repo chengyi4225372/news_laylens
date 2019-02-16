@@ -1,0 +1,137 @@
+{include file='public:head'/}
+<div class="inContent cForm">
+		<div class="tit">
+			<img src="/static/index/images/in-title10.png" alt="">
+		</div>
+		<div class="main">
+			<div class="crumbs">
+				<h5>您当前所在的位置：</h5>
+				<a href="{:url('index/index')}">主页</a> > <a href="{:url('index/dingzhi')}">在线定制</a>
+			</div>
+			<!-- 内容 -->
+           <form action="{:url('index/savedz')}" method="post">
+			 <div class="inForm">
+			 	<div class="form-tit">
+			 		<h4>定制团建方案</h4>
+			 	</div>
+			 	<div class="trip">
+			 		<h5>行程信息</h5>
+			 		<ul>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form01.jpg" alt="">
+			 				</div>
+			 				<input type="text" name='cfd' id='cfd' placeholder="请输入出发地" required='' >
+			 			</li>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form02.jpg" alt="">
+			 				</div>
+			 				<input type="text" name='mdd' id='mdd' placeholder="请输入目的地" required=''>
+			 			</li>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form03.jpg" alt="">
+			 				</div>
+			 				<input type="text" name='csrs' id='csrs' placeholder="请输入成人人数" required=''>
+			 			</li>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form04.jpg" alt="">
+			 				</div>
+			 				<input type="text" name='etrs' id='etrs' placeholder="请输入儿童人数" required=''>
+			 			</li>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form05.jpg" alt="">
+			 				</div>
+			 				<input type="text" name='hdts' id='hdts' placeholder="请输入活动天数" required=''>
+			 			</li>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form06.jpg" alt="">
+			 				</div>
+			 				<input type="text" name='hdys' id='hdys' placeholder="请输入活动预算（元/每人）" required=''>
+			 			</li>
+			 			<li>
+			 				<h5>特殊要求：</h5>
+                                                        <textarea name='content' id='content' placeholder="如果您有什么特殊要求请您详细告诉我们，以便我们给您更精彩的方案"></textarea>		
+			 			</li>
+			 		</ul>
+			 	</div>
+			 	<div class="lx">
+			 		<h5>联系信息</h5>
+			 		<ul>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form03.jpg" alt="">
+			 				</div>
+			 				<input type="text" name='name' id='name' placeholder="请输入您的姓名" required=''>
+			 			</li>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form07.jpg" alt="">
+			 				</div>
+			 				<div class="btn">
+			 					<input type="radio" name="sex" value="先生" checked="checked">先生
+			 					<input type="radio" name="sex" value="女士">女士
+			 				</div>
+			 			</li>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form09.jpg" alt="">
+			 				</div>
+			 				<input type="text"  name='tel' id='tel' placeholder="请填写您的手机号码" required=''>
+			 			</li>
+			 			<li>
+			 				<div class="icon">
+			 					<img src="/static/index/images/form10.jpg" alt="">
+			 				</div>
+			 				<input type="text" name='email' id='email' placeholder="请请填写您的电子邮箱" required=''>
+			 			</li>
+			 		</ul>
+			 	</div>
+			 	<input class="true" type="submit"  value="提交定制需求">	
+			 </div>
+             </form>
+			<!-- 内容结束 -->
+		</div>
+		 
+	  </div> 
+	</div>
+        {include file='public:partner'/}
+	<div class="slogan">
+		<div class="main">
+			<ul>
+				<li>
+					<img src="/static/index/images/bz01.png" alt="拓展保障">
+					<div>
+						<p>质量保证</p>
+						<span>以专业的团队来保证品质！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz02.png" alt="拓展安全">
+					<div>
+						<p>安全第一</p>
+						<span>以安全因素为前提的活动！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz03.png" alt="拓展价格">
+					<div>
+						<p>价格优惠</p>
+						<span>将不定时的推出优惠方案！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz04.png" alt="拓展服务">
+					<div>
+						<p>24小时服务</p>
+						<span>24小时有人为您提供咨询服务！</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div> 
+	 {include file='public:foot'/} 

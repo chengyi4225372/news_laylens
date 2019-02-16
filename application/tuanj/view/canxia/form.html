@@ -1,0 +1,60 @@
+{extend name='admin@public/content'}
+
+{block name="content"}
+<form class="layui-form layui-box modal-form-box" action="{:request()->url()}" data-auto="true" method="post">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">小图片</label>
+        <div class="layui-input-block">
+            <input type="text" name="xiao_img" value='{$vo.xiao_img|default=""}' class="layui-input">
+            <span style="color: #ff2c27;">*:建议图片大小845 x 565</span>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">详情页面大图片</label>
+        <div class="layui-input-block">
+            <input type="text" name="big_img" value='{$vo.big_img|default=""}' class="layui-input">
+            <span style="color: #ff2c27;">*:建议图片大小1920 x 1280</span>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">公司简介下二级标题</label>
+        <div class="layui-input-block">
+            <input type="text" name="cate_title" value='{$vo.cate_title|default=""}' required="required" title="请输入标题" placeholder="请输入标题" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">详情标题</label>
+        <div class="layui-input-block">
+            <input type="text" name="xq_title" value='{$vo.xq_title|default=""}' title="请入标输题" placeholder="请入标输题" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">详细信息:</label>
+        <div class="layui-input-block">
+            <textarea name="content" class="layui-textarea" >{$vo.content|default=""}</textarea>
+        </div>
+    </div>
+
+    <div class="hr-line-dashed"></div>
+
+    <div class="layui-form-item text-center">
+        {if isset($vo['id'])}<input type='hidden' value='{$vo.id}' name='id'>{/if}
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <!--<button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>-->
+    </div>
+</form>
+<script>
+    require(['jquery', 'ckeditor'], function() {
+        window.form.render();
+        $('form [name="xiao_img"]').uploadOneImage();
+        $('form [name="big_img"]').uploadOneImage();
+        window.createEditor('[name="content"]', {height: 500});
+    });
+</script>
+{/block}

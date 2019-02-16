@@ -1,0 +1,148 @@
+﻿.brakeLatheAdaptorSearch select,
+.brakeLatheAdaptorSearch input[type="text"]{
+    border: 1px solid #d6d6d6;
+    height: 45px;
+    background: #fff;
+    padding: 8px 12px;
+    font-size: 18px;
+    line-height: 1.428571429;
+    color: #333333;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 100%
+}
+
+#checkAdaptorsButton{
+    text-align: center;
+    background: #c00;
+    color: #fff;
+    font-weight: 700;
+}
+
+#howToMeasureButton{
+    float: left;
+    background: #ccc;
+    font-weight: 700;
+}
+
+.form-wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.brakeLatheAdaptorSearch .w-row{
+    margin: 10px 0;
+}
+.brakeLatheAdaptorSearch .w-row .text{
+    padding: 8px 0;
+}
+
+.buttonContainer{
+    text-align: right;
+}
+
+#searchByMeasuring p{
+    display: inline-block;
+}
+
+.brakeLatheAdaptorSearch #searchByVehicle select{
+    width: 95%;
+}
+
+.w-tab-content{
+    margin-bottom: 40px;
+}
+
+
+.displayVehicleResults .title{
+    text-align: center;
+}
+
+.brakeLatheAdaptorSearch td, .brakeLatheAdaptorSearch th{
+    border: 1px solid #d6d6d6;
+    text-align: center;
+}
+
+.brakeLatheAdaptorSearch td{
+    padding: 10px;
+}
+
+.brakeLatheAdaptorSearch th{
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.brakeLatheAdaptorSearch table{
+    margin: 0 auto;
+}
+
+.brakeLatheAdaptorSearch table .part{
+    width: 25%;
+}
+
+.displayMeasuringResults{
+    margin-top: 50px;
+}
+
+.inputError{
+    color: #c00;
+    text-align: center;
+}
+
+#locationSelectContainer,
+#optionSelectContainer{
+    display: none;
+}
+
+.brakeLatheAdaptorSearch .results img{
+    width: 110px;
+}
+
+
+
+@media (min-width: 768px){
+    .brakeLatheAdaptorSearch select,
+    .brakeLatheAdaptorSearch input[type="text"]{
+        width: 50%
+    }
+    .form-wrapper{
+        width: 95%;
+    }
+}
+
+@media (min-width: 992px){
+    .brakeLatheAdaptorSearch select,
+    .brakeLatheAdaptorSearch input[type="text"]{
+        width: 60%
+    }
+    .form-wrapper{
+        width: 90%;
+    }
+}
+
+@media (min-width: 1200px){
+    .brakeLatheAdaptorSearch select,
+    .brakeLatheAdaptorSearch input[type="text"]{
+        width: 65%
+    }
+    .form-wrapper{
+        width: 85%;
+    }
+}
+
+@media (max-width: 1200px){
+    .w-col-large-12{
+        width: 100% !important;
+    }
+}
+
+
+@media (min-width: 1500px){
+    .brakeLatheAdaptorSearch select,
+    .brakeLatheAdaptorSearch input[type="text"]{
+        width: 70%
+    }
+    .form-wrapper{
+        width: 80%;
+    }
+}

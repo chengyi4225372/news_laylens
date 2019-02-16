@@ -1,0 +1,9 @@
+$(document).ready(function(){if($('#benefits-content').length){$('#benefits-content').appendTo('#benefits')}
+if(!($('#videos .video').length)){$('#videos').hide();}
+if(!($('#features .feature').length)){$('#features').hide();}
+if(!($('#awardSection .award').length)){$('#awardSection').hide();}
+$('#awardSection').appendTo('#newAwardSection');$('#testimonialSection').appendTo('#newTestimonialSection');$('#linkSection').appendTo('#productLinkSection');$('#sliderOEMSection').appendTo('#productOEMSection');$('#documents .document').each(function(){var documentTitle=$('a',this).text();if(documentTitle.indexOf("Brochure")!=-1){$(this).appendTo($('#brochure .documents'));}
+else if(documentTitle.indexOf("Spec Sheet")!=-1){$(this).appendTo($('#specsheet .documents'));}
+else{$(this).appendTo($('#other .documents'));}});if(!($('#brochure .documents .document').length)){$('#brochure').hide();}
+if(!($('#specsheet .documents .document').length)){$('#specsheet').hide();}
+if(!($('#other .documents .document').length)){$('#other').hide();}});var videoDisplayer=function(){var show=function(youTubeId,name){$('#displayVideoModal .modal-title').text(name);$('iframe[name="preview-youtube"]').attr('src','//www.youtube.com/embed/'+youTubeId);$('#displayVideoModal').show();};return{show:show};}();$('#displayVideoModal .modal-close, #displayVideoModal').click(function(){$('#displayVideoModal').hide();$('#productVideoModal').hide();$('iframe[name="preview-youtube"]').attr('src','');});$('#benefits-modal').click(function(){$('#benefits-modal').hide();$('.modal-video-wrapper','#benefits-modal').empty();}).children().click(function(e){return false;});

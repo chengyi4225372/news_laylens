@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="120px" viewBox="0 0 90 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>saving-time-and-money-smartweight-touch-image-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M873.828125,107.546875 L885.390625,107.546875 L885.390625,127.859375 L873.828125,127.859375 L873.828125,152 L847.5,152 L847.5,127.859375 L803.515625,127.859375 L801.953125,111.765625 L847.5,38.484375 L847.5,38.25 L873.828125,38.25 L873.828125,107.546875 Z M827.03125,107.546875 L847.5,107.546875 L847.5,72.546875 L845.859375,75.203125 L827.03125,107.546875 Z" id="path-1"></path>
+        <filter x="-4.2%" y="-3.1%" width="113.2%" height="109.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.65327381   0 0 0 0 0.65327381   0 0 0 0 0.65327381  0 0 0 0.718636775 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Landing-Page-Open" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1057.000000, -2244.000000)">
+        <g id="Group-51" transform="translate(256.000000, 2207.000000)">
+            <g id="saving-time-and-money-smartweight-touch-image-2">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#40AD49" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

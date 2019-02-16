@@ -1,0 +1,35 @@
+/* Appplied to the parent UL element for the index */
+.PageList {
+	width: auto;
+	font-size: 12px;
+	line-height: 16px;
+	font-family: Verdana, Tahoma, Arial, Helvetica, Sans-Serif;
+}
+
+/* Appplied to nested UL elements */
+.PageList ul {
+	font-size: 10px;
+	line-height: 13px;
+}
+
+/* Appplied to the LI element for each tab entry */
+.PageItem {
+}
+
+/* Applied to the SPAN element for the tab name in each entry */
+.PageName {
+	font-weight: bold;
+}
+
+/* Applied to the SPAN element for the tab description in each entry */
+.PageDescription
+{}
+
+/* Applied to the SPAN element for the list of keywords in each entry */
+.PageKeywords
+{}
+
+/* Applied to the SPAN element for the list of modules in each entry */
+.PageModules {
+	font-style: italic;
+}

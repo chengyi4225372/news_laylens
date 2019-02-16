@@ -1,0 +1,231 @@
+{include file='public:head'/}
+<div class="inContent">
+		<div class="main">
+			<!-- 内容 -->
+			<div class="crumbs">
+				<h5>您当前所在的位置：</h5>
+				<a href="{:url('index/index')}">主页</a> > <a href="{:url('index/anli')}">{$listname}</a>
+			</div>
+			<div class="training" id="training">
+				<div class="t-title">
+					<h3>{$anli.title}</h3>
+				</div>
+				<div id="slideBox" class="tBanner">
+				    <div class="bd">
+				    <ul>
+                    <li><img src="{$anli.zansimg}" /></li>
+				    </ul>
+				  </div>
+				</div>
+				<div class="tab">
+					<div class="heat">
+						<ul>
+							<li>
+								<span>{$anli.nandu}</span>
+								<p>难度</p>
+							</li>
+							<li>
+								<span>{$anli.tese}</span>
+								<p>特色</p>
+							</li>
+							<li>
+								<span>{$anli.tuijian}</span>
+								<p>推荐</p>
+							</li>
+						</ul>
+					</div>
+					<div class="part02">
+						<div class="text1">	
+                        <div class="te_coont">{$anli.jianjie}</div>	
+						</div>
+
+						<div class="xx">
+							<ul>
+								<li>
+									<p>人数：</p>
+									<span>{$anli.reshu}人</span>
+								</li>
+								<li>
+									<p>天数：</p>
+									<span>{$anli.tianshu}</span>
+								</li>
+								<li>
+									<p>车程：</p>
+									<span>{$anli.cheshu}</span>
+								</li>
+								<li>
+									<p>行程：</p>
+									<span>{$anli.bushu}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="price">
+						<p>
+							
+						</p>
+						<span></span>
+					</div>
+					<a class="btn">{$anli.price}元/人起</a>
+				</div>
+				<div class="t-left">
+                    <div class="cont_content">
+                        <p style=";text-align: center;font-size: medium;font-family: Cambria;white-space: normal">
+                            {:htmlspecialchars_decode($anli.content)}
+                        </p>
+                            </div>
+				</div>
+				<div class="t-right">
+					<div class="fx">
+						<p>
+							 每一次<span>分享</span>
+						</p>
+						<p>
+							都将成为一种正能量！
+						</p>
+						<div class="bdsharebuttonbox" data-tag="share_1">
+							<a class="bds_weixin" data-cmd="weixin"></a>
+							<a class="bds_tsina" data-cmd="tsina"></a>
+							<a class="bds_renren" data-cmd="renren"></a>
+							<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+						</div>
+					</div>
+					<div class="hot">
+						<div class="tit">
+							<p>热门拓展</p>
+						</div>
+						<ul>
+                                                    {volist name="hots" id="hot"}
+                                                         <li>
+								<a href="{:url('index/tjdetail')}?id={$hot.id}">
+									<img src="{$hot.img}" alt="{$hot.name}">
+									<div>
+										<p>
+											{$hot.name}
+										</p>
+										<div class="day">天数：{$hot.tianshu}天</div>
+										<div class="jg">￥<span>{$hot.price}</span>/人</div>
+									</div>
+								</a>
+							</li>  
+                                                        {/volist}
+						</ul>
+					</div>
+				</div>
+			</div>
+
+	
+			<!-- 内容结束 -->
+		</div>
+{include file='public:partner'/}
+	<div class="slogan">
+		<div class="main">
+			<ul>
+				<li>
+					<img src="/static/index/images/bz01.png" alt="拓展保障">
+					<div>
+						<p>质量保证</p>
+						<span>以专业的团队来保证品质！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz02.png" alt="拓展安全">
+					<div>
+						<p>安全第一</p>
+						<span>以安全因素为前提的活动！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz03.png" alt="拓展价格">
+					<div>
+						<p>价格优惠</p>
+						<span>将不定时的推出优惠方案！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz04.png" alt="拓展服务">
+					<div>
+						<p>24小时服务</p>
+						<span>24小时有人为您提供咨询服务！</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div> 
+<script>
+		
+
+		var inList = document.getElementById('inList');
+		var training = document.getElementById('training');
+		var inLi = document.getElementById('inList').getElementsByTagName('li');
+
+		for(var i = 0 ; i<inLi.length;i++){
+
+			   inLi[i].onclick=function(){
+
+			   		     for(var j = 0 ; j<inLi.length; j++){
+
+			   		   	    inLi[j].style.borderBottom = '';
+			   		 	    inLi[j].children[0].style.color = "#333";
+			   		  }
+
+			   	      this.style.borderBottom = "2px solid #e50012"
+			   	      this.children[0].style.color = "#e50012";
+			   	      
+			   }
+		}
+		var h = inList.offsetTop + training.offsetTop
+ 
+		window.onscroll =function(){
+
+				var scroll = document.body.scrollTop || document.documentElement.scrollTop;
+				 
+			   if(scroll <= h){
+
+
+			   		 inList.style.position = "initial";
+			   		 inList.style.top = '0';
+
+			    	 
+			    }
+			    else{
+
+			    	 
+			    	inList.style.position = "fixed";
+			    	inList.style.top = '0';
+			    	inList.style.marginTop = '0';
+			    	 	 
+			    	 
+			    	 
+			    }
+		}
+
+
+		 
+		window._bd_share_config = {
+			 
+			share : [{
+				"bdSize" : 106,
+
+			}],
+			slide : [{	   
+				bdImg : 0,
+				bdPos : "right",
+				bdTop : 100
+			}],
+			image : [{
+				viewType : 'list',
+				viewPos : 'top',
+				viewColor : 'black',
+				viewSize : '35',
+				viewList : ['qzone','tsina','huaban','tqq','renren']
+			}],
+			selectShare : [{
+				"bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
+			}]
+		}
+		with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+	 	
+	 	 
+	</script>
+        	 {include file='public:foot'/}

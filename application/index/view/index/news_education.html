@@ -1,0 +1,115 @@
+{include file="common/header"/}
+        <div class="content">
+            <div>
+                <div class="w-row">
+                    <div class="contactModal" id="global-contactusform">
+                        <div class="modal-container">
+                            <div class="modal-content">
+                                <div class="modal-body form-horizontal">
+                                    <div class="modal-rep-section"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-col w-col-12">
+                        <div class="w-row expanded">
+                            <div id="dnn_ContentPane2" class="content-pane-2 w-col-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-3089"><a name="3089"></a>
+                                <div class="C_Container">
+                                    <div id="dnn_ctr3089_contentPane" class="containerContent">
+                                        <div id="dnn_ctr3089_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                        <div id="dnn_ctr3089_HtmlModule_lblContent" class="Normal">
+                                            <div class="w-row">
+                                                <div class="w-col w-col-9 w-col-medium-12">
+                                                    <div class="product-section-white">
+                                                        {foreach $news as $key=>$vo}
+                                                        <strong>{$vo.time|date='Y-m-d H:i'}</strong><br>
+                                                        <a href="{:url('index/press')}?id={$vo.id}" target="_blank">{$vo.title|raw}</a>
+                                                        <br>
+                                                        <hr width="90%">
+                                                        {/foreach}
+                                                    </div>
+                                                </div>
+                                                <div class="w-col w-col-3 w-col-medium-12">
+                                                    <div class="post-module-wrapper">
+                                                        <!-- todo 招聘信息-->
+                                                        <!--<div class="social-wrapper"><img src="__HOME__/home/Portals/0/Images/larwence.png">-->
+                                                            <!--<p class="text">11250  Lawrence Drive-->
+                                                                <!--<br>-->
+                                                                <!--Bridgeton, MO 63044-->
+                                                                <!--<br>-->
+                                                                <!--+1(314) 731-0000</p>-->
+                                                            <!--<div class="social-link-wrapper">-->
+                                                                <!--<a class="w-inline-block" href="https://www.facebook.com/hunterengineeringcompany" target="_blank"><img class="social-icon" src="__HOME__/home/portals_1/0/Images/facebook.svg">-->
+                                                                <!--</a>-->
+                                                                <!--<a class="w-inline-block" href="https://twitter.com/HunterEngCo" target="_blank"><img class="social-icon" src="__HOME__/home/portals_1/0/Images/twitter.svg">-->
+                                                                <!--</a>-->
+                                                                <!--<a class="w-inline-block" href="https://www.youtube.com/user/HunterEngCo" target="_blank"><img class="social-icon" src="__HOME__/home/portals_1/0/Images/youtube.svg">-->
+                                                                <!--</a>-->
+                                                                <!--<a class="w-inline-block" href="https://www.linkedin.com/company/hunter-engineering" target="_blank"><img class="social-icon" src="__HOME__/home/portals_1/0/Images/linkedin.svg">-->
+                                                                <!--</a>-->
+                                                            <!--</div>-->
+                                                            <!--<a class="centered main-button product-download w-button" href="https://www.linkedin.com/company/hunter-engineering">Connect</a>-->
+                                                        <!--</div>-->
+                                                        <!-- todo 注释-->
+                                                        <!--<div class="recent-article-wrapper">-->
+                                                           <!--<h3 class="heading-2 social">Recent Articles</h3>-->
+                                                           <!--<br>-->
+                                                           <!--<div>-->
+                                                               <!--<div class="about-link-wrapper w-clearfix"><img class="double-arrow-right news-link" src="__HOME__/home/portals_1/0/Images/double-arrow-right.svg">-->
+                                                                   <!--<div class="about-content-wrapper" data-ix="double-arrow"><a class="no-decoration-link" href="/about-hunter/news/press/2017/hunter-releases-educational-video-to-answer-the-question-why-do-cars-need-wheel-alignment">Hunter releases educational video to answer the question: Why Do Cars Need Wheel Alignment?</a>-->
+                                                                   <!--</div>-->
+                                                               <!--</div>-->
+                                                               <!--<br>-->
+                                                               <!--<div class="about-link-wrapper w-clearfix"><img class="double-arrow-right news-link" src="__HOME__/home/portals_1/0/Images/double-arrow-right.svg">-->
+                                                                   <!--<div class="about-content-wrapper" data-ix="double-arrow"><a class="no-decoration-link" href="/about-hunter/news/press/2017/hunter-releases-revolution-with-walkaway-operation-video">Hunter releases Revolution<sup>&trade;</sup> with WalkAway<sup>&trade;</sup> operation video</a>-->
+                                                                   <!--</div>-->
+                                                               <!--</div>-->
+                                                               <!--<br>-->
+                                                               <!--<div class="about-link-wrapper w-clearfix"><img class="double-arrow-right news-link" src="__HOME__/home/portals_1/0/Images/double-arrow-right.svg">-->
+                                                                   <!--<div class="about-content-wrapper" data-ix="double-arrow"><a class="no-decoration-link" href="/about-hunter/news/press/2017/hunter-engineering-revolution-tire-changer-with-walkaway-operation-wins-2018-global-media-award-at-the-sema-show">Hunter Engineering's Revolution<sup>&trade;</sup> tire changer with WalkAway<sup>&trade;</sup> operation wins 2018 Global Media Award at the SEMA Show! </a>-->
+                                                                   <!--</div>-->
+                                                               <!--</div>-->
+                                                           <!--</div>-->
+                                                       <!--</div>-->
+                                                       <!--<div class="recent-article-wrapper">-->
+                                                           <!--<h3 class="heading-2 social">Recent Video</h3>-->
+                                                           <!--<br>-->
+                                                           <!--<div id="aboutVideoImage"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/SPMBB2ID0nY"><img class="drop-shadow" src="__HOME__/home/portals_1/0/Media/walkway-video-image.jpg"></a>-->
+                                                           <!--</div>-->
+                                                       <!--</div>-->
+                                                   </div>
+                                                   <div class="modal-wrapper" data-ix="modal-display">
+                                                       <div class="modal-container">
+                                                           <div class="modal-top w-clearfix">
+                                                               <div class="modal-title">&nbsp;</div>
+                                                               <div class="modal-close" data-ix="modal-close">x</div>
+                                                           </div>
+                                                           <div class="modal-video-wrapper"><iframe class="video-embed" src="/portals/0/#" frameborder="0" allowfullscreen=""></iframe></div>
+                                                       </div>
+                                                   </div>
+                                                   <script type="text/javascript">
+                                                       $(document).ready(function() {
+                                                           $('iframe.video-embed').attr('src', '');
+                                                       });
+                                                       $('#aboutVideoImage .video-button').click(function() {
+                                                           var videoPath = $(this).attr('video');
+                                                           $('iframe.video-embed').attr('src', videoPath);
+                                                       });
+                                                       $
+                                                       $('.modal-close').click(function() {
+                                                           $('iframe.video-embed').attr('src', '');
+                                                       });
+                                                   </script>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div></div>
+                               </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4446"><a name="4446"></a>
+                            </div>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   {include file="common/footer"/}

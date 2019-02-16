@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.specCategory .categoryToggle {
+	display: none;
+}
+
+.specAttributes dl {
+	background: #e8e8e8;
+}
+
+@media (min-width:768px) {
+.dl-horizontal dt {
+	padding: 5px 10px;
+}
+}

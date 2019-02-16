@@ -1,0 +1,114 @@
+{include file='public:head'/}
+<div class="inBanner">
+		<img src="/static/index/images/in-banner.png" alt="">
+		<!-- 搜索 -->
+		<div class="tit">
+			<img src="/static/index/images/in-title07.png" alt="">
+		</div>
+                <div class="retrieve">
+			<div class="theMain">
+				<div>
+					<h5>拓展场地:</h5>       
+					<ul>
+						<li><a href="{:url('index/tjtwo')}">不限</a></li>
+
+                                                {volist name="categorys" id="category"}
+                                                <li><a href="{:url('index/tjsearch')}?lid=4&cid={$category.id}">{$category.name}</a></li>
+                                                {/volist}
+					</ul>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+	<div class="inContent">
+		<div class="main">
+			<div class="crumbs">
+				<h5>您当前所在的位置：</h5>
+				<a href="{:url('index/index')}">主页</a> > <a href="{:url('index/tjtwo')}">{$listname}</a>
+			</div>
+			<div class="itemList">
+                            {volist name="goods" id="good"}
+                                <div class="index">
+					<div class="pic">
+						<img src="{$good.img}" alt="">
+					</div>
+					<div class="right">
+						<h4>{$good.name}</h4>
+						<div class="text">
+							<h5>旅行亮点</h5>
+							<p>
+								{$good.liangdian}
+							</p>
+						</div>
+						<div class="reason">
+							<div>
+								<p>推荐理由：</p>
+								<span>{$good.liyou}</span>
+							</div>
+							<div>
+								<p>适合条件：</p>
+								<span>人数：{$good.reshu}人   天数：{$good.tianshu}天    车程：{$good.cheshu}   行程：{$good.bushu}</span>
+							</div>
+							<div class="db">
+								<p>
+									￥<em>{$good.price}</em><b>/起</b>
+								</p>
+								<a href="{:url('index/tjdetail')}?id={$good.id}">查看方案</a>
+								<ul>
+									<li>
+										难度指数:<span>{$good.nandud}</span>
+									</li>
+									<li>
+										特色指数:<span>{$good.tesed}</span>	
+									</li>
+									<li>
+										推荐指数:<span>{$good.tuijiand}</span>	
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+                            {/volist}
+				<div class="page">
+					{:htmlspecialchars_decode($goods->render())}
+				</div>
+			</div>
+		</div>
+             {include file='public:partner'/}
+	<div class="slogan">
+		<div class="main">
+			<ul>
+				<li>
+					<img src="/static/index/images/bz01.png" alt="拓展保障">
+					<div>
+						<p>质量保证</p>
+						<span>以专业的团队来保证品质！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz02.png" alt="拓展安全">
+					<div>
+						<p>安全第一</p>
+						<span>以安全因素为前提的活动！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz03.png" alt="拓展价格">
+					<div>
+						<p>价格优惠</p>
+						<span>将不定时的推出优惠方案！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz04.png" alt="拓展服务">
+					<div>
+						<p>24小时服务</p>
+						<span>24小时有人为您提供咨询服务！</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div> 
+	 {include file='public:foot'/}

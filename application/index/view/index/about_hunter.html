@@ -1,0 +1,594 @@
+{include file="common/header" /}
+
+
+<div class="content">
+    <div>
+        <div class="w-row">
+            <div class="contactModal" id="global-contactusform">
+                <div class="modal-container">
+                    <div class="modal-content">
+                        <div class="modal-top w-clearfix">
+                            <button type="button" class="close modal-close">x</button>
+                            <h4 class="modal-title">Contact Us</h4>
+                        </div>
+                        <div class="modal-body form-horizontal">
+                            <div class="modal-rep-section"></div>
+
+                            <div>
+                                For a price quote, or on-site demo, contact our representative directly using zip code or country search.<br>
+                            </div>
+                            <hr />
+                            <div class='formWrapper'>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-name" class="control-label">Name:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-name" name="globalcontactform-name" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-phone" class="control-label">Phone:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="tel" class="form-control" id="globalcontactform-phone" name="globalcontactform-phone" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-email" class=" control-label">Email:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="email" class="form-control" id="globalcontactform-email" name="globalcontactform-email" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-zip" class=" control-label">Postal Code:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-zip" name="globalcontactform-zip" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <hr />
+                                <div class="form-group w-row">
+                                    <label for="globalcontactform-address" class=" control-label">Address:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-address" name="globalcontactform-address" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="globalcontactform-city" class="control-label">City:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-city" name="globalcontactform-city" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="globalcontactform-state" class="control-label">State:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-state" name="globalcontactform-state" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row input-comment">
+                                    <label for="globalcontactform-comment" class="control-label">Comments:</label>
+                                    <div class="contact-form-input">
+                                        <textarea class="form-control" id="globalcontactform-comment" name="globalcontactform-comment"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group w-row flex-column">
+                                    <label class="control-label">Interested in:</label>
+                                    <div>
+                                        <div class="w-col w-col-4">
+                                            <input type="checkbox" name="interest" value="AL" class="interestCheckBox"><span>Alignment Systems</span><br>
+                                            <input type="checkbox" name="interest" value="TC" class="interestCheckBox"><span>Tire Changers</span><br>
+                                            <input type="checkbox" name="interest" value="BL" class="interestCheckBox"><span>Brake Lathes</span><br>
+                                        </div>
+                                        <div class="w-col w-col-4">
+                                            <input type="checkbox" name="interest" value="HD" class="interestCheckBox"><span>Heavy-Duty</span><br>
+                                            <input type="checkbox" name="interest" value="WB" class="interestCheckBox"><span>Wheel Balancers</span><br>
+                                            <input type="checkbox" name="interest" value="LR" class="interestCheckBox"><span>Lift Rack</span><br>
+                                        </div>
+                                        <div class="w-col w-col-4">
+                                            <input type="checkbox" name="interest" value="QC" class="interestCheckBox"><span>Inspection</span><br>
+                                            <input type="checkbox" name="interest" value="OT" class="interestCheckBox"><span>Other</span><br>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input id="globalcontactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                                    <input type="hidden" id="HiddenRepNumber" value="" />
+                                    <input type="hidden" id="HiddenRepEmail" value="" />
+                                    <input type="hidden" id="IsDistributor" value="" />
+                                    <input type="hidden" id="ContactType" value="" />
+                                    <input type="hidden" id="Origin" value="" />
+                                    <input type="hidden" id="Country" value="" />
+                                    <input type="hidden" id="GatherFormInfo" value="true" />
+                                    <input type="hidden" id="HiddenZipCode" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactModal" id="trainer-contactusform">
+                <div class="modal-container">
+                    <div class="modal-content">
+                        <div class="modal-top w-clearfix">
+                            <button type="button" class="close modal-close">x</button>
+                            <h4 class="modal-title">Contact Us</h4>
+                        </div>
+                        <div class="modal-body form-horizontal">
+                            <div class="modal-rep-section"></div>
+                            <hr />
+                            <div class='formWrapper'>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="trainer-contactform-name" class="control-label">Name: *</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-name" name="trainer-contactform-name" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="trainer-contactform-email" class=" control-label">Email:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="email" class="form-control" id="trainer-contactform-email" name="trainer-contactform-email" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <hr />
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-phone" class="control-label">Phone:</label>
+                                    <div class="contact-form-input">
+                                        <input type="tel" class="form-control" id="trainer-contactform-phone" name="trainer-contactform-phone" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-address" class=" control-label">Address:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-address" name="trainer-contactform-address" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-city" class="control-label">City:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-city" name="trainer-contactform-city" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-state" class="control-label">State:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-state" name="trainer-contactform-state" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-zip" class=" control-label">Postal Code:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-zip" name="trainer-contactform-zip" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-comment" class="control-label">Comments:</label>
+                                    <div class="contact-form-input">
+                                        <textarea class="form-control" id="trainer-contactform-comment" name="trainer-contactform-comment"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input id="trainer-contactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                                    <input type="hidden" id="HiddenRepEmail" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-icon-wrapper" data-ix="about-slideout-modal"><img class="rep-icon" data-ix="rep-slideout-modal" src="/portals/0/Images/about-icon.svg">
+                <div class="rep-icon-text" data-ix="rep-slideout-modal">about menu</div>
+            </div>
+            <div class="side-menu-wrapper">
+                <div class="about-slideout-close" data-ix="close-about-slideout-modal">X</div>
+                <div class="mobile-dropdown-wrapper">
+                    <div class="menu-option" data-ix="mobile-menu-dropdown">
+                        <div class="w-row">
+                            <div class="w-col w-col-10">
+                                <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about- Lawrence/who-we-are">who we are</a>
+                                </div>
+                            </div>
+                            <div class="w-col w-col-2">
+                                <div class="side-menu-arrow-column"><img class="menu-arrow" src="/portals/0/Images/menu-arrow.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary-menu-wrapper">
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/history">history</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/who-we-are/innovation">innovation team</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/who-we-are/sales-service">sales &amp; service</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" target="_blank" href="/Portals/0/documents/7222-T_MadeInUSA.pdf">made in the usa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-dropdown-wrapper">
+                    <div class="menu-option" data-ix="mobile-menu-dropdown">
+                        <div class="w-row">
+                            <div class="w-col w-col-10">
+                                <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/locations">where to go</a>
+                                </div>
+                            </div>
+                            <div class="w-col w-col-2">
+                                <div class="side-menu-arrow-column"><img class="menu-arrow" src="/portals/0/Images/menu-arrow.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary-menu-wrapper">
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/About-Hunter/Locations/St-Louis-MO">St. Louis, MO</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/About-Hunter/Locations/Durant-MS">Durant, MS</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/About-Hunter/Locations/Raymond-MS">Raymond, MS</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/About-Hunter/Locations/Canada">Canada</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/About-Hunter/Locations/Germany">Germany</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-dropdown-wrapper">
+                    <div class="menu-option" data-ix="mobile-menu-dropdown">
+                        <div class="w-row">
+                            <div class="w-col w-col-10">
+                                <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/news/press">news & education</a>
+                                </div>
+                            </div>
+                            <div class="w-col w-col-2">
+                                <div class="side-menu-arrow-column"><img class="menu-arrow" src="/portals/0/Images/menu-arrow.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary-menu-wrapper">
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/trade-shows">trade show calendar</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/news/press">press releases</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/news/highlights">newsletters</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/company-overview/awards">awards</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-dropdown-wrapper">
+                    <div class="menu-option" data-ix="mobile-menu-dropdown">
+                        <div class="w-row">
+                            <div class="w-col w-col-10">
+                                <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/careers">careers</a>
+                                </div>
+                                <div class="side-menu-dropdown-option"><a target="_blank" class="light-color link text" href="https://hunterengineeringcc.orders.com/shop/home/">shop merchandise</a>
+                                </div>
+                            </div>
+                            <div class="w-col w-col-2">
+                                <div class="side-menu-arrow-column"><img class="menu-arrow" src="/portals/0/Images/menu-arrow.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary-menu-wrapper">
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="about-hunter/careers/co-op">co-op</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/careers/sales">sales</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="/about-hunter/careers/service">service</a>
+                            </div>
+                        </div>
+                        <div class="secondary-menu-option">
+                            <div class="side-menu-dropdown-option"><a class="light-color link text" href="#">manufacturing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-col w-col-12">
+                <div class="w-row">
+                    <div id="dnn_ContentPane" class="content-pane w-col w-col-12 DNNEmptyPane"></div>
+                </div>
+                <div class="w-row expanded">
+                    <div id="dnn_LeftPane75" class="left-pane-75 w-col-9 w-col-medium-12 DNNEmptyPane"></div>
+                    <div id="dnn_RightPane25" class="right-pane-25 w-col-3 w-col-medium-12 DNNEmptyPane"></div>
+                </div>
+                <div class="w-row expanded">
+                    <div id="dnn_ContentPane2" class="content-pane-2 w-col-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-516"><a name="516"></a>
+                        <div class="C_Container">
+                            <div id="dnn_ctr516_contentPane" class="containerContent"><div id="dnn_ctr516_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                <div id="dnn_ctr516_HtmlModule_lblContent" class="Normal">
+                                    <div class="about product-hero-section">
+                                        <h2 class="product-hero-text" data-ix="scroll-reveal">About  Lawrence</h2>
+                                    </div>
+                                    <div class="product-section-gray">
+                                        <h1 class="heading-2 main-color">About  Lawrence Engineering</h1>
+                                        <p class="text"> Lawrence Engineering Company&reg; is the global leader in alignment systems, wheel and tire service, brake service and inspection lane equipment.
+                                            Lawrence&reg; equipment is approved and used by vehicle manufacturers, automobile and truck dealers, tire dealers and service facilities around the world.</p>
+                                    </div>
+                                </div>
+                            </div></div>
+                        </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4062"><a name="4062"></a>
+                        <div class="C_Container">
+                            <div id="dnn_ctr4062_contentPane" class="containerContent"><div id="dnn_ctr4062_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                <div id="dnn_ctr4062_HtmlModule_lblContent" class="Normal">
+                                    <div class="no-padding product-landing product-section-white about-menu">
+                                        <div>
+                                            <div class="main-slider w-clearfix w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                                <div class="w-slider-mask">
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="slider-image-wrapper"><a href="/about-hunter/who-we-are"><img class="slider-image" src="/portals/0/Images/about-us/about-landing-1.jpg"></a>
+                                                            </div>
+                                                            <div>
+                                                                <a class="main-button w-button" href="/about-hunter/who-we-are">Who We Are</a>
+                                                            </div>
+                                                            <div class="features slider-description-wrapper">
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/history">Our History</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/about-hunter/who-we-are/innovation">Innovation Team</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/about-hunter/who-we-are/sales-service">Sales &amp; Service</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" target="_blank" href="/Portals/0/documents/7222-T_MadeInUSA.pdf">Made in the USA</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" target="_blank" href="/about-hunter/who-we-are/innovation#benefits-content">Patents</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="slider-image-wrapper"><a href="/about-hunter/locations"><img class="slider-image" src="/portals/0/Images/about-us/about-landing-2.jpg"></a>
+                                                            </div>
+                                                            <div>
+                                                                <a class="main-button w-button" href="/about-hunter/locations">Where to go</a>
+                                                            </div>
+                                                            <div class="features slider-description-wrapper">
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/About-Hunter/Locations/St-Louis-MO">St. Louis, MO</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/About-Hunter/Locations/Durant-MS">Durant, MS</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/About-Hunter/Locations/Raymond-MS">Raymond, MS</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/About-Hunter/Locations/Canada">Canada</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/About-Hunter/Locations/Germany">Germany</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="slider-image-wrapper"><a href="/about-hunter/news"><img class="slider-image" src="/portals/0/Images/about-us/about-landing-3.jpg"></a>
+                                                            </div>
+                                                            <div>
+                                                                <a class="main-button w-button" href="/about-hunter/news">News &amp; Education</a>
+                                                            </div>
+                                                            <div class="features slider-description-wrapper">
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/about-hunter/trade-shows">Trade Show Calendar</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/about-hunter/news/press">Press Releases</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/about-hunter/news/highlights">Highlights</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/about-hunter/company-overview/awards">Awards</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="slider-image-wrapper"><a href="/about-hunter/careers"><img class="slider-image" src="/portals/0/Images/about-us/about-landing-4.jpg"></a>
+                                                            </div>
+                                                            <div>
+                                                                <a class="main-button w-button" href="/about-hunter/careers">Careers</a>
+                                                            </div>
+                                                            <div class="features slider-description-wrapper">
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/about-hunter/careers/co-op">Co-op</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/about-hunter/careers/sales">Sales</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" href="/about-hunter/careers/service">Service</a>
+                                                                </div>
+                                                                <div class="about-link-wrapper"><img class="double-arrow-right" src="/portals/0/Images/double-arrow-right.svg"><a class="no-decoration-link" data-ix="double-arrow" target="_blank" href="/Portals/0/documents/7222-T_MadeInUSA.pdf">Manufacturing</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="left-slider-arrow w-slider-arrow-left">
+                                                    <div class="left slider-navigation w-icon-slider-left"></div>
+                                                </div>
+                                                <div class="right-slider-arrow w-slider-arrow-right">
+                                                    <div class="right slider-navigation w-icon-slider-right"></div>
+                                                </div>
+                                                <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div>
+                        </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4063"><a name="4063"></a>
+                        <div class="C_Container">
+                            <div id="dnn_ctr4063_contentPane" class="containerContent"><div id="dnn_ctr4063_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                <div id="dnn_ctr4063_HtmlModule_lblContent" class="Normal">
+                                    <div id="displayVideoModal" class="modal-wrapper" data-ix="modal-display">
+                                        <div class="modal-container">
+                                            <div class="modal-top w-clearfix">
+                                                <div class="modal-title">&nbsp;</div>
+                                                <div class="modal-close" data-ix="modal-close">x</div>
+                                            </div>
+                                            <div class="modal-video-wrapper"><iframe class="video-embed" name="preview-youtube" src="/portals/0/#" frameborder="0" allowfullscreen=""></iframe></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section about-video-section" id="homePageVideoSlider">
+                                        <h2 class="heading-1 main-color section-padding" data-ix="scroll-reveal">featured videos</h2>
+                                        <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                            <div class="w-slider-mask">
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/0B1YPiBw3XA"><img class="slider-image" src="/portals/0/Images/about-video-1.jpg"></a>
+                                                        </div>
+                                                        <div class="slider-description-wrapper">
+                                                            <h3 class="heading-2">The  Lawrence Story</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/PNuc-YmaClM"><img class="slider-image" src="/portals/0/Images/about-video-2.jpg"></a>
+                                                        </div>
+                                                        <div class="slider-description-wrapper">
+                                                            <h3 class="heading-2">Designed and built in the USA</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/8Kv0e4O9gII"><img class="slider-image" src="/portals/0/Images/about-video-3.jpg"></a>
+                                                        </div>
+                                                        <div class="slider-description-wrapper">
+                                                            <h3 class="heading-2">Collet Manufacturing</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/wXgyZBgTcbg"><img class="slider-image" src="/portals/0/Images/raymond-ms-operations-vid.jpg"></a>
+                                                        </div>
+                                                        <div class="slider-description-wrapper">
+                                                            <h3 class="heading-2">Raymond, MS Operations</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/d2ghUI-Rb7A"><img class="slider-image" src="/portals/0/Images/about-video-4.jpg"></a>
+                                                        </div>
+                                                        <div class="slider-description-wrapper">
+                                                            <h3 class="heading-2">Durant, MS Operations</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w-slider-arrow-left">
+                                                <div class="left slider-navigation w-icon-slider-left"></div>
+                                            </div>
+                                            <div class="w-slider-arrow-right">
+                                                <div class="right slider-navigation w-icon-slider-right"></div>
+                                            </div>
+                                            <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                                        </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $('iframe.video-embed').attr('src', '');
+                                        });
+                                        $('#homePageVideoSlider .video-button').click(function() {
+                                            var videoPath = $(this).attr('video');
+                                            $('iframe.video-embed').attr('src', videoPath);
+                                        });
+                                        $
+                                        $('.modal-close').click(function() {
+                                            $('iframe.video-embed').attr('src', '');
+                                        });
+
+                                        $('#displayVideoModal .modal-close, #displayVideoModal').click(function () {
+                                            $('#displayVideoModal').hide();
+                                            $('#productVideoModal').hide();
+                                            $('iframe[name="preview-youtube"]').attr('src', '');
+                                        });
+                                    </script>
+                                </div>
+                            </div></div>
+                        </div></div></div>
+                </div>
+                <div class="w-row expanded">
+                    <div id="dnn_LeftPane25" class="left-pane-25 w-col-3 w-col-small-12 DNNEmptyPane"></div>
+                    <div id="dnn_RightPane75" class="right-pane-75 w-col-9 w-col-small-12 DNNEmptyPane"></div>
+                </div>
+                <div class="w-row expanded">
+                    <div id="dnn_ContentPane3" class="content-pane-3 w-col-12 DNNEmptyPane"></div>
+                </div>
+                <div class="w-row expanded">
+                    <div id="dnn_LeftPane33" class="left-pane-33 w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                    <div id="dnn_CenterPane33" class="center-pane-33 w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                    <div id="dnn_RightPane33" class="right-pane-33 w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                </div>
+                <div class="w-row expanded">
+                    <div id="dnn_ContentPane4" class="content-pane-4 w-col-12 DNNEmptyPane"></div>
+                </div>
+                <div class="w-row">
+                    <div class="left-pane-66 w-col-8 w-col-small-12">
+                        <div class="w-row">
+                            <div id="dnn_LeftCol66" class="left-col-66 w-col-12 DNNEmptyPane"></div>
+                            <div id="dnn_HalfColumnLeft" class="half-column-left w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                            <div id="dnn_HalfColumnRight" class="half-column-right w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                            <div id="dnn_LeftCol66Middle" class="left-col-66 w-col-12 DNNEmptyPane"></div>
+                            <div id="dnn_HalfColumnLeft2" class="half-column-left w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                            <div id="dnn_HalfColumnRight2" class="half-column-right w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                        </div>
+                    </div>
+                    <div id="dnn_RightCol33" class="right-pane-33 w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                </div>
+                <div id="dnn_ContentPane5" class="content-pane-5 w-col-12 DNNEmptyPane"></div>
+                <div class="w-row">
+                </div>
+                <div class="w-row">
+                    <div id="dnn_LeftCol33" class="left-col-33 w-col-4 w-col-small-12 DNNEmptyPane"></div>
+                    <div id="dnn_RightCol66" class="right-col-66 w-col-8 w-col-small-12 DNNEmptyPane"></div>
+                </div>
+                <div class="w-row">
+                    <div id="dnn_ContentPane6" class="content-pane-6 w-col-12 w-col-small-12 DNNEmptyPane"></div>
+                </div>
+                <div class="w-row">
+                    <div id="dnn_LeftPane50" class="left-pane-50 w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                    <div id="dnn_RightPane50" class="right-pane-50 w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                </div>
+                <div class="w-row">
+                    <div id="dnn_ContentPane7" class="content-pane-7 w-col-12 DNNEmptyPane"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{include file="common/footer"/}

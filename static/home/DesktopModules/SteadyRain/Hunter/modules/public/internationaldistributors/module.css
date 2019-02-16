@@ -1,0 +1,301 @@
+/* Card Design */
+.internationaldistributors .international-card-wrapper {
+	box-shadow: 0px 2px 5px #aaa;
+}
+
+.sticky-item{
+     width: 100%;
+}
+
+.sticky-base{
+    position: relative;
+}
+
+@media (max-width: 767px) {
+	.location-detail {
+		padding-left: 0px;
+		margin-left: 0px;
+	}
+	.international-card-wrapper {
+		text-align: center;
+	}
+
+	.location-detail .international-column.contact{
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.international-column.contact {
+		margin-top: 0px;
+	}
+}
+
+.internationaldistributors .map-wrapper {
+	border-top: none;
+	position: relative;
+}
+
+/*.browseLocContainer{
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 25%;
+  max-width: 475px;
+  min-width: 240px;
+  padding: 10px 25px;
+  background-color: rgba(232,232,232,0.8);
+}*/
+
+.filter-section{
+    padding: 10px 25px;
+    background-color: rgba(232,232,232,0.8);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-width: 250px;
+    box-shadow: 0px 2px 5px #aaa;
+}
+
+.map>.row {
+	margin-left: 15px;
+}
+
+.map .googleMap {
+	height: 585px;
+}
+
+.map {
+	position: relative;
+	width: 100%;
+}
+
+.browselocations.map #map_canvas_centers {
+	height: 600px;
+}
+
+#map_canvas_centers {
+	height: 600px;
+}
+
+.findCourse {
+	float: left;
+	margin-top: 15px;
+}
+
+select {
+	width: 100%;
+}
+
+.browseCountry.searchInput, .browseState.searchInput, .browseLocation.searchInput, .searchLocation.searchInput, .searchCourse.searchInput {
+	width: 100%;
+}
+
+.ui-autocomplete li a {
+	font-size: 14px;
+	border-radius: 0;
+	border: 0;
+}
+
+.ui-autocomplete li a:hover, .ui-autocomplete li a:focus, .ui-autocomplete li .ui-state-focus {
+	background: none;
+	border: 0;
+	margin: 0;
+}
+
+.col-md-9 {
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+}
+
+.representative.clearfix {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.location-detail .infocontent {
+	width: 98%;
+	clear: both;
+	margin: 10px;
+	border-bottom: 1px solid #c6c8c9;
+	padding: 10px;
+}
+
+ul.location-detail, ul.manager-detail {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+hr {
+	border-top-color: #000 !important;
+}
+
+.manager-detail li {
+	clear: both;
+}
+
+.addressInfo {
+	float: left;
+	padding-right: 15px;
+}
+
+.contactInfo {
+	text-align: right;
+	float: right;
+}
+
+.location-detail .addressInfo {
+	float: left;
+	display: block;
+	padding-right: 15px;
+	clear: left;
+	width: 50%;
+	margin-top: 15%;
+}
+
+.location-detail .contactInfo {
+	display: block;
+	width: 50%;
+	text-align: center;
+	float: right;
+}
+
+.location-detail .distributorInfo {
+	display: block;
+	width: 50%;
+	text-align: center;
+	float: right;
+}
+
+.distributor-display-country div {
+	margin-bottom: -35px;
+	display: inline-block;
+	float: left;
+	clear: right;
+	padding-top: 16px;
+	font-weight: 700;
+}
+
+.distributor-logo {
+	padding: 10px 0;
+	margin: 1px;
+}
+
+.floatFix {
+	display: block;
+	clear: both;
+}
+
+.browseLocContainer select{
+    border: 1px solid #d6d6d6;;
+    height: 45px;
+    background: #fff;
+    padding: 8px 12px;
+    font-size: 18px;
+    line-height: 1.428571429;
+    color: #333333;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+a.resetBrowse.w-button{
+    text-align: center;
+    background: #ccc;
+    color: #444;
+    font-weight: 700;
+	width: 100%;
+}
+
+.button-row{
+	margin-top: 10px;
+}
+
+.info-window .distributor-logo{
+	text-align: center;
+}
+
+.info-window #content{
+	display: inline-block;
+}
+
+.info-window .profile{
+	float: right;
+}
+
+.info-window .main-button{
+	max-width: none;
+}
+
+@media (min-width: 768px) {
+	.location-detail .addressInfo {
+		float: left;
+		clear: none;
+		padding-right: 15px;
+		width: 33%;
+		margin: 15px 0;
+	}
+	.location-detail .contactInfo {
+		text-align: right;
+		display: inline-block;
+		width: 33%;
+		float: none;
+	}
+	.location-detail .distributorInfo {
+		display: inline-block;
+		width: 33%;
+		text-align: center;
+		float: none;
+	}
+	.distributor-display-country {
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-weight: 700;
+	}
+	.distributor-display-country div {
+		margin-bottom: -35px;
+		padding-top: 0;
+		display: block;
+		float: none;
+		clear: none;
+	}
+}
+
+
+@media (min-width: 900px){
+    .filter-section{
+        position: absolute;
+        padding: 10px;
+    }
+
+    .sticky-base{
+        position: absolute;
+        top: 50px;
+        left: 90px;
+        width: 25%;
+    }
+}
+
+@media (min-width:1280px) {
+
+    .sticky-absolute{
+        position: absolute;
+        bottom:0;
+        margin: 0 !important;
+    }
+
+    .sticky-fixed{
+        position: fixed;
+        top: 20px;
+    }
+
+    ul.location-detail{
+      list-style: none;
+      width: 66.666666%;
+      margin-left: 33.333333%;
+  }
+}
+
+/*# sourceMappingURL=module.css.map */

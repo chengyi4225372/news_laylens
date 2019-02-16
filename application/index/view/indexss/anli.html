@@ -1,0 +1,106 @@
+{include file='public:head'/}
+<div class="inBanner">
+		<img src="/static/index/images/b-case.png" alt="">
+		<!-- 搜索 -->
+		<div class="tit">
+			<img src="/static/index/images/in-title02.png" alt="">
+		</div>
+        
+		<!--<div class="search">
+			<div class="title">
+				<h4>找方案</h4>
+			</div>
+				<div class="box">
+              <form method="post" action="/plus/search.php" name="formsearch">
+				<input type="text"   name="q" id="search" value="">
+                <input type="hidden" value="titlekeyword" name="searchtype" >
+				<input type="submit" value="">
+                </form>
+			</div>
+		</div>-->
+
+			</div>
+		</div>
+	</div>
+	<div class="inContent">
+		<div class="main">
+			<div class="crumbs">
+				<h5>您当前所在的位置：</h5>
+				<a href="{:url('index/index')}">主页</a> > <a href="{:url('index/anli')}">{$listname}</a>
+			</div>
+			<!-- 内容 -->
+			<div class="inCase">
+				<ul>
+                                    {volist name="anlis" id="anli"}
+                                        <li>
+						<a href="{:url('index/anlidetail')}?id={$anli.id}">
+							<img src="{$anli.yulanimg}" alt="{$anli.title}">
+							<div class="tit">
+								<h4>{$anli.title}</h4>
+							</div>
+							<div class="text">
+								<p>
+									活动人数：<span>{$anli.reshu}人</span>
+								</p>
+								<p>
+									活动天数：<span>{$anli.tianshu}</span>
+								</p>
+								<p>
+									活动地点：<span>{$anli.didian}</span>
+								</p>
+							</div>
+							<div class="jg">
+                            <em>查看案例</em>
+								<p>
+									<span>{$anli.price}</span>元/人起
+								</p>
+                                
+							</div>
+						</a>
+					</li> 
+                                        {/volist}
+				</ul>
+			</div>
+			<div class="page">
+				{:htmlspecialchars_decode($anlis->render())}
+			</div>
+			<!-- 内容结束 -->
+		</div>
+
+        
+{include file='public:partner'/}
+	<div class="slogan">
+		<div class="main">
+			<ul>
+				<li>
+					<img src="/static/index/images/bz01.png" alt="拓展保障">
+					<div>
+						<p>质量保证</p>
+						<span>以专业的团队来保证品质！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz02.png" alt="拓展安全">
+					<div>
+						<p>安全第一</p>
+						<span>以安全因素为前提的活动！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz03.png" alt="拓展价格">
+					<div>
+						<p>价格优惠</p>
+						<span>将不定时的推出优惠方案！</span>
+					</div>
+				</li>
+				<li>
+					<img src="/static/index/images/bz04.png" alt="拓展服务">
+					<div>
+						<p>24小时服务</p>
+						<span>24小时有人为您提供咨询服务！</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div> 
+	 {include file='public:foot'/}

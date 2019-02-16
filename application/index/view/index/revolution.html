@@ -1,0 +1,1323 @@
+{include file="common/header" /}
+
+    <div class="content">
+        <div>
+            <div class="contactModal" id="global-contactusform">
+                <div class="modal-container">
+                    <div class="modal-content">
+                        <div class="modal-top w-clearfix">
+                            <button type="button" class="close modal-close">x</button>
+                            <h4 class="modal-title">Contact Us</h4>
+                        </div>
+                        <div class="modal-body form-horizontal">
+                            <div class="modal-rep-section"></div>
+
+                            <div>
+                                For a price quote, or on-site demo, contact our representative directly using zip code or country search.<br>
+                            </div>
+                            <hr />
+                            <div class='formWrapper'>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-name" class="control-label">Name:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-name" name="globalcontactform-name" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-phone" class="control-label">Phone:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="tel" class="form-control" id="globalcontactform-phone" name="globalcontactform-phone" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-email" class=" control-label">Email:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="email" class="form-control" id="globalcontactform-email" name="globalcontactform-email" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="globalcontactform-zip" class=" control-label">Postal Code:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-zip" name="globalcontactform-zip" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <hr />
+                                <div class="form-group w-row">
+                                    <label for="globalcontactform-address" class=" control-label">Address:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-address" name="globalcontactform-address" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="globalcontactform-city" class="control-label">City:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-city" name="globalcontactform-city" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="globalcontactform-state" class="control-label">State:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="globalcontactform-state" name="globalcontactform-state" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row input-comment">
+                                    <label for="globalcontactform-comment" class="control-label">Comments:</label>
+                                    <div class="contact-form-input">
+                                        <textarea class="form-control" id="globalcontactform-comment" name="globalcontactform-comment"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group w-row flex-column">
+                                    <label class="control-label">Interested in:</label>
+                                    <div>
+                                        <div class="w-col w-col-4">
+                                            <input type="checkbox" name="interest" value="AL" class="interestCheckBox"><span>Alignment Systems</span><br>
+                                            <input type="checkbox" name="interest" value="TC" class="interestCheckBox"><span>Tire Changers</span><br>
+                                            <input type="checkbox" name="interest" value="BL" class="interestCheckBox"><span>Brake Lathes</span><br>
+                                        </div>
+                                        <div class="w-col w-col-4">
+                                            <input type="checkbox" name="interest" value="HD" class="interestCheckBox"><span>Heavy-Duty</span><br>
+                                            <input type="checkbox" name="interest" value="WB" class="interestCheckBox"><span>Wheel Balancers</span><br>
+                                            <input type="checkbox" name="interest" value="LR" class="interestCheckBox"><span>Lift Rack</span><br>
+                                        </div>
+                                        <div class="w-col w-col-4">
+                                            <input type="checkbox" name="interest" value="QC" class="interestCheckBox"><span>Inspection</span><br>
+                                            <input type="checkbox" name="interest" value="OT" class="interestCheckBox"><span>Other</span><br>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input id="globalcontactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                                    <input type="hidden" id="HiddenRepNumber" value="" />
+                                    <input type="hidden" id="HiddenRepEmail" value="" />
+                                    <input type="hidden" id="IsDistributor" value="" />
+                                    <input type="hidden" id="ContactType" value="" />
+                                    <input type="hidden" id="Origin" value="" />
+                                    <input type="hidden" id="Country" value="" />
+                                    <input type="hidden" id="GatherFormInfo" value="true" />
+                                    <input type="hidden" id="HiddenZipCode" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactModal" id="trainer-contactusform">
+                <div class="modal-container">
+                    <div class="modal-content">
+                        <div class="modal-top w-clearfix">
+                            <button type="button" class="close modal-close">x</button>
+                            <h4 class="modal-title">Contact Us</h4>
+                        </div>
+                        <div class="modal-body form-horizontal">
+                            <div class="modal-rep-section"></div>
+                            <hr />
+                            <div class='formWrapper'>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="trainer-contactform-name" class="control-label">Name: *</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-name" name="trainer-contactform-name" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <div class="form-group has-feedback required-form-section w-row">
+                                    <label for="trainer-contactform-email" class=" control-label">Email:*</label>
+                                    <div class="contact-form-input">
+                                        <input type="email" class="form-control" id="trainer-contactform-email" name="trainer-contactform-email" />
+                                    </div>
+                                    <div class="form-control-feedback" aria-hidden="true"></div>
+                                </div>
+                                <hr />
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-phone" class="control-label">Phone:</label>
+                                    <div class="contact-form-input">
+                                        <input type="tel" class="form-control" id="trainer-contactform-phone" name="trainer-contactform-phone" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-address" class=" control-label">Address:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-address" name="trainer-contactform-address" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-city" class="control-label">City:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-city" name="trainer-contactform-city" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-state" class="control-label">State:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-state" name="trainer-contactform-state" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-zip" class=" control-label">Postal Code:</label>
+                                    <div class="contact-form-input">
+                                        <input type="text" class="form-control" id="trainer-contactform-zip" name="trainer-contactform-zip" />
+                                    </div>
+                                </div>
+                                <div class="form-group w-row">
+                                    <label for="trainer-contactform-comment" class="control-label">Comments:</label>
+                                    <div class="contact-form-input">
+                                        <textarea class="form-control" id="trainer-contactform-comment" name="trainer-contactform-comment"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input id="trainer-contactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                                    <input type="hidden" id="HiddenRepEmail" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-row">
+                <div id="dnn_ContentPane" class="content-pane w-col w-col-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row expanded">
+                <div id="dnn_LeftPane75" class="left-pane-75 w-col w-col-9 w-col-medium-12 DNNEmptyPane"></div>
+                <div id="dnn_RightPane25" class="right-pane-25 w-col w-col-3 w-col-medium-12 DNNEmptyPane"></div>
+            </div>
+            <div class="w-row expanded">
+                <div id="dnn_ContentPane2" class="content-pane-2 w-col-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-3976"><a name="3976"></a>
+                    <div class="C_Container">
+                        <div id="dnn_ctr3976_contentPane" class="containerContent"><div id="dnn_ctr3976_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                            <div id="dnn_ctr3976_HtmlModule_lblContent" class="Normal">
+                                <div class="product-hero-section revolution">
+                                    <h2 class="product-hero-text" data-ix="scroll-reveal">REVOLUTION</h2>
+                                    <div class="product-cta-section"></div>
+                                </div>
+                            </div>
+                        </div></div>
+                    </div></div><div class="DnnModule DnnModule-SteadyRainProductCalltoActionModule DnnModule-915"><a name="915"></a>
+                    <div class="C_Container">
+                        <div id="dnn_ctr915_contentPane" class="containerContent"><div id="dnn_ctr915_ModuleContent" class="DNNModuleContent ModSteadyRainProductCalltoActionModuleC">
+                            <div class="steadyrain calltoaction cta-section-desktop">
+                                <div class="product-cta-wrapper">
+                                    <a class="global-contactus first product-cta-icon-wrapper" href="javascript:void(0);" data-origin="ScheduleDemo" data-contacttype="Sales" data-ga-category="Soft Lead" data-ga-action="Requested Demo" data-ga-label="Revolution™">
+                                        <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/schedule.svg">-->
+                                        <div class="product-cta-text">
+                                            schedule<br>
+                                            demonstration
+                                        </div>
+                                    </a>
+                                    <a class="global-contactus product-cta-icon-wrapper" href="javascript:void(0);" data-origin="GetQuote" data-contacttype="Sales" data-ga-category="Soft Lead" data-ga-action="Requested Quote" data-ga-label="Revolution™">
+                                        <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/quote.svg">-->
+                                        <div class="product-cta-text">
+                                            Get<br>
+                                            Pricing Quote
+                                        </div>
+                                    </a>
+                                    <div id="dnn_ctr915_View_brochureItem" class="product-cta-icon-wrapper">
+                                        <a id="dnn_ctr915_View_brochureLink" class="gaAutoTrack brochureLink" data-ga-category="Soft Lead" data-ga-action="Downloaded Brochure" data-ga-label="Revolution™" href="/Portals/0/Media/7430-T(04-18_RevC).pdf" target="_blank">
+                                            <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/download.svg">-->
+                                            <div class="product-cta-text">
+                                                Download<br>
+                                                Brochure
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="dnn_ctr915_View_specSheetItem" class="product-cta-icon-wrapper">
+                                        <a id="dnn_ctr915_View_specSheetLink" class="gaAutoTrack specSheetLink" data-ga-category="Soft Lead" data-ga-action="Downloaded Spec Sheet" data-ga-label="Revolution™" href="/Portals/0/Media/7082-T_04-18.pdf" target="_blank">
+                                            <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/download.svg">-->
+                                            <div class="product-cta-text">
+                                                DOWNLOAD<br>
+                                                spec sheet
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="dnn_ctr915_View_videoItem" class="product-cta-icon-wrapper">
+                                        <a class="actionVideo gaAutoTrack" href="javascript:void(0);" data-ix="reveal-modal" data-youtubeid="rqMVprmn6Jw" data-ga-category="Soft Lead" data-ga-action="Viewed Video" data-ga-label="Revolution™">
+                                            <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/see-it-in-action.svg">-->
+                                            <div class="product-cta-text">
+                                                SEE IT<br>
+                                                IN ACTION
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="dnn_ctr915_View_compareItem" class="product-cta-icon-wrapper">
+                                        <a id="dnn_ctr915_View_compareLink" href="/product-comparison">
+                                            <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/compare.svg">-->
+                                            <div class="product-cta-text">
+                                                compare<br>
+                                                products
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="productVideoModal" class="modal-wrapper" data-ix="modal-display">
+                                    <div class="modal-container">
+                                        <div class="modal-top w-clearfix">
+                                            <span class="modal-title">See it in Action!</span>
+                                            <div class="modal-close" data-ix="modal-close" style="transition: all 0.3s ease 0s;">x</div>
+                                        </div>
+                                        <div class="modal-video-wrapper">
+                                            <iframe class="video-embed" name="see-it-in-action" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div>
+                    </div></div><div class="DnnModule DnnModule-SteadyRainProductDetailsModule DnnModule-914"><a name="914"></a><div id="dnn_ctr914_ContentPane"><div id="dnn_ctr914_ModuleContent" class="DNNModuleContent ModSteadyRainProductDetailsModuleC">
+                    <link rel="stylesheet" href="__STATIC__/home/Portals/_default/Skins/Hunter/includes/Testing Animated Content Slider/AnimatedSlider.css">
+                    <div class="containerForStickemContainer">
+                        <div id="tabs" class="steadyrain additional-info stickem-container">
+
+
+                            <div class="cta-section-mobile"></div>
+                            <div id="description" class="product-section-gray">
+                                <div class="row" style="margin-top: 80px">
+                                    <h1 id="dnn_ctr914_View_h2ProductTitle" class="heading-1 main-color" data-ix="scroll-reveal">Revolution<sup>&trade;</sup> Tire Changer</h1>
+                                </div>
+                                <div class="row">
+                                    <div class="text" style="margin-top:100px;">
+                                        The Revolution<sup>&trade;</sup> tire changer machine is truly one-of-a-kind. This fully automatic tire changer is the easiest tire changer to use in the industry, and recognized as the 2015 Motor Magazine Top 20 Tools Awards, as well as a PTEN Innovation Award and PTEN Innovation Award’s People’ Choice Award all in 2014.
+                                        <br><br>
+                                        Featuring a space-saving wheel lift, "Go" pedal and Powered Press arms <a href="http://www.hunter.com/tire-changers">fully automatic tire changer machine</a> is equipped with everything you need to effortlessly and effectively service vehicles.
+                                        <br><br>
+                                        Step up to the Revolution<sup>&trade;</sup> fully automatic tire changer, and add the convenience and superiority of Hunter Engineering products to your shop.
+                                    </div>
+                                </div>
+                            </div>
+                            <hr id="dnn_ctr914_View_awardRule"></hr>
+                            <!--<div class="product-section-gray" id="awardSection">-->
+                                <!--<div class="row" style="margin-top: 10px">-->
+                                    <!--<h2 id="dnn_ctr914_View_awardHeader" class="heading-1 main-color" data-ix="scroll-reveal">Awards</h2>-->
+                                <!--</div>-->
+                                <!--<div id="animatedContentSlider" class="text w-slider-mask ">-->
+                                    <!--<div class="slideContainer">-->
+
+                                        <!--<div class="contentContainer">-->
+                                            <!--<div class="award">-->
+                                                <!--<img id="dnn_ctr914_View_rAwards_imgAward_0" src="__HOME__/home/Portals/0/Media/856eeaba-3147-46d1-8223-16b00fd3f320.png" /><br />-->
+
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="contentContainer">-->
+                                            <!--<div class="award">-->
+                                                <!--<img id="dnn_ctr914_View_rAwards_imgAward_1" src="__HOME__/home/Portals/0/Media/9f3a8720-d509-4d38-b926-2e211bdf2511.png" /><br />-->
+
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="contentContainer">-->
+                                            <!--<div class="award">-->
+                                                <!--<img id="dnn_ctr914_View_rAwards_imgAward_2" src="__HOME__/home/Portals/0/Media/caa9bb4b-4449-4ce5-8cd9-802b4b7dee30.png" /><br />-->
+
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="contentContainer">-->
+                                            <!--<div class="award">-->
+                                                <!--<img id="dnn_ctr914_View_rAwards_imgAward_3" src="__HOME__/home/Portals/0/Media/undercar-top10-2014.png" /><br />-->
+
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="contentContainer">-->
+                                            <!--<div class="award">-->
+                                                <!--<img id="dnn_ctr914_View_rAwards_imgAward_4" src="__HOME__/home/Portals/0/Media/global-media-award.png" /><br />-->
+
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="slider-arrow" id="left">-->
+                                    <!--<div class="left slider-navigation w-icon-slider-left"></div>-->
+                                <!--</div>-->
+                                <!--<div class="slider-arrow" id="right">-->
+                                    <!--<div class="right slider-navigation w-icon-slider-right"></div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                        <div id="videos" class="no-padding product-section-white slider-section">
+                            <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Featured Videos</h2>
+                            <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                <div class="w-slider-mask">
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('SPMBB2ID0nY', 'REVOLUTION WALKAWAY');">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rVideos_imgVideo_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/walkway-video-image.jpg" /><br />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <div class="name heading-2">REVOLUTION WALKAWAY</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('dq8WbWcfAJg', 'Revolution S');">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rVideos_imgVideo_1" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/revolution-s-video-image.jpg" /><br />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <div class="name heading-2">Revolution S</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('rqMVprmn6Jw', 'Revolution Tire Changer');">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rVideos_imgVideo_2" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/Revolution-Tire-Changer.jpg" /><br />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <div class="name heading-2">Revolution Tire Changer</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('wbPkge2TXEE', 'Revolution Tire Changer - 10 10 10 ');">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rVideos_imgVideo_3" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/Revolution-Tire-Changer---10-10-10.jpg" /><br />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <div class="name heading-2">Revolution Tire Changer - 10 10 10 </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('XYzQUN_O-s0', 'Performance TV - Revolution - SEMA 2015');">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rVideos_imgVideo_4" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/perf-sema-2015.jpg" /><br />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <div class="name heading-2">Performance TV - Revolution - SEMA 2015</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-slider-arrow-left">
+                                    <div class="left slider-navigation w-icon-slider-left"></div>
+                                </div>
+                                <div class="w-slider-arrow-right">
+                                    <div class="right slider-navigation w-icon-slider-right"></div>
+                                </div>
+                                <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                            </div>
+                        </div>
+                        <div id="features" class="slider-section">
+                            <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Features</h2>
+                            <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                <div class="w-slider-mask">
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/revolution-walkaway-4-2018.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">WalkAway<sup>&trade;</sup></h3>
+                                                    <p class="text">80-second unattended bead breaking and demounting process, 25%+ time savings possible if paired with wheel balancing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_1" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/fully-automatic-featured-4-2018.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Fully Automatic</h3>
+                                                    <p class="text">Operator experience is no longer a factor with this fully automatic tire changer. Use the same procedure for all tires and wheels.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_2" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/leverless-tool-head-4-2018.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Leverless Tool Head - Revolution<sup>&trade;</sup></h3>
+                                                    <p class="text" style="margin-top:130px;">The Revolution<sup>&trade;</sup> fully automatic tire changer features a leverless tool head. Demounts without levers and prevents damage to the tire and rim.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_3" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/status-indicator-no-cs.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">status indicator lamp</h3>
+                                                    <p class="text">Helpful signal indicates when the machine is in operation, stopped, or requires operator</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_4" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/147d89d6-620e-43a3-847a-fc8230b83f64.jpeg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">"Go" Pedal</h3>
+                                                    <p class="text">Press “Go” to make selection, hold “Go” to allow sequence to advance automatically and release “Go” to pause at any time.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_5" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/tpms-protect-feature-4-2018.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">TPMS Protection is Automatic</h3>
+                                                    <p class="text">The Revolution™ tracks the sensor during mounting and demounting.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_6" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/bead-loosening.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Bead Loosening Rollers</h3>
+                                                    <p class="text">Bead loosening rollers work the best for the widest variety of tires.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_7" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/match-mounting-feature-4-2018.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Match-Mounting – Revolution<sup>&trade;<sup /></h3>
+                                                    <p class="text">The bead roller discs on the Revolution<sup>&trade;</sup> tire changer machine allow the tire to spin on rim, helping match-mount stiffest point on tire to low spot on rim.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_8" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/bead-massage.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Bead Massage</h3>
+                                                    <p class="text">Rollers apply force to the tire walls, assisting proper bead seating.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_9" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/powered-press-arms-feature-4-2018.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Powered Press Arms</h3>
+                                                    <p class="text">Mount virtually any tire with the powered press arms on this fully automatic tire changer. Powered for maximum control.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_10" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/b160310f-1897-412a-96da-f903f4332e99.jpeg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Space Saving Wheel Lift</h3>
+                                                    <p class="text">Spindle lifts tire directly into position. The built-in wheel lift on this tire changer machine reduces it's overall footprint.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_11" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/fast-inflation-feature-4-2018.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Fast Inflation</h3>
+                                                    <p class="text">This tire changer machine inflates faster than traditional foot pedal inflation systems by 33%.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_12" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/clamp-versitility-feature-4-2018.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Clamping Versatility</h3>
+                                                    <p class="text">The three position cone on this fully automatic tire changer handles wide variety of wheels.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_13" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/37a85245-ece3-4926-87cf-df3f2cefe96e.jpeg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Animations & Videos</h3>
+                                                    <p class="text">Animations train operator “on-the-job.” Gain video training for new users and video library of special procedures.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_14" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/made-in-usa-no-logo.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Designed and built in the USA</h3>
+                                                    <p class="text">Hunter products are engineered in the USA by 75+ technical staff, and built in four manufacturing facilities in the USA employing 1000+</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-section-wrapper w-slide">
+                                        <div class="slide-wrapper">
+                                            <div class="feature">
+                                                <div class="slider-image-wrapper">
+                                                    <img id="dnn_ctr914_View_rFeatures_imgFeature_15" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/hunter-service-feature.jpg" />
+                                                </div>
+                                                <div class="descriptionContainer slider-description-wrapper">
+                                                    <h3 class="heading-2">Hunter Service</h3>
+                                                    <p class="text">Hunter Engineering deploys the largest service force in the industry with more
+                                                        than 390+ highly-qualified, independent representatives</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-slider-arrow-left">
+                                    <div class="left slider-navigation w-icon-slider-left"></div>
+                                </div>
+                                <div class="w-slider-arrow-right">
+                                    <div class="right slider-navigation w-icon-slider-right"></div>
+                                </div>
+                                <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                            </div>
+                        </div>
+                        <div id="benefits">
+                        </div>
+
+                        <div id="productLinkSection"></div>
+
+                        <div id="documents" class="product-section-white">
+                            <div class="row">
+                                <h2 class="heading-1 main-color" data-ix="scroll-reveal">documents</h2>
+                                <p style="line-height:5;">&nbsp;</p>
+                            </div>
+                            <div class="section-text section-padding document-wrapper">
+                                <div class="w-col w-col-12 document">
+                                    <a id="dnn_ctr914_View_rDocs_docLink_0" href="__STATIC__/home/Portals/0/Media/7082-T_04-18.pdf" target="_blank"><div class="doc-icon">
+                                        <img  style ="hieght:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>Revolution - Spec Sheet</a>
+                                    <p>TCR1S Specification Sheet</p>
+                                </div>
+                                <div class="w-col w-col-12 document">
+                                    <a id="dnn_ctr914_View_rDocs_docLink_1" href="__STATIC__/home/Portals/0/Media/7430-T(04-18_RevC).pdf" target="_blank"><div class="doc-icon">
+                                        <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>Revolution - Tire Changer Brochure</a>
+                                    <p>Fully Automatic and Easy-to-Use</p>
+                                </div>
+                                <div class="w-col w-col-12 document">
+                                    <a id="dnn_ctr914_View_rDocs_docLink_2" href="__STATIC__/home/Portals/0/Media/6817-T.pdf" target="_blank"><div class="doc-icon">
+                                        <img style ="hieght:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>Revolution - Tire Changer Testimonial Brochure</a>
+                                    <p>Testimonials from Shops that use Hunter's Revolution Tire Changer</p>
+                                </div>
+                                <div class="w-col w-col-12 document">
+                                    <a id="dnn_ctr914_View_rDocs_docLink_3" href="__STATIC__/home/Portals/0/Media/7068-T.pdf" target="_blank"><div class="doc-icon">
+                                        <img  style ="hieght:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>Tire Changer Decision Guide Brochure</a>
+                                    <p>Choosing the right model for your shop</p>
+                                </div>
+                                <div class="w-col w-col-12 document">
+                                    <a id="dnn_ctr914_View_rDocs_docLink_4" href="__STATIC__/home/Portals/0/Media/4042-T.pdf" target="_blank"><div class="doc-icon">
+                                        <img  style ="hieght:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>Tire Changer Accessories Brochure</a>
+                                    <p>Tire Changer Accessories Brochure</p>
+                                </div>
+                                <div class="doc-breakdown" id="brochure">
+                                    <div class="doc-content-wrapper">
+                                        <div class=" heading-2 doc-section-heading">brochure</div>
+                                        <div class="documents"></div>
+                                    </div>
+                                </div>
+                                <div class="doc-breakdown " id="specsheet">
+                                    <div class="doc-content-wrapper">
+                                        <div class=" heading-2 doc-section-heading">spec sheet</div>
+                                        <div class="documents"></div>
+                                    </div>
+                                </div>
+                                <div class="doc-breakdown" id="other">
+                                    <div class="doc-content-wrapper">
+                                        <div class=" heading-2 doc-section-heading">other</div>
+                                        <div class="documents"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="productOEMSection"></div>
+                        <div id="newTestimonialSection"></div>
+
+                    </div>
+                </div>
+                    <div id="newAwardSection"></div>
+                    <div id="displayVideoModal" class="modal-wrapper" data-ix="modal-display">
+                        <div class="modal-container">
+                            <div class="modal-top w-clearfix">
+                                <div class="modal-title"></div>
+                                <div class="modal-close" data-ix="modal-close" style="transition: all 0.3s ease 0s;">x</div>
+                            </div>
+                            <div class="modal-video-wrapper">
+                                <iframe class="video-embed" name="preview-youtube" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript" Src="__STATIC__/homes/Portals/_default/Skins/Hunter/includes/Testing Animated Content Slider/AnimatedSlider.js"></script>
+                </div></div>
+                </div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4280"><a name="4280"></a>
+                <div class="C_Container">
+                    <div id="dnn_ctr4280_contentPane" class="containerContent"><div id="dnn_ctr4280_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                        <div id="dnn_ctr4280_HtmlModule_lblContent" class="Normal">
+
+                            <div id="comm100-button-dynamic"></div>
+                            <script type="text/javascript">
+                                var Comm100API=Comm100API||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({div_id:"comm100-button-dynamic"}),t.site_id=1000335,t.dynamic=true,e("https://ent.comm100.com/chatserver/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://entmax.comm100.com/chatserver/livechat.ashx?siteId=")},5e3)})(Comm100API||{})
+                            </script>
+
+                        </div>
+                    </div></div>
+                </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4259"><a name="4259"></a>
+                <div class="C_Container">
+                    <div id="dnn_ctr4259_contentPane" class="containerContent"><div id="dnn_ctr4259_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                        <div id="dnn_ctr4259_HtmlModule_lblContent" class="Normal">
+                            <div id="testimonialSection">
+                                <div class="product-section-gray no-padding">
+                                    <h2 data-ix="scroll-reveal" class="heading-2 main-color section-padding">What our customers are saying</h2>
+                                    <div data-animation="slide" data-hide-arrows="1" data-duration="500" class="main-slider testimonial w-slider">
+                                        <div class="slider-mask w-slider-mask">
+                                            <div class="w-clearfix w-slide">
+                                                <div class="testimonial-slider-content-wrapper background-image-1 revolution"></div>
+                                                <div class="testimonial-slider-content-wrapper">
+                                                    <div class="testimonial-content-wrapper">
+                                                        <h3 class="heading-1">Bert's Service - Athens, Il</h3>
+                                                        <p>I would recommend the Revolution<sup>&trade;</sup> to any shop<br>
+                                                            regardless of volume. Today&rsquo;s assemblies are<br>
+                                                            getting more and more complicated. The<br>
+                                                            Revolution<sup>&trade;</sup> has helped us change complicated<br>
+                                                            assemblies with speed and efficiency.</p>
+                                                        <p class="bold">Bert Kincaid - Owner, Bert's Service</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w-clearfix w-slide">
+                                                <div class="testimonial-slider-content-wrapper background-image-2 revolution"></div>
+                                                <div class="testimonial-slider-content-wrapper">
+                                                    <div class="testimonial-content-wrapper">
+                                                        <h3 class="heading-1">Madison Tire Co., Inc. - Madison, NJ</h3>
+                                                        <p>When we saw the Hunter Revolution<sup>&trade;</sup> tire changer<br>
+                                                            it occurred to us that this machine could become<br>
+                                                            the great equalizer and put all our techs on<br>
+                                                            an equal plane.</p>
+                                                        <p class="bold">John Kirwan - Owner, Madison Tire Co., Inc.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w-clearfix w-slide">
+                                                <div class="testimonial-slider-content-wrapper background-image-3 revolution"></div>
+                                                <div class="testimonial-slider-content-wrapper">
+                                                    <div class="testimonial-content-wrapper">
+                                                        <h3 class="heading-1">Plaza Mercedez-Benz - St. Louis, MO</h3>
+                                                        <p>We see a lot of run flats and low profile tires<br>
+                                                            and the Revolution<sup>&trade;</sup> has helped us handle these<br>
+                                                            faster while still protecting TPMS sensors.</p>
+                                                        <p class="bold">Matt Prunty - Service Manager, Plaza Mercedes-Benz</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="left-slider-arrow w-slider-arrow-left">
+                                            <div class="slider-navigation left w-icon-slider-left"></div>
+                                        </div>
+                                        <div class="right-slider-arrow w-slider-arrow-right">
+                                            <div class="slider-navigation right w-icon-slider-right"></div>
+                                        </div>
+                                        <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny w-slider-nav w-round"></div>
+                                    </div>
+                                </div>
+                                <!--<div class="product-section-white">-->
+                                    <!--<h2 data-ix="scroll-reveal" class="heading-2 main-color">#Hunterrevolution</h2>-->
+                                    <!--<div class="embed-section w-embed w-script">-->
+                                        <!--<script async="" src="https://cdn.hypemarks.com/pages/a5b5e5.js"></script>-->
+                                        <!--<div class="tintup" data-id="hunter-revolution-mijohnson" data-columns="4" data-mobilescroll="true" data-clickformore="true" data-personalization-id="877607" style="height:500px;width:100%;"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div></div>
+                </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4024"><a name="4024"></a>
+                <div class="C_Container">
+                    <div id="dnn_ctr4024_contentPane" class="containerContent"><div id="dnn_ctr4024_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                        <div id="dnn_ctr4024_HtmlModule_lblContent" class="Normal">
+                            <div id="benefits-content">
+                                <div class="product-section-white">
+                                    <div>
+                                        <h2 data-ix="scroll-reveal" class="heading-2 main-color">Productivity Technology</h2>
+                                    </div>
+                                    <div class="super-tech-wrapper top">
+                                        <div class="div-row w-clearfix">
+                                            <div class="div-column-half-left">
+                                                <div data-ix="fade-in-from-left" class="super-tech-img-wrapper right-align"><img src="__STATIC__/home/bortals/0/Images/add-capacity-new-clamp-4-2018.png" class="productivity-main-image"></div>
+                                            </div>
+                                            <div class="div-column-half-right">
+                                                <ul class="desc-list">
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">25%+ Time Reduction Possible</h4>
+                                                        <p class="text">80-second, unattended bead breaking and demounting process leads to 25%+ time savings when paired with wheel balancing</p>
+                                                    </li>
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">More productive service</h4>
+                                                        <p class="text">Walkaway mode frees the operator for other tasks while the machine demounts the next tire in the set</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="super-tech-section-1" data-scroll-time=".3" class="super-tech-drop-section">
+                                    <div data-ix="scroll-reveal-2-remain" class="text centered bold main-color">Learn more about the benefits of autonomous walkaway operation</div>
+                                    <a href="#super-desc-drop-1" data-ix="super-desc-drop" class="plus-sign centered w-inline-block"><img src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-1" data-ix="super-desc-close" class="plus-sign-sticky w-inline-block">
+                                    <img src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-1" data-ix="super-desc-close" class="plus-sign-top w-inline-block"><img src="/portals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a>
+                                    <div data-ix="super-desc-sticky" id="super-desc-drop-1" data-scroll-time=".3" class="super-desc-drop-container">
+                                        <div class="super-desc-drop-wrapper no-bottom-padding">
+                                            <div class="w-container">
+                                                <p class="text centered">Automatic and autonomous operation saves time, effort, and mistakes.</p>
+                                            </div>
+                                        </div>
+                                        <div class="super-desc-drop-wrapper">
+                                            <div class="w-container"><img src="__STATIC__/home/bortals/0/revolution-new-clamp-timeline-4-2018.png"></div>
+                                        </div>
+                                        <div class="super-desc-drop-wrapper">
+                                            <div class="w-container">
+                                                <div class="w-row">
+                                                    <div class="w-col w-col-5"><img src="__STATIC__/home/bortals/0/Images/walkaway-logo-image-1.png" class="margin-bottom">
+                                                        <p class="text margin-bottom">The TCR1X allows the operator to &ldquo;walk away&rdquo; during bead breaking and demounting process, and can lead to a 25%+ time savings when paired with wheel balancing.</p>
+                                                        <ul class="checkmark-list">
+                                                            <li data-ix="scroll-reveal-2-remain" class="margin-bottom">
+                                                                <p class="text">Available for tires 2 through 4 in a set</p>
+                                                            </li>
+                                                        </ul>
+                                                        <ul class="checkmark-list">
+                                                            <li data-ix="scroll-reveal-2-remain" class="margin-bottom">
+                                                                <p class="text">Status indicator lamp signals when the machine is in operation, stopped, or needs requires operator</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="w-col w-col-4"><img src="__STATIC__/home/bortals/0/Images/revolution-walkaway-equipment-stacklight.png"></div>
+                                                    <div class="w-col w-col-3"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-image-2.png"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="super-desc-drop-wrapper">
+                                            <div class="w-container">
+                                                <div data-ix="scroll-reveal-2-remain" class="text centered bold margin-bottom">The Operator&rsquo;s Responsibilities When Using WalkAway bead breaking and demount</div>
+                                                <div class="w-row">
+                                                    <div class="w-col w-col-4"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-image-7.png" class="center margin-bottom">
+                                                        <ul class="checkmark-list">
+                                                            <li data-ix="scroll-reveal-2-remain" class="margin-bottom">
+                                                                <p class="text">Load and unload the assembly</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="w-col w-col-4"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-image-10.png" class="center margin-bottom">
+                                                        <ul class="checkmark-list">
+                                                            <li data-ix="scroll-reveal-2-remain" class="margin-bottom">
+                                                                <p class="text">Orient the TPMS and enable WalkAway</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="w-col w-col-4"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-image-11.png" class="center margin-bottom">
+                                                        <ul class="checkmark-list">
+                                                            <li data-ix="scroll-reveal-2-remain" class="margin-bottom">
+                                                                <p class="text">Offload old tire</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-section-white">
+                                    <div class="super-tech-wrapper top">
+                                        <div class="div-row w-clearfix">
+                                            <div class="div-column-half-left w-hidden-small w-hidden-tiny">
+                                                <ul class="desc-list">
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Increase operator safety</h4>
+                                                        <p class="text">Fully automatic keeps operators hands and body safely away from the machine. Wheel lift protects operator&rsquo;s back</p>
+                                                    </li>
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Reduce risk of assembly damage</h4>
+                                                        <p class="text">Automatic procedure protects expensive rims and tires. Polymer tools ensure scratch free operation</p>
+                                                    </li>
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Increase TPMS Safety</h4>
+                                                        <p class="text">Machine constantly monitors TPMS location. Automatically mounts and demounts with best TPMS procedures</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="div-column-half-right">
+                                                <div data-ix="fade-in-from-right" class="super-tech-img-wrapper"><img src="__STATIC__/home/bortals/0/Images/revolution-safety-image-2-4-2018.png" class="productivity-main-image"></div>
+                                            </div>
+                                            <div class="div-column-half-left w-hidden-main w-hidden-medium">
+                                                <ul class="desc-list">
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Increase operator safety</h4>
+                                                        <p class="text">Fully automatic keeps operators hands and body safely away from the machine. Wheel lift protects operator&rsquo;s back</p>
+                                                    </li>
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Reduce risk of assembly damage</h4>
+                                                        <p class="text">Automatic procedure protects expensive rims and tires. Polymer tools ensure scratch free operation</p>
+                                                    </li>
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Increase TPMS Safety</h4>
+                                                        <p class="text">Machine constantly monitors TPMS location. Automatically mounts and demounts with best TPMS procedures</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="super-tech-section-3" data-scroll-time=".3" class="super-tech-drop-section">
+                                    <div data-ix="scroll-reveal-2-remain" class="text centered bold main-color">Learn more about increasing safety</div>
+                                    <a href="#super-desc-drop-3" data-ix="super-desc-drop" class="plus-sign centered w-inline-block"><img src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-3" data-ix="super-desc-close" class="plus-sign-sticky w-inline-block"><img src="/portals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-3" data-ix="super-desc-close" class="plus-sign-top w-inline-block"><img src="/portals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a>
+                                    <div data-ix="super-desc-sticky" id="super-desc-drop-3" data-scroll-time=".3" class="super-desc-drop-container">
+                                        <div class="super-desc-drop-wrapper no-bottom-padding">
+                                            <div class="w-container">
+                                                <p class="text centered">Fully automatic adds safety.</p>
+                                            </div>
+                                        </div>
+                                        <div class="super-desc-drop-wrapper">
+                                            <div class="max-width-drawer-container">
+                                                <div class="w-row">
+                                                    <div class="w-col w-col-3">
+                                                        <div>
+                                                            <div class="margin-bottom"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-icon-1.png" class="inline-block margin-right">
+                                                                <div data-ix="scroll-reveal-2-remain" class="text bold inline-block">Position Safety</div>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="checkmark-list">
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">Operator stands back and lets the machine do the work</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="margin-bottom"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-icon-2.png" class="inline-block margin-right">
+                                                                <div data-ix="scroll-reveal-2-remain" class="text bold inline-block">Leverless Safety</div>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="checkmark-list">
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">No levers to hit operator</p>
+                                                                    </li>
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">Automatic press arms replace using levers for mounting</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="margin-bottom"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-icon-3.png" class="inline-block margin-right">
+                                                                <div data-ix="scroll-reveal-2-remain" class="text bold inline-block">Clamping Safety</div>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="checkmark-list">
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">Operator&rsquo;s hands stay away from the assembly</p>
+                                                                    </li>
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">No pinch points</p>
+                                                                    </li>
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">No risk of rim slipping</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="margin-bottom"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-icon-4.png" class="inline-block margin-right">
+                                                                <div data-ix="scroll-reveal-2-remain" class="text bold inline-block">Wheel Lift Safety</div>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="checkmark-list">
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">Protects operator&rsquo;s back</p>
+                                                                    </li>
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">No need to lift heavy assemblies</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="w-col w-col-6"><img src="__STATIC__/home/bortals/0/Images/fully-automatic-adds-safety-image-3-4-2018.png" class="center"></div>
+                                                    <div class="w-col w-col-3">
+                                                        <div>
+                                                            <div class="margin-bottom"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-icon-5.png" class="inline-block margin-right">
+                                                                <div data-ix="scroll-reveal-2-remain" class="text bold inline-block">TPMS Safety</div>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="checkmark-list">
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">Monitors TPMS location constantly</p>
+                                                                    </li>
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">Won&rsquo;t allow tire to be mounted or demounted in unsafe TPMS location</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="margin-bottom"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-icon-6.png" class="inline-block margin-right">
+                                                                <div data-ix="scroll-reveal-2-remain" class="text bold inline-block">Inflation Safety</div>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="checkmark-list">
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">Inflation station algorithm fills to set pressure automatically - not necessary to stand on foot pedal to inflate</p>
+                                                                    </li>
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">Inflation controls keep operator away from assembly</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="margin-bottom"><img src="__STATIC__/home/bortals/0/Images/autonomous-walkaway-icon-6.png" class="inline-block margin-right">
+                                                                <div data-ix="scroll-reveal-2-remain" class="text bold inline-block">Tire &amp; Wheel Safety</div>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="checkmark-list">
+                                                                    <li data-ix="scroll-reveal-2-remain">
+                                                                        <p class="text">Automatic procedure protects rim and tire</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-section-white">
+                                    <div class="super-tech-wrapper top">
+                                        <div class="div-row w-clearfix">
+                                            <div class="div-column-half-left">
+                                                <div data-ix="fade-in-from-left" class="super-tech-img-wrapper right-align">
+                                                    <img src="__STATIC__/home/bortals/0/Images/tcr-productivity-image-4.png" class="productivity-main-image"></div>
+                                            </div>
+                                            <div class="div-column-half-right">
+                                                <ul class="desc-list">
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Reduce critical decisions during operation</h4>
+                                                        <p class="text">Revolution requires only four key decisions from the operator, getting new techs productive faster</p>
+                                                    </li>
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">All techs can be experts</h4>
+                                                        <p class="text">Everyone on your tire changing team can be equally productive with simple, fully automatic operation</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="super-tech-section-6" data-scroll-time=".3" class="super-tech-drop-section">
+                                    <div data-ix="scroll-reveal-2-remain" class="text centered bold main-color">Learn more about eliminating the experience gap</div>
+                                    <a href="#super-desc-drop-6" data-ix="super-desc-drop" class="plus-sign centered w-inline-block">
+                                        <img src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-6" data-ix="super-desc-close" class="plus-sign-sticky w-inline-block">
+                                    <img src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-6" data-ix="super-desc-close" class="plus-sign-top w-inline-block"><img src="/portals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a>
+                                    <div data-ix="super-desc-sticky" id="super-desc-drop-6" data-scroll-time=".3" class="super-desc-drop-container">
+                                        <!--<div class="super-desc-drop-wrapper no-bottom-padding">-->
+                                            <!--<div class="w-container">-->
+                                                <!--<p class="text centered">The Revolution can elevate your tire-changing team with differing experience levels to a team of experts.</p>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <div class="super-desc-drop-wrapper">
+                                            <div class="w-container">
+                                                <div style="margin-bottom: -5%;">
+                                                    <div class="rev-video w-hidden-small w-hidden-tiny" style="margin-bottom: -5%;">
+                                                        <div style="padding: 110.56% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/266206548" style="position:absolute;left: -3%;top: 0%;width: 105%;h;height: 100%;" frameborder="0" allowfullscreen=""></iframe></div>
+                                                        <script src="https://player.vimeo.com/api/player.js"></script>
+                                                    </div>
+                                                    <div class="rev-image w-hidden-main w-hidden-medium">
+                                                        <img src="__STATIC__/home/bortals/0/Images/experience-gap-drawer-image.png" data-ix="scroll-reveal" srcset="/portals/0/Images/experience-gap-drawer-image-p-500.png 500w, /portals/0/Images/experience-gap-drawer-image-p-800.png 800w, /portals/0/Images/experience-gap-drawer-image.png 935w" sizes="100vw" class="center">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-section-white">
+                                    <div class="super-tech-wrapper top">
+                                        <div class="div-row w-clearfix">
+                                            <div class="div-column-half-left w-hidden-small w-hidden-tiny">
+                                                <ul class="desc-list w-hidden-small w-hidden-tiny">
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Handle all tires in the same amount of time</h4>
+                                                        <p class="text">Regardless of fitment type, change all tires in about two minutes</p>
+                                                    </li>
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">15% time savings on today's tires</h4>
+                                                        <p class="text">Consistent cycle-times unlocks savings on the growing body of high-performance, run flat, and large diameter fitments</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="div-column-half-right">
+                                                <div data-ix="fade-in-from-right" class="super-tech-img-wrapper"><img src="__STATIC__/home/bortals/0/Images/tcr-productivity-image-4_1.png" srcset="/portals/0/Images/tcr-productivity-image-4_1-p-500.png 500w, /portals/0/Images/tcr-productivity-image-4_1.png 519w" sizes="(max-width: 479px) 100vw, (max-width: 640px) 81vw, (max-width: 767px) 519px, (max-width: 991px) 45vw, 41vw" class="productivity-main-image"></div>
+                                            </div>
+                                            <div class="div-column-half-left w-hidden-main w-hidden-medium">
+                                                <ul class="desc-list">
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Handle all tires in the same amount of time</h4>
+                                                        <p class="text">Regardless of fitment type, change all tires in about two minutes</p>
+                                                    </li>
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">15% time savings on today's tires</h4>
+                                                        <p class="text">Consistent cycle-times unlocks savings on the growing body of high-performance, run flat, and large diameter fitments</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="super-tech-section-2" data-scroll-time=".3" class="super-tech-drop-section">
+                                    <div data-ix="scroll-reveal-2-remain" class="text centered bold main-color">Learn more about saving time with fully automatic</div>
+                                    <a href="#super-desc-drop-2" data-ix="super-desc-drop" class="plus-sign centered w-inline-block"><img src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-2" data-ix="super-desc-close" class="plus-sign-sticky w-inline-block"><img src="/portals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-2" data-ix="super-desc-close" class="plus-sign-top w-inline-block"><img src="/portals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a>
+                                    <div data-ix="super-desc-sticky" id="super-desc-drop-2" data-scroll-time=".3" class="super-desc-drop-container">
+                                        <div class="super-desc-drop-wrapper">
+                                            <div class="w-container">
+                                                <p class="text centered">Operators often judge how fast they can complete a single assembly, but tire changing is an all-day process with extreme variation. Against a skilled tire technician, a fully automatic tire changer may be slightly slower on the simplest assemblies, but in the long run and with today&rsquo;s tires, the time spent changing 100 tires will be less.</p>
+                                            </div>
+                                        </div>
+                                        <div class="super-desc-drop-wrapper">
+                                            <div class="w-container"><img src="__STATIC__/home/bortals/0/Images/save-time-with-fully-automatic-drawer-image.png" data-ix="scroll-reveal" srcset="/portals/0/Images/save-time-with-fully-automatic-drawer-image-p-500.png 500w, /portals/0/Images/save-time-with-fully-automatic-drawer-image-p-800.png 800w, /portals/0/Images/save-time-with-fully-automatic-drawer-image.png 943w" sizes="100vw" class="center"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-section-white">
+                                    <div class="super-tech-wrapper top">
+                                        <div class="div-row w-clearfix">
+                                            <div class="div-column-half-left">
+                                                <div data-ix="fade-in-from-left" class="super-tech-img-wrapper right-align"><img src="__STATIC__/home/bortals/0/Images/tcr-productivity-image-5.png" srcset="/portals/0/Images/tcr-productivity-image-5-p-500.png 500w, /portals/0/Images/tcr-productivity-image-5.png 504w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 83vw, (max-width: 991px) 45vw, 41vw" class="productivity-main-image"></div>
+                                            </div>
+                                            <div class="div-column-half-right">
+                                                <ul class="desc-list">
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Single Process makes it easy</h4>
+                                                        <p class="text">One tire changing process is used on all assemblies</p>
+                                                    </li>
+                                                    <li data-ix="scroll-reveal-2-remain" class="desc-list-item">
+                                                        <h4 class="heading-2">Three ways to train</h4>
+                                                        <p class="text">&ldquo;Walk Me Through It&rdquo; software mode, onboard training videos, and onboard camera provide training before, during, and after product installation</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="super-tech-section-4" data-scroll-time=".3" class="super-tech-drop-section">
+                                    <div data-ix="scroll-reveal-2-remain" class="text centered bold main-color">Learn more about simplifying training</div>
+                                    <a href="#super-desc-drop-4" data-ix="super-desc-drop" class="plus-sign centered w-inline-block"><img src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-4" data-ix="super-desc-close" class="plus-sign-sticky w-inline-block"><img src="/portals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a><a href="#super-tech-section-4" data-ix="super-desc-close" class="plus-sign-top w-inline-block"><img src="/portals/0/Images/plus-sign-icon.svg" class="plus-sign-icon"></a>
+                                    <div data-ix="super-desc-sticky" id="super-desc-drop-4" data-scroll-time=".3" class="super-desc-drop-container">
+                                        <div class="super-desc-drop-wrapper">
+                                            <div class="w-container"><img src="__STATIC__/home/bortals/0/Images/simplify-training-drawer-image-1.png" data-ix="scroll-reveal" srcset="/portals/0/Images/simplify-training-drawer-image-1-p-500.png 500w, /portals/0/Images/simplify-training-drawer-image-1-p-800.png 800w, /portals/0/Images/simplify-training-drawer-image-1.png 951w" sizes="100vw" class="center"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-2995"><a name="2995"></a><div id="dnn_ctr2995_ContentPane"><div id="dnn_ctr2995_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                <div id="dnn_ctr2995_HtmlModule_lblContent" class="Normal">
+                    <div class="product-cta-icon-wrapper extra-action">
+                        <a class="gaAutoTrack" data-ga-category="Soft Lead" data-ga-action="Viewed Things to Consider" data-ga-label="Revolution™" href="/tire-changers/tips-for-choosing-a-tire-changer">
+                            <img class="product-cta-icon" src="__STATIC__/home/bortals/0/Images/ProductCallsToAction/consider.svg">
+                            <div class="product-cta-text" data-origin="ScheduleDemo">Things to <br>
+                                Consider...</div>
+                        </a>
+                    </div>
+                </div>
+            </div></div>
+            </div></div>
+        </div>
+        <div class="w-row expanded">
+            <div id="dnn_LeftPane25" class="left-pane-25 w-col w-col-3 w-col-small-12 DNNEmptyPane"></div>
+            <div id="dnn_RightPane75" class="right-pane-75 w-col w-col-9 w-col-small-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row expanded">
+            <div id="dnn_ContentPane3" class="content-pane-3 w-col w-col-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row expanded">
+            <div id="dnn_LeftPane33" class="left-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+            <div id="dnn_CenterPane33" class="center-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+            <div id="dnn_RightPane33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row expanded">
+            <div id="dnn_ContentPane4" class="content-pane-4 w-col w-col-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row">
+            <div class="left-pane-66 w-col w-col-8 w-col-small-12">
+                <div class="w-row">
+                    <div id="dnn_LeftCol66" class="left-col-66 w-col-12 DNNEmptyPane"></div>
+                    <div id="dnn_HalfColumnLeft" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                    <div id="dnn_HalfColumnRight" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                    <div id="dnn_LeftCol66Middle" class="left-col-66 w-col w-col-12 DNNEmptyPane"></div>
+                    <div id="dnn_HalfColumnLeft2" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                    <div id="dnn_HalfColumnRight2" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                </div>
+            </div>
+            <div id="dnn_RightCol33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row">
+            <div id="dnn_ContentPane5" class="content-pane-5 w-col w-col-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row">
+            <div id="dnn_LeftCol33" class="left-col-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+            <div id="dnn_RightCol66" class="right-col-66 w-col w-col-8 w-col-small-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row">
+            <div id="dnn_ContentPane6" class="content-pane-6 w-col w-col-12 w-col-small-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row">
+            <div id="dnn_LeftPane50" class="left-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+            <div id="dnn_RightPane50" class="right-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row">
+            <div id="dnn_ContentPane7" class="content-pane-7 w-col-12 DNNEmptyPane"></div>
+        </div>
+    </div>
+    </div>
+
+    <!--<div id="slideoutButton" class="rep-icon-wrapper w-hidden-small w-hidden-tiny" data-ix="rep-slideout-modal">-->
+        <!--<img class="rep-icon" data-ix="rep-slideout-modal" src="__STATIC__/home/bortals/0/Images/rep-icon.svg">-->
+        <!--<div class="rep-icon-text" data-ix="rep-slideout-modal">Service, Sales, Pricing</div></div>-->
+    <div id="slideoutWrapper" class="slideout-wrapper w-hidden-small w-hidden-tiny">
+        <div class="slideout-container">
+            <div class="connect-wrapper">
+                <div id="slideoutClose" class="rep-slideout-close" data-ix="close-rep-slideout-modal">
+                    X
+                </div>
+                <div class="center section-text">
+                    SERVICE, SALES, PRICING<br>
+                    CONNECT WITH YOUR HUNTER TEAM<br>
+                    <div class="price-text">
+                        For a price quote, or on-site demo, contact one of our representatives<br> directly using zip code or country search.<br>
+                    </div>
+                </div>
+                <div class="bold center section-text display-zip">
+                    63044
+                </div>
+                <div class="change-location-link-wrapper ">
+                    <a id="change-location-link" class="cta-button w-button"><span class="change-location-text">ENTER LOCATION</span><span class="w-icon-dropdown-toggle"></span></a>
+                </div>
+                <div class="location ">
+                    <div id="location-picker" class="select-location">
+                        <div>
+                            <select class="change-location-input w-select" id="country-select"></select>
+                        </div>
+                        <div>
+                            <input class="change-location-input w-input" type="text" id="zipcode-input" placeholder="ZIP CODE" />
+                        </div>
+                        <div class="zipError">
+                            * Please Enter a Valid Postal Code
+                        </div>
+                        <div id="submit">
+                            <button class="change-location-submit w-button" type="button" id="location-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rep-wrapper">
+                <div class="rep-container">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="slideoutButton" class="rep-icon-wrapper-mobile w-hidden-main w-hidden-medium" " data-ix="rep-slideup-modal"><img class="rep-icon" data-ix="rep-slideup-modal" src="__STATIC__/home/bortals/0/Images/rep-icon.svg"><div class="rep-icon-text" data-ix="rep-slideup-modal">hunter team</div></div>
+    <div id="slideoutWrapper" class="slideout-wrapper-mobile w-hidden-main w-hidden-medium">
+        <div class="slideout-container">
+            <div class="connect-wrapper">
+                <div id="slideoutClose" class="rep-slideout-close" data-ix="close-rep-slideout-modal-mobile">
+                    X
+                </div>
+                <div class="center section-text">
+                    CONNECT WITH YOUR HUNTER TEAM
+                </div>
+                <div class="bold center section-text display-zip">
+                    63044
+                </div>
+                <div class="change-location-link-wrapper ">
+                    <a id="change-location-link" class="cta-button w-button"><span class="change-location-text">ENTER LOCATION</span><span class="w-icon-dropdown-toggle"></span></a>
+                </div>
+                <div class="location ">
+                    <div id="location-picker" class="select-location">
+                        <div>
+                            <select class="change-location-input w-select" id="country-select"></select>
+                        </div>
+                        <div>
+                            <input class="change-location-input w-input" type="text" id="zipcode-input" placeholder="ZIP CODE" />
+                        </div>
+                        <div class="zipError">
+                            * Please Enter a Valid Postal Code
+                        </div>
+                        <div id="submit">
+                            <button class="change-location-submit w-button" type="button" id="location-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rep-wrapper">
+            </div>
+        </div>
+    </div>
+
+    {include file="common/footer"/}

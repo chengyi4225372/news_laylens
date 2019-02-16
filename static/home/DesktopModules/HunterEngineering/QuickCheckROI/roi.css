@@ -1,0 +1,392 @@
+ .headerBlue {
+    color: #000;
+    border: 1px solid #06c;
+    font-size: 24px;
+    width: 90px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+    }
+    td.bottomBorder {
+    font-weight: bold;
+    background-color: #98FB98;
+    color: #090;
+    width: 30px;
+    border: 3px solid #090;
+    text-align: right;
+    padding-right: 5px;
+    white-space: nowrap;
+    }
+    table {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    .ui-slider .ui-slider-handle {
+    height: 30px;
+    width: 25px;
+    background-repeat: no-repeat;
+    margin-left: -20px !important;
+    }
+    .equipmentColor {
+    background-image: url(/Portals/0/Images/orange_slider_button.png) !important;
+    background-repeat: no-repeat;
+    }
+    .acceptanceColor {
+    background-image: url(/Portals/0/Images/green_slider_button.png) !important;
+    background-repeat: no-repeat;
+    }
+    .carColor {
+    background-image: url(/Portals/0/Images/blue_slider_button.png) !important;
+    background-repeat: no-repeat;
+    }
+    .yellowColor {
+    background-image: url(/Portals/0/Images/yellow_slider_button.png) !important;
+    background-repeat: no-repeat;
+    }
+    .yellowSlider {
+    background-color: #EDE275 !important;
+    color: #000 !important;
+    border: 1px solid black !important;
+    }
+    .carLineColor {
+    background-color: #06c;
+    color: #fff;
+    border: 1px solid black !important;
+    }
+    .equipmentLineColor {
+    background-color: #FF8000;
+    color: #fff;
+    border: 1px solid black !important;
+    }
+    .absorptionLineColor {
+    background-color: #FF8000;
+    color: #fff;
+    border: 1px solid black !important;
+    }
+    .acceptanceLineColor {
+    background-color: #090 !important;
+    color: #FFFFFF !important;
+    border: 1px solid black !important;
+    }
+    .absorbColor {
+    background-image: url(/Portals/0/Images/absorb.png) !important;
+    background-repeat: no-repeat;
+    height: 23px !important;
+    width: 30px !important;
+    }
+    absorbLineColor {
+    background-color: #FF8000;
+    color: #fff;
+    border: 1px solid black !important;
+    }
+    .benefitSlider {
+    padding-top: 5px;
+    height: 10px;
+    }
+    .productSliders {
+    height: 400px;
+    }
+    td span {
+    width: 75px;
+    display: inline-block;
+    vertical-align: middle;
+    }
+    .header {
+    margin-left: .5cm;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    white-space: nowrap;
+    }
+    .headerLeft {
+    margin-left: .5cm;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    width: 160px;
+    }
+    .border {
+    height: 20px;
+    width: 140px;
+    font-weight: bold;
+    color: #06C;
+    background-color: #fff;
+    padding-left: 2px;
+    border: 1px solid thin;
+    text-align: right;
+    }
+    .opportunity {
+    background-color: #98FB98;
+    text-align: center;
+    color: #090;
+    width: 150px;
+    font-weight: bolder;
+    font-size: 18px;
+    border-top: 3px solid #090;
+    border-left: 3px solid #090;
+    border-right: 3px solid #090;
+    }
+    .acceptance {
+    background-color: #2E64FE;
+    text-align: center;
+    color: #0101DF;
+    width: 150px;
+    font-weight: bolder;
+    font-size: 18px;
+    border-top: 3px solid #2E2EFE;
+    border-left: 3px solid #2E2EFE;
+    border-right: 3px solid #2E2EFE;
+    }
+    .greenUpside {
+    background-color: #98FB98;
+    text-align: center;
+    color: #090;
+    width: 150px;
+    font-weight: bolder;
+    overflow: hidden;
+    white-space: nowrap !important;
+    text-overflow: ellipses;
+    font-size: 24px;
+    border-left: 3px solid #090;
+    border-right: 3px solid #090;
+    }
+    .blueAcceptance {
+    background-color: #2E64FE;
+    text-align: center;
+    color: #0101DF;
+    width: 150px;
+    font-weight: bolder;
+    overflow: hidden;
+    white-space: nowrap !important;
+    text-overflow: ellipses;
+    font-size: 24px;
+    border-left: 3px solid #2E2EFE;
+    border-right: 3px solid #2E2EFE;
+    }
+    .selectedAcceptanceRate {
+    background-color: #98FB98;
+    color: #090 !important;
+    border: 4px solid #090 !important;
+    }
+    .filler {
+    text-align: center;
+    width: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    }
+    .selectedSlider {
+    background-color: #09F;
+    color: #fff;
+    border: 1px solid black !important;
+    }
+    .bordered {
+    border: 1px solid black;
+    height: 20px;
+    }
+    .littleSpan {
+    width: 61px;
+    height: 61px;
+    border: 1px solid #A9A9A9;
+    text-align: center !important;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 3em;
+    }
+    .textBoxName {
+    height: 40px;
+    border: 1px solid #A9A9A9;
+    text-align: center !important;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 2.0em;
+    }
+    .bigSpan {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #A9A9A9;
+    text-align: center !important;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 2em;
+    }
+    .minus {
+    padding-top: 25px;
+    }
+    .plus {
+    padding-bottom: 25px;
+    }
+    span.checked {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-image: url(/Portals/0/Images/check.png);
+    }
+    .unchecked {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-image: url(/Portals/0/Images/uncheck.png);
+    }
+    .lowestAcceptRate {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    }
+    .lowAcceptRate {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    }
+    .lowMidAcceptRate {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+    }
+    .midHighAcceptRate {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+    }
+    .highAcceptRate {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+    }
+    .highestAcceptRate {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+    }
+    .bottomOppLabels {
+    width: 80px;
+    }
+    .frequencyChecked {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-image: url(/Portals/0/Images/check.png);
+    }
+    .frequencyUnchecked {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-image: url(/Portals/0/Images/uncheck.png);
+    }
+    .showInterval {
+    display: none;
+    }
+    .hide {
+    display: none;
+    }
+    .hideOnLoad {
+    display: none;
+    text-align: center;
+    }
+    sharepoint fix *, *:before, *:after {
+    -webkit-box-sizing: content-box;
+    -mox-box-sizing: content-box;
+    box-sizing: content-box;
+    }
+    *[class^="span"], *[class^="span"]:before, *[class^="span"]:after {
+    -webkit-box-sizing: border-box;
+    ;
+    -mox-box0sizing: border-box;
+    box-sizing: border-box;
+    }
+    img {
+    max-width: none;
+    width: auto;
+    }
+    *[class^="span"]img {
+    max-width: 100%;
+    }
+    #scriptWPQ2 img, img.ms-webpart-menuArrowImg, #applist img {
+    width: auto;
+    max-width: none;
+    }
+    .ms-siteactions-imgspan {
+    float: none;
+    margin: 0px;
+    }
+    .valuedCustomerName {
+    text-align: center;
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    }
+
+    .bottomContainer table{
+        line-height: 1.3;
+    }
+
+    .roiContainer>table{
+        margin: 0 auto;
+    }
+    @media print {
+        .frequencyCars {
+        display: inline;
+        }
+        .bordertable {
+        border: 1px solid black;
+        }
+        .reset_btn {
+        display: none;
+        }
+        .onPrint {
+        display: none;
+        }
+        .intervalToggle {
+        display: none;
+        }
+        .textBoxName {
+        height: 20px;
+        border: 0px;
+        text-align: center !important;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.0em;
+        }
+        .hide {
+        display: inline;
+        }
+        #s4-workspace {
+        overflow-x: visible !important;
+        }
+        #customHeaderTopFixed {
+        display: none !important;
+        }
+        .primary-nav-section,
+        .secondary-nav-section,
+        .footer-section{
+            display: none !important;
+        }
+        html,body{
+            width: 1200px;
+        }
+    }

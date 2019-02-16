@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hunter Engineering</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet" />
+    <link href="/a2c/css/app.css" rel="stylesheet" />
+    <link href="/a2c/css/login-page.css" rel="stylesheet">
+    <link href="/a2c/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://static.authen2cate.com/company/hunter/css/v2-5.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <noscript>
+        <style>
+            .entry-form {
+                display: initial;
+            }
+        </style>
+    </noscript>
+
+</head>
+<body>
+<div id="loginPageBody" class="fluid-container alternate-background flex-centered">
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <div class="row align-items">
+
+        <div class="card flex-align-center login-box">
+            <form id="login-form" name="login-form" method="post" action="/a2c/hunter/login" enctype="application/x-www-form-urlencoded">
+                <img src="https://static.authen2cate.com/company/hunter/img/hunter-header.png"
+                     title="hunter header" class="image" />
+                <input id="companyName" type="hidden" name="companyName" value="hunter" />
+                <input id="fingerprint" type="hidden" name="fingerprint" />
+
+
+
+
+
+
+
+                <div class="input-group mb-4">
+                    <input id="username" type="text" name="username" placeholder="Username" autocomplete="off" autofocus class="form-control" />
+                </div>
+
+                <div class="input-group mb-4">
+                    <input id="password" type="password" name="password" placeholder="Password" autocomplete="off" class="form-control" value="" />
+                </div>
+
+
+
+
+                <div class="flex-centered">
+                    <label id="rememberMeText"class="form-check-label">Remember Me</label>
+                    <input id="loginFrmSubmitBtn" type="checkbox" name="remember" id="updateUser" value="updateUser"
+                           class="fa fa-square-o btn-checkbox hide-checkbox" onclick="toggle('fa-square-o', 'fa-check-square-o', this)" />
+                    <br>
+                </div>
+
+                <input id="signIn" type="submit" name="signIn" value="SIGN IN" class="btn btn-submit" />
+                <div class="row">
+                    <div class="small-12 columns">
+
+                        <a id="forgotPasswordText" href="/a2c/hunter/reset" onclick="storeUsername()">Forgot Your Password?</a>
+
+                        <p id="customFooter">
+                            <br/>
+                            <br/>
+                            Documents stored and accessible from this site are the property of Hunter Engineering Company and contain information that may be business confidential, even if not specifically labelled as such. Unauthorized forwarding, printing, copying, distributing, or use of the documents stored and accessible from this site, or their contents is strictly prohibited. Any authorized copies (printed or electronic) of these documents or their contents should be treated as both property of Hunter Engineering Company and as confidential information.
+                        </p>
+
+                    </div>
+                </div>
+                <br />
+                <img onerror="this.style.display ='none'" class="image"
+                     src="https://static.authen2cate.com/company/hunter/img/hunter-footer.png"
+                     title="hunter footer" />
+                <span id="loginPageErrorMsg"></span>
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src="/a2c/js/jquery.min.js"></script>
+<!-- Customize Css of Cusomter needs to run before everything -->
+<script src='/a2c/js/customizeCustomer.js'></script>
+
+<script src="/a2c/js/jquery.cookie.js" ></script>
+<script src="/a2c/js/jquery-ui.min.js"></script>
+<script src="/a2c/js/a2c.js"></script>
+<script type="text/javascript">
+    document.getElementById('fingerprint').value = new Fingerprint().getKeys();
+    $(document).ready(function() {
+        check('hunter');
+    });
+
+    function toggle(hideClass, showClass, obj) {
+        if (obj.checked) {
+            $(obj).addClass(showClass).removeClass(hideClass);
+        }
+        else {
+            $(obj).addClass(hideClass).removeClass(showClass);
+        }
+    };
+
+    function storeUsername(){
+        sessionStorage.setItem('username', $('#username').val());
+    }
+</script>
+
+</body>
+</html>

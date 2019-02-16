@@ -1,0 +1,1696 @@
+{include file="common/header" /}
+
+<div class="content">
+    <div>
+        <div class="contactModal" id="global-contactusform">
+            <div class="modal-container">
+                <div class="modal-content">
+                    <div class="modal-top w-clearfix">
+                        <button type="button" class="close modal-close">x</button>
+                        <h4 class="modal-title">Contact Us</h4>
+                    </div>
+                    <div class="modal-body form-horizontal">
+                        <div class="modal-rep-section"></div>
+
+                        <div>
+                            For a price quote, or on-site demo, contact our representative directly using zip code or country search.<br>
+                        </div>
+                        <hr />
+                        <div class='formWrapper'>
+                            <div class="form-group has-feedback required-form-section w-row">
+                                <label for="globalcontactform-name" class="control-label">Name:*</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="globalcontactform-name" name="globalcontactform-name" />
+                                </div>
+                                <div class="form-control-feedback" aria-hidden="true"></div>
+                            </div>
+                            <div class="form-group has-feedback required-form-section w-row">
+                                <label for="globalcontactform-phone" class="control-label">Phone:*</label>
+                                <div class="contact-form-input">
+                                    <input type="tel" class="form-control" id="globalcontactform-phone" name="globalcontactform-phone" />
+                                </div>
+                                <div class="form-control-feedback" aria-hidden="true"></div>
+                            </div>
+                            <div class="form-group has-feedback required-form-section w-row">
+                                <label for="globalcontactform-email" class=" control-label">Email:*</label>
+                                <div class="contact-form-input">
+                                    <input type="email" class="form-control" id="globalcontactform-email" name="globalcontactform-email" />
+                                </div>
+                                <div class="form-control-feedback" aria-hidden="true"></div>
+                            </div>
+                            <div class="form-group has-feedback required-form-section w-row">
+                                <label for="globalcontactform-zip" class=" control-label">Postal Code:*</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="globalcontactform-zip" name="globalcontactform-zip" />
+                                </div>
+                                <div class="form-control-feedback" aria-hidden="true"></div>
+                            </div>
+                            <hr />
+                            <div class="form-group w-row">
+                                <label for="globalcontactform-address" class=" control-label">Address:</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="globalcontactform-address" name="globalcontactform-address" />
+                                </div>
+                            </div>
+                            <div class="form-group w-row">
+                                <label for="globalcontactform-city" class="control-label">City:</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="globalcontactform-city" name="globalcontactform-city" />
+                                </div>
+                            </div>
+                            <div class="form-group w-row">
+                                <label for="globalcontactform-state" class="control-label">State:</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="globalcontactform-state" name="globalcontactform-state" />
+                                </div>
+                            </div>
+                            <div class="form-group w-row input-comment">
+                                <label for="globalcontactform-comment" class="control-label">Comments:</label>
+                                <div class="contact-form-input">
+                                    <textarea class="form-control" id="globalcontactform-comment" name="globalcontactform-comment"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group w-row flex-column">
+                                <label class="control-label">Interested in:</label>
+                                <div>
+                                    <div class="w-col w-col-4">
+                                        <input type="checkbox" name="interest" value="AL" class="interestCheckBox"><span>Alignment Systems</span><br>
+                                        <input type="checkbox" name="interest" value="TC" class="interestCheckBox"><span>Tire Changers</span><br>
+                                        <input type="checkbox" name="interest" value="BL" class="interestCheckBox"><span>Brake Lathes</span><br>
+                                    </div>
+                                    <div class="w-col w-col-4">
+                                        <input type="checkbox" name="interest" value="HD" class="interestCheckBox"><span>Heavy-Duty</span><br>
+                                        <input type="checkbox" name="interest" value="WB" class="interestCheckBox"><span>Wheel Balancers</span><br>
+                                        <input type="checkbox" name="interest" value="LR" class="interestCheckBox"><span>Lift Rack</span><br>
+                                    </div>
+                                    <div class="w-col w-col-4">
+                                        <input type="checkbox" name="interest" value="QC" class="interestCheckBox"><span>Inspection</span><br>
+                                        <input type="checkbox" name="interest" value="OT" class="interestCheckBox"><span>Other</span><br>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <input id="globalcontactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                                <input type="hidden" id="HiddenRepNumber" value="" />
+                                <input type="hidden" id="HiddenRepEmail" value="" />
+                                <input type="hidden" id="IsDistributor" value="" />
+                                <input type="hidden" id="ContactType" value="" />
+                                <input type="hidden" id="Origin" value="" />
+                                <input type="hidden" id="Country" value="" />
+                                <input type="hidden" id="GatherFormInfo" value="true" />
+                                <input type="hidden" id="HiddenZipCode" value="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactModal" id="trainer-contactusform">
+            <div class="modal-container">
+                <div class="modal-content">
+                    <div class="modal-top w-clearfix">
+                        <button type="button" class="close modal-close">x</button>
+                        <h4 class="modal-title">Contact Us</h4>
+                    </div>
+                    <div class="modal-body form-horizontal">
+                        <div class="modal-rep-section"></div>
+                        <hr />
+                        <div class='formWrapper'>
+                            <div class="form-group has-feedback required-form-section w-row">
+                                <label for="trainer-contactform-name" class="control-label">Name: *</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="trainer-contactform-name" name="trainer-contactform-name" />
+                                </div>
+                                <div class="form-control-feedback" aria-hidden="true"></div>
+                            </div>
+                            <div class="form-group has-feedback required-form-section w-row">
+                                <label for="trainer-contactform-email" class=" control-label">Email:*</label>
+                                <div class="contact-form-input">
+                                    <input type="email" class="form-control" id="trainer-contactform-email" name="trainer-contactform-email" />
+                                </div>
+                                <div class="form-control-feedback" aria-hidden="true"></div>
+                            </div>
+                            <hr />
+                            <div class="form-group w-row">
+                                <label for="trainer-contactform-phone" class="control-label">Phone:</label>
+                                <div class="contact-form-input">
+                                    <input type="tel" class="form-control" id="trainer-contactform-phone" name="trainer-contactform-phone" />
+                                </div>
+                            </div>
+                            <div class="form-group w-row">
+                                <label for="trainer-contactform-address" class=" control-label">Address:</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="trainer-contactform-address" name="trainer-contactform-address" />
+                                </div>
+                            </div>
+                            <div class="form-group w-row">
+                                <label for="trainer-contactform-city" class="control-label">City:</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="trainer-contactform-city" name="trainer-contactform-city" />
+                                </div>
+                            </div>
+                            <div class="form-group w-row">
+                                <label for="trainer-contactform-state" class="control-label">State:</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="trainer-contactform-state" name="trainer-contactform-state" />
+                                </div>
+                            </div>
+                            <div class="form-group w-row">
+                                <label for="trainer-contactform-zip" class=" control-label">Postal Code:</label>
+                                <div class="contact-form-input">
+                                    <input type="text" class="form-control" id="trainer-contactform-zip" name="trainer-contactform-zip" />
+                                </div>
+                            </div>
+                            <div class="form-group w-row">
+                                <label for="trainer-contactform-comment" class="control-label">Comments:</label>
+                                <div class="contact-form-input">
+                                    <textarea class="form-control" id="trainer-contactform-comment" name="trainer-contactform-comment"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <input id="trainer-contactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                                <input type="hidden" id="HiddenRepEmail" value="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-row">
+            <div id="dnn_ContentPane" class="content-pane w-col w-col-12 DNNEmptyPane"></div>
+        </div>
+        <div class="w-row expanded">
+            <div id="dnn_LeftPane75" class="left-pane-75 w-col w-col-9 w-col-medium-12 DNNEmptyPane"></div>
+            <div id="dnn_RightPane25" class="right-pane-25 w-col w-col-3 w-col-medium-12 DNNEmptyPane"></div>
+        </div>row
+        <div id="dnn_ContentPane2" class="content-pane-2 w-col-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-3968"><a name="3968"></a>
+            <div class="C_Container">
+                <div id="dnn_ctr3968_contentPane" class="containerContent"><div id="dnn_ctr3968_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                    <div id="dnn_ctr3968_HtmlModule_lblContent" class="Normal">
+                        <div class="hawkeye-elite product-hero-section" style="background-image: url('/static/home/Portals/0/Images/xsuper.png')">
+                            <h2 class="product-hero-text" data-ix="scroll-reveal">XSUPER</h2>
+                            <div class="product-cta-section"></div>
+                        </div>
+                    </div>
+                </div></div>
+            </div></div><div class="DnnModule DnnModule-SteadyRainProductCalltoActionModule DnnModule-1126"><a name="1126"></a>
+            <div class="C_Container">
+                <div id="dnn_ctr1126_contentPane" class="containerContent">
+                    <div id="dnn_ctr1126_ModuleContent" class="DNNModuleContent ModSteadyRainProductCalltoActionModuleC">
+                        <div class="steadyrain calltoaction cta-section-desktop">
+                            <style>
+                                .product-cta-wrapper{height:55px;bottom:130px;}
+                            </style>
+                            <div class="product-cta-wrapper">
+                                <a class="global-contactus first product-cta-icon-wrapper" href="javascript:void(0);" data-origin="ScheduleDemo" data-contacttype="Sales" data-ga-category="Soft Lead" data-ga-action="Requested Demo" data-ga-label="HawkEye Elite&#174;">
+                                    <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/schedule.svg">-->
+                                    <div class="product-cta-text">
+                                        INQUIRY
+                                    </div>
+                                </a>
+                                <a class="global-contactus product-cta-icon-wrapper" href="javascript:void(0);" data-origin="GetQuote" data-contacttype="Sales" data-ga-category="Soft Lead" data-ga-action="Requested Quote" data-ga-label="HawkEye Elite&#174;">
+                                    <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/quote.svg">-->
+                                    <div class="product-cta-text">
+                                        DOWNLOAD BROCHURE
+                                    </div>
+                                </a>
+                                <div id="dnn_ctr1126_View_brochureItem" class="product-cta-icon-wrapper">
+                                    <a id="dnn_ctr1126_View_brochureLink" class="gaAutoTrack brochureLink" data-ga-category="Soft Lead" data-ga-action="Downloaded Brochure" data-ga-label="HawkEye Elite®" href="/Portals/0/Media/6230-T.pdf" target="_blank">
+                                        <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/download.svg">-->
+                                        <div class="product-cta-text">
+                                            COMPARE PRODUCTS
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="dnn_ctr1126_View_specSheetItem" class="product-cta-icon-wrapper">
+                                    <a id="dnn_ctr1126_View_specSheetLink" class="gaAutoTrack specSheetLink" data-ga-category="Soft Lead" data-ga-action="Downloaded Spec Sheet" data-ga-label="HawkEye Elite®" href="/Portals/0/Media/7368-T.pdf" target="_blank">
+                                        <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/download.svg">-->
+                                        <div class="product-cta-text">
+                                            THINGS TO CONSIDER
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="dnn_ctr1126_View_videoItem" class="product-cta-icon-wrapper">
+                                    <a class="actionVideo gaAutoTrack" href="javascript:void(0);" data-ix="reveal-modal" data-youtubeid="jVkOiOcmAk0" data-ga-category="Soft Lead" data-ga-action="Viewed Video" data-ga-label="HawkEye Elite&#174;">
+                                        <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/see-it-in-action.svg">-->
+                                        <div class="product-cta-text">
+                                            VIDEO
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- todo 注释-->
+                            <!--<div id="productVideoModal" class="modal-wrapper" data-ix="modal-display">-->
+                            <!--<div class="modal-container">-->
+                            <!--<div class="modal-top w-clearfix">-->
+                            <!--<span class="modal-title">VIDEO</span>-->
+                            <!--<div class="modal-close" data-ix="modal-close" style="transition: all 0.3s ease 0s;">x</div>-->
+                            <!--</div>-->
+                            <!--<div class="modal-video-wrapper">-->
+                            <!--<iframe class="video-embed" name="see-it-in-action" frameborder="0" allowfullscreen></iframe>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                    </div></div>
+            </div></div><div class="DnnModule DnnModule-SteadyRainProductDetailsModule DnnModule-3944"><a name="3944"></a>
+            <div class="C_Container">
+
+                <div id="tabs" class="steadyrain additional-info stickem-container">
+                    <div class="cta-section-mobile"></div>
+                    <div id="description" class="product-section-gray">
+                        <div class="row" style="margin-top: 55px">
+                            <h1 id="dnn_ctr3944_View_h2ProductTitle" class="heading-1 main-color" data-ix="scroll-reveal">XSUPER ALIGNMENT MACHINE</h1>
+                        </div>
+                        <div class="row">
+                            <div class="text">
+                                "Xsuper" means a group of intelligent and energetic automotive science and technology talents,
+                                taking building a kingdom of automotive testing equipment as their responsibility,
+                                bringing an unprecedented emerging technology flow for the development of automotive repair and maintenance industryand
+                                providing high cost-effective and high-quality product experience and services for global users.
+                            </div>
+                        </div>
+                    </div>
+                    <hr id="dnn_ctr3944_View_awardRule"></hr>
+                </div>
+                <!-- 图片 -->
+                <div id="features" class="slider-section">
+                    <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                        <div class="w-slider-mask">
+                            <div class="slider-section-wrapper w-slide">
+                                <div class="slide-wrapper">
+                                    <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                            <img id="dnn_ctr3944_View_rFeatures_imgFeature_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/xspuer-tu-1.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-section-wrapper w-slide">
+                                <div class="slide-wrapper">
+                                    <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                            <img id="dnn_ctr3944_View_rFeatures_imgFeature_1" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/smarter-tu-2.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-section-wrapper w-slide">
+                                <div class="slide-wrapper">
+                                    <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                            <img id="dnn_ctr3944_View_rFeatures_imgFeature_2" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/smarter-tu-3.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-section-wrapper w-slide">
+                                <div class="slide-wrapper">
+                                    <div class="feature">
+                                        <div class="slider-image-wrapper">
+                                            <img id="dnn_ctr3944_View_rFeatures_imgFeature_3" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/smarter-tu-4.jpg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-slider-arrow-left">
+                            <div class="left slider-navigation w-icon-slider-left"></div>
+                        </div>
+                        <div class="w-slider-arrow-right">
+                            <div class="right slider-navigation w-icon-slider-right"></div>
+                        </div>
+                        <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                    </div>
+                </div>
+
+
+
+                            <hr id="dnn_ctr3944_View_awardRule"></hr>
+                            <!-- todo 选项卡 Features -->
+                            <div class="primary-nav-section">
+                                <div class="navbar w-nav" data-animation="over-left" data-collapse="medium" data-doc-height="1" data-duration="400" >
+                                    <div class="menu-icon-wrapper">
+                                        <img class="mobile-search-icon" data-ix="mobile-menu-reveal" src="__STATIC__/home/Portals/0/Images/hamburger-menu-icon.svg">
+                                    </div>
+                                    <div class="menu-icon-wrapper right" data-ix="mobile-menu-search">
+                                        <h3 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Features</h3>
+                                    </div>
+                                    <nav class="nav-menu w-nav-menu" role="navigation" style="float:left;">
+                                        <a menu-id="features" class="heading-2 menu w-nav-link" href="features"  style="background-color: #f43838;">Features
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg" >
+                                        </a>
+                                    </nav>
+
+                                    <nav class="nav-menu w-nav-menu" role="navigation" style="float:left;">
+                                        <a menu-id="media" class="heading-2 menu w-nav-link" href="features"  style="background-color: #f43838;">media
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg" >
+                                        </a>
+                                    </nav>
+                                    <nav class="nav-menu w-nav-menu" role="navigation" style="float:left;">
+                                        <a menu-id="specs" class="heading-2 menu w-nav-link" href="specs"  style="background-color: #f43838;">specs
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg" >
+                                        </a>
+                                    </nav>
+
+                                </div>
+                            </div>
+                            <div class="mobile-dropdown w-hidden-main">
+                                <div class="mobile-dropdown-wrapper">
+                                    <div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">
+                                        <div class="w-row">
+                                            <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
+                                                <div class="side-menu-dropdown-option"><a href="features">features</a></div>
+                                            </div>
+                                            <div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2">
+                                                <img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- 图片 -->
+                                    <div class="secondary-menu-wrapper"  >
+                                        <div id="benefits-content">
+                                            <div class="product-section-white">
+                                                <div>
+                                                    <h2 class="heading-2 main-color" data-ix="scroll-reveal">features</h2>
+                                                </div>
+                                                <div class="super-tech-wrapper top">
+                                                    <div class="div-row w-clearfix">
+                                                        <div class="div-column-half-left">
+                                                            <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                                                <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-1.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-1.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-1.jpg 752w"></div>
+                                                        </div>
+                                                        <div class="div-column-half-right">
+                                                            <ul class="desc-list">
+                                                                <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                                    <h4 class="heading-2">1、5M USB3.0HD Industrial Digital Camera</h4>
+                                                                    <p class="text">
+                                                                        Continuously monitor on target position
+                                                                        Feedback on target status at any time
+                                                                        Provide accurate dynamic measuring results
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-section-white">
+                                                <div>
+                                                    <h2 class="heading-2 main-color" data-ix="scroll-reveal">features</h2>
+                                                </div>
+                                                <div class="super-tech-wrapper top">
+                                                    <div class="div-row w-clearfix">
+                                                        <div class="div-column-half-left">
+                                                            <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                                                <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-2.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-2.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-2.jpg 752w"></div>
+                                                        </div>
+                                                        <div class="div-column-half-right">
+                                                            <ul class="desc-list">
+                                                                <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                                    <h4 class="heading-2">2.Unique Accurate Target</h4>
+                                                                    <p class="text">
+                                                                        Ultra-thin design, light and easy to install
+                                                                        Made of aluminum material, elegant and durable
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-2">
+                                                <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about 70-second alignment results</div>
+                                                <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-1">
+                                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                                <a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                                <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                                <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-1">
+                                                    <div class="super-desc-drop-wrapper">
+                                                        <div class="w-container">
+                                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">3.Image Stabilizing System  </h2>
+                                                            <p class="centered text" data-ix="scroll-reveal">
+                                                                Self-developed technology
+                                                                No limit for rolling compensation, easy operation.
+                                                                Cameras shooting on target consistently for stable and accurate reading
+                                                            </p>
+                                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-3.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-3.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-3.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-3.jpg 851w"></div>
+                                                    </div>
+                                                    <div class="super-desc-drop-wrapper">
+                                                        <div class="w-container">
+                                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">4.2-post and mini scissor lift Jack up Adjustment  </h2>
+                                                            <p class="centered text" data-ix="scroll-reveal">
+                                                                After alignment measurement, the values can be frozen for 2-post and mini scissor lift Jack up Adjustmen
+                                                            </p>
+                                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-4.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-4.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-4.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-4.jpg 851w"></div>
+                                                    </div>
+                                                    <div class="super-desc-drop-wrapper">
+                                                        <div class="w-container">
+                                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">5. IAA Lift System  </h2>
+                                                            <p class="centered text" data-ix="scroll-reveal">
+                                                                Automatically track targets and ready for the best measuring position any time for the operator. Global origination, leading technology, no human intervention, more efficient
+                                                            </p>
+                                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-5.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-5.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-5.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-5.jpg 858w"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="product-section-white">
+                                                <div>
+                                                    <h2 class="heading-2 main-color" data-ix="scroll-reveal">features</h2>
+                                                </div>
+                                                <div class="super-tech-wrapper top">
+                                                    <div class="div-row w-clearfix">
+                                                        <div class="div-column-half-left">
+                                                            <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                                                <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-6.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-6.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-6.jpg 752w"></div>
+                                                        </div>
+                                                        <div class="div-column-half-right">
+                                                            <ul class="desc-list">
+                                                                <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                                    <h4 class="heading-2">6.Intelligent Switch  </h4>
+                                                                    <p class="text">
+                                                                        Quick Mode ，Expert Mode
+                                                                        The AI program will switch between “Quick Mode” or “Expert Mode” base on operator’s requirements.
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-3">
+                                                <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about 70-second alignment results</div>
+                                                <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-1">
+                                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                                <a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                                <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                                <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-1">
+                                                    <div class="super-desc-drop-wrapper">
+                                                        <div class="w-container">
+                                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">10.Engine Cradle Adjust</h2>
+                                                            <p class="centered text" data-ix="scroll-reveal">
+                                                                Provide visual reference for simultaneous S.A.I and caster adjustment for vehicles with front sub-frames or cradles
+                                                            </p>
+                                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-10.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-10.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-10.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-10.jpg 851w"></div>
+                                                    </div>
+                                                    <div class="super-desc-drop-wrapper">
+                                                        <div class="w-container">
+                                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">7. Two Adjustment Mode</h2>
+                                                            <p class="centered text" data-ix="scroll-reveal">
+                                                                Two modes of displaying the measuring and adjusting results are available in the program.
+                                                            </p>
+                                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-7.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-7.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-7.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-7.jpg 851w"></div>
+                                                    </div>
+                                                    <div class="super-desc-drop-wrapper">
+                                                        <div class="w-container">
+                                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">8.Drive-on Camera Assistant</h2>
+                                                            <p class="centered text" data-ix="scroll-reveal">
+                                                                Mirror function of the PC camera can guide the best parking position on the platform effectively.
+                                                            </p>
+                                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-8.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-8.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-8.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-8.jpg 858w"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="product-section-white">
+                                                <div>
+                                                    <h2 class="heading-2 main-color" data-ix="scroll-reveal">features</h2>
+                                                </div>
+                                                <div class="super-tech-wrapper top">
+                                                    <div class="div-row w-clearfix">
+                                                        <div class="div-column-half-left">
+                                                            <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                                                <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-9.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-9.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-9.jpg 752w"></div>
+                                                        </div>
+                                                        <div class="div-column-half-right">
+                                                            <ul class="desc-list">
+                                                                <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                                    <h4 class="heading-2">9.DIY Printout report </h4>
+                                                                    <p class="text">
+                                                                        You can use your own language, your own logo, and your own ideas to design the printout.
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-4">
+                                                <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about 70-second alignment results</div>
+                                                <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-1">
+                                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                                <a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                                <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                                <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-1">
+                                                    <div class="super-desc-drop-wrapper">
+                                                        <div class="w-container">
+                                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">10.Rich Help Videos</h2>
+                                                            <p class="centered text" data-ix="scroll-reveal">
+                                                            </p>
+                                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-10.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-10.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-10.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-10.jpg 851w"></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mobile-dropdown-wrapper">
+                                    <div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">
+                                        <div class="w-row">
+                                            <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
+                                                <div class="side-menu-dropdown-option"><a href="media">media</a></div>
+                                            </div>
+                                            <div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2">
+                                                <img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="secondary-menu-wrapper"  >
+                                        <div id="media" class="no-padding product-section-white slider-section">
+                                            <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Media</h2>
+                                            <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                                <div class="w-slider-mask">
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('9U3m9uILg5s', 'Safety System Alignment - Service Provider');">
+                                                                <div class="slider-image-wrapper">
+                                                                    <img id="dnn_ctr3944_View_rVideos_imgVideo_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/safety-system-alignment-service-provider.jpg" /><br />
+                                                                </div>
+                                                                <div class="descriptionContainer slider-description-wrapper">
+                                                                    <div class="name heading-2">Safety System Alignment - Service Provider</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('2nnzYUeYQo8', 'FIA Alignment');">
+                                                                <div class="slider-image-wrapper">
+                                                                    <img id="dnn_ctr3944_View_rVideos_imgVideo_1" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/FIA-Alignment.jpg" /><br />
+                                                                </div>
+                                                                <div class="descriptionContainer slider-description-wrapper">
+                                                                    <div class="name heading-2">FIA Alignment</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('sESaG_l4gl4', 'HawkEye Elite Drive Through Quick Check');">
+                                                                <div class="slider-image-wrapper">
+                                                                    <img id="dnn_ctr3944_View_rVideos_imgVideo_2" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/HawkEye-Elite-Drive-Through-Quick-Check.jpg" /><br />
+                                                                </div>
+                                                                <div class="descriptionContainer slider-description-wrapper">
+                                                                    <div class="name heading-2">HawkEye Elite Drive Through Quick Check</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-slider-arrow-left">
+                                                    <div class="left slider-navigation w-icon-slider-left"></div>
+                                                </div>
+                                                <div class="w-slider-arrow-right">
+                                                    <div class="right slider-navigation w-icon-slider-right"></div>
+                                                </div>
+                                                <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mobile-dropdown-wrapper">
+                                    <div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">
+                                        <div class="w-row">
+                                            <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
+                                                <div class="side-menu-dropdown-option"><a href="specs">specs</a></div>
+                                            </div>
+                                            <div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2">
+                                                <img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="secondary-menu-wrapper"  >
+                                        <div id="specs" class="no-padding product-section-white slider-section">
+                                            <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">TECHNICAL PARAMETERS</h2>
+                                            <div class="w-row">
+                                                <div id="dnn_ContentPane7" class="content-pane-7 w-col-12">
+                                                    <div class="DnnModule DnnModule-DNN_HTML DnnModule-1160"><a name="1160"></a>
+                                                        <div class="C_Container">
+                                                            <h3>
+                                                                <span id="dnn_ctr1160_dnnTITLE_titleLabel" class="TitleText">Measurement Function</span>
+                                                            </h3>
+                                                            <div id="dnn_ctr1160_contentPane" class="containerContent">
+                                                                <div id="dnn_ctr1160_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                                                    <div id="dnn_ctr1160_HtmlModule_lblContent" class="Normal">
+                                                                        <p>&nbsp;</p>
+                                                                        <p class="p1">
+                                                                            Basic Measurement: toe, camber, caster, kingpin inclination, setback, thrust angle
+                                                                            Additional Functions: Smart Toe, max turning angle, toe-out-on-turn, tire radius,
+                                                                            tire rotations rate, axle offset, wheel offset, track/wheelbase,
+                                                                            two-wheel measurement, vehicle lifting measurement,
+                                                                            alignment platform level detection,
+                                                                            toe constant value measurement
+                                                                        </p>
+                                                                        <p>&nbsp;</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="drawer-container">
+                           <div class="primary-nav-drawer-alignment primary-nav-drawer" menu-id="features">
+                                 <div id="benefits-content">
+                            <div class="product-section-white">
+                                <div>
+                                    <h2 class="heading-2 main-color" data-ix="scroll-reveal">features</h2>
+                                </div>
+                                <div class="super-tech-wrapper top">
+                                    <div class="div-row w-clearfix">
+                                        <div class="div-column-half-left">
+                                            <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                                <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-1.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-1.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-1.jpg 752w"></div>
+                                        </div>
+                                        <div class="div-column-half-right">
+                                            <ul class="desc-list">
+                                                <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                    <h4 class="heading-2">1、5M USB3.0HD Industrial Digital Camera</h4>
+                                                    <p class="text">
+                                                        Continuously monitor on target position
+                                                        Feedback on target status at any time
+                                                        Provide accurate dynamic measuring results
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-section-white">
+                                <div>
+                                    <h2 class="heading-2 main-color" data-ix="scroll-reveal">features</h2>
+                                </div>
+                                <div class="super-tech-wrapper top">
+                                    <div class="div-row w-clearfix">
+                                        <div class="div-column-half-left">
+                                            <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                                <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-2.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-2.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-2.jpg 752w"></div>
+                                        </div>
+                                        <div class="div-column-half-right">
+                                            <ul class="desc-list">
+                                                <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                    <h4 class="heading-2">2.Unique Accurate Target</h4>
+                                                    <p class="text">
+                                                        Ultra-thin design, light and easy to install
+                                                        Made of aluminum material, elegant and durable
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-2">
+                                <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about 70-second alignment results</div>
+                                <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-1">
+                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                <a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-1">
+                                    <div class="super-desc-drop-wrapper">
+                                        <div class="w-container">
+                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">3.Image Stabilizing System  </h2>
+                                            <p class="centered text" data-ix="scroll-reveal">
+                                                Self-developed technology
+                                                No limit for rolling compensation, easy operation.
+                                                Cameras shooting on target consistently for stable and accurate reading
+                                            </p>
+                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-3.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-3.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-3.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-3.jpg 851w"></div>
+                                    </div>
+                                    <div class="super-desc-drop-wrapper">
+                                        <div class="w-container">
+                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">4.2-post and mini scissor lift Jack up Adjustment  </h2>
+                                            <p class="centered text" data-ix="scroll-reveal">
+                                                After alignment measurement, the values can be frozen for 2-post and mini scissor lift Jack up Adjustmen
+                                            </p>
+                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-4.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-4.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-4.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-4.jpg 851w"></div>
+                                    </div>
+                                    <div class="super-desc-drop-wrapper">
+                                        <div class="w-container">
+                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">5. IAA Lift System  </h2>
+                                            <p class="centered text" data-ix="scroll-reveal">
+                                                Automatically track targets and ready for the best measuring position any time for the operator. Global origination, leading technology, no human intervention, more efficient
+                                            </p>
+                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-5.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-5.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-5.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-5.jpg 858w"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-section-white">
+                                <div>
+                                    <h2 class="heading-2 main-color" data-ix="scroll-reveal">features</h2>
+                                </div>
+                                <div class="super-tech-wrapper top">
+                                    <div class="div-row w-clearfix">
+                                        <div class="div-column-half-left">
+                                            <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                                <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-6.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-6.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-6.jpg 752w"></div>
+                                        </div>
+                                        <div class="div-column-half-right">
+                                            <ul class="desc-list">
+                                                <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                    <h4 class="heading-2">6.Intelligent Switch  </h4>
+                                                    <p class="text">
+                                                        Quick Mode ，Expert Mode
+                                                        The AI program will switch between “Quick Mode” or “Expert Mode” base on operator’s requirements.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-3">
+                                <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about 70-second alignment results</div>
+                                <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-1">
+                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                <a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-1">
+                                    <div class="super-desc-drop-wrapper">
+                                        <div class="w-container">
+                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">7. Two Adjustment Mode</h2>
+                                            <p class="centered text" data-ix="scroll-reveal">
+                                                Two modes of displaying the measuring and adjusting results are available in the program.
+                                            </p>
+                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-7.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-7.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-7.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-7.jpg 851w"></div>
+                                    </div>
+                                    <div class="super-desc-drop-wrapper">
+                                        <div class="w-container">
+                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">8.Drive-on Camera Assistant</h2>
+                                            <p class="centered text" data-ix="scroll-reveal">
+                                                Mirror function of the PC camera can guide the best parking position on the platform effectively.
+                                            </p>
+                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-8.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-8.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-8.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-8.jpg 858w"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-section-white">
+                                <div>
+                                    <h2 class="heading-2 main-color" data-ix="scroll-reveal">features</h2>
+                                </div>
+                                <div class="super-tech-wrapper top">
+                                    <div class="div-row w-clearfix">
+                                        <div class="div-column-half-left">
+                                            <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                                <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-9.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-9.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-9.jpg 752w"></div>
+                                        </div>
+                                        <div class="div-column-half-right">
+                                            <ul class="desc-list">
+                                                <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                    <h4 class="heading-2">9.DIY Printout report </h4>
+                                                    <p class="text">
+                                                        You can use your own language, your own logo, and your own ideas to design the printout.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-4">
+                                <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about 70-second alignment results</div>
+                                <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-1">
+                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                <a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1">
+                                    <img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                                <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-1">
+                                    <div class="super-desc-drop-wrapper">
+                                        <div class="w-container">
+                                            <h2 class="heading-2 main-color" data-ix="scroll-reveal">10.Rich Help Videos</h2>
+                                            <p class="centered text" data-ix="scroll-reveal">
+                                            </p>
+                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/xspuer-image-10.jpg" srcset="__STATIC__/home/bortals/0/Images/xspuer-image-10.jpg 500w, __STATIC__/home/bortals/0/Images/xspuer-image-10.jpg 800w, __STATIC__/home/bortals/0/Images/xspuer-image-10.jpg 851w"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                          </div>
+                          </div>
+                            <br/>
+                            <!-- todo media -->
+                            <div class="primary-nav-section">
+                             <div class="drawer-container">
+                                <div class="primary-nav-drawer-changers primary-nav-drawer" menu-id="media">
+                                    <div id="media" class="no-padding product-section-white slider-section">
+                                        <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Media</h2>
+                                        <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                            <div class="w-slider-mask">
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('9U3m9uILg5s', 'Safety System Alignment - Service Provider');">
+                                                            <div class="slider-image-wrapper">
+                                                                <img id="dnn_ctr3944_View_rVideos_imgVideo_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/safety-system-alignment-service-provider.jpg" /><br />
+                                                            </div>
+                                                            <div class="descriptionContainer slider-description-wrapper">
+                                                                <div class="name heading-2">Safety System Alignment - Service Provider</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('2nnzYUeYQo8', 'FIA Alignment');">
+                                                            <div class="slider-image-wrapper">
+                                                                <img id="dnn_ctr3944_View_rVideos_imgVideo_1" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/FIA-Alignment.jpg" /><br />
+                                                            </div>
+                                                            <div class="descriptionContainer slider-description-wrapper">
+                                                                <div class="name heading-2">FIA Alignment</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('sESaG_l4gl4', 'HawkEye Elite Drive Through Quick Check');">
+                                                            <div class="slider-image-wrapper">
+                                                                <img id="dnn_ctr3944_View_rVideos_imgVideo_2" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/HawkEye-Elite-Drive-Through-Quick-Check.jpg" /><br />
+                                                            </div>
+                                                            <div class="descriptionContainer slider-description-wrapper">
+                                                                <div class="name heading-2">HawkEye Elite Drive Through Quick Check</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w-slider-arrow-left">
+                                                <div class="left slider-navigation w-icon-slider-left"></div>
+                                            </div>
+                                            <div class="w-slider-arrow-right">
+                                                <div class="right slider-navigation w-icon-slider-right"></div>
+                                            </div>
+                                            <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <!-- todo Specs -->
+                            <div class="primary-nav-section">
+
+                            <div class="drawer-container">
+                                <div class="primary-nav-drawer-changers primary-nav-drawer" menu-id="specs">
+                                    <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">TECHNICAL PARAMETERS</h2>
+                                    <div class="w-row">
+                                        <div id="dnn_ContentPane7" class="content-pane-7 w-col-12">
+                                            <div class="DnnModule DnnModule-DNN_HTML DnnModule-1160"><a name="1160"></a>
+                                                <div class="C_Container">
+                                                    <h3>
+                                                        <span id="dnn_ctr1160_dnnTITLE_titleLabel" class="TitleText">Measurement Function</span>
+                                                    </h3>
+                                                    <div id="dnn_ctr1160_contentPane" class="containerContent">
+                                                        <div id="dnn_ctr1160_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                                            <div id="dnn_ctr1160_HtmlModule_lblContent" class="Normal">
+                                                                <p>&nbsp;</p>
+                                                                <p class="p1">
+                                                                    Basic Measurement: toe, camber, caster, kingpin inclination, setback, thrust angle
+                                                                    Additional Functions: Smart Toe, max turning angle, toe-out-on-turn, tire radius,
+                                                                    tire rotations rate, axle offset, wheel offset, track/wheelbase,
+                                                                    two-wheel measurement, vehicle lifting measurement,
+                                                                    alignment platform level detection,
+                                                                    toe constant value measurement
+                                                                </p>
+                                                                <p>&nbsp;</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+
+
+
+
+
+
+
+                            <div id="benefits">
+                            </div>
+
+                            <div id="productLinkSection"></div>
+                            <!--todo 暂时注释-->
+                            <!--
+                            <div id="documents" class="product-section-white">
+                                <div class="row">
+                                    <h2 class="heading-1 main-color" data-ix="scroll-reveal">documents</h2>
+                                    <p style="line-height:.5;">&nbsp;</p>
+                                </div>
+                                <div class="section-text section-padding document-wrapper">
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_0" href="/Portals/0/Media/6230-T.pdf" target="_blank"><div class="doc-icon">
+                                            <img  style="height:15px;width:17px;"src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure</a>
+                                        <p>Greater profit and productivity through innovation</p>
+                                    </div>
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_1" href="/Portals/0/Media/6370-T.pdf" target="_blank"><div class="doc-icon">
+                                            <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Sensors Spec Sheet</a>
+                                        <p>HE421 Series Sensor Specifications</p>
+                                    </div>
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_2" href="/Portals/0/Media/5414-T.pdf" target="_blank"><div class="doc-icon">
+                                            <img style="height:15px;width:17px;" src="___STATIC__/home/bortals/0/Images/download-icon.svg" /></div>Alignment Accessories Brochure</a>
+                                        <p>Alignment Accessories</p>
+                                    </div>
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_3" href="/Portals/0/Media/6230-T-18.pdf" target="_blank"><div class="doc-icon">
+                                            <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure (Spanish)</a>
+                                        <p>Greater profit and productivity through innovation</p>
+                                    </div>
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_4" href="/Portals/0/Media/6230-TE-09.pdf" target="_blank"><div class="doc-icon">
+                                            <img  style="height:15px;width:17px;"src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure (German)</a>
+                                        <p>Greater profit and productivity through innovation</p>
+                                    </div>
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_5" href="/Portals/0/Media/6230-TE-23.pdf" target="_blank"><div class="doc-icon">
+                                            <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure (French)</a>
+                                        <p>Greater profit and productivity through innovation</p>
+                                    </div>
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_6" href="/Portals/0/Media/5759-T.pdf" target="_blank"><div class="doc-icon">
+                                            <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>WinAlign Console Upgrades Brochure</a>
+                                        <p>For 211/311/411/511/611/811/WA Systems</p>
+                                    </div>
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_7" href="/Portals/0/Media/7368-T.pdf" target="_blank"><div class="doc-icon">
+                                            <img  style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Console Spec Sheet</a>
+                                        <p>Space consideration for storage of accessories and targets</p>
+                                    </div>
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_8" href="/Portals/0/Media/7418-T.pdf" target="_blank"><div class="doc-icon">
+                                            <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Testimonial Brochure</a>
+                                        <p></p>
+                                    </div>
+                                    <div class="w-col w-col-12 document">
+                                        <a id="dnn_ctr3944_View_rDocs_docLink_9" href="/Portals/0/Media/Printout-SSA.pdf" target="_blank"><div class="doc-icon">
+                                            <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>SSA Printout</a>
+                                        <p>Chrysler 200 sample with Safety System Alignment section</p>
+                                    </div>
+                                    <div class="doc-breakdown" id="brochure">
+                                        <div class="doc-content-wrapper">
+                                            <div class=" heading-2 doc-section-heading">brochure</div>
+                                            <div class="documents"></div>
+                                        </div>
+                                    </div>
+                                    <div class="doc-breakdown " id="specsheet">
+                                        <div class="doc-content-wrapper">
+                                            <div class=" heading-2 doc-section-heading">spec sheet</div>
+                                            <div class="documents"></div>
+                                        </div>
+                                    </div>
+                                    <div class="doc-breakdown" id="other">
+                                        <div class="doc-content-wrapper">
+                                            <div class=" heading-2 doc-section-heading">other</div>
+                                            <div class="documents"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                            <div id="productOEMSection"></div>
+                            <div id="newTestimonialSection"></div>
+
+                        </div>
+                    </div>
+                    <div id="newAwardSection"></div>
+                    <div id="displayVideoModal" class="modal-wrapper" data-ix="modal-display">
+                        <div class="modal-container">
+                            <div class="modal-top w-clearfix">
+                                <div class="modal-title"></div>
+                                <div class="modal-close" data-ix="modal-close" style="transition: all 0.3s ease 0s;">x</div>
+                            </div>
+                            <div class="modal-video-wrapper">
+                                <iframe class="video-embed" name="preview-youtube" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript" src="__STATIC__/home/Portals/_default/Skins/Hunter/includes/Testing Animated Content Slider/AnimatedSlider.js"></script>
+                </div></div>
+            </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4280"><a name="4280"></a>
+            <div class="C_Container">
+                <div id="dnn_ctr4280_contentPane" class="containerContent"><div id="dnn_ctr4280_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                    <div id="dnn_ctr4280_HtmlModule_lblContent" class="Normal">
+
+                        <div id="comm100-button-dynamic"></div>
+                        <script type="text/javascript">
+                            var Comm100API=Comm100API||{};(function(t){function e(e){
+                                var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({div_id:"comm100-button-dynamic"}),t.site_id=1000335,t.dynamic=true,e("https://ent.comm100.com/chatserver/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://entmax.comm100.com/chatserver/livechat.ashx?siteId=")},5e3)})(Comm100API||{})
+                        </script>
+
+                    </div>
+                </div></div>
+            </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4240"><a name="4240"></a>
+            <div class="C_Container">
+                <div id="dnn_ctr4240_contentPane" class="containerContent"><div id="dnn_ctr4240_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                    <div id="dnn_ctr4240_HtmlModule_lblContent" class="Normal">
+                        <!--<div id="testimonialSection">-->
+                        <!--<div class="no-padding product-section-gray">-->
+                        <!--<h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">What our customers are saying</h2>-->
+                        <!--<div class="main-slider testimonial w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">-->
+                        <!--<div class="slider-mask w-slider-mask">-->
+                        <!--<div class="w-clearfix w-slide">-->
+                        <!--<div class="background-image-1 testimonial-slider-content-wrapper"></div>-->
+                        <!--<div class="testimonial-slider-content-wrapper">-->
+                        <!--<div class="testimonial-content-wrapper">-->
+                        <!--<h3 class="heading-1">First Class H.A.L.T - Anderson, SC</h3>-->
+                        <!--<p>We now sell more alignments in our new facility than at our older location, making the alignment machine even more profitable. Plus, the technicians love using HawkEye Elite&reg;. The QuickGrip&reg; adaptors make it very easy to get work started and the aligner has all the tools to help us save time and get on to the next job.</p>-->
+                        <!--<p class="bold">Mark Maitland-Smith</p>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="w-clearfix w-slide">-->
+                        <!--<div class="background-image-2 testimonial-slider-content-wrapper"></div>-->
+                        <!--<div class="testimonial-slider-content-wrapper">-->
+                        <!--<div class="testimonial-content-wrapper">-->
+                        <!--<h3 class="heading-1">Warren's Tires - Greenville, SC</h3>-->
+                        <!--<p>The HawkEye Elite&reg; has also had a wider impact on our business &ndash; customer came in just last week with a truck that three or four other shops in the area couldn&rsquo;t align. We were able to align his vehicle and perform his needed suspension work as well. When we can provide our customers what other shops can&rsquo;t, we increase customer loyalty and trust.</p>-->
+                        <!--<p class="bold">Warren Smith</p>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="w-clearfix w-slide">-->
+                        <!--<div class="background-image-3 testimonial-slider-content-wrapper"></div>-->
+                        <!--<div class="testimonial-slider-content-wrapper">-->
+                        <!--<div class="testimonial-content-wrapper">-->
+                        <!--<h3 class="heading-1">Burke Automotive Service - Woburn, MA</h3>-->
+                        <!--<p>When it was time to upgrade to the latest and greatest model, we knew a Hunter wheel aligner was the way to go. The simplicity and technology of the HawkEye Elite&reg; makes it easy for technicians to use. The screen helps technicians avoid mistakes and makes it easier on them, as well.</p>-->
+                        <!--<p class="bold">Peter Burke</p>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="left-slider-arrow w-slider-arrow-left">-->
+                        <!--<div class="left slider-navigation w-icon-slider-left"></div>-->
+                        <!--</div>-->
+                        <!--<div class="right-slider-arrow w-slider-arrow-right">-->
+                        <!--<div class="right slider-navigation w-icon-slider-right"></div>-->
+                        <!--</div>-->
+                        <!--<div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny w-round w-slider-nav"></div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="product-section-white">-->
+                        <!--<h2 class="heading-2 main-color" data-ix="scroll-reveal">#hawkeyeelite</h2>-->
+                        <!--<div class="embed-section w-embed w-script">-->
+                        <!--<script async="" src="https://cdn.hypemarks.com/pages/a5b5e5.js"></script>-->
+                        <!--<div class="tintup" data-id="hunter-hawkeye-elite-mijohnson" data-columns="4" data-mobilescroll="true" data-clickformore="true" data-personalization-id="876091" style="height:1000px;width:100%;"></div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                </div></div>
+        </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-4028"><a name="4028"></a>
+        <div class="C_Container">
+            <div id="dnn_ctr4028_contentPane" class="containerContent"><div id="dnn_ctr4028_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                <div id="dnn_ctr4028_HtmlModule_lblContent" class="Normal">
+                    <!-- todo 产品详情
+                    <div id="benefits-content">
+                        <div class="product-section-white">
+                            <div>
+                                <h2 class="heading-2 main-color" data-ix="scroll-reveal">Productivity Technology</h2>
+                            </div>
+                            <div class="super-tech-wrapper top">
+                                <div class="div-row w-clearfix">
+                                    <div class="div-column-half-left">
+                                        <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                            <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw"
+                                                 src="__STATIC__/home/bortals/0/Images/productivity-technology-image-1_1.jpg" srcset="__STATIC__/home/bortals/0/Images/productivity-technology-image-1_1-p-500.jpeg 500w, __STATIC__/home/Portals/0/Images/productivity-technology-image-1_1.jpg 752w">
+                                        </div>
+                                    </div>
+                                    <div class="div-column-half-right">
+                                        <ul class="desc-list">
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">FASTEST PROCEDURE</h4>
+                                                <p class="text">Only Hunter can capture all readings in 70 seconds.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">MINIMAL setup time</h4>
+                                                <p class="text">Less trips around the vehicle means faster alignments.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Fast printouts</h4>
+                                                <p class="text">Easy to understand printouts help sell more work.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-1">
+                            <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about 70-second alignment results</div>
+                            <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-1"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a><a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-1"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-1">
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text" data-ix="scroll-reveal">Previous setups used valuable shop time, today present your results in seconds. Hunter&rsquo;s HawkEye Elite&reg; and premium RX lift rack capture all readings and produce detailed printouts of alignment measurements in just 70 seconds to
+                                            help your sell more work.</p>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text" data-ix="scroll-reveal">Camera sensors, plus FIA technology, yield industries fastest results.Today, present your results in just 70 seconds!</p>
+                                        <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-1.png" srcset="__STATIC__/home/Portals/0/Images/he-productivity-1-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-1-p-800.png 800w, /Portals/0/Images/he-productivity-1.png 851w"></div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text" data-ix="scroll-reveal">Camera-sensors combined with traditional rack technology yield 4 minutes to readings, an improvement over older technology. Yet, not world class.</p>
+                                        <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-2.png" srcset="__STATIC__/home/Portals/0/Images/he-productivity-2-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-2-p-800.png 800w, /Portals/0/Images/he-productivity-2.png 851w"></div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text" data-ix="scroll-reveal">Yesterdays conventional &nbsp;wheel mounted sensor system and traditional rack technology yield 10 minutes to readings.</p>
+                                        <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-3.png" srcset="__STATIC__/home/Portals/0/Images/he-productivity-3-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-3-p-800.png 800w, /Portals/0/Images/he-productivity-3.png 858w"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-section-white">
+                            <div class="super-tech-wrapper top">
+                                <div class="div-row w-clearfix">
+                                    <div class="div-column-half-left w-hidden-small w-hidden-tiny">
+                                        <ul class="desc-list">
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">HUNTER CODELINK&reg; ADVANTAGE</h4>
+                                                <p class="text">The only integrated, complete alignment system.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">REPLACES MULTIPLE TOOLS</h4>
+                                                <p class="text">No need for multiple scan tools with cumbersome wires.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">EASILY HANDLE MOST VEHICLES</h4>
+                                                <p class="text">CodeLink&reg; covers most vehicles with one seamless procedure.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="div-column-half-right">
+                                        <div class="super-tech-img-wrapper" data-ix="fade-in-from-right">
+                                            <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, (max-width: 2540px) 40vw, 1016px"
+                                                 src="__STATIC__/home/bortals/0/Images/productivity-technology-image-2_1.jpg" srcset="__STATIC__/home/bortals/0/Images/productivity-technology-image-2_1-p-800.jpeg 800w, __STATIC__/home/Portals/0/Images/productivity-technology-image-2_1.jpg 1016w"></div>
+                                    </div>
+                                    <div class="div-column-half-left w-hidden-main w-hidden-medium">
+                                        <ul class="desc-list">
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">HUNTER CODELINK<sup>&reg;</sup> ADVANTAGE</h4>
+                                                <p class="text">The only integrated, complete alignment system.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">REPLACES MULTIPLE TOOLS</h4>
+                                                <p class="text">No need for multiple scan tools with cumbersome wires.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">EASILY HANDLE MOST VEHICLES</h4>
+                                                <p class="text">CodeLink<sup>&reg;</sup> covers most vehicles with one seamless procedure.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-2">
+                            <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about today's last step in alignment service</div>
+                            <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-2"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a><a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-2"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-2"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-2">
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text">Over 50 million vehicles require Safety System Alignment. Several systems use electronic steering system output to determine the vehicle's travel direction.</p>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container"><img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-4.png" srcset="__STATIC__/home/Portals/0/Images/he-productivity-4-p-500.png 500w, /Portals/0/Images/he-productivity-4-p-800.png 800w, __STATIC__/home/Portals/0/Images/he-productivity-4.png 922w"></div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text">A growing number of vehicles also require &nbsp;additional resets. Many vehicles are now equipped with advanced driver assistance systems (ADAS) and require a calibration after wheel alignment.</p>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <div class="w-row">
+                                            <div class="w-col w-col-6" data-ix="scroll-reveal"><img src="__STATIC__/home/bortals/0/Images/super-desc-drop-img-2.jpg"></div>
+                                            <div class="w-col w-col-6">
+                                                <h4 class="heading-2">ADAS systems most likely to require reset</h4>
+                                                <ul class="desc-list no-padding">
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Lane Departure Warning (LDW) - Camera-based
+                                                        </p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Forward Collision Warning (FCW) - Radar-based
+                                                        </p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Adaptive Cruise Control (ACC) - Radar-based
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text">Codelink is the only integrated, complete alignment procedure to reset ADAS systems and other related sensors.</p>
+                                    </div>
+                                </div>
+                                <div class="no-bottom-padding super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <div class="w-row">
+                                            <div class="w-col w-col-6">
+                                                <h4 class="heading-2">CodeLink&reg; advantages:</h4>
+                                                <ul class="desc-list no-padding">
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Integrated with Hunter WinAlign&reg; systems</p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Simple instructions shown on aligner screen</p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Only one tool required</p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Wireless communication with aligner</p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Alignment printouts document reset</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="w-col w-col-6"><img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-5.png" srcset="/Portals/0/Images/he-productivity-5-p-500.png 500w, /Portals/0/Images/he-productivity-5.png 684w"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-section-white">
+                            <div class="super-tech-wrapper top">
+                                <div class="div-row w-clearfix">
+                                    <div class="div-column-half-left">
+                                        <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                            <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="__STATIC__/home/bortals/0/Images/productivity-technology-image-3.jpg" srcset="__STATIC__/home/bortals/0/Images/productivity-technology-image-3-p-500.jpeg 500w, __STATIC__/home/Portals/0/Images/productivity-technology-image-3-p-800.jpeg 800w, /Portals/0/Images/productivity-technology-image-3.jpg 960w"></div>
+                                    </div>
+                                    <div class="div-column-half-right">
+                                        <ul class="desc-list">
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Speed alignment service</h4>
+                                                <p class="text">Complete alignments 60% faster with synchronized aligner and lift rack.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">FIA IS AUTOMATIC</h4>
+                                                <p class="text">Turnplates and slipplates auto-lock, and inflation station automatically inflates tires.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Error proof your alignments</h4>
+                                                <p class="text">Automates technician tasks &nbsp;that can be easily forgotten or skipped.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-3">
+                            <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about the fully integrated alignment</div>
+                            <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-3"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a><a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-3"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-3"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-3">
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text">FIA streamlines the entire alignment process. Communication links automate tasks once performed by the technician manually, eliminating time-consuming trips around the vehicle and to the console.</p>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <div class="w-row">
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img src="__STATIC__/home/bortals/0/Images/he-productivity-6.png">
+                                                <p class="centered text">Control PowerSlide&reg; and Inflation Station settings on the lift console</p>
+                                            </div>
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img src="__STATIC__/home/bortals/0/Images/he-productivity-7.png">
+                                                <p class="centered text">Centralizes control of entire system and guides technician through alignment process</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <div class="w-row">
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img src="__STATIC__/home/bortals/0/Images/he-productivity-8.png">
+                                                <p class="centered text">Control PowerSlide&reg; and Inflation Station settings on the lift console</p>
+                                            </div>
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img src="__STATIC__/home/bortals/0/Images/he-productivity-9.png">
+                                                <p class="centered text">Automatically inflate all four tires simultaneously and record starting and final pressure</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-section-white">
+                            <div class="super-tech-wrapper top">
+                                <div class="div-row w-clearfix">
+                                    <div class="div-column-half-left w-hidden-small w-hidden-tiny">
+                                        <ul class="desc-list">
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">product-cta-icon
+                                                <p class="text">Identify profitable service opportunities without wasting valuable shop time.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Increase ROI</h4>
+                                                <p class="text">Secure more repair authorizations and generate more service revenue and profit.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Optional inspection accessories</h4>
+                                                <p class="text">Optional tools such as battery tester and tread depth help sell more services.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="div-column-half-right">
+                                        <div class="super-tech-img-wrapper" data-ix="fade-in-from-right">
+                                            <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw"
+                                                 src="__STATIC__/home/bortals/0/Images/productivity-technology-image-4.jpg" srcset="__STATIC__/home/bortals/0/Images/productivity-technology-image-4-p-500.jpeg 500w, /Portals/0/Images/productivity-technology-image-4.jpg 764w"></div>
+                                    </div>
+                                    <div class="div-column-half-left w-hidden-main w-hidden-medium">
+                                        <ul class="desc-list">
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Fast results</h4>
+                                                <p class="text">Identify profitable service opportunities without wasting valuable shop time.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Increase ROI</h4>
+                                                <p class="text">Secure more repair authorizations and generate more service revenue and profit.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Optional inspection accessories</h4>
+                                                <p class="text">Optional tools such as battery tester and tread depth help sell more services.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-4">
+                            <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about expanding repair opportunities</div>
+                            <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-4"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a><a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-4"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-4"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-4">
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text">Grow your business by using HawkEye Elite&reg; to perform Quick Check&reg; inspections. Use Quick Check&reg; inspections and detailed printouts to identify profitable repair opportunities and sell more work.</p>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <div class="w-row">
+                                            <div class="w-col w-col-6"><img data-ix="scroll-reveal" sizes="100vw"
+                                                                            src="__STATIC__/home/bortals/0/Images/he-productivity-10.png" srcset="__STATIC__/home/bortals/0/Images/he-productivity-10-p-500.png 500w, /Portals/0/Images/he-productivity-10.png 762w"></div>
+                                            <div class="w-col w-col-6">
+                                                <h4 class="heading-2">Detailed printouts feature:</h4>
+                                                <ul class="desc-list no-padding">
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Total toe front and rear</p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Camber on all wheels</p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Tire wear indication</p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Identifies vehicles that require Safety System Alignment&reg;</p>
+                                                    </li>
+                                                    <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                        <p class="text">Can feature your company's logo</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="super-desc-drop-wrapper">
+                                        <div class="w-container">
+                                            <div class="w-row">
+                                                <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-11.png" srcset="/Portals/0/Images/he-productivity-11-p-500.png 500w, /Portals/0/Images/he-productivity-11.png 675w">
+                                                    <p class="centered text">Retrieves emission codes. Wirelessly transfers important vehicle information to console.</p>
+                                                </div>
+                                                <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-12.png" srcset="/Portals/0/Images/he-productivity-12-p-500.png 500w, /Portals/0/Images/he-productivity-12.png 675w">
+                                                    <p class="centered text">Tests battery to OEM specs. Sends results to console wirelessly in seconds.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="super-desc-drop-wrapper">
+                                        <div class="w-container">
+                                            <div class="w-row">
+                                                <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-13.png" srcset="/Portals/0/Images/he-productivity-13-p-500.png 500w, /Portals/0/Images/he-productivity-13.png 675w">
+                                                    <p class="centered text">Quick and easy tire wear check. Conditions transmitted to console automatically.</p>
+                                                </div>
+                                                <div class="centered-column w-col w-col-6" data-ix="scroll-reveal">
+                                                    <img sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-14.png" srcset="/Portals/0/Images/he-productivity-14-p-500.png 500w, /Portals/0/Images/he-productivity-14.png 675w">
+                                                    <p class="centered text">Creates a 3D model of the tire and can be easily added to existing Quick Check&reg; inspection systems.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-section-white">
+                            <div class="super-tech-wrapper top">
+                                <div class="div-row w-clearfix">
+                                    <div class="div-column-half-left">
+                                        <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
+                                            <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw"
+                                                 src="__STATIC__/home/bortals/0/Images/productivity-technology-image-5.jpg" srcset="__STATIC__/home/bortals/0/Images/productivity-technology-image-5-p-800.jpeg 800w, __STATIC__/home/Portals/0/Images/productivity-technology-image-5.jpg 901w"></div>
+                                    </div>
+                                    <div class="div-column-half-right">
+                                        <ul class="desc-list">
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Options for Every Shop</h4>
+                                                <p class="text">Alignment console and sensor combinations to suit every need.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Sensor Packages for Any Space</h4>
+                                                <p class="text">Regardless of bay or space constraints, Hunter has a sensor package.</p>
+                                            </li>
+                                            <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
+                                                <h4 class="heading-2">Premium Consoles Maximize Productivity</h4>
+                                                <p class="text">Award-winning WinAlign software delivers dozens of productivity tools.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="super-tech-drop-section" data-scroll-time=".3" id="super-tech-section-5">
+                            <div class="bold centered main-color text" data-ix="scroll-reveal-2-remain">Learn more about choosing the right configuration</div>
+                            <a class="centered plus-sign w-inline-block" data-ix="super-desc-drop" href="#super-desc-drop-5"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a><a class="plus-sign-sticky w-inline-block" data-ix="super-desc-close" href="#super-tech-section-5"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <a class="plus-sign-top w-inline-block" data-ix="super-desc-close" href="#super-tech-section-5"><img class="plus-sign-icon" src="__STATIC__/home/bortals/0/Images/plus-sign-icon.svg"></a>
+                            <div class="super-desc-drop-container" data-ix="super-desc-sticky" data-scroll-time=".3" id="super-desc-drop-5">
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <p class="centered text">Choose the right alignment console and sensor package for your shop. Hunter provides customized solutions for every service facility.</p>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container"><img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-15.png" srcset="/Portals/0/Images/he-productivity-15-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-15-p-800.png 800w, __STATIC__/home/Portals/0/Images/he-productivity-15-p-1080.png 1080w, __STATIC__/home/Portals/0/Images/he-productivity-15.png 1517w"></div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <div class="w-row">
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img class="margin-bottom" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-16.png" srcset="/Portals/0/Images/he-productivity-16-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-16.png 679w">
+                                                <p class="centered text">Fixed-column configurations fit most service bay applications.</p>
+                                            </div>
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img class="margin-bottom" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-17.png" srcset="/Portals/0/Images/he-productivity-17-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-17.png 679w">
+                                                <p class="centered text">Motorized and manual movable-camera configurations provide a full range of vertical travel for additional lift height.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <div class="w-row">
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img class="margin-bottom" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-18.png" srcset="/Portals/0/Images/he-productivity-18-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-18.png 679w">
+                                                <p class="centered text">Cabinet-mounted configuration is mobile to service multiple alignment bays and provides a manual lift camera adjustment for a wide range of lift heights.</p>
+                                            </div>
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img class="margin-bottom" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-19.png" srcset="__STATIC__/home/Portals/0/Images/he-productivity-19-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-19.png 679w">
+                                                <p class="centered text">Wall- and ceiling-mount configurations are perfect when space is at a premium.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <div class="w-row">
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img class="margin-bottom" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-20.png" srcset="__STATIC__/home/Portals/0/Images/he-productivity-20-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-20.png 679w">
+                                                <p class="centered text">Floor-mounted overhead configurations are ideal for drive-through bays or to accommodate unique applications.</p>
+                                            </div>
+                                            <div class="centered-column w-col w-col-6" data-ix="scroll-reveal"><img class="margin-bottom" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-21.png" srcset="/Portals/0/Images/he-productivity-21-p-500.png 500w, /Portals/0/Images/he-productivity-21.png 679w">
+                                                <p class="centered text">One set of adjustable clamp arms covers the same clamping range as standard multi-arm kit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="super-desc-drop-wrapper">
+                                    <div class="w-container">
+                                        <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-22.png" srcset="__STATIC__/home/Portals/0/Images/he-productivity-22-p-500.png 500w, __STATIC__/home/Portals/0/Images/he-productivity-22-p-800.png 800w, __STATIC__/home/Portals/0/Images/he-productivity-22.png 1070w"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div></div>
+        </div></div><div class="DnnModule DnnModule-DNN_HTML DnnModule-3249"><a name="3249"></a><div id="dnn_ctr3249_ContentPane"><div id="dnn_ctr3249_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+        <div id="dnn_ctr3249_HtmlModule_lblContent" class="Normal">
+
+            <!--<div class="product-cta-icon-wrapper extra-action">-->
+            <!--<a class="gaAutoTrack" data-ga-category="Soft Lead" data-ga-action="Viewed Things to Consider" data-ga-label="HawkEye Elite®" href="/alignment-systems/tips-for-choosing-an-aligner">-->
+            <!--<img class="product-cta-icon" src="__STATIC__/home/bortals/0/Images/ProductCallsToAction/consider.svg">-->
+            <!--<div class="product-cta-text" data-origin="ScheduleDemo">Things to <br>-->
+            <!--Consider...</div>-->
+            <!--</a>-->
+            <!--</div>-->
+        </div>
+    </div></div>
+    </div></div>
+</div>
+<div class="w-row expanded">
+    <div id="dnn_LeftPane25" class="left-pane-25 w-col w-col-3 w-col-small-12 DNNEmptyPane"></div>
+    <div id="dnn_RightPane75" class="right-pane-75 w-col w-col-9 w-col-small-12 DNNEmptyPane"></div>
+</div>
+<div class="w-row expanded">
+    <div id="dnn_ContentPane3" class="content-pane-3 w-col w-col-12 DNNEmptyPane"></div>
+</div>
+<div class="w-row expanded">
+    <div id="dnn_LeftPane33" class="left-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+    <div id="dnn_CenterPane33" class="center-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+    <div id="dnn_RightPane33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+</div>
+<div class="w-row expanded">
+    <div id="dnn_ContentPane4" class="content-pane-4 w-col w-col-12 DNNEmptyPane"></div>
+</div>
+<div class="w-row">
+    <div class="left-pane-66 w-col w-col-8 w-col-small-12">
+        <div class="w-row">
+            <div id="dnn_LeftCol66" class="left-col-66 w-col-12 DNNEmptyPane"></div>
+            <div id="dnn_HalfColumnLeft" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+            <div id="dnn_HalfColumnRight" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+            <div id="dnn_LeftCol66Middle" class="left-col-66 w-col w-col-12 DNNEmptyPane"></div>
+            <div id="dnn_HalfColumnLeft2" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+            <div id="dnn_HalfColumnRight2" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+        </div>
+    </div>
+    <div id="dnn_RightCol33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+</div>
+<div class="w-row">
+    <div id="dnn_ContentPane5" class="content-pane-5 w-col w-col-12 DNNEmptyPane"></div>
+</div>
+<div class="w-row">
+    <div id="dnn_LeftCol33" class="left-col-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+    <div id="dnn_RightCol66" class="right-col-66 w-col w-col-8 w-col-small-12 DNNEmptyPane"></div>
+</div>
+<div class="w-row">
+    <div id="dnn_ContentPane6" class="content-pane-6 w-col w-col-12 w-col-small-12 DNNEmptyPane"></div>
+</div>
+<div class="w-row">
+    <div id="dnn_LeftPane50" class="left-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+    <div id="dnn_RightPane50" class="right-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+</div>
+<div class="w-row">
+    <div id="dnn_ContentPane7" class="content-pane-7 w-col-12 DNNEmptyPane"></div>
+</div>
+</div>
+</div>
+
+<!--<div id="slideoutButton" class="rep-icon-wrapper w-hidden-small w-hidden-tiny" data-ix="rep-slideout-modal">-->
+<!--<img class="rep-icon" data-ix="rep-slideout-modal" src="__STATIC__/home/bortals/0/Images/rep-icon.svg">-->
+<!--<div class="rep-icon-text" data-ix="rep-slideout-modal">Service, Sales, Pricing</div></div>-->
+
+<div id="slideoutWrapper" class="slideout-wrapper-mobile w-hidden-main w-hidden-medium">
+    <div class="slideout-container">
+        <div class="connect-wrapper">
+            <div id="slideoutClose" class="rep-slideout-close" data-ix="close-rep-slideout-modal-mobile">
+                X
+            </div>
+            <div class="center section-text">
+                CONNECT WITH YOUR HUNTER TEAM
+            </div>
+            <div class="bold center section-text display-zip">
+                63044
+            </div>
+            <div class="change-location-link-wrapper ">
+                <a id="change-location-link" class="cta-button w-button"><span class="change-location-text">ENTER LOCATION</span><span class="w-icon-dropdown-toggle"></span></a>
+            </div>
+            <div class="location ">
+                <div id="location-picker" class="select-location">
+                    <div>
+                        <select class="change-location-input w-select" id="country-select"></select>
+                    </div>
+                    <div>
+                        <input class="change-location-input w-input" type="text" id="zipcode-input" placeholder="ZIP CODE" />
+                    </div>
+                    <div class="zipError">
+                        * Please Enter a Valid Postal Code
+                    </div>
+                    <div id="submit">
+                        <button class="change-location-submit w-button" type="button" id="location-submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rep-wrapper">
+        </div>
+    </div>
+</div>
+
+
+
+{include file="common/footer" /}
+
+
+
+

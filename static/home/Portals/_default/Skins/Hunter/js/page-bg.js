@@ -1,0 +1,1 @@
+$(document).ready(function(){var pathArray=window.location.pathname.split('/');var page=pathArray[1].toLowerCase();page=page.replace(/ /g,"-");$('.content').addClass(page);});

@@ -1,0 +1,361 @@
+﻿@media (max-width: 767px){
+    .comparison-buttons .w-col {
+        width:33.333333%;
+    }
+}
+
+
+.header {
+    margin: 10px 0;
+}
+
+.product-model {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 120px;
+    max-height: 120px;
+    margin: auto;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.feature-image {
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 10px;
+}
+
+ul.inline-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline;
+}
+
+ul.inline-list li {
+    display: inline;
+}
+
+.btn-go {
+    margin-left: 5px;
+}
+
+.compare-pane button {
+    width: 100%;
+}
+
+.btn-compare:not([disabled]) {
+    background-color: #c00;
+    border-color: #b30000;
+    color: #fff;
+}
+
+.btn-compare:not([disabled]):hover, .btn-compare:not([disabled]):focus {
+    background-color: #a30000;
+    border-color: #750000;
+    color: #fff;
+}
+
+.search-products {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.search-product {
+    line-height: 115px;
+    padding-left: 140px;
+}
+.search-product-input{
+    
+    margin-right: 20px !important;
+    margin-top: 52px !important;
+}
+.attribute-name {
+    font-weight: bold;
+}
+.modal-left {
+    width: 150px;
+}
+.modal-right {
+    width: 200px;
+}
+
+.filter input + span {
+    vertical-align: text-bottom;
+}
+
+.modal.contact-modal .modal-dialog .modal-body .form .form-group:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+.modal.contact-modal .modal-dialog .modal-body .form .form-group label {
+    float: left;
+    width: 40%;
+}
+.modal.contact-modal .modal-dialog .modal-body .form .form-group .controls {
+    float: right;
+    width: 60%;
+}
+.modal.contact-modal .modal-dialog .modal-footer {
+    text-align: center;
+}
+
+.table-striped tr:nth-child(even) {
+    background-color: #eaeaea;
+}
+
+.category-row {
+    background-color: #393c3a;
+    color: white;
+    font-weight: bold;
+}
+
+.header-row {
+    text-align: center;
+}
+.feature-header {
+    vertical-align: middle !important;
+    font-weight: bold;
+}
+.feature-title {
+    vertical-align: middle !important;
+    font-weight: bold;
+}
+.feature-link {
+    font-weight: bold;
+}
+.feature-value {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.feature-value div {
+    background-image: url('images/checkmark.jpg');
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 16px;
+    margin: auto;
+}
+
+
+.spec-value {
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.compare-results .table tr td {
+    word-break: break-word;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.compare-results .table .header-row td:nth-child(1):nth-last-child(1) {
+    width: 100%;
+}
+
+.compare-results .table .header-row td:nth-child(1):nth-last-child(2),
+.compare-results .table .header-row td:nth-child(2):nth-last-child(1) {
+    width:  50%;
+}
+
+.compare-results .table .header-row td:nth-child(1):nth-last-child(3),
+.compare-results .table .header-row td:nth-child(2):nth-last-child(2),
+.compare-results .table .header-row td:nth-child(3):nth-last-child(1) {
+    width: 33%;
+}
+
+.compare-results .table .header-row td:nth-child(1):nth-last-child(4),
+.compare-results .table .header-row td:nth-child(2):nth-last-child(3),
+.compare-results .table .header-row td:nth-child(3):nth-last-child(2),
+.compare-results .table .header-row td:nth-child(4):nth-last-child(1) {
+    width:  25%;
+}
+
+.compare-results .table .header-row td:nth-child(1):nth-last-child(5),
+.compare-results .table .header-row td:nth-child(2):nth-last-child(4),
+.compare-results .table .header-row td:nth-child(3):nth-last-child(3),
+.compare-results .table .header-row td:nth-child(4):nth-last-child(2),
+.compare-results .table .header-row td:nth-child(5):nth-last-child(1) {
+    width:  20%;
+}
+
+.DnnModule-DNN_HTML{
+	width: 100%;
+	margin-top: 0; 
+}
+
+.tipsContainer{
+	display:none;
+}
+
+.tipsInspection, .tipsOnCarBrakeLathes, .tipsBenchBrakeLathe, .tipsTireChanger, .tipsWheelBalancer, .tipsLiftRacks, .tipsAligner{
+	height: 600px;
+	overflow-x: auto;
+}
+
+.comparison-buttons .button-box,
+.tipButtons{
+    display: inline-block;
+    width: 100%;
+    min-width: 200px;
+}
+
+.tipButtons div{
+    display: none;
+    text-align: center;
+    background: #4e4e50;
+    padding: 5px;
+}
+
+.tipButtons div a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.non-sticky-comparison-buttons{
+}
+
+.comparison-buttons .button-box{
+    margin-right: 5px;
+}
+
+.comparison-buttons .button-box button{
+    padding: 5px;
+    
+}
+
+.tipsContainer {
+    display:none;
+}
+
+.title-button-arrow {
+    top: 34% !important;
+}
+
+.compare-results .thumbnail{
+    display: block;
+}
+
+.stickem-container {
+    position: relative;
+}
+.stickit {
+    width: 85%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.stickit-end {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+}
+
+.table-responsive{
+    overflow-x: auto;
+}
+
+.table-responsive table{
+    min-width: 630px;
+}
+
+
+.segment-filter .heading-2{
+    display:block;
+    text-align:left;
+    padding-top: 50px;
+}
+
+
+
+.right-pane .heading-2{
+    text-align: left;
+    width: 70%;
+}
+@media print {
+
+    .compare-pane .left-pane, .compare-pane .right-pane, .compare-pane .compare-results .form-group {
+        display: none !important;
+    }
+
+    .compare-results {
+        width: 100% !important;
+    }
+
+    .compare-results .table-bordered th,
+    .compare-results .table-bordered td {
+        border: 1px solid #aaa !important;
+    }
+
+    .product-section-white{
+        display: none;
+        padding: 0 !important;
+    }
+    .compare-products{
+        display: block;
+        width: 100%;
+    }
+
+    .primary-nav-section,
+    .secondary-nav-section,
+    .footer-section{
+        display: none !important;
+    }
+}
+
+
+@media (min-width: 600px){
+    .segment-filter .heading-2{
+        display:inline;
+        padding-top: 0;
+    }
+
+    .comparison-buttons .button-box,
+    .tipButtons{
+        width: 48%;
+    }
+}
+
+@media (min-width: 992px){
+    .segment-filter .heading-2{
+        display:inline;
+        padding-top: 0;
+    }
+
+    .comparison-buttons .button-box,
+    .tipButtons{
+        width: 25%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
