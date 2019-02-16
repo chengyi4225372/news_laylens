@@ -64,10 +64,6 @@ class Index extends Common {
     }
 
 
-    //todo  调整 对其
-    public function hawkeye_elite(){
-        return $this->view->fetch();
-    }
 
     //todo 轮胎机 革命
     public function revolution(){
@@ -156,6 +152,16 @@ public  function services(){
     
 /* todo 完成部分  */
 
+
+    //todo  调整 对其
+    public function hawkeye_elite(){
+        //cid = 8 smarter
+        $specs = Db::name('specs')->where('cid','8')->find();
+        $this->assign('specs',$specs);
+        return $this->view->fetch();
+    }
+
+    
     // todo 前台首页
     public function index(){
         //新闻
