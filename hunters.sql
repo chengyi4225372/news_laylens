@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-02-16 17:11:19
+Date: 2019-02-16 18:15:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -610,7 +610,7 @@ CREATE TABLE `specs` (
 -- ----------------------------
 -- Records of specs
 -- ----------------------------
-INSERT INTO `specs` VALUES ('0000000001', '8', 'fffffffffffffffff');
+INSERT INTO `specs` VALUES ('0000000001', '8', '<p style=\"text-align: center;\"><img border=\"0\" src=\"/static/upload/f82d5eaa69d2b4dd/d282f3003ead143c.jpg\" style=\"max-width:880px\" title=\"image\" /></p>\r\n\r\n<p style=\"text-align: center;\"><img border=\"0\" src=\"/static/upload/15b86ae3ea9ed0f1/7039a93b85f848c5.jpg\" style=\"max-width:880px\" title=\"image\" /></p>');
 
 -- ----------------------------
 -- Table structure for `system_auth`
