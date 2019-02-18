@@ -2,7 +2,7 @@
 
 {block name="button"}
 <!--{if auth("$classuri/add")}-->
-<button data-open='{:url("$classuri/add")}' class='layui-btn layui-btn-sm'>添加产品规格</button>
+<button data-open='{:url("$classuri/add")}' class='layui-btn layui-btn-sm'>添加产品规格图片</button>
 <!--&lt;!&ndash;{/if}&ndash;&gt;-->
 <!--&lt;!&ndash;{if auth("$classuri/del")}&ndash;&gt;-->
 <button data-update data-field='delete' data-action='{:url("$classuri/del")}' class='layui-btn layui-btn-sm layui-btn-danger'>删除</button>
@@ -49,6 +49,7 @@
                 <input data-auto-none="" data-check-target='.list-check-box' type='checkbox'>
             </th>
             <th class='text-left nowrap'>ID</th>
+            <th class='text-left nowrap'>规格图片</th>
             <th class='text-left nowrap'>关联二级分类</th>
             <th class='text-left nowrap'>操作</th>
         </tr>
@@ -63,9 +64,11 @@
                 {$vo.id|default=''}
             </td>
             <td class='text-left nowrap'>
+                <img data-tips-image src="{$vo.img|default=''}" height="60"/>
+            </td>
+            <td class='text-left nowrap'>
                 {$vo.fenlei_2}
             </td>
-
             <td class='text-left nowrap'>
                 {if auth("$classuri/edit")}
                 <span class="text-explode">|</span>

@@ -860,25 +860,13 @@
                                                                 </h3>
 
                                                                 <!--text 测试下-->
+                                                                {volist name="specs" id="list"}
                                                                 <div class="super-desc-drop-wrapper">
                                                                     <div class="w-container">
-                                                                        <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-2.png" srcset="/Portals/0/Images/he-productivity-2-p-500.png 500w, /Portals/0/Images/he-productivity-2-p-800.png 800w, /Portals/0/Images/he-productivity-2.png 851w">
+                                                                        <img data-ix="scroll-reveal" sizes="100vw" src="{$list.img}" srcset="{$list.img} 500w, {$list.img} 800w, {$list.img} 851w">
                                                                     </div>
                                                                 </div>
-
-
-
-                                                                <div id="dnn_ctr1160_contentPane" class="containerContent">
-                                                                    <div id="dnn_ctr1160_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
-                                                                        <div id="dnn_ctr1160_HtmlModule_lblContent" class="Normal">
-                                                                            <p>&nbsp;</p>
-                                                                            <!--<p class="p1">-->
-                                                                            {$specs.content|raw}
-                                                                            <!--</p>-->
-                                                                            <p>&nbsp;</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                {/volist}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1367,25 +1355,15 @@
                                                     </h3>
 
 
-                                                    <!-- todo text 测试下  自使用修改成这种
+                                                    <!-- todo text 测试下  自使用修改成这种 -->
+                                                    {volist name="specs" id="list"}
                                                     <div class="super-desc-drop-wrapper">
                                                         <div class="w-container">
-                                                            <img data-ix="scroll-reveal" sizes="100vw" src="__STATIC__/home/bortals/0/Images/he-productivity-2.png" srcset="/Portals/0/Images/he-productivity-2-p-500.png 500w, /Portals/0/Images/he-productivity-2-p-800.png 800w, /Portals/0/Images/he-productivity-2.png 851w">
+                                                            <img data-ix="scroll-reveal" sizes="100vw" src="{$list.img}" srcset="{$list.img} 500w, {$list.img} 800w, {$list.img} 851w">
                                                         </div>
                                                     </div>
-                                                 -->
+                                                  {/volist}
 
-                                                    <div id="dnn_ctr1160_contentPane" class="containerContent">
-                                                        <div id="dnn_ctr1160_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
-                                                            <div id="dnn_ctr1160_HtmlModule_lblContent" class="Normal">
-                                                                <p>&nbsp;</p>
-                                                                <p class="p1">
-                                                                    {$specs.content|raw}
-                                                                </p>
-                                                                <p>&nbsp;</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

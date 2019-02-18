@@ -156,7 +156,7 @@ public  function services(){
     //todo  调整 对其
     public function hawkeye_elite(){
         //cid = 8 smarter
-        $specs = Db::name('specs')->where('cid','8')->find();
+        $specs = Db::name('specs')->where('cid','8')->select();
         $this->assign('specs',$specs);
         return $this->view->fetch();
     }

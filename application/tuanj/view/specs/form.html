@@ -18,35 +18,36 @@
             </select>
         </div>
     </div>
-  <!--
-    <div class="layui-form-item">
-        <label class="layui-form-label">logo图</label>
-        <div class="layui-input-block">
-            <input type="text" name="logo" value='{$vo.logo|default=""}'   class="layui-input">
-        </div>
-    </div>
 
     <div class="layui-form-item">
-        <label class="layui-form-label">logo标题</label>
+        <label class="layui-form-label">上传规格（specs)图</label>
         <div class="layui-input-block">
-            <input type="text" name="logo_title" value='{$vo.logo_title|default=""}'   class="layui-input">
+            <input type="text" name="img" value='{$vo.img|default=""}'   class="layui-input">
+            <span style="color: #ff2c27;">*: 图片建议上传尺寸为：851 x 775</span>
         </div>
     </div>
+    <!--
+      <div class="layui-form-item">
+          <label class="layui-form-label">logo标题</label>
+          <div class="layui-input-block">
+              <input type="text" name="logo_title" value='{$vo.logo_title|default=""}'   class="layui-input">
+          </div>
+      </div>
 
-    <div class="layui-form-item">
-        <label class="layui-form-label">介绍标题</label>
-        <div class="layui-input-block">
-            <input type="text" name="info_title" value='{$vo.info_title|default=""}'   class="layui-input">
-        </div>
-    </div>
-   -->
+      <div class="layui-form-item">
+          <label class="layui-form-label">介绍标题</label>
+          <div class="layui-input-block">
+              <input type="text" name="info_title" value='{$vo.info_title|default=""}'   class="layui-input">
+          </div>
+      </div>
+
     <div class="layui-form-item layui-form-text">
         <label class="layui-form-label">介绍内容</label>
         <div class="layui-input-block">
             <textarea name="content" class="layui-textarea" data-value="">{$vo.content|default=""}</textarea>
         </div>
     </div>
-
+    -->
     <div class="hr-line-dashed"></div>
 
     <div class="layui-form-item text-center">
@@ -58,7 +59,7 @@
 <script>
     require(['jquery', 'ckeditor'], function() {
         window.form.render();
-        $('form [name="logo"]').uploadOneImage();
+        $('form [name="img"]').uploadOneImage();
         window.createEditor('[name="content"]', {height: 500});
     });
 </script>
