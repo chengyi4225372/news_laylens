@@ -38,8 +38,10 @@
         <div class="layui-input-block">
             <input type="text" name="com" value='{$vo.com|default=""}'   class="layui-input">
         </div>
+        <span style="color: #ff2c27;font-size: 15px;">
+                *:填写youtobe视频的时候请注意：例如 https://www.youtube.com/watch?v=d7BV_6UsHP0 修改成 https://www.youtube.com/embed/d7BV_6UsHP0 在这里我只需要填写 d7BV_6UsHP0 即可！！
+            </span>
     </div>
-
 
     <div class="hr-line-dashed"></div>
 
@@ -53,7 +55,7 @@
     require(['jquery', 'ckeditor'], function() {
         window.form.render();
         $('form [name="img"]').uploadOneImage();
-        window.createEditor('[name="info"]', {height: 500});
+        //window.createEditor('[name="info"]', {height: 500});
     });
 </script>
 

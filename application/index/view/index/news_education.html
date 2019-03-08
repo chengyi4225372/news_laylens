@@ -1,4 +1,5 @@
 {include file="common/header"/}
+
         <div class="content">
             <div>
                 <div class="w-row">
@@ -12,7 +13,7 @@
                         </div>
                     </div>
                     <div class="w-col w-col-12">
-                        <div class="w-row expanded">
+                        <div class="w-row expanded" >
                             <div id="dnn_ContentPane2" class="content-pane-2 w-col-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-3089"><a name="3089"></a>
                                 <div class="C_Container">
                                     <div id="dnn_ctr3089_contentPane" class="containerContent">
@@ -21,7 +22,7 @@
                                             <div class="w-row">
                                                 <div class="w-col w-col-9 w-col-medium-12">
                                                     <div class="product-section-white">
-                                                        {foreach $news as $key=>$vo}
+                                                        {foreach $newss as $key=>$vo}
                                                         <strong>{$vo.time|date='Y-m-d H:i'}</strong><br>
                                                         <a href="{:url('index/press')}?id={$vo.id}" target="_blank">{$vo.title|raw}</a>
                                                         <br>
@@ -113,3 +114,6 @@
            </div>
        </div>
    {include file="common/footer"/}
+
+</body>
+</html>

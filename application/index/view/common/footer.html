@@ -1,3 +1,4 @@
+
 <div class="footer-section">
     <div class="w-row">
         <div class="w-col w-col-2 w-col-medium-4 w-col-small-6">
@@ -5,16 +6,16 @@
                 <h5 class="heading-2">Product lines</h5>
                 <a class="block link text" href="{:url('index/tz')}">Alignment</a>
                 <a class="block link text" href="{:url('index/luntai_chai')}">Tire Changers</a>
-                <a class="block link text" href="{:url('index/brake_lathes')}">Brake Lathes</a>
-                <a class="block link text" href="{:url('index/sjj')}">Lifts</a>
+                <a class="block link text" href="{:url('index/sjj')}">Brake Lathes</a>
+                <a class="block link text" href="{:url('index/brake_lathes')}"> Lifts</a>
             </div>
         </div>
         <div class="w-col w-col-2 w-col-medium-4 w-col-small-6">
             <div class="footer-div-wrapper">
                 <h5 class="heading-2">customer service</h5>
-                <a class="block link text" href="{:url('index/contact')}">AFTER-SALES SUPPORT</a>
+                <a class="block link text" href="{:url('index/support')}">AFTER-SALES SUPPORT</a>
                 <a class="block link text" href="{:url('index/materials')}">UPGRADE</a>
-                <a class="block link text" href="{:url('index/training')}">Q&A</a>
+                <a class="block link text" href="{:url('index/qalist')}">Q&A</a>
                 <a class="block link text" href="{:url('index/documents')}">TRAINING CENTER </a>
                 <a class="block link text" href="{:url('index/documents')}">DOWNLOADING</a>
                 <a class="block link text" href="{:url('index/contact')}"> CONTACT US</a>
@@ -37,14 +38,11 @@
         <div class="w-col w-col-2 w-col-medium-4 w-col-small-6">
             <div class="footer-div-wrapper">
                 <h5 class="heading-2">INTERNATIONAL EXHIBITION</h5>
-                <ul><li><a class="block link text" href="{:url('index/news_education')}?years=2"> 2012&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a class="block link text" href="{:url('index/news_education')}?years=3"> 2013&nbsp;&nbsp;&nbsp;</a></li></ul>
-                <ul><li><a class="block link text" href="{:url('index/news_education')}?years=4"> 2014&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a class="block link text" href="{:url('index/news_education')}?years=5"> 2015&nbsp;&nbsp;&nbsp;</a></li></ul>
-                <ul><li><a class="block link text" href="{:url('index/news_education')}?years=6"> 2016&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a class="block link text" href="{:url('index/news_education')}?years=7"> 2017&nbsp;&nbsp;&nbsp;</a></li></ul>
-                <ul><li><a class="block link text" href="{:url('index/news_education')}?years=8"> 2018&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a class="block link text" href="{:url('index/news_education')}?years=9"> 2019&nbsp;&nbsp;&nbsp;</a></li></ul>
+                <ul>
+                    {volist name="news" id="new"}
+                    <li><a class="block link text" href="{:url('index/news_education')}?years={$new.id}">{$new.year} &nbsp;&nbsp;&nbsp;</a></li>
+                    {/volist}
+                </ul>
             </div>
         </div>
         <div class="w-col w-col-2 w-col-medium-4 w-col-small-6">
@@ -52,33 +50,32 @@
                 <img class="footer-logo" src="__STATIC__/home/Portals/0/Images/flogo.png">
             </div>
         </div>
-        <!--<div class="w-col w-col-2 w-col-medium-4 w-col-small-6">-->
-            <!--<div class="footer-div-wrapper">-->
-                <!--<h5 class="heading-2">oem equipment</h5>-->
-                <!--<a class="block link text" href="{:url('index/benz')}">BMW</a>-->
-                <!--<a class="block link text" href="{:url('index/benz')}">Jaguar/ Land Rover</a>-->
-                <!--<a class="block link text" href="{:url('index/benz')}">Mercedes-Benz</a>-->
-                <!--<a class="block link text" href="{:url('index/benz')}">Porsche/ Bentley</a>-->
-                <!--<a class="block link text" href="{:url('index/benz')}">Volkswagen/ Audi</a>-->
-                <!--<a class="block link text" href="{:url('index/benz')}">Other OEMs</a>-->
-            <!--</div>-->
-        <!--</div>-->
         <div class="w-col w-col-2 w-col-medium-4 w-col-small-6">
             <div class="footer-div-wrapper social">
-                <div class="footer-div-wrapper social">
-                    <!-- <img class="footer-logo" src="/static/home/Portals/0/Images/hunter-black-logo.png"> -->
-                    <div class="text">
-                        <!--<br><span class="block link text"><a href="tel:+1(314)731-0000" class="block link text">+1(314) 731-0000</a>-->
-                        <span>LAWRENCE AUTO MACHINERY (USA)</span>
-                        <span>Headquarter: Ave. Suite 3G Flushing, New York, 11354, USA</span>
-                        <!-- <span>Asia-Pacific General Agent: Guangzhou Lawrence Auto Machinery Co., Ltd.</span> -->
-                        <span>Production Base: No.53 Zhonghe Rd., 4th Guangcong Rd., Guangzhou </span>
-                        <!-- <span> <a href="www.Lawren3d.com">Website: www. Lawren3d.com</a></span>
-                         <span class="block link text"><a href="tel:Tel: +86-20-86328363" class="block link text">Tel: +86-20-86328363</a>
-                         <span>Fax: +86-20-86331 8680 </span>
-                         <span>Email: info@lawren3d.com</span> -->
-                        <!--</span>-->
-                    </div>
+                <!-- <img class="footer-logo" src="/static/home/Portals/0/Images/hunter-black-logo.png"> -->
+                <div class="text">
+                    <!--<br><span class="block link text"><a href="tel:+1(314)731-0000" class="block link text">+1(314) 731-0000</a>-->
+                    <span>LAWRENCE AUTO MACHINERY (USA)</span>
+                    <span>Headquarter: Ave. Suite 3G Flushing, New York, 11354, USA</span>
+                    <!-- <span>Asia-Pacific General Agent: Guangzhou Lawrence Auto Machinery Co., Ltd.</span> -->
+                    <span>Production Base: No.53 Zhonghe Rd., 4th Guangcong Rd., Guangzhou </span>
+                    <!-- <span> <a href="www.Lawren3d.com">Website: www. Lawren3d.com</a></span>
+                     <span class="block link text"><a href="tel:Tel: +86-20-86328363" class="block link text">Tel: +86-20-86328363</a>
+                     <span>Fax: +86-20-86331 8680 </span>
+                     <span>Email: info@lawren3d.com</span> -->
+                    <!--</span>-->
+                </div>
+
+                <div class="social-link-wrapper">
+                    <a class="w-inline-block social-icon" href="https://www.facebook.com/hunterengineeringcompany" target="_blank"><img class="social-icon" src="__STATIC__/home/bortals/0/Images/facebook.svg">
+                    </a>
+                    <a class="w-inline-block social-icon" href="https://twitter.com/HunterEngCo" target="_blank"><img class="social-icon" src="__STATIC__/home/bortals/0/Images/twitter.svg">
+                    </a>
+                    <a class="w-inline-block social-icon" href="https://www.youtube.com/user/HunterEngCo" target="_blank"><img class="social-icon" src="__STATIC__/home/bortals/0/Images/youtube.svg">
+                    </a>
+                    <a class="w-inline-block social-icon" href="https://www.linkedin.com/company/hunter-engineering" target="_blank"><img class="social-icon" src="__STATIC__/home/bortals/0/Images/linkedin.svg">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -105,10 +102,27 @@
 
 <script>
     $(document).on('click', '.st_newsletter_large', function() {
-        //console.log(111);
         window.location = '/newsletter';
     });
 </script>
+
+<!--<script type="text/javascript">-->
+<!--/* <![CDATA[ */-->
+<!--var google_conversion_id = 1070064664;-->
+<!--var google_custom_params = window.google_tag_params;-->
+<!--var google_remarketing_only = true;-->
+<!--/* ]]> */-->
+<!--</script>-->
+<!--<div style="display:none;">-->
+<!--<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">-->
+<!--</script>-->
+<!--</div>-->
+<!--<noscript>-->
+<!--<div style="display:inline;">-->
+<!--<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1070064664/?value=0&amp;guid=ON&amp;script=0"/>-->
+<!--</div>-->
+<!--</noscript>-->
+
 
 <script>
     if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
@@ -123,18 +137,23 @@
     }
 </script>
 
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '550441425147952');
-    fbq('track', 'PageView');
-</script>
+<!--<script>-->
+<!--!function(f,b,e,v,n,t,s)-->
+<!--{if(f.fbq)return;n=f.fbq=function(){n.callMethod?-->
+<!--n.callMethod.apply(n,arguments):n.queue.push(arguments)};-->
+<!--if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';-->
+<!--n.queue=[];t=b.createElement(e);t.async=!0;-->
+<!--t.src=v;s=b.getElementsByTagName(e)[0];-->
+<!--s.parentNode.insertBefore(t,s)}(window, document,'script',-->
+<!--'https://connect.facebook.net/en_US/fbevents.js');-->
+<!--fbq('init', '550441425147952');-->
+<!--fbq('track', 'PageView');-->
+<!--</script>-->
+<!--<noscript>-->
+<!--<img height="1" width="1" style="display:none"-->
+<!--src="https://www.facebook.com/tr?id=550441425147952&ev=PageView&noscript=1"/>-->
+<!--</noscript>-->
+
 
 <script type="text/javascript">
     /* Create a configuration object */
@@ -247,100 +266,83 @@
     }
 </script>
 
- <script>
-        $("#about").mouseenter(function(){
-            $("#about-content").height('auto') ;
-            $('#about-content').siblings('.secondary-nav-drawer').height('0');
-        });
-        $("#about-content").mouseleave(function(){
-            $("#about-content").height('0');
-        });
+<script>
+    //导航 菜单
+    $("#about").mouseenter(function(){
+        $("#about-content").height('auto') ;
+        $('#about-content').siblings('.secondary-nav-drawer').height('0');
+    });
+    $("#about-content").mouseleave(function(){
+        $("#about-content").height('0');
+    });
 
-        $("#inter").mouseenter(function(){
-            $("#inter-content").height('auto');
-            $('#inter-content').siblings('.secondary-nav-drawer').height('0');
-        })
-        $("#inter-content").mouseleave(function(){
-            $("#inter-content").height('0');
+    $("#inter").mouseenter(function(){
+        $("#inter-content").height('auto');
+        $('#inter-content').siblings('.secondary-nav-drawer').height('0');
+    })
+    $("#inter-content").mouseleave(function(){
+        $("#inter-content").height('0');
 
-        });
+    });
 
-        $("#language").mouseenter(function(){
-            $("#language-content").height('auto');
-            $('#language-content').siblings('.secondary-nav-drawer').height('0');
-        });
-        $("#language-content").mouseleave(function(){
-            $("#language-content").height('0')
-        });
+    $("#language").mouseenter(function(){
+        $("#language-content").height('auto');
+        $('#language-content').siblings('.secondary-nav-drawer').height('0');
+    });
+    $("#language-content").mouseleave(function(){
+        $("#language-content").height('0')
+    });
 
-        $("#cusiomer").mouseenter(function(){
-            $("#cusiomer-content").height('auto');
-            $('#cusiomer-content').siblings('.secondary-nav-drawer').height('0');
-        });
-        $("#cusiomer-content").mouseleave(function(){
-            $("#cusiomer-content").height('0');
-        });
-    </script>
-
+    $("#cusiomer").mouseenter(function(){
+        $("#cusiomer-content").height('auto');
+        $('#cusiomer-content').siblings('.secondary-nav-drawer').height('0');
+    });
+    $("#cusiomer-content").mouseleave(function(){
+        $("#cusiomer-content").height('0');
+    });
+</script>
 
 <script>
-        // 二级菜单
-        $("#alignment").mouseenter(function(){
-            $("#alignment-1").height('auto') ;
-            $('#alignment-1').siblings('.primary-nav-drawer').height('0');
-        });
-        $("#alignment-1").mouseleave(function(){
-            $("#alignment-1").height('0');
-        });
+    // 二级菜单
+    $("#alignment").mouseenter(function(){
+        $("#alignment-1").height('auto') ;
+        $('#alignment-1').siblings('.primary-nav-drawer').height('0');
+    });
+    $("#alignment-1").mouseleave(function(){
+        $("#alignment-1").height('0');
+    });
 
-        $("#tire").mouseenter(function(){
-            $("#tire-1").height('auto') ;
-            $('#tire-1').siblings('.primary-nav-drawer').height('0');
-        });
-        $("#tire-1").mouseleave(function(){
-            $("#tire-1").height('0');
-        });
+    $("#tire-changers").mouseenter(function(){
+        $("#tire-changers-1").height('auto') ;
+        $('#tire-changers-1').siblings('.primary-nav-drawer').height('0');
+    });
+    $("#tire-changers-1").mouseleave(function(){
+        $("#tire-changers-1").height('0');
+    });
 
-        $("#wheel").mouseenter(function(){
-            $("#wheel-1").height('auto') ;
-            $('#wheel-1').siblings('.primary-nav-drawer').height('0');
-        });
-        $("#wheel-1").mouseleave(function(){
-            $("#wheel-1").height('0');
-        });
+    $("#wheel-balancers").mouseenter(function(){
+        $("#wheel-balancers-1").height('auto') ;
+        $('#wheel-balancers-1').siblings('.primary-nav-drawer').height('0');
+    });
+    $("#wheel-balancers-1").mouseleave(function(){
+        $("#wheel-balancers-1").height('0');
+    });
 
-        $("#lathe").mouseenter(function(){
-            $("#lathe-1").height('auto') ;
-            $('#lathe-1').siblings('.primary-nav-drawer').height('0');
-        });
-        $("#lathe-1").mouseleave(function(){
-            $("#lathe-1").height('0');
-        });
+    $("#lifts").mouseenter(function(){
+        $("#lifts-1").height('auto') ;
+        $('#lifts-1').siblings('.primary-nav-drawer').height('0');
+    });
+    $("#lifts-1").mouseleave(function(){
+        $("#lifts-1").height('0');
+    });
 
-
-
-
-    </script>
-
-   <!-- featrues 展示-->
-  <script>
-        $(document).ready(function(){
-            $("div.primary-nav-drawer-alignment.primary-nav-drawer").height('auto');
-        });
-
-            $("a[href= 'features']").click(function(){
-                console.log(111);
-                $("div.primary-nav-drawer-alignment.primary-nav-drawer").height('0');
-            })
-
-
-    </script>
+</script>
 
 
 <script src="https://sitesearch360.com/cdn/sitesearch360-v10.min.js"></script>
 <input name="ScrollTop" type="hidden" id="ScrollTop" />
 <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__scdoff`:`1`,`sf_siteRoot`:`/`,`sf_tabId`:`55`}" />
-<input name="__RequestVerificationToken" type="hidden" value="0O8DEhkmunbMGTvW7_7KTCD3pESLsLs0fko7QqIxEiS5tgiUX-5o7dj-NWG4OnBePHOByjyussV-KVug8A0lCr1RXR2mpUzlF3KoYB5fP67G0oxJBnPNVO3SLes1" />
+<input name="__RequestVerificationToken" type="hidden" value="ElZvKlw0hy-LRQFet__Y2OqtQPM5eD3_IiiJtol64-9neOCzJwZiXIPxMJYSZsazcigS16SsR6N5Ka8ydp68Vo0p4H85wDhTOrFHLbFOdyitnOONlAxUbTT3kvk1" />
 <script src="__STATIC__/home/DesktopModules/SteadyRain/Hunter/Resources/js/jquery.helpers.js?cdv=330" type="text/javascript"></script>
 <script src="__STATIC__/home/Portals/_default/Skins/Hunter/js/flexibility.js?cdv=330" type="text/javascript"></script>
 <script src="__STATIC__/home/Portals/_default/Skins/Hunter/js/hunter-search.js?cdv=330" type="text/javascript"></script>
@@ -352,7 +354,5 @@
 <script src="__STATIC__/home/Portals/_default/Skins/Hunter/includes/RepAndTrainingCTA.js?cdv=330" type="text/javascript"></script>
 <script src="__STATIC__/home/Portals/_default/Skins/Hunter/js/modernizr.js?cdv=330" type="text/javascript"></script>
 <script src="__STATIC__/home/Portals/_default/Skins/Hunter/includes/InternationalDistributor.js?cdv=330" type="text/javascript"></script>
-<script type="text/javascript" src="__STATIC__/home/Resources/Shared/scripts/initWidgets.js"></script></form>
-
-</body>
-</html>
+<script type="text/javascript" src="__STATIC__/home/Resources/Shared/scripts/initWidgets.js"></script>
+</form>

@@ -39,7 +39,70 @@ class Common extends Controller {
         $this->assign('helps',$helps);
         $articles = Db::name('new')->order('id desc')->limit(5)->select();
         $this->assign('articles',$articles);
+        //新闻 年份
+        $news = Db::name('years')->select();
+        $this->assign('news',$news);
+        //产品 分类
+        $fenlei =Db::name('chanping')->where('pid',0)->select();
+        foreach($fenlei as $k =>$vo){
+            $fenlei[$k]['cate_2'] = Db::name('chanping')->where('pid',$fenlei[$k]['id'])->select();
+        }
+        $this->assign('fenlei',$fenlei);
+
     }
+
+    //产品详情
+    public function info($id){
+        if($id<=0){
+          return false;
+        }else{
+            $info = Db::name('info')->where('cid',$id)->find();
+        }
+        return $info;
+    }
+
+    //产品特征
+    public function features($id){
+        if($id<=0){
+            return false;
+        }else{
+            $features = Db::name('features')->where('cid',$id)->order('id asc')->select();
+        }
+        return $features;
+    }
+
+    //产品视频
+    public function media($id){
+        if($id<=0){
+            return false;
+        }else{
+            $media = Db::name('media')->where('cid',$id)->order('id desc')->select();
+        }
+        return $media;
+    }
+
+   //产品规格
+    public function specs($id){
+        if($id<=0){
+            return false;
+        }else{
+            $specs = Db::name('specs')->where('cid',$id)->order('id asc')->select();
+        }
+        return $specs;
+    }
+
+  //产品展示图
+    public function zhan_img($id){
+        if($id<=0){
+            return false;
+        }else{
+            $zhan_img = Db::name('zhanshi_img')->where('cid',$id)->order('id desc')->select();
+        }
+        return $zhan_img;
+    }
+
+
+
 
     //todo 生成pdf
     public function send_pdf(){

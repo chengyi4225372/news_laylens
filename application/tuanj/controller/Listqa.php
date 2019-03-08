@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Administrator
- * Date: 2019/2/14
- * Time: 11:20
+ * Date: 2019/2/26
+ * Time: 14:56
  */
 
 namespace app\tuanj\controller;
@@ -12,14 +12,14 @@ use think\Db;
 use controller\BasicAdmin;
 use service\DataService;
 
-class Features extends  BasicAdmin
+class Listqa extends  BasicAdmin
 {
-    private  $dataform='features';
+    private  $dataform='qa';
 
     public function index() {
-        $this->title = '设置产品特征';
+        $this->title = '设置Q&A';
         list($get, $db) = [$this->request->get(), Db::name($this->dataform)];
-        (isset($get['keywords']) && $get['keywords'] !== '') && $db->whereLike('time|id', "%{$get['keywords']}%");
+        (isset($get['keywords']) && $get['keywords'] !== '') && $db->whereLike('time|title', "%{$get['keywords']}%");
         if (isset($get['date']) && $get['date'] !== '') {
             list($start, $end) = explode(' - ', $get['date']);
             $db->whereBetween('time', ["{$start} 00:00:00", "{$end} 23:59:59"]);
@@ -27,14 +27,6 @@ class Features extends  BasicAdmin
         return parent::_list($db->order('id desc'));
     }
 
-
-
-    protected function _data_filter(&$data) {
-        foreach ($data as $key => $val) {
-            $data[$key]['fenlei_2'] = Db::name('chanping')->where('id', '=', $val['cid'])->value('cp_title');
-        }
-    }
-    
     public function add() {
         return $this->_form($this->dataform, 'form');
     }
@@ -57,7 +49,7 @@ class Features extends  BasicAdmin
      */
     protected function _form_result($result) {
         if ($result !== false) {
-            list($base, $spm, $url) = [url('@admin'), $this->request->get('spm'), url('tuanj/features/index')];
+            list($base, $spm, $url) = [url('@admin'), $this->request->get('spm'), url('tuanj/listqa/index')];
             $this->success('数据保存成功！', "{$base}#{$url}?spm={$spm}");
         }
     }

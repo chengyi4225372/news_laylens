@@ -1,5 +1,7 @@
 {include file="common/header" /}
 
+
+
 <div class="content">
     <div>
         <div class="contactModal" id="global-contactusform">
@@ -281,33 +283,27 @@
                         </div>
                         <hr id="dnn_ctr3944_View_awardRule"></hr>
                     </div>
-
-
                      <!-- 展示图 -->
                     <div id="features" class="slider-section">
                         <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
                             <div class="w-slider-mask">
-
-                                <div class="user-left-showinfo">
-                                    {volist name="zhan_img" id="zhanshi"}
-                                    <div class="slider-section-wrapper w-slide">
-                                        <div class="slide-wrapper">
-                                            <div class="slider-image-wrapper">
-                                                <a href="">
-                                                    <img class="slider-image" src="{$zhanshi.img}">
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <a class="main-button w-button" href="#{$zhanshi.id}" style="border-radius: 20px;">{$zhanshi.title}</a>
-                                            </div>
+                                {volist name="zhan_img" id="zhanshi"}
+                                <div class="slider-section-wrapper w-slide">
+                                    <div class="slide-wrapper">
+                                        <div class="slider-image-wrapper">
+                                            <a href="">
+                                                <img class="slider-image" src="{$zhanshi.img}">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a class="main-button w-button" href="#{$zhanshi.id}" style="border-radius: 20px;">{$zhanshi.title}</a>
                                         </div>
                                     </div>
-                                    {/volist}
                                 </div>
-                               
+                                {/volist}
 
                                 <!-- 测试 begin-->
-                                <div class="primary-nav-section user-tabs">
+                                <div class="primary-nav-section">
                                     <div class="navbar w-nav" data-animation="over-left" data-collapse="medium" data-doc-height="1" data-duration="400" >
                                         <div class="menu-icon-wrapper">
                                             <img class="mobile-search-icon" data-ix="mobile-menu-reveal" src="__STATIC__/home/Portals/0/Images/hamburger-menu-icon.svg">
@@ -336,193 +332,9 @@
                                             </a>
                                         </nav>
                                     </div>
-                                    <div class="user-right-block">
-
-
-
-
-
-                              <div class="primary-nav-section">
-                                   <!-- todo features-->
-                                  <div class="drawer-container" >
-                                      <div class="primary-nav-drawer-alignment primary-nav-drawer"   menu-id="features" style="height:auto;">
-                                          <!-- todo  pc 图片 -->
-                                          <div id="benefits-content">
-                                              {volist name="features" id="vo"}
-                                              <div class="product-section-white">
-                                                  <div>
-                                                      <h2 class="heading-2 main-color" data-ix="scroll-reveal">features</h2>
-                                                  </div>
-                                                  <div class="super-tech-wrapper top">
-                                                      <div class="div-row w-clearfix">
-                                                          <div class="div-column-half-left">
-                                                              <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
-                                                                  <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="{$vo.img}" srcset="{$vo.img} 500w, {$vo.img} 752w"></div>
-                                                          </div>
-                                                          <div class="div-column-half-right">
-                                                              <ul class="desc-list">
-                                                                  <li class="desc-list-item" data-ix="scroll-reveal-2-remain">
-                                                                      <h4 class="heading-2">{$vo.title}</h4>
-                                                                      <p class="text">
-                                                                          {$vo.fea_info|raw}
-                                                                      </p>
-                                                                  </li>
-                                                              </ul>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              {/volist}
-                                          </div>
-                                      </div>
-                                  </div>
-                                     <!-- todo media -->
-                                      <div class="drawer-container">
-                                        <div class="primary-nav-drawer-changers primary-nav-drawer" menu-id="media">
-                                            <div id="media" class="no-padding product-section-white slider-section">
-                                                <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Media</h2>
-                                                <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
-                                                    <div class="w-slider-mask">
-                                                        {volist name="media" id="vo"}
-                                                        <div class="slider-section-wrapper w-slide">
-                                                            <div class="slide-wrapper">
-                                                                <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('{$vo.com}', '{$vo.title}');">
-                                                                    <div class="slider-image-wrapper">
-                                                                        <img id="dnn_ctr3944_View_rVideos_imgVideo_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="{$vo.img}" /><br />
-                                                                    </div>
-                                                                    <div class="descriptionContainer slider-description-wrapper">
-                                                                        <div class="name heading-2">{$vo.title}</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        {/volist}
-                                                    </div>
-                                                    <div class="w-slider-arrow-left">
-                                                        <div class="left slider-navigation w-icon-slider-left"></div>
-                                                    </div>
-                                                    <div class="w-slider-arrow-right">
-                                                        <div class="right slider-navigation w-icon-slider-right"></div>
-                                                    </div>
-                                                    <div class="slide-nav-bottom w-round w-slider-nav"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                      <br/>
-                                    <!-- todo Specs -->
-                                      <div class="primary-nav-section">
-                                      <div class="drawer-container">
-                                        <div class="primary-nav-drawer-changers primary-nav-drawer" menu-id="specs">
-                                            <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">TECHNICAL PARAMETERS</h2>
-                                            <div class="w-row">
-                                                <div id="dnn_ContentPane7" class="content-pane-7 w-col-12">
-                                                    <div class="DnnModule DnnModule-DNN_HTML DnnModule-1160"><a name="1160"></a>
-                                                        <div class="C_Container">
-                                                            <h3>
-                                                                <span id="dnn_ctr1160_dnnTITLE_titleLabel" class="TitleText">Measurement Function</span>
-                                                            </h3>
-                                                            {volist name="specs" id="list"}
-                                                            <div class="super-desc-drop-wrapper">
-                                                                <div class="w-container">
-                                                                    <img data-ix="scroll-reveal" sizes="100vw" src="{$list.img}" srcset="{$list.img} 500w, {$list.img} 800w, {$list.img} 851w">
-                                                                </div>
-                                                            </div>
-                                                          {/volist}
-        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                      <br/>
-                                    <!-- todo 产品文档 -->
-                                        <!--
-                                        <div id="documents" class="product-section-white">
-                                            <div class="row">
-                                                <h2 class="heading-1 main-color" data-ix="scroll-reveal">documents</h2>
-                                                <p style="line-height:.5;">&nbsp;</p>
-                                            </div>
-                                            <div class="section-text section-padding document-wrapper">
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_0" href="/Portals/0/Media/6230-T.pdf" target="_blank"><div class="doc-icon">
-                                                        <img  style="height:15px;width:17px;"src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure</a>
-                                                    <p>Greater profit and productivity through innovation</p>
-                                                </div>
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_1" href="/Portals/0/Media/6370-T.pdf" target="_blank"><div class="doc-icon">
-                                                        <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Sensors Spec Sheet</a>
-                                                    <p>HE421 Series Sensor Specifications</p>
-                                                </div>
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_2" href="/Portals/0/Media/5414-T.pdf" target="_blank"><div class="doc-icon">
-                                                        <img style="height:15px;width:17px;" src="___STATIC__/home/bortals/0/Images/download-icon.svg" /></div>Alignment Accessories Brochure</a>
-                                                    <p>Alignment Accessories</p>
-                                                </div>
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_3" href="/Portals/0/Media/6230-T-18.pdf" target="_blank"><div class="doc-icon">
-                                                        <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure (Spanish)</a>
-                                                    <p>Greater profit and productivity through innovation</p>
-                                                </div>
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_4" href="/Portals/0/Media/6230-TE-09.pdf" target="_blank"><div class="doc-icon">
-                                                        <img  style="height:15px;width:17px;"src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure (German)</a>
-                                                    <p>Greater profit and productivity through innovation</p>
-                                                </div>
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_5" href="/Portals/0/Media/6230-TE-23.pdf" target="_blank"><div class="doc-icon">
-                                                        <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure (French)</a>
-                                                    <p>Greater profit and productivity through innovation</p>
-                                                </div>
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_6" href="/Portals/0/Media/5759-T.pdf" target="_blank"><div class="doc-icon">
-                                                        <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>WinAlign Console Upgrades Brochure</a>
-                                                    <p>For 211/311/411/511/611/811/WA Systems</p>
-                                                </div>
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_7" href="/Portals/0/Media/7368-T.pdf" target="_blank"><div class="doc-icon">
-                                                        <img  style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Console Spec Sheet</a>
-                                                    <p>Space consideration for storage of accessories and targets</p>
-                                                </div>
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_8" href="/Portals/0/Media/7418-T.pdf" target="_blank"><div class="doc-icon">
-                                                        <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Testimonial Brochure</a>
-                                                    <p></p>
-                                                </div>
-                                                <div class="w-col w-col-12 document">
-                                                    <a id="dnn_ctr3944_View_rDocs_docLink_9" href="/Portals/0/Media/Printout-SSA.pdf" target="_blank"><div class="doc-icon">
-                                                        <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>SSA Printout</a>
-                                                    <p>Chrysler 200 sample with Safety System Alignment section</p>
-                                                </div>
-                                                <div class="doc-breakdown" id="brochure">
-                                                    <div class="doc-content-wrapper">
-                                                        <div class=" heading-2 doc-section-heading">brochure</div>
-                                                        <div class="documents"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="doc-breakdown " id="specsheet">
-                                                    <div class="doc-content-wrapper">
-                                                        <div class=" heading-2 doc-section-heading">spec sheet</div>
-                                                        <div class="documents"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="doc-breakdown" id="other">
-                                                    <div class="doc-content-wrapper">
-                                                        <div class=" heading-2 doc-section-heading">other</div>
-                                                        <div class="documents"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        -->
-                                        <div id="productOEMSection"></div>
-                                        <div id="newTestimonialSection"></div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
+                                </div>
                                 <!-- end-->
+
                             </div>
 
 
@@ -713,7 +525,7 @@
                                                         <div class="div-row w-clearfix">
                                                             <div class="div-column-half-left">
                                                                 <div class="super-tech-img-wrapper" data-ix="fade-in-from-left">
-                                                         <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="{$vo.img}" srcset="{$vo.img} 500w, {$vo.img} 752w"></div>
+                                                                    <img sizes="(max-width: 479px) 90vw, (max-width: 767px) 87vw, (max-width: 991px) 45vw, 43vw" src="{$vo.img}" srcset="{$vo.img} 500w, {$vo.img} 752w"></div>
                                                             </div>
                                                             <div class="div-column-half-right">
                                                                 <ul class="desc-list">
@@ -734,7 +546,238 @@
                                     </div>
                                 </div>
                                 <br/>
-                          
+                             <!-- todo media -->
+                              <div class="primary-nav-section">
+                            <!--
+                              <div class="mobile-dropdown w-hidden-main">
+                                <div class="mobile-dropdown-wrapper">
+                                    <div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">
+                                        <div class="w-row">
+                                            <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
+                                                <div class="side-menu-dropdown-option"><a href="media">media</a></div>
+                                            </div>
+                                            <div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2">
+                                                <img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="secondary-menu-wrapper"  >
+                                        <div id="media" class="no-padding product-section-white slider-section">
+                                            <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Media</h2>
+                                            <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                                <div class="w-slider-mask">
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('9U3m9uILg5s', 'Safety System Alignment - Service Provider');">
+                                                                <div class="slider-image-wrapper">
+                                                                    <img id="dnn_ctr3944_View_rVideos_imgVideo_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/safety-system-alignment-service-provider.jpg" /><br />
+                                                                </div>
+                                                                <div class="descriptionContainer slider-description-wrapper">
+                                                                    <div class="name heading-2">Safety System Alignment - Service Provider</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('2nnzYUeYQo8', 'FIA Alignment');">
+                                                                <div class="slider-image-wrapper">
+                                                                    <img id="dnn_ctr3944_View_rVideos_imgVideo_1" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/FIA-Alignment.jpg" /><br />
+                                                                </div>
+                                                                <div class="descriptionContainer slider-description-wrapper">
+                                                                    <div class="name heading-2">FIA Alignment</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slider-section-wrapper w-slide">
+                                                        <div class="slide-wrapper">
+                                                            <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('sESaG_l4gl4', 'HawkEye Elite Drive Through Quick Check');">
+                                                                <div class="slider-image-wrapper">
+                                                                    <img id="dnn_ctr3944_View_rVideos_imgVideo_2" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/HawkEye-Elite-Drive-Through-Quick-Check.jpg" /><br />
+                                                                </div>
+                                                                <div class="descriptionContainer slider-description-wrapper">
+                                                                    <div class="name heading-2">HawkEye Elite Drive Through Quick Check</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-slider-arrow-left">
+                                                    <div class="left slider-navigation w-icon-slider-left"></div>
+                                                </div>
+                                                <div class="w-slider-arrow-right">
+                                                    <div class="right slider-navigation w-icon-slider-right"></div>
+                                                </div>
+                                                <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                              <div class="drawer-container">
+                                <div class="primary-nav-drawer-changers primary-nav-drawer" menu-id="media">
+                                    <div id="media" class="no-padding product-section-white slider-section">
+                                        <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">Media</h2>
+                                        <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
+                                            <div class="w-slider-mask">
+                                                {volist name="media" id="vo"}
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('{$vo.com}', '{$vo.title}');">
+                                                            <div class="slider-image-wrapper">
+                                                                <img id="dnn_ctr3944_View_rVideos_imgVideo_0" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="{$vo.img}" /><br />
+                                                            </div>
+                                                            <div class="descriptionContainer slider-description-wrapper">
+                                                                <div class="name heading-2">{$vo.title}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/volist}
+                                                <!--
+                                                <div class="slider-section-wrapper w-slide">
+                                                    <div class="slide-wrapper">
+                                                        <div class="video" data-ix="reveal-modal" onclick="videoDisplayer.show('2nnzYUeYQo8', 'FIA Alignment');">
+                                                            <div class="slider-image-wrapper">
+                                                                <img id="dnn_ctr3944_View_rVideos_imgVideo_1" class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/Portals/0/Media/videos-2.png "/><br />
+                                                            </div>
+                                                            <div class="descriptionContainer slider-description-wrapper">
+                                                                <div class="name heading-2">FIA Alignment</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            -->
+                                            </div>
+                                            <div class="w-slider-arrow-left">
+                                                <div class="left slider-navigation w-icon-slider-left"></div>
+                                            </div>
+                                            <div class="w-slider-arrow-right">
+                                                <div class="right slider-navigation w-icon-slider-right"></div>
+                                            </div>
+                                            <div class="slide-nav-bottom w-round w-slider-nav"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              <br/>
+                            <!-- todo Specs -->
+                              <div class="primary-nav-section">
+                              <div class="drawer-container">
+                                <div class="primary-nav-drawer-changers primary-nav-drawer" menu-id="specs">
+                                    <h2 class="heading-2 main-color section-padding" data-ix="scroll-reveal">TECHNICAL PARAMETERS</h2>
+                                    <div class="w-row">
+                                        <div id="dnn_ContentPane7" class="content-pane-7 w-col-12">
+                                            <div class="DnnModule DnnModule-DNN_HTML DnnModule-1160"><a name="1160"></a>
+                                                <div class="C_Container">
+                                                    <h3>
+                                                        <span id="dnn_ctr1160_dnnTITLE_titleLabel" class="TitleText">Measurement Function</span>
+                                                    </h3>
+
+                                                    <!-- todo text 测试下  自使用修改成这种 -->
+                                                    {volist name="specs" id="list"}
+                                                    <div class="super-desc-drop-wrapper">
+                                                        <div class="w-container">
+                                                            <img data-ix="scroll-reveal" sizes="100vw" src="{$list.img}" srcset="{$list.img} 500w, {$list.img} 800w, {$list.img} 851w">
+                                                        </div>
+                                                    </div>
+                                                  {/volist}
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                              <br/>
+
+
+                            <!-- todo 产品文档 -->
+                                <!--
+                                <div id="documents" class="product-section-white">
+                                    <div class="row">
+                                        <h2 class="heading-1 main-color" data-ix="scroll-reveal">documents</h2>
+                                        <p style="line-height:.5;">&nbsp;</p>
+                                    </div>
+                                    <div class="section-text section-padding document-wrapper">
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_0" href="/Portals/0/Media/6230-T.pdf" target="_blank"><div class="doc-icon">
+                                                <img  style="height:15px;width:17px;"src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure</a>
+                                            <p>Greater profit and productivity through innovation</p>
+                                        </div>
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_1" href="/Portals/0/Media/6370-T.pdf" target="_blank"><div class="doc-icon">
+                                                <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Sensors Spec Sheet</a>
+                                            <p>HE421 Series Sensor Specifications</p>
+                                        </div>
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_2" href="/Portals/0/Media/5414-T.pdf" target="_blank"><div class="doc-icon">
+                                                <img style="height:15px;width:17px;" src="___STATIC__/home/bortals/0/Images/download-icon.svg" /></div>Alignment Accessories Brochure</a>
+                                            <p>Alignment Accessories</p>
+                                        </div>
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_3" href="/Portals/0/Media/6230-T-18.pdf" target="_blank"><div class="doc-icon">
+                                                <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure (Spanish)</a>
+                                            <p>Greater profit and productivity through innovation</p>
+                                        </div>
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_4" href="/Portals/0/Media/6230-TE-09.pdf" target="_blank"><div class="doc-icon">
+                                                <img  style="height:15px;width:17px;"src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure (German)</a>
+                                            <p>Greater profit and productivity through innovation</p>
+                                        </div>
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_5" href="/Portals/0/Media/6230-TE-23.pdf" target="_blank"><div class="doc-icon">
+                                                <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Brochure (French)</a>
+                                            <p>Greater profit and productivity through innovation</p>
+                                        </div>
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_6" href="/Portals/0/Media/5759-T.pdf" target="_blank"><div class="doc-icon">
+                                                <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>WinAlign Console Upgrades Brochure</a>
+                                            <p>For 211/311/411/511/611/811/WA Systems</p>
+                                        </div>
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_7" href="/Portals/0/Media/7368-T.pdf" target="_blank"><div class="doc-icon">
+                                                <img  style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Console Spec Sheet</a>
+                                            <p>Space consideration for storage of accessories and targets</p>
+                                        </div>
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_8" href="/Portals/0/Media/7418-T.pdf" target="_blank"><div class="doc-icon">
+                                                <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>HawkEye Elite Alignment Systems Testimonial Brochure</a>
+                                            <p></p>
+                                        </div>
+                                        <div class="w-col w-col-12 document">
+                                            <a id="dnn_ctr3944_View_rDocs_docLink_9" href="/Portals/0/Media/Printout-SSA.pdf" target="_blank"><div class="doc-icon">
+                                                <img style="height:15px;width:17px;" src="__STATIC__/home/bortals/0/Images/download-icon.svg" /></div>SSA Printout</a>
+                                            <p>Chrysler 200 sample with Safety System Alignment section</p>
+                                        </div>
+                                        <div class="doc-breakdown" id="brochure">
+                                            <div class="doc-content-wrapper">
+                                                <div class=" heading-2 doc-section-heading">brochure</div>
+                                                <div class="documents"></div>
+                                            </div>
+                                        </div>
+                                        <div class="doc-breakdown " id="specsheet">
+                                            <div class="doc-content-wrapper">
+                                                <div class=" heading-2 doc-section-heading">spec sheet</div>
+                                                <div class="documents"></div>
+                                            </div>
+                                        </div>
+                                        <div class="doc-breakdown" id="other">
+                                            <div class="doc-content-wrapper">
+                                                <div class=" heading-2 doc-section-heading">other</div>
+                                                <div class="documents"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+                                <div id="productOEMSection"></div>
+                                <div id="newTestimonialSection"></div>
+                            </div>
+                                    </div>
                                   <div id="newAwardSection"></div>
                                   <div id="displayVideoModal" class="modal-wrapper" data-ix="modal-display">
                             <div class="modal-container">

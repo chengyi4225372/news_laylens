@@ -29,6 +29,8 @@
     <script src="__STATIC__/home/Resources/libraries/jQuery/01_09_01/jquery.js?cdv=330" type="text/javascript"></script>
     <script src="__STATIC__/home/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js?cdv=330" type="text/javascript"></script>
     <script src="__STATIC__/home/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js?cdv=330" type="text/javascript"></script>
+    <!-- 添加-->
+    <link href="__STATIC__/home/Untitled-1.css" media="all" type="text/css" rel="stylesheet" />
 
     <script src="//www.hunter.com/js/mp_linkcode.js"></script>
 
@@ -166,28 +168,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
 
 
-
-
-    <div class="secondary-nav-section">
+    <!-- begin -->
+    <!-- todo 导航栏 -->
+    <div class="secondary-nav-section" >
         <div class="secondary-nav-group" >
-            <!--<img class="secondary-nav-icon" src="__STATIC__/home/Portals/0/Images/about-icon.svg">-->
-            <a  menu-id="about"  class="light-color sec-menu text" href="#" id="about">about</a>
+            <a  menu-id="about" class="light-color sec-menu text" href="#"  id="about">about</a>
         </div>
-        <!--<div class="secondary-nav-group"><img class="secondary-nav-icon" src="__STATIC__/home/Portals/0/Images/training-icon.svg"><a menu-id="training" class="light-color sec-menu text" href="/training/">training</a>-->
-        <!--</div>-->
-        <!-- <div class="secondary-nav-group"><img class="secondary-nav-icon" src="__STATIC__/home/Portals/0/Images/find-icon.svg"><a menu-id="oem" class="light-color sec-menu text" href="#">oem</a>
-        </div> -->
-        <!-- todo 修改-->
         <div class="secondary-nav-group">
             <!--<img class="secondary-nav-icon" src="__STATIC__/home/Portals/0/Images/international-icon.svg">-->
             <a menu-id="international" class="light-color sec-menu text" href="#" id="inter">INTERNATIONAL EXHIBITION</a>
         </div>
-
         <div class="secondary-nav-group">
             <!--<img class="secondary-nav-icon" src="__STATIC__/home/Portals/0/Images/language-icon.svg">-->
             <a menu-id="language" class="light-color sec-menu text" href="#" id="language">language</a>
         </div>
-        <!-- todo 添加-->
         <div class="secondary-nav-group">
             <!--<img class="secondary-nav-icon" src="__STATIC__/home/Portals/0/Images/international-icon.svg">-->
             <a menu-id="cusiomer" class="light-color sec-menu text" href="#" id="cusiomer">CUSTOMER SERVICES</a>
@@ -197,71 +191,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <div class="secondary-drawer-container">
-        <div class="secondary-nav-drawer-about secondary-nav-drawer" id="about-content" menu-id="about"  >
+    <!-- todo 菜单列表-->
+    <div class="secondary-drawer-container"  >
+        <div class="secondary-nav-drawer-about secondary-nav-drawer " menu-id="about" id="about-content">
             <!-- todo 类容修改-->
-            <div class="secondary-nav-drawer-wrapper" ><a class="link menu text" href="{:url('index/who_we_are')}">COMPANY PROFILE</a>
+            <div class="secondary-nav-drawer-wrapper" >
+                <a class="link menu text" href="{:url('index/who_we_are')}">COMPANY PROFILE</a>
             </div>
-            <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/news_education')}">NEWS</a>
+            <div class="secondary-nav-drawer-wrapper">
+                <a class="link menu text" href="{:url('index/news_education')}">NEWS</a>
             </div>
-            <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/highlights')}"> HIGHLIGHTS </a>
+            <div class="secondary-nav-drawer-wrapper">
+                <a class="link menu text" href="{:url('index/highlights')}"> HIGHLIGHTS </a>
             </div>
             <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/patents')}">PATENTS AND CERTIFICATIONS</a>
             </div>
-            <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/careers')}">careers</a>
+            <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/careers')}">Careers</a>
             </div>
-            <!--<div class="secondary-nav-drawer-button-wrapper"><a class="secondary-nav-drawer-button w-button" href="{:url('index/about_hunter')}">view all</a>-->
+            <!--<div class="secondary-nav-drawer-button-wrapper">
+            <a class="secondary-nav-drawer-button w-button" href="{:url('index/about_hunter')}">view all</a>-->
             <!--</div>-->
         </div>
-        <div class="secondary-nav-drawer-international secondary-nav-drawer" id="inter-content" menu-id="international">
+        <div class="secondary-nav-drawer-international secondary-nav-drawer inter" id="inter-content" menu-id="international">
             <!-- todo edit-->
-            <div class="international secondary-nav-drawer-wrapper"><a class="centered link menu text" href="{:url('index/news_education')}?years=2" region="YEAR 2012">
-             <div>2012</div></a>
+            {volist name="news" id="new"}
+            <div class="international secondary-nav-drawer-wrapper">
+                <a class="centered link menu text" href="{:url('index/news_education')}?years={$new.id}" region="YEAR {$new.year}">
+                    <div>{$new.year}</div></a>
             </div>
-            <div class="international secondary-nav-drawer-wrapper"><a class="centered link menu text" href="{:url('index/news_education')}?years=3" region="YEAR 2013">
-                <div>2013</div></a>
-            </div>
-            <div class="international secondary-nav-drawer-wrapper"><a class="centered link menu text" href="{:url('index/news_education')}?years=4" region="YEAR 2014">
-                <div>2014</div></a>
-            </div>
-            <div class="international secondary-nav-drawer-wrapper"><a class="centered link menu text" href="{:url('index/news_education')}?years=5" region="YEAR 2015">
-                <div>2015</div></a>
-            </div>
-            <div class="international secondary-nav-drawer-wrapper"><a class="centered link menu text" href="{:url('index/news_education')}?years=6" region="YEAR 2016">
-               <div>2016</div></a>
-            </div>
-            <div class="international secondary-nav-drawer-wrapper"><a class="centered link menu text" href="{:url('index/news_education')}?years=7" region="YEAR 2017">
-            <div>2017</div></a>
-            </div>
-            <div class="international secondary-nav-drawer-wrapper"><a class="centered link menu text" href="{:url('index/news_education')}?years=8" region="YEAR 2018">
-               <div>2018</div></a>
-            </div>
-            <div class="international secondary-nav-drawer-wrapper"><a class="centered link menu text" href="{:url('index/news_education')}?years=9" region="YEAR 2019">
-                <div>2019</div></a>
-            </div>
+            {/volist}
+
         </div>
-        <div class="secondary-nav-drawer-language secondary-nav-drawer" id="language-content" menu-id="language">
-            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('en');" href="javascript:void(0)" mporgnav=""><img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/ENGLISH.svg"></a><a class="centered link menu text" onclick="return switchLanguage('en');" href="javascript:void(0)" mporgnav="">English</a>
+
+        <div class="secondary-nav-drawer-language secondary-nav-drawer language" id="language-content" menu-id="language">
+            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('en');" href="javascript:void(0)" mporgnav="">
+                <img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/ENGLISH.svg"></a>
+                <a class="centered link menu text" onclick="return switchLanguage('en');" href="javascript:void(0)" mporgnav="">English</a>
             </div>
-            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('de');" href="//de.hunter.com" mporgnav=""><img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/DEUTSCH.svg"></a><a class="centered link menu text" onclick="return switchLanguage('de');" href="//de.hunter.com" mporgnav="">Deutsch</a>
+            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('de');" href="//de.hunter.com" mporgnav="">
+                <img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/DEUTSCH.svg"></a>
+                <a class="centered link menu text" onclick="return switchLanguage('de');" href="//de.hunter.com" mporgnav="">Deutsch</a>
             </div>
-            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('fr');" href="//fr-ca.hunter.com" mporgnav=""><img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/FRANCAIS.svg"></a><a class="centered link menu text" onclick="return switchLanguage('fr');" href="//fr-ca.hunter.com" mporgnav="">Français</a>
+            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('fr');" href="//fr-ca.hunter.com" mporgnav="">
+                <img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/FRANCAIS.svg"></a>
+                <a class="centered link menu text" onclick="return switchLanguage('fr');" href="//fr-ca.hunter.com" mporgnav="">Français</a>
             </div>
-            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('zs');" href="http://www.hunterchina.com.cn" mporgnav=""><img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/CHINESE.svg"></a><a class="centered link menu text" onclick="return switchLanguage('zs');" href="http://www.hunterchina.com.cn" mporgnav="">简体中文</a>
+            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('zs');" href="http://www.hunterchina.com.cn" mporgnav="">
+                <img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/CHINESE.svg"></a>
+                <a class="centered link menu text" onclick="return switchLanguage('zs');" href="http://www.hunterchina.com.cn" mporgnav="">简体中文</a>
             </div>
-            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('ru');" href="http://www.hunter.com.ru" mporgnav=""><img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/RUSSIAN.svg"></a><a class="centered link menu text" onclick="return switchLanguage('ru');" href="http://www.hunter.com.ru" mporgnav="">Русский</a>
+            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('ru');" href="http://www.hunter.com.ru" mporgnav="">
+                <img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/RUSSIAN.svg"></a>
+                <a class="centered link menu text" onclick="return switchLanguage('ru');" href="http://www.hunter.com.ru" mporgnav="">Русский</a>
             </div>
-            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('es');" href="javascript:void(0)" mporgnav=""><img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/ESPANOL.svg"></a><a class="centered link menu text" onclick="return switchLanguage('es');" href="javascript:void(0)" mporgnav="">Español</a>
+            <div class="international secondary-nav-drawer-wrapper"><a onclick="return switchLanguage('es');" href="javascript:void(0)" mporgnav="">
+                <img class="secondary-nav-international-icon" src="__STATIC__/home/Portals/0/Images/ESPANOL.svg"></a>
+                <a class="centered link menu text" onclick="return switchLanguage('es');" href="javascript:void(0)" mporgnav="">Español</a>
             </div>
         </div>
         <!--todo 添加 cusiomer div-->
         <div class="secondary-nav-drawer-language secondary-nav-drawer" id="cusiomer-content" menu-id="cusiomer">
             <!-- todo 路由后期需要修改-->
-            <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/index')}">AFTER-SALES SUPPORT</a>
+            <div class="secondary-nav-drawer-wrapper">
+                <a class="link menu text" href="{:url('index/support')}">AFTER-SALES SUPPORT</a>
             </div>
             <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/index')}">UPGRADE</a>
             </div>
-            <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/index')}">Q&A</a>
+            <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/qalist')}">Q&A</a>
             </div>
             <div class="secondary-nav-drawer-wrapper"><a class="link menu text" href="{:url('index/index')}">TRAINING CENTER</a>
             </div>
@@ -272,511 +268,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!--<div class="secondary-nav-drawer-button-wrapper"><a class="secondary-nav-drawer-button w-button" href="{:url('index/about_hunter')}">CONTACT US</a>-->
             <!--</div>-->
         </div>
-        <!-- 二级 菜单 -->
-        <div class="primary-nav-section" style="background:#c00c00;">
+
+        <!-- todo 二级 菜单-->
+        <div class="primary-nav-section" style="background: #c00c00;">
             <div class="navbar w-nav" data-animation="over-left" data-collapse="medium" data-doc-height="1" data-duration="400">
                 <div class="menu-icon-wrapper"><img class="mobile-search-icon" data-ix="mobile-menu-reveal" src="__STATIC__/home/Portals/0/Images/hamburger-menu-icon.svg">
                 </div>
                 <a class="brand-link w-nav-brand" href="/"><img class="menu-logo" src="__STATIC__/home/Portals/0/Images/hunter-black-logo.png">
                 </a>
-                <div class="menu-icon-wrapper right" data-ix="mobile-menu-search"><img class="mobile-search-icon" src="__STATIC__/home/Portals/0/Images/search-icon.svg">
+                <div class="menu-icon-wrapper right" data-ix="mobile-menu-search">
+                    <img class="mobile-search-icon" src="__STATIC__/home/Portals/0/Images/search-icon.svg">
                 </div>
                 <nav class="nav-menu w-nav-menu" role="navigation" >
                     <!--调整-->
-                    <a menu-id="alignment-menu"  class="heading-2 menu w-nav-link" id="alignment" href="{:url('index/tz')}">alignment</a>
-                    <!--轮胎拆装机-->
-                    <a menu-id="tire-changer-menu" class="heading-2 menu w-nav-link"  id="tire" href="{:url('index/luntai_chai')}">tire changers</a>
-                    <!--升降机-->
-                    <a menu-id="lift-menu" class="heading-2 menu w-nav-link" id="wheel" href="{:url('index/sjj')}">WHEEL BALANCERS</a>
-                    <!--制动车床-->
-                    <a menu-id="lathe-menu" style="border-right: none;" class="heading-2 menu w-nav-link" id="lathe" href="{:url('index/brake_lathes')}">lifts</a>
-                    <!-- brake lathes-->
+                    {volist name="fenlei" id='list'}
+                    <a menu-id="alignment-menu"  class="heading-2 menu w-nav-link" href="" id="{$list.name}">{$list.name}</a>
+                    {/volist}
+                    <!--
+                    <a menu-id="tire-changer-menu" class="heading-2 menu w-nav-link" href="{:url('index/luntai_chai')}" id="tire">tire changers</a>
+                    <a menu-id="lift-menu" class="heading-2 menu w-nav-link" href="{:url('index/sjj')}" id="wheel">WHEEL BALANCERS</a>
+                    <a menu-id="lathe-menu" style="border-right: none;" class="heading-2 menu w-nav-link" href="{:url('index/brake_lathes')}" id="lathe">lifts</a>
+                    -->
                 </nav>
             </div>
         </div>
-        <!--<div class="primary-nav-drawer-search">-->
-        <!--<div class="mobile-search-wrapper"><div class="search-section-mobile">-->
-        <!--<input id="mobileSearch" class="hunter360Search" type="text" placeholder="search" /></div></div>-->
-        <!--</div>-->
         <div class="drawer-container">
-            <div class="primary-nav-drawer-alignment primary-nav-drawer" id='alignment-1' menu-id="alignment-menu">
+            {volist name="fenlei" id="list"}
+            <div class="primary-nav-drawer-alignment primary-nav-drawer"  id="{$list.name}-1" menu-id="alignment-menu">
+                {volist name="list.cate_2" id='lis'}
                 <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="{:url('index/hawkeye_elite')}"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/smarter.jpg">
-                    </a><a class="link menu text" href="{:url('index/hawkeye_elite')}">Smarter</a>
+                    <a class="w-inline-block" href="{:url('index/hawkeye_elite')}?id={$lis.id}">
+                        <img class="primary-nav-image" src="{$lis.img}">
+                    </a>
+                    <a class="link menu text" href="{:url('index/hawkeye_elite')}?id={$lis.id}">{$lis.cp_title}</a>
                 </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="{:url('index/crown')}">
-                        <img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/crown.jpg">
-                    </a><a class="link menu text" href="{:url('index/crown')}">Crown</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="{:url('index/bosstar')}">
-                        <img class="primary-nav-image" style="height:107px;width:198px;" src="__STATIC__/home/Portals/0/Images/bosstar.jpg">
-                    </a><a class="link menu text" href="{:url('index/bosstar')}">Bosstar</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="{:url('index/xsuper')}"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/xsuper.jpg">
-                    </a><a class="link menu text" href="{:url('index/xsuper')}">Xsuper</a>
-                </div>
-                <!-- <div class="primary-nav-image-wrapper">
-                <a class="w-inline-block" href="/alignment-systems/codelink"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/codelink.jpg">
-                </a><a class="link menu text" href="/alignment-systems/codelink">codelink</a>
-                </div> -->
-                <!-- <div class="secondary-nav-drawer-button-wrapper"><a class="secondary-nav-drawer-button w-button" href="/alignment-systems">view all</a>
-                </div> -->
+                {/volist}
             </div>
-            <!-- <div class="primary-nav-drawer-balancers primary-nav-drawer" menu-id="balancer-menu">
-            <div class="primary-nav-image-wrapper">
-            <a class="w-inline-block" href="/wheel-balancers/road-force-elite"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/rfe.jpg">
-            </a><a class="link menu text" href="/wheel-balancers/road-force-elite">road force elite</a>
-            </div>
-            <div class="primary-nav-image-wrapper">
-            <a class="w-inline-block" href="/wheel-balancers/smartweight-touch"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/smartweight-touch.jpg">
-            </a><a class="link menu text" href="/wheel-balancers/smartweight-touch">smartweight touch</a>
-            </div>
-            <div class="primary-nav-image-wrapper">
-            <a class="w-inline-block" href="/wheel-balancers/dsp9200"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/dsp9200.jpg">
-            </a><a class="link menu text" href="/wheel-balancers/dsp9200">dsp9200</a>
-            </div>
-            <div class="primary-nav-image-wrapper">
-            <a class="w-inline-block" href="/wheel-balancers/dsp7705"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/dsp7705.jpg">
-            </a><a class="link menu text" href="/wheel-balancers/dsp7705">dsp7705</a>
-            </div>
-            <div class="primary-nav-image-wrapper">
-            <a class="w-inline-block" href="/heavy-duty/forcematch-hd-wheel-balancer"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/forcematch.jpg">
-            </a><a class="link menu text" href="/heavy-duty/forcematch-hd-wheel-balancer">forcematch hd</a>
-            </div>
-            <div class="secondary-nav-drawer-button-wrapper"><a class="secondary-nav-drawer-button w-button" href="/wheel-balancers">view all</a>
-            </div>
-            </div> -->
-            <div class="primary-nav-drawer-changers primary-nav-drawer"  id='tire-1' menu-id="tire-changer-menu">
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="{:url('index/tire_1')}"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/x618.jpg">
-                    </a><a class="link menu text" href="{:url('index/tire_1')}">X618</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/tire-changers/center-clamp"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/x306gt.jpg">
-                    </a><a class="link menu text" href="/tire-changers/center-clamp">X306GT</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/tire-changers/table-top"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/x203b-px8.jpg">
-                    </a><a class="link menu text" href="/tire-changers/table-top">X203B-PX8</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/tire-changers/table-top"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/x203a-px6.jpg">
-                    </a><a class="link menu text" href="/tire-changers/table-top">X203A-PX6</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/tire-changers/table-top"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/x403.jpg">
-                    </a><a class="link menu text" href="/tire-changers/table-top">X403</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/tire-changers/table-top"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/x102.jpg">
-                    </a><a class="link menu text" href="/tire-changers/table-top">X102</a>
-                </div>
-                <!--<div class="secondary-nav-drawer-button-wrapper"><a class="secondary-nav-drawer-button w-button" href="/tire-changers">view all</a>-->
-                <!--</div>-->
-            </div>
+            {/volist}
 
-            <div class="primary-nav-drawer-lifts primary-nav-drawer" id='wheel-1' menu-id="lift-menu">
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/lift-racks/scissor-lift-family"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/b805.jpg">
-                    </a><a class="link menu text" href="/lift-racks/scissor-lift-family">B805</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/lift-racks/four-post-lift-family"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/b705.jpg">
-                    </a><a class="link menu text" href="/lift-racks/four-post-lift-family">B705</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/lift-racks/pit-racks"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/b605.jpg">
-                    </a><a class="link menu text" href="/lift-racks/pit-racks">B605</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/lift-racks/pit-racks"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/b505.jpg">
-                    </a><a class="link menu text" href="/lift-racks/pit-racks">B505</a>
-                </div>
-            </div>
-
-            <div class="primary-nav-drawer-lathes primary-nav-drawer"  id="lathe-1"menu-id="lathe-menu">
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/brake-lathes/autocomp"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/lg8800.jpg">
-                    </a><a class="link menu text" href="/brake-lathes/autocomp">LG8800</a>
-                </div>
-
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/brake-lathes/bl500-series"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/lg8000-xsuper.jpg">
-                    </a><a class="link menu text" href="/brake-lathes/bl500-series">LG8000-xsuper</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/brake-lathes/bl500-series"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/lg6800.jpg">
-                    </a><a class="link menu text" href="/brake-lathes/bl500-series">LG6800</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/brake-lathes/bl500-series"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/lg3800.jpg">
-                    </a><a class="link menu text" href="/brake-lathes/bl500-series">LG3800</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/brake-lathes/bl500-series"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/lg3000.jpg">
-                    </a><a class="link menu text" href="/brake-lathes/bl500-series">LG3000</a>
-                </div>
-            </div>
-
-             <!--
-            <div class="primary-nav-drawer-inspection primary-nav-drawer" menu-id="inspection-menu">
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/inspection/quick-check-drive"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/quick-check-drive-nav.jpg">
-                    </a><a class="link menu text" href="/inspection/quick-check-drive">quick check drive<sup>&trade;</sup></a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/inspection/quick-check"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/quick-check.jpg">
-                    </a><a class="link menu text" href="/inspection/quick-check">quick check</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/inspection/quick-tread"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/quick-tread.jpg">
-                    </a><a class="link menu text" href="/inspection/quick-tread">quick tread</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/inspection/quick-id"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/quick-id-sub-nav-4-2018.jpg">
-                    </a><a class="link menu text" href="/inspection/quick-id">quick id</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/inspection/hunter-net"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/hunter-net.jpg">
-                    </a><a class="link menu text" href="/inspection/hunter-net">hunternet</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/inspection/integration"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/integration.jpg">
-                    </a><a class="link menu text" href="/inspection/integration">integration</a>
-                </div>
-                <div class="secondary-nav-drawer-button-wrapper"><a class="secondary-nav-drawer-button w-button" href="/inspection">view all</a>
-                </div>
-            </div>
-            <div class="primary-nav-drawer-hd primary-nav-drawer" menu-id="hd-menu">
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/heavy-duty/winalign-hd"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/win-hd-nav-img-4-2018.jpg">
-                    </a><a class="link menu text" href="/heavy-duty/winalign-hd">winalign hd</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/heavy-duty/pt200"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/pt200-hd-alignment-large-icon.jpg">
-                    </a><a class="link menu text" href="/heavy-duty/pt200">pt200</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/heavy-duty/forcematch-hd-wheel-balancer"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/forcematch.jpg">
-                    </a><a class="link menu text" href="/heavy-duty/forcematch-hd-wheel-balancer">forcematch hd</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/heavy-duty/tire-changers"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/heavy-duty-tire-changer.jpg">
-                    </a><a class="link menu text" href="/heavy-duty/tire-changers">tire changers</a>
-                </div>
-                <div class="primary-nav-image-wrapper">
-                    <a class="w-inline-block" href="/heavy-duty/lift-racks/hd-pit-racks"><img class="primary-nav-image" src="__STATIC__/home/Portals/0/Images/hd-pitrack-sub-nav.jpg">
-                    </a><a class="link menu text" href="/heavy-duty/lift-racks/hd-pit-racks">Racks</a>
-                </div>
-
-            </div>
-            -->
         </div>
 
-
-        <!--<div class="mobile-dropdown w-hidden-main">-->
-            <!--<div class="mobile-dropdown-wrapper">-->
-                <!--<div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<div class="side-menu-dropdown-option"><a href="{:url('index/tz')}">alignment</a></div>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="secondary-menu-wrapper">-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/alignment-systems/hawkeye-elite"><div class="side-menu-dropdown-option">Hawkeye elite</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/alignment-systems/collision-repair-alignment"><div class="side-menu-dropdown-option">Collision Alignment</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/alignment-systems/hawkeye"><div class="side-menu-dropdown-option">Hawkeye</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/alignment-systems/proalign"><div class="side-menu-dropdown-option">proalign</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/alignment-systems/codelink"><div class="side-menu-dropdown-option">codelink</div></a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mobile-dropdown-wrapper">-->
-                <!--<div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<div class="side-menu-dropdown-option"><a href="/wheel-balancers">wheel balancers</a></div>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="secondary-menu-wrapper">-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/wheel-balancers/road-force-elite"><div class="side-menu-dropdown-option">ROAD FORCE<sup>&reg;</sup> ELITE</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/wheel-balancers/smartweight-touch"><div class="side-menu-dropdown-option">SMARTWEIGHT TOUCH<sup>&reg;</sup></div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/wheel-balancers/dsp9200"><div class="side-menu-dropdown-option">DSP9200</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/wheel-balancers/dsp7705"><div class="side-menu-dropdown-option">DSP7705</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/heavy-duty/force-match-hd-wheel-balancer"><div class="side-menu-dropdown-option">FORCEMATCH<sup>&reg;</sup> HD</div></a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mobile-dropdown-wrapper">-->
-                <!--<div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<div class="side-menu-dropdown-option"><a href="/tire-changers">tire changers</a></div>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="secondary-menu-wrapper">-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/tire-changers/revolution"><div class="side-menu-dropdown-option">REVOLUTION<sup>&trade;</sup></div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/tire-changers/center-clamp"><div class="side-menu-dropdown-option">CENTER CLAMP</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/tire-changers/table-top"><div class="side-menu-dropdown-option">TABLE TOP</div></a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mobile-dropdown-wrapper">-->
-                <!--<div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<div class="side-menu-dropdown-option"><a href="/lift-racks">lifts</a></div>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home__STATIC__/home/Portals/0/Images/menu-arrow.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="secondary-menu-wrapper">-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/lift-racks/scissor-lift-family"><div class="side-menu-dropdown-option">SCISSOR LIFT FAMILY</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/lift-racks/four-post-lift-family"><div class="side-menu-dropdown-option">FOUR POST LIFT FAMILY</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/lift-racks/pit-racks"><div class="side-menu-dropdown-option">PIT RACKS</div></a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mobile-dropdown-wrapper">-->
-                <!--<div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<div class="side-menu-dropdown-option"><a href="/brake-lathes">brake lathes</a></div>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2">-->
-                            <!--<img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="secondary-menu-wrapper">-->
-
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/brake-lathes/autocomp"><div class="side-menu-dropdown-option">AUTOCOMP ELITE<sup>&trade;</sup></div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/brake-lathes/bl500-series"><div class="side-menu-dropdown-option">BL505</div></a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mobile-dropdown-wrapper">-->
-                <!--<div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<div class="side-menu-dropdown-option"><a href="/inspection">inspection</a></div>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="secondary-menu-wrapper">-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/inspection/quick-check-drive"><div class="side-menu-dropdown-option">QUICK CHECK DRIVE<sup>&trade;</sup></div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/inspection/quick-check"><div class="side-menu-dropdown-option">QUICK CHECK<sup>&trade;</sup></div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/inspection/quick-tread"><div class="side-menu-dropdown-option">QUICK TREAD<sup>&trade;</sup></div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/inspection/quick-id"><div class="side-menu-dropdown-option">QUICK ID</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/inspection/hunter-net"><div class="side-menu-dropdown-option">HUNTERNET</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/inspection/integration"><div class="side-menu-dropdown-option">INTEGRATION</div></a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mobile-dropdown-wrapper">-->
-                <!--<div class="dropdown-menu menu-option" data-ix="mobile-menu-dropdown">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<div class="side-menu-dropdown-option"><a href="/heavy-duty">heavy duty</a></div>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/menu-arrow.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="secondary-menu-wrapper">-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/heavy-duty/winalign-hd"><div class="side-menu-dropdown-option">WINALIGN<sup>&reg;</sup> HD</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/heavy-duty/pt200"><div class="side-menu-dropdown-option">PT200</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/heavy-duty/force-match-hd-wheel-balancer"><div class="side-menu-dropdown-option">FORCEMATCH<sup>&reg;</sup> HD</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/heavy-duty/tire-changers"><div class="side-menu-dropdown-option">TIRE CHANGERS</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="/heavy-duty/lift-racks"><div class="side-menu-dropdown-option">lifts</div></a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mobile-dropdown-wrapper secondary">-->
-                <!--<div class="menu-option" data-ix="mobile-menu-dropdown">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<div class="side-menu-dropdown-option"><a href="{:url('index/about_hunter')}">about</a></div>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home/portals/0/Images/menu-arrow.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="secondary-menu-wrapper">-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="{:url('index/who_we_are')}"><div class="side-menu-dropdown-option">who we are</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="{:url('index/we_go')}"><div class="side-menu-dropdown-option">where to go</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="{:url('index/news_education')}"><div class="side-menu-dropdown-option">news & education</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="{:url('index/highlights')}"><div class="side-menu-dropdown-option">highlights</div></a>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<a href="{:url('index/careers')}"><div class="side-menu-dropdown-option">careers</div></a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mobile-dropdown-wrapper secondary">-->
-                <!--<div class="menu-option">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<a href="/training"><div class="side-menu-dropdown-option">training</div></a>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/training-icon.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--&lt;!&ndash;<div class="mobile-dropdown-wrapper secondary">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="menu-option" data-ix="mobile-menu-dropdown">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="w-row">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="side-menu-dropdown-option">oem</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<img class="menu-arrow" src="__STATIC__/home/bortals/0/Images/menu-arrow.svg">&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="secondary-menu-wrapper">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="secondary-menu-option">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a href="/oem/bmw"><div class="side-menu-dropdown-option">bmw</div></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="secondary-menu-option">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a href="/oem/jaguar-land-rover"><div class="side-menu-dropdown-option">jaguar</div></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="secondary-menu-option">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a href="/oem/jaguar-land-rover"><div class="side-menu-dropdown-option">land rover</div></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="secondary-menu-option">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a href="/oem/mercedes-benz"><div class="side-menu-dropdown-option">mercedes-benz</div></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="secondary-menu-option">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a href="/oem/porsche-bentley"><div class="side-menu-dropdown-option">Porsche</div></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="secondary-menu-option">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a href="/oem/porsche-bentley"><div class="side-menu-dropdown-option">Bentley</div></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="secondary-menu-option">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a href="/oem/volkswagen-audi"><div class="side-menu-dropdown-option">volkswagen</div></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div class="secondary-menu-option">&ndash;&gt;-->
-                        <!--&lt;!&ndash;<a href="/oem/volkswagen-audi"><div class="side-menu-dropdown-option">audi</div></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--<div class="mobile-dropdown-wrapper secondary">-->
-                <!--<div class="menu-option">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<a href="/hunter-international"><div class="side-menu-dropdown-option">international</div></a>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home/Portals/0/Images/international-icon.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mobile-dropdown-wrapper secondary">-->
-                <!--<div class="menu-option" data-ix="mobile-menu-dropdown">-->
-                    <!--<div class="w-row">-->
-                        <!--<div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">-->
-                            <!--<div class="side-menu-dropdown-option">change language</div>-->
-                        <!--</div>-->
-                        <!--<div class="side-menu-arrow-column w-col w-col-2 w-col-small-2 w-col-tiny-2"><img class="menu-arrow" src="__STATIC__/home/portals/0/Images/menu-arrow.svg">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="secondary-menu-wrapper">-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<div class="side-menu-dropdown-option">ENGLISH</div>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<div class="side-menu-dropdown-option">DEUTSCH</div>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<div class="side-menu-dropdown-option">简体中文</div>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<div class="side-menu-dropdown-option">РУССКИЙ</div>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<div class="side-menu-dropdown-option">FRANÇAIS</div>-->
-                    <!--</div>-->
-                    <!--<div class="secondary-menu-option">-->
-                        <!--<div class="side-menu-dropdown-option">ESPAÑOL</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-
+        <!-- end -->
 
