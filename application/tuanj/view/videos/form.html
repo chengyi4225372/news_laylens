@@ -1,0 +1,52 @@
+{extend name='admin@public/content'}
+
+{block name="content"}
+<form class="layui-form layui-box modal-form-box" action="{:request()->url()}" data-auto="true" method="post">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">关联产品</label>
+        <div class="layui-input-inline">
+            <select name="cid">
+                <option value=""></option>
+                {volist name="fenlei" id="condition"}
+                {if isset($vo['id'])}
+                <option value="{$condition.id}" {if condition="$condition.id eq $vo.cid"} selected="" {/if}>{$condition.cp_title}</option>
+                {else /}
+                <option value="{$condition.id}">{$condition.cp_title}</option>
+                {/if}
+                {/volist}
+            </select>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">视频地址</label>
+        <div class="layui-input-block">
+            <input type="text" name="video_com" value='{$vo.video_com|default=""}'  class="layui-input">
+            <span style="color:#ff0000;">*如视频地址 https://www.youtube.com/watch?v=-3MNS5mBs2g 是这个样子 您只需要填写 -3MNS5mBs2g 作为地址即可。</span>
+        </div>
+    </div>
+
+    <div class="hr-line-dashed"></div>
+
+    <div class="layui-form-item text-center">
+        {if isset($vo['id'])}<input type='hidden' value='{$vo.id}' name='id'>{/if}
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <!--        <button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>-->
+    </div>
+</form>
+<script>
+    require(['jquery', 'ckeditor'], function() {
+        window.form.render();
+        $('form [name="img"]').uploadOneImage();
+        window.createEditor('[name="content"]', {height: 500});
+    });
+</script>
+
+<script>
+
+</script>
+
+
+{/block}
+

@@ -9,8 +9,33 @@ namespace app\index\controller;
 use think\Db;
 use app\index\controller\Common;
 use think\Request;
-
+use app\index\controller\SendEmail;
+use think\Exception;
 class Index extends Common {
+
+    // $host [SMTP地址]
+   // private $host = 'smtp.163.com';
+
+    //$send_email [发送邮箱账号]
+   // private $send_email='cy732345907@163.com';
+
+    //$pwd [发送邮箱密码]
+    //private $pwd ='cy4225372';
+
+    //$to [接收邮箱账号]
+    //private  $to ="732345907@qq.com";
+
+    //$title [邮件标题]
+   private  $title= '这是一份来劳伦斯官网的邮件！';
+
+    //邮件内容; $content
+    private $content ='';
+
+    //附件 $file
+    private $file='';
+
+
+
 
 
     //调整
@@ -103,10 +128,54 @@ public  function services(){
     return $this->view->fetch();
 }
 
+/* todo  产品中间五个按钮     */
+
+  //考虑的事情
+  public function things_to_consider(){
+      $id = input('get.id','','intval');
+      //echo $id;exit();
+      $things = Db::name('things_title')->where('cid',$id)->find();
+      $things_info =Db::name('things_info')->where('cid',$id)->select();
+      $this->assign('things',$things);
+      $this->assign('things_info',$things_info);
+      return $this->view->fetch();
+   }
+
+   //邮件 接收参数
+    public function mail(){
+       $data = input('post.');
+      $arr = array();
+        $arr[] = $data['Name'];
+        $arr[] = $data['Phone'];
+        $arr[] = $data['CompanyName']; //与名称一致
+        $arr[] = $data['MailingAddress'];
+        $arr[] = $data['EmailAddress'];
+        $arr[] = $data['City'];
+        $arr[] = $data['State'];
+        $arr[] = $data['Zipcode'];
+        $arr[] = $data['Comments'];
+        $arr[] = $data['Interests'];
+        //接入 PHP 邮件类
+       $this->content = $arr;
+        //todo 发送到 infor@lawren3d.com
+        $email = new SendEmail();
+        $emails =$email->send($this->title,$this->content,$this->file);
+        if(!$emails){
+            echo 111;
+            exit();
+            //return false;
+        }
+        exit(1111);
+        //  return true;
+  }
 
 
+  //产品对比 带解决
+    public function product_comparison(){
+      return $this->view->fetch();
+    }
 
-    
+
 /* todo 完成部分  */
 
 
@@ -201,6 +270,12 @@ public  function services(){
         $specs =$this->specs($id);
         //展示图
         $zhan_img=$this->zhan_img($id);
+        //下载pdf
+        $pdf = Db::name('download')->where('cid',$id)->find();
+        //视频地址
+        $videos = Db::name('videos')->where('cid',$id)->find();
+        $this->assign('pdf',$pdf);
+        $this->assign('videos',$videos);
         $this->assign('info',$info);
         $this->assign('features',$features);
         $this->assign('media',$media);
