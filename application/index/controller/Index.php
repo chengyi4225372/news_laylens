@@ -86,10 +86,6 @@ class Index extends Common {
  public function documents(){
         return $this->view->fetch();
     }
-//todo 底部查看所有课程
-  public function training(){
-        return $this->view->fetch();
-    }
 */
 //todo company file 页面
 public  function team(){
@@ -186,14 +182,26 @@ public  function services(){
         return $this->view->fetch();
     }
 
+    //下载中心
+    public function downloading(){
+        $res = Db::name('downloading')->select();
+        $this->assign('res',$res);
+        return $this->fetch();
+    }
+
+    //培训中心
+    public function training(){
+        $data = Db::name('training')->order('id asc')->find();
+        $this->assign('data',$data);
+        return $this->fetch();
+    }
+
     //升级资料
     public function upgrade(){
        $res = Db::name('upgrade')->select();
        $this->assign('res',$res);
        return  $this->fetch();
     }
-
-
 
     // q&a
     public function qalist(){
@@ -215,8 +223,6 @@ public  function services(){
         $this->assign('support',$support);
         return $this->view->fetch();
     }
-
-
 
     // 新闻详情
     public function press(){
@@ -285,7 +291,7 @@ public  function services(){
         $this->assign('newss',$newss);
         return $this->view->fetch();
     }
-    //todo 登陆显示 经销商
+    //todo 登陆显示 经销商 不明确是否有用
     public function logon(){
         $dis= Db::name('distr')->select();
         $this->assign('dis',$dis);

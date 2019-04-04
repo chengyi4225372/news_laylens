@@ -58,14 +58,16 @@
                 <div id="dnn_ContentPane7" class="content-pane-7 w-col-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-1160"><a name="1160"></a>
                     <div class="C_Container">
                         <h1>
-                            <span id="dnn_ctr1160_dnnTITLE_titleLabel" class="TitleText">{$data.title}</span>
+                            <span id="dnn_ctr1160_dnnTITLE_titleLabel" class="TitleText">LAWRENCE DOWNLOAD CENTER</span>
                         </h1>
                         <div id="dnn_ctr1160_contentPane" class="containerContent">
                             <div id="dnn_ctr1160_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
                                 <div id="dnn_ctr1160_HtmlModule_lblContent" class="Normal">
-                                    <p>&nbsp;</p>
-                                    <p class="p1">{$data.content|raw}</p>
-                                    <p>&nbsp;</p>
+                                    <p></p>
+                                    <p class="p1" style="padding-bottom: 20px;"></p>
+                                    {volist name="res" id="vo" }
+                                    <p  class="p1" style="padding-bottom: 10px;">&nbsp;<a href="{$vo.down_url}" target="_blank">{$vo.title}</a></p>
+                                    {/volist}
                                 </div>
                             </div>
                         </div>
@@ -77,8 +79,6 @@
     </div>
     <div id="slideoutWrapper" class="slideout-wrapper w-hidden-small w-hidden-tiny">
     </div>
-
-
 
     {include  file="common/footer"/}
 </body>
