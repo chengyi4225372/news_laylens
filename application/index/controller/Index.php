@@ -13,30 +13,6 @@ use app\index\controller\SendEmail;
 use think\Exception;
 class Index extends Common {
 
-    // $host [SMTP地址]
-   // private $host = 'smtp.163.com';
-
-    //$send_email [发送邮箱账号]
-   // private $send_email='cy732345907@163.com';
-
-    //$pwd [发送邮箱密码]
-    //private $pwd ='cy4225372';
-
-    //$to [接收邮箱账号]
-    //private  $to ="732345907@qq.com";
-
-    //$title [邮件标题]
-   private  $title= '这是一份来劳伦斯官网的邮件！';
-
-    //邮件内容; $content
-    private $content ='';
-
-    //附件 $file
-    private $file='';
-
-
-
-
 
     //调整
     public function tz(){
@@ -210,7 +186,16 @@ public  function services(){
         return $this->view->fetch();
     }
 
-    //todo q&a
+    //升级资料
+    public function upgrade(){
+       $res = Db::name('upgrade')->select();
+       $this->assign('res',$res);
+       return  $this->fetch();
+    }
+
+
+
+    // q&a
     public function qalist(){
         $lists = Db::name('qa')->order('time desc')->select();
         $this->assign('lists',$lists);
@@ -224,14 +209,16 @@ public  function services(){
         return $this->view->fetch();
     }
 
-    //todo 客户服务
+    // 客户服务
     public function support(){
         $support = Db::name('support')->find();
         $this->assign('support',$support);
         return $this->view->fetch();
     }
 
-    //todo 新闻详情
+
+
+    // 新闻详情
     public function press(){
         $id = $this->request->param('id');
         $content = Db::name('new')->where(array('id'=>$id))->find();
@@ -239,14 +226,14 @@ public  function services(){
         return $this->view->fetch();
     }
 
-    //todo 亮点
+    // 亮点
     public function highlights(){
         $light = Db::name('light')->order('id desc')->select();
         $this->assign('light',$light);
         return $this->view->fetch();
     }
 
-    //todo 新闻 列表
+    //新闻 列表
     public function news_education(){
         $years = input('years');
         if($years){
@@ -257,7 +244,7 @@ public  function services(){
         $this->assign('newss',$newss);
         return $this->view->fetch();
     }
-    //todo  调整 对其
+    //  调整 对其
     public function hawkeye_elite(){
         $id = input('get.id');
         //查找商品详情
@@ -283,7 +270,7 @@ public  function services(){
         $this->assign('zhan_img',$zhan_img);
         return $this->view->fetch();
     }
-    //todo 个人条款
+    //个人条款
     public  function  terms_of_use(){
         //个人条款是第六条 新闻
         $id=6;
@@ -291,7 +278,7 @@ public  function services(){
         $this->assign('newss',$newss);
         return $this->view->fetch();
     }
-    //todo 隐私声明
+    // 隐私声明
     public function privacy(){
         $id = 7;
         $newss =Db::name('new')->where('id',$id)->find();
