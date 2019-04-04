@@ -156,10 +156,7 @@ public  function services(){
         return $this->view->fetch();
     }
 
-    //todo 底部 Contact 联系我们
-    public function contact(){
-        return $this->view->fetch();
-    }
+
 
     // todo 我们是谁
     public  function  who_we_are(){
@@ -179,6 +176,13 @@ public  function services(){
             $dta[$k]['content'] = Db::name('patents')->where('tid',$v['id'])->select();
         }
         $this->assign('dta',$dta);
+        return $this->view->fetch();
+    }
+
+    // 联系我们
+    public function contact(){
+        $result = Db::name('contact')->order('id asc')->find();
+        $this->assign('result',$result);
         return $this->view->fetch();
     }
 
