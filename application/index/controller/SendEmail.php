@@ -66,7 +66,7 @@ class SendEmail extends Common
      * @return bool
      * @throws \Exception
      */
-    public function sendMail($host, $send_email='cy732345907@163.com', $pwd, $to='732345907@qq.com' , $title, $content, $file){
+    public function sendMail($host, $send_email, $pwd, $to='' , $title, $content, $file){
         //实例化PHPMailer核心类
        // Loader::import('PHPMailer.src.PHPMailer',EXTEND_PATH,'.php');
        // Loader::import('PHPMailer.src.SMTP',EXTEND_PATH,'.php');
@@ -115,7 +115,7 @@ class SendEmail extends Common
         $mail->isHTML(true);
 
         //收件人邮箱地址 参数一为邮箱地址 参数二为给该地址设置的昵称
-        $mail->addAddress($to,'映月读书');//重复调用可添加多个收件人
+        $mail->addAddress($to,'邮件');//重复调用可添加多个收件人
 
         //邮件标题
         $mail->Subject = $title;
@@ -139,14 +139,15 @@ class SendEmail extends Common
 
         try{
             //发送邮件
-            $status = $mail->send();
-        }
-        catch (Exception $e){
+             dump($mail->send());
+             exit();
+        }catch (\Exception $e){
             echo $e->getMessage();
         }
 
         //返回结果
-        return $status?true:false;
+        //  return $status?true:false;
+
     }
 
 

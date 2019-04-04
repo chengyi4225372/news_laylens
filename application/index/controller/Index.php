@@ -116,22 +116,21 @@ public  function services(){
    //邮件 接收参数
     public function mail(){
        $data = input('post.');
-      $arr = array();
-        $arr[] = $data['Name'];
-        $arr[] = $data['Phone'];
-        $arr[] = $data['CompanyName']; //与名称一致
-        $arr[] = $data['MailingAddress'];
-        $arr[] = $data['EmailAddress'];
-        $arr[] = $data['City'];
-        $arr[] = $data['State'];
-        $arr[] = $data['Zipcode'];
-        $arr[] = $data['Comments'];
-        $arr[] = $data['Interests'];
+       $arr = array();
+        $arr['name'] = $data['Name'];
+        $arr['phone'] = $data['Phone']; //电话号码
+        $arr['companyname'] = $data['CompanyName']; //与名称一致
+        $arr['address'] = $data['MailingAddress']; //公司地址
+        $arr['email'] = $data['EmailAddress']; //邮箱地址
+        $arr['city'] = $data['City'];  //省份
+        $arr['state'] = $data['State'];  //构架
+        $arr['zipcode'] = $data['Zipcode']; //邮政编码
+        $arr['comments'] = $data['Comments'];//备注信息
+        $arr['interests'] = implode(',',$data['Interests']); //有兴趣的
         //接入 PHP 邮件类
-       $this->content = $arr;
         //todo 发送到 infor@lawren3d.com
         $email = new SendEmail();
-        $emails =$email->send($this->title,$this->content,$this->file);
+        $emails =$email->sendMail('localhost','cy732345907@163.com','',$arr['email'],'',$arr,'');
         if(!$emails){
             echo 111;
             exit();
