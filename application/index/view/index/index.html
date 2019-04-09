@@ -194,7 +194,7 @@
                                     <div class="home-background-video w-background-video w-hidden-small w-hidden-tiny">
                                         <video autoplay="" muted="" loop="" poster="__STATIC__/home/Portals/0/Media/videos/hunter-hero-poster-11-18.jpg">
                                             <!-- <source src="/portals/0/Media/videos/V1-HECO-Website-Hero-181109.mp4" type="video/mp4"> -->
-                                            <source src="__STATIC__/home/121.mp4" type="video/mp4">
+                                            <source src="{$shipin.video}" type="video/mp4">
                                             <source src="__STATIC__/home/portals/0/Media/videos/V1-HECO-Website-Hero-181109.webm" type="video/webm">
                                         </video>
                                     </div>
@@ -350,9 +350,6 @@
                                             <h3 class="heading-1 main-color" data-ix="section-heading-interaction">product highlight</h3>
                                             <div class="popular-product-tab w-tabs" data-duration-in="500" data-duration-out="300" data-easing="ease-in-out">
                                                 <div class="popular-tab-menu w-tab-menu">
-                                                    <!-- <a class="popular-tab-link w--current w-inline-block w-tab-link" data-w-tab="Quick Check Drive" id="popular-0">
-                                                    <div class="heading-2">quick check drive<sup>&trade;</sup></div>
-                                                    </a> -->
                                                     <a class="popular-tab-link w--current w-inline-block w-tab-link" data-w-tab="Alignment Systems" id="popular-1">
                                                         <div class="heading-2">alignment Systems</div>
                                                     </a>
@@ -520,152 +517,22 @@
                                         <h2 class="heading-1 main-color section-padding" data-ix="scroll-reveal">featured videos</h2>
                                         <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
                                             <div class="w-slider-mask">
+                                                {volist name="foot" id="vo" }
                                                 <div class="slider-section-wrapper w-slide">
                                                     <div class="slide-wrapper">
                                                         <div class="slider-image-wrapper">
-                                                            <a class="video-button" data-ix="reveal-modal" href="#" video=" https://www.youtube.com/embed/d7BV_6UsHP0">
-                                                               <img class="slider-image" src="__STATIC__/home/bortals/0/Images/shipin-1.png"></a>
+                                                            <a class="video-button" data-ix="reveal-modal" href="#" video="{$vo.home_com}">
+                                                               <img class="slider-image" src="{$vo.home_img}"></a>
                                                         </div>
                                                         <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">1. LAWRENCE AUTO MACHINERY</h3>
-                                                           <!-- <p>Hunter Engineering SEMA 2018 Highlights </p> -->
+                                                            <h3 class="heading-2">{$vo.home_title}</h3>
+                                                              {notempty name="vo.home_info"}
+                                                            <p>{$vo.home_info} </p>
+                                                               {/notempty}
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper">
-                                                            <a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/9U3m9uILg5s">
-                                                            <img class="slider-image" src="__STATIC__/home/bortals/0/Images/shipin-2.png"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">2. LAWRENCE CALIBRATION DEMO</sup></h3>
-                                                         <!--   <p>Operation</p>  -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/2nnzYUeYQo8">
-                                                            <img class="slider-image" src="__STATIC__/home/bortals/0/Images/shipin-3.png"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">3. LAWRENCE ADVANTAGES</h3>
-                                                           <!-- <p>Conicelli: Hunter Quick Tread<sup>&reg;</sup> = Customer Retention</p> -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/sESaG_l4gl4">
-                                                            <img class="slider-image" src="__STATIC__/home/bortals/0/Images/shipin-4.png"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">4. LAWRENCE INTRODUCTION</h3>
-                                                             <!-- <p>Revolution<sup>&trade;</sup> Tire Changer &ndash; WalkAway<sup>&trade;</sup> Operation</p> -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="http://www.youtube.com/embed/fbF7OWJNEyY&t=54s">
-                                                            <img class="slider-image" src="__STATIC__/home/bortals/0/Images/shipin-5.png"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">HawkEye Elite<sup>&reg;</sup></h3>
-                                                            <p>Hunter's HawkEye Elite<sup>&reg;</sup> alignment system is the world's leading wheel aligner, recording four-wheel alignment readings as fast as 90 seconds!</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/fbF7OWJNEyY&t=54s">
-                                                            <img class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/bortals/0/Images/shipin-6.png" srcset="__STATIC__/home/bortals/0/Images/shipin-6.png 500w, __STATIC__/home/bortals/0/Images/shipin-6.png 678w"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">AutoComp Elite<sup>&reg;</sup></h3>
-                                                            <p>AutoComp Elite<sup>&reg;</sup> features automatic compensation, the result is the highest quality brake job possible. </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/0kk4dc0F_zw">
-                                                            <img class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/bortals/0/Images/shipin-7.png" srcset="__STATIC__/home/bortals/0/Images/shipin-7.png 500w, __STATIC__/home/bortals/0/Images/shipin-7.png 678w"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">Road Force<sup>&reg;</sup> Elite</h3>
-                                                            <p>Road Force<sup>&reg;</sup> Elite performs a Road Force Measurement<sup>&reg;</sup> and balance in less time than it takes to complete a conventional balance. </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/HiLrEo0UNLM">
-                                                            <img class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/bortals/0/Images/shipin-8.png" srcset="__STATIC__/home/bortals/0/Images/shipin-8.png, __STATIC__/home/bortals/0/Images/shipin-8.png"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">Quick Tread<sup>&reg;</sup></h3>
-                                                            <p>Quick Tread<sup>&reg;</sup> drive over tread depth measurement system provides measurements in seconds.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/5NvU4Z3ZN3Y">
-                                                            <img class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/bortals/0/Images/shipin-9.png" srcset="__STATIC__/home/bortals/0/Images/shipin-9.png, __STATIC__/home/bortals/0/Images/shipin-9.png"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">Quick ID<sup>&trade;</sup></h3>
-                                                            <p>Quick ID<sup>&trade;</sup> automates vehicle identification by turning license plate information into VIN, saving valuable time and labor.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/dq8WbWcfAJg">
-                                                            <img class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/bortals/0/Images/shipin-10.png" srcset="__STATIC__/home/bortals/0/Images/shipin-10.png 500w,__STATIC__/home/bortals/0/Images/shipin-10.png 678w"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">Revolution S</h3>
-                                                            <p>The Revolution S uses the same fully-automatic process for all tire and wheel combinations, saving time on today's diverse assemblies. </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/eJHrxQbT5Og">
-                                                            <img class="slider-image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 44vw, (max-width: 991px) 27vw, 22vw" src="__STATIC__/home/bortals/0/Images/shipin-11.png" srcset="__STATIC__/home/bortals/0/Images/shipin-11.png 500w,__STATIC__/home/bortals/0/Images/shipin-11.png 678w"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">Auto34S</h3>
-                                                            <p>Auto34S features a space saving, functional design that makes this powerful tire changer even easier to use. </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/Ja9u2W3PFJc">
-                                                            <img class="slider-image" src="__STATIC__/home/bortals/0/Images/home-video-9.jpg"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">#WECHOOSEHUNTER</h3>
-                                                            <p>Why Sullivan Tire Chose Hunter for Automotive Service Equipment</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="slider-section-wrapper w-slide">
-                                                    <div class="slide-wrapper">
-                                                        <div class="slider-image-wrapper"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/PNuc-YmaClM">
-                                                            <img class="slider-image" src="__STATIC__/home/bortals/0/Images/about-video-2.jpg"></a>
-                                                        </div>
-                                                        <div class="slider-description-wrapper">
-                                                            <h3 class="heading-2">Designed and Built in the USA</h3>
-                                                            <p>Hunter manufactures service equipment right here in the USA! From our US operations ...to yours.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                {/volist}
                                             </div>
 
                                             <div class="w-slider-arrow-left">

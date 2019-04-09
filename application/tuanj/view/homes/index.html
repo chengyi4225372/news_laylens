@@ -36,7 +36,7 @@
     window.laydate.render({range: true, elem: '#range-date'});
 </script>
 <!-- 表单搜索 结束 -->
-
+ <span style="color:#ff2600;">*首页只有一条视频，请不要过多上传！</span>
 <form onsubmit="return false;" data-auto="true" method="post">
     <!--{empty name='list'}-->
     <p class="help-block text-center well">没 有 记 录 哦！</p>
@@ -63,7 +63,6 @@
             <td class='text-left nowrap'>
                 {$vo.id|default=''}
             </td>
-
             <td class='text-left nowrap'>
                 {$vo.video|default=''}
             </td>
@@ -76,10 +75,11 @@
                 <span class="text-explode">|</span>
                 <a data-open='{:url("$classuri/edit")}?id={$vo.id}'>编辑</a>
                 {/if}
-                {if auth("$classuri/del")}
-                <span class="text-explode">|</span>
-                <a data-update="{$vo.id}" data-field='delete' data-action='{:url("$classuri/del")}'>删除</a>
-                {/if}
+
+                <!--{if auth("$classuri/del")}-->
+                <!--<span class="text-explode">|</span>-->
+                <!--<a data-update="{$vo.id}" data-field='delete' data-action='{:url("$classuri/del")}'>删除</a>-->
+                <!--{/if}-->
             </td>
         </tr>
         <!--{/foreach}-->

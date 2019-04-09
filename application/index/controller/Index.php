@@ -143,6 +143,7 @@ public  function services(){
 
   //产品对比 带解决
     public function product_comparison(){
+
       return $this->view->fetch();
     }
 
@@ -162,8 +163,17 @@ public  function services(){
         return   $this->view->fetch();
     }
 
-    // todo 前台首页
+    // 前台首页
     public function index(){
+        //首页头部视频
+        $shipin =Db::name('video')->order('id asc')->find();
+        //首页底部
+        $foot = Db::name('home_video')->select();
+        //首页 中间 类容文字
+        $content =Db::name('home_info')->select();
+        $this->assign('content',$content);
+        $this->assign('foot',$foot);
+        $this->assign('shipin',$shipin);
         return  $this->view->fetch();
     }
 
