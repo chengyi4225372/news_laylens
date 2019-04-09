@@ -169,9 +169,6 @@ public  function services(){
         $shipin =Db::name('video')->order('id asc')->find();
         //首页底部
         $foot = Db::name('home_video')->select();
-        //首页 中间 类容文字
-        $content =Db::name('home_info')->select();
-        $this->assign('content',$content);
         $this->assign('foot',$foot);
         $this->assign('shipin',$shipin);
         return  $this->view->fetch();
