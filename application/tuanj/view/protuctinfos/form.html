@@ -1,0 +1,341 @@
+{extend name='admin@public/content'}
+
+{block name="content"}
+<form class="layui-form layui-box modal-form-box" action="{:request()->url()}" data-auto="true" method="post">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">关联产品对比类型</label>
+        <div class="layui-input-inline">
+            <select name="pid">
+                <option value=""></option>
+                {volist name="duibi" id="condition"}
+                {if isset($vo['id'])}
+                <option value="{$condition.id}" {if condition="$condition.id eq $vo.pid"} selected="" {/if}>{$condition.title}</option>
+                {else /}
+                <option value="{$condition.id}">{$condition.title}</option>
+                {/if}
+                {/volist}
+            </select>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">产品对比详情图</label>
+        <div class="layui-input-block">
+            <input type="text" name="img" value='{$vo.img|default=""}' class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">产品名称</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" value='{$vo.title|default=""}' class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">产品描述</label>
+        <div class="layui-input-block">
+            <input type="text" name="miaoshu" value='{$vo.miaoshu|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">周期时间，楼层到楼层（秒）</label>
+        <div class="layui-input-block">
+            <input type="text" name="zhouqi" value='{$vo.zhouqi|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">自动车轮测量</label>
+        <div class="layui-input-block">
+            <input type="text" name="chelun" value='{$vo.chelun|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">自动重量模式选择</label>
+        <div class="layui-input-block">
+            <input type="text" name="zhong" value='{$vo.zhong|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">自动跳动测量</label>
+        <div class="layui-input-block">
+            <input type="text" name="tiao" value='{$vo.tiao|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">高扭矩驱动</label>
+        <div class="layui-input-block">
+            <input type="text" name="qudong" value='{$vo.qudong|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">双摄像头视觉系统</label>
+        <div class="layui-input-block">
+            <input type="text" name="shijue" value='{$vo.shijue|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">RoadForce®测量</label>
+        <div class="layui-input-block">
+            <input type="text" name="road" value='{$vo.road|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">周期时间，楼层到楼层（秒）</label>
+        <div class="layui-input-block">
+            <input type="text" name="zhouqi" value='{$vo.zhouqi|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">径向测量</label>
+        <div class="layui-input-block">
+            <input type="text" name="jing" value='{$vo.jing|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">横向力测量</label>
+        <div class="layui-input-block">
+            <input type="text" name="heng" value='{$vo.heng|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">周期时间，楼层到楼层（秒）</label>
+        <div class="layui-input-block">
+            <input type="text" name="zhouqi" value='{$vo.zhouqi|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">轮辋偏差测量</label>
+        <div class="layui-input-block">
+            <input type="text" name="piancha" value='{$vo.piancha|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">通货膨胀站</label>
+        <div class="layui-input-block">
+            <input type="text" name="peng" value='{$vo.peng|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">SmartWeight®</label>
+        <div class="layui-input-block">
+            <input type="text" name="smart" value='{$vo.smart|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">增强的SmartWeight</label>
+        <div class="layui-input-block">
+            <input type="text" name="big_smart" value='{$vo.big_smart|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">ECAL™</label>
+        <div class="layui-input-block">
+            <input type="text" name="ecal" value='{$vo.ecal|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">触摸屏</label>
+        <div class="layui-input-block">
+            <input type="text" name="chumo" value='{$vo.chumo|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">自动向上引擎盖</label>
+        <div class="layui-input-block">
+            <input type="text" name="shang" value='{$vo.shang|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">BullsEye™Collets</label>
+        <div class="layui-input-block">
+            <input type="text" name="bulls" value='{$vo.bulls|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">HammerHead™TDC激光系统</label>
+        <div class="layui-input-block">
+            <input type="text" name="hammer" value='{$vo.hammer|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">轮式升降机</label>
+        <div class="layui-input-block">
+            <input type="text" name="lunshi" value='{$vo.lunshi|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">彩色液晶显示器</label>
+        <div class="layui-input-block">
+            <input type="text" name="xianshi" value='{$vo.xianshi|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">打印机</label>
+        <div class="layui-input-block">
+            <input type="text" name="daying" value='{$vo.daying|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">最大装配重量（磅）</label>
+        <div class="layui-input-block">
+            <input type="text" name="bang" value='{$vo.bang|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">最大装配直径（英寸）</label>
+        <div class="layui-input-block">
+            <input type="text" name="chun" value='{$vo.chun|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">TPMS / VIN扫描</label>
+        <div class="layui-input-block">
+            <input type="text" name="tpms" value='{$vo.tpms|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">BDC激光</label>
+        <div class="layui-input-block">
+            <input type="text" name="bdc" value='{$vo.bdc|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">SpeedClamp</label>
+        <div class="layui-input-block">
+            <input type="text" name="speed" value='{$vo.speed|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">电压</label>
+        <div class="layui-input-block">
+            <input type="text" name="dianya" value='{$vo.dianya|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">轮辋扫描</label>
+        <div class="layui-input-block">
+            <input type="text" name="saomiao" value='{$vo.saomiao|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">CenteringCheck®</label>
+        <div class="layui-input-block">
+            <input type="text" name="centering" value='{$vo.centering|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">PatchBalancing®</label>
+        <div class="layui-input-block">
+            <input type="text" name="patch" value='{$vo.patch|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">伺服停止</label>
+        <div class="layui-input-block">
+            <input type="text" name="stop" value='{$vo.stop|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">主轴-Lok®部位</label>
+        <div class="layui-input-block">
+            <input type="text" name="lok" value='{$vo.lok|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">TranzSaver™）</label>
+        <div class="layui-input-block">
+            <input type="text" name="tranz" value='{$vo.tranz|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">外部数据集臂</label>
+        <div class="layui-input-block">
+            <input type="text" name="waibu" value='{$vo.waibu|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">优质合金轴</label>
+        <div class="layui-input-block">
+            <input type="text" name="youzhi" value='{$vo.youzhi|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">培训视频</label>
+        <div class="layui-input-block">
+            <input type="text" name="video" value='{$vo.video|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">TruWeight</label>
+        <div class="layui-input-block">
+            <input type="text" name="tru" value='{$vo.tru|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">轮胎/车轮组件的3D建模</label>
+        <div class="layui-input-block">
+            <input type="text" name="luntai" value='{$vo.luntai|default=""}'  class="layui-input">
+        </div>
+    </div>
+
+
+    <div class="hr-line-dashed"></div>
+
+    <div class="layui-form-item text-center">
+        {if isset($vo['id'])}<input type='hidden' value='{$vo.id}' name='id'>{/if}
+        <button class="layui-btn" type='submit'>保存数据</button>
+        <!--<button class="layui-btn layui-btn-danger" type='button' data-confirm="确定要取消编辑吗？" data-close>取消编辑</button>-->
+    </div>
+</form>
+<script>
+    require(['jquery', 'ckeditor'], function() {
+        window.form.render();
+        $('form [name="img"]').uploadOneImage();
+        window.createEditor('[name="content"]', {height: 500});
+    });
+</script>
+{/block}
+

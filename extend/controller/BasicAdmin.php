@@ -75,6 +75,10 @@ class BasicAdmin extends Controller {
                 //todo 公司简介二级分类
                 $company_two = Db::name('company_xia')->order('id desc')->select();
                 $this->assign('company_two',$company_two);
+                //产品对比 类型
+                $duibi = Db::name('protuct_cates')->select();
+                $this->assign('duibi',$duibi);
+
 //                $conditions = Db::name('condition')->where('conid',0)->select();
 //                $this->assign('conditions',$conditions);
                 return $this->fetch($tplFile, ['vo' => $vo]);

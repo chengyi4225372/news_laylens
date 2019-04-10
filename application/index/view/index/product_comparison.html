@@ -206,6 +206,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!--
                                     <div class="right-pane w-col w-col-medium-12 w-col-8">
                                         <div class="header">
                                             <h3 class="heading-2">Select up to three models for a comparison</h3>
@@ -242,7 +243,9 @@
                                                 <li data-bind="attr: { 'data-id': $data.id }">
                                                     <span data-bind="text: $data.Name"></span>
                                                     <img data-cfsrc="/images/delete.gif" data-bind="click: $parent.removeBreadcrumbClick" style="display:none;visibility:hidden;" />
-                                                    <noscript><img src="/images/delete.gif" data-bind="click: $parent.removeBreadcrumbClick" /></noscript>
+                                                    <noscript>
+                                                        <img src="/images/delete.gif" data-bind="click: $parent.removeBreadcrumbClick" />
+                                                    </noscript>
                                                 </li>
                                             </ul>
                                         </div>
@@ -266,6 +269,125 @@
                                             </div>
                                         </div>
                                     </div>
+                                      -->
+                                    <!-- todo 注释 -->
+                                    <div class="right-pane w-col w-col-medium-12 w-col-8">
+                                        <div class="header">
+                                            <h3 class="heading-2">Select up to three models for a comparison</h3>
+                                            <div class="non-sticky-comparison-buttons ">
+
+                                                <div class="comparison-buttons">
+                                                    <div class="form-group button-box">
+                                                        <button class="btn btn-compare" type="button" data-bind="enable: selectedProducts().length > 1">Compare</button>
+                                                    </div>
+                                                    <div class="tipButtons">
+                                                        <div style="display: block;">
+                                                            <a id="wheelBalancerTip" class="w-inline-block" target="_blank" href="/wheel-balancers/tips-for-choosing-a-wheel-balancer">Wheel Balancer Tips</a>
+                                                        </div>
+                                                        <div style="display: none;">
+                                                            <a id="alignmentTip" class="w-inline-block" target="_blank" href="/wheel-balancers/tips-for-choosing-an-aligner">Alignment Tips</a>
+                                                        </div>
+                                                        <div style="display: none;">
+                                                            <a id="liftRackTip" class="w-inline-block" target="_blank" href="/wheel-balancers/tips-for-choosing-an-alignment-lift">Lift Rack Tips</a>
+                                                        </div>
+                                                        <div style="display: none;">
+                                                            <a id="tireChangerTip" class="w-inline-block" target="_blank" href="/wheel-balancers/tips-for-choosing-a-tire-changer">Tire Changer Tips</a>
+                                                        </div>
+                                                        <div style="display: none;">
+                                                            <a id="brakeLatheTip" class="w-inline-block" target="_blank" href="/wheel-balancers/tips-for-choosing-an-on-car-brake-lathe">On-Car Lathe Tips</a>
+                                                        </div>
+                                                        <div style="display: none;">
+                                                            <a id="inspectionTip" class="w-inline-block" target="_blank" href="/wheel-balancers/tips-for-choosing-inspection-equipment">Inspection Tips</a>
+                                                        </div>
+                                                    </div>
+                                                </div></div>
+                                        </div>
+                                        <div class="clearfix">
+                                            <ul id="breadcrumbs" class="inline-list" data-bind="foreach: selectedProducts">
+                                                <li data-bind="attr: { 'data-id': $data.id }">
+                                                    <span data-bind="text: $data.Name">Road Force® Elite</span>
+                                                    <img src="/images/delete.gif" data-bind="click: $parent.removeBreadcrumbClick">
+                                                </li>
+
+                                                <li data-bind="attr: { 'data-id': $data.id }">
+                                                    <span data-bind="text: $data.Name">SmartWeight Touch®</span>
+                                                    <img src="/images/delete.gif" data-bind="click: $parent.removeBreadcrumbClick">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="text-right">
+                                                <a class="" href="javascript:void(0);" data-bind="click: previousPageClick, visible: pageIndex() > 0" style="display: none;">&lt;</a>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="results row clearfix" data-bind="foreach: pagedItems">
+                                            <div class="product-model w-col w-col-small-12  w-col-4">
+                                                <div>
+                                                    <img class="product-image" data-bind="attr: { src: Image }" alt="Product Image" onerror="this.src = '/Portals/0/Images/ProductComparison/nophoto.png'" src="/Portals/0/Images/ProductComparison/roadforceelite.png"><br>
+                                                </div>
+                                                <input type="checkbox" data-bind="checkedValue: $data, value: Id, checked: $parent.selectedProducts, click: $parent.productClick" value="394"><br>
+                                                <span data-bind="text: Name">Road Force® Elite</span>
+                                            </div>
+
+                                            <div class="product-model w-col w-col-small-12  w-col-4">
+                                                <div>
+                                                    <img class="product-image" data-bind="attr: { src: Image }" alt="Product Image" onerror="this.src = '/Portals/0/Images/ProductComparison/nophoto.png'" src="/Portals/0/Images/ProductComparison/smartweight_touch.png"><br>
+                                                </div>
+                                                <input type="checkbox" data-bind="checkedValue: $data, value: Id, checked: $parent.selectedProducts, click: $parent.productClick" value="243"><br>
+                                                <span data-bind="text: Name">SmartWeight Touch®</span>
+                                            </div>
+
+                                            <div class="product-model w-col w-col-small-12  w-col-4">
+                                                <div>
+                                                    <img class="product-image" data-bind="attr: { src: Image }" alt="Product Image" onerror="this.src = '/Portals/0/Images/ProductComparison/nophoto.png'" src="/Portals/0/Images/ProductComparison/DSP9200.png"><br>
+                                                </div>
+                                                <input type="checkbox" data-bind="checkedValue: $data, value: Id, checked: $parent.selectedProducts, click: $parent.productClick" value="4"><br>
+                                                <span data-bind="text: Name">DSP9200</span>
+                                            </div>
+
+                                            <div class="product-model w-col w-col-small-12  w-col-4">
+                                                <div>
+                                                    <img class="product-image" data-bind="attr: { src: Image }" alt="Product Image" onerror="this.src = '/Portals/0/Images/ProductComparison/nophoto.png'" src="/Portals/0/Images/ProductComparison/dsp7705.png"><br>
+                                                </div>
+                                                <input type="checkbox" data-bind="checkedValue: $data, value: Id, checked: $parent.selectedProducts, click: $parent.productClick" value="188"><br>
+                                                <span data-bind="text: Name">DSP7705</span>
+                                            </div>
+
+                                            <div class="product-model w-col w-col-small-12  w-col-4">
+                                                <div>
+                                                    <img class="product-image" data-bind="attr: { src: Image }" alt="Product Image" onerror="this.src = '/Portals/0/Images/ProductComparison/nophoto.png'" src="/Portals/0/Images/ProductComparison/forcematchhd.png"><br>
+                                                </div>
+                                                <input type="checkbox" data-bind="checkedValue: $data, value: Id, checked: $parent.selectedProducts, click: $parent.productClick" value="6"><br>
+                                                <span data-bind="text: Name">ForceMatch® HD</span>
+                                            </div>
+
+                                            <div class="product-model w-col w-col-small-12  w-col-4">
+                                                <div>
+                                                    <img class="product-image" data-bind="attr: { src: Image }" alt="Product Image" onerror="this.src = '/Portals/0/Images/ProductComparison/nophoto.png'" src="/Portals/0/Images/ProductComparison/genericbalancer1.png"><br>
+                                                </div>
+                                                <input type="checkbox" data-bind="checkedValue: $data, value: Id, checked: $parent.selectedProducts, click: $parent.productClick" value="395"><br>
+                                                <span data-bind="text: Name">Standard Wheel Balancer</span>
+                                            </div>
+
+                                            <div class="product-model w-col w-col-small-12  w-col-4">
+                                                <div>
+                                                    <img class="product-image" data-bind="attr: { src: Image }" alt="Product Image" onerror="this.src = '/Portals/0/Images/ProductComparison/nophoto.png'" src="/Portals/0/Images/ProductComparison/genericbalancer2.png"><br>
+                                                </div>
+                                                <input type="checkbox" data-bind="checkedValue: $data, value: Id, checked: $parent.selectedProducts, click: $parent.productClick" value="396"><br>
+                                                <span data-bind="text: Name">Standard Diagnostic Balancer</span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="text-right">
+                                                <a class="" href="javascript:void(0);" data-bind="click: previousPageClick, visible: pageIndex() > 0" style="display: none;">&lt;</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="compare-results w-col w-col-medium-12 w-col-8" style="display: none;">
                                         <div class="w-row">
                                             <div class="w-col w-col-medium-8 w-col-10 form-group">

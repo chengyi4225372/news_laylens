@@ -42,7 +42,6 @@ class Index extends Common {
     }
 //todo 职业生涯
     public function careers(){
-
         return $this->view->fetch();
     }
     // todo 关于 我们
@@ -155,14 +154,10 @@ public  function services(){
     public function we_go(){
         return $this->view->fetch();
     }
-
-
-
     // todo 我们是谁
     public  function  who_we_are(){
         return   $this->view->fetch();
     }
-
     // 前台首页
     public function index(){
         //首页头部视频
@@ -173,7 +168,6 @@ public  function services(){
         $this->assign('shipin',$shipin);
         return  $this->view->fetch();
     }
-
     //todo patents 专利和认证 后台需要优化
     public function patents(){
         /*一级 */
@@ -184,35 +178,30 @@ public  function services(){
         $this->assign('dta',$dta);
         return $this->view->fetch();
     }
-
     // 联系我们
     public function contact(){
         $result = Db::name('contact')->order('id asc')->find();
         $this->assign('result',$result);
         return $this->view->fetch();
     }
-
     //下载中心
     public function downloading(){
         $res = Db::name('downloading')->select();
         $this->assign('res',$res);
         return $this->fetch();
     }
-
     //培训中心
     public function training(){
         $data = Db::name('training')->order('id asc')->find();
         $this->assign('data',$data);
         return $this->fetch();
     }
-
     //升级资料
     public function upgrade(){
        $res = Db::name('upgrade')->select();
        $this->assign('res',$res);
        return  $this->fetch();
     }
-
     // q&a
     public function qalist(){
         $lists = Db::name('qa')->order('time desc')->select();
@@ -226,14 +215,12 @@ public  function services(){
         $this->assign('qainfo',$qainfo);
         return $this->view->fetch();
     }
-
     // 客户服务
     public function support(){
         $support = Db::name('support')->find();
         $this->assign('support',$support);
         return $this->view->fetch();
     }
-
     // 新闻详情
     public function press(){
         $id = $this->request->param('id');
@@ -241,14 +228,12 @@ public  function services(){
         $this->assign('content',$content);
         return $this->view->fetch();
     }
-
     // 亮点
     public function highlights(){
         $light = Db::name('light')->order('id desc')->select();
         $this->assign('light',$light);
         return $this->view->fetch();
     }
-
     //新闻 列表
     public function news_education(){
         $years = input('years');
