@@ -140,25 +140,27 @@ public  function services(){
   }
 
 
-  //产品对比 带解决
+    //产品对比 展示
     public function product_comparison(){
-      //产品对比类型
-        $duibi =Db::name('protuct_cates')->select();
-        //获取产品对比类型
-        $pid = input('get.pid');
-        $img = Db::name('protuct_infos')->field('id,pid,img,title')->where('pid',$pid)->select();
-        $this->assign('img',$img);
-        $this->assign('duibi',$duibi);
-        return $this->view->fetch();
+        //产品对比类型
+         $duibi =Db::name('protuct_cates')->select();
+         $pid = input('get.pid');
+           //产品具体信息
+            $img = Db::name('protuct_infos')->field('id,pid,img,title')->where('pid',$pid)->select();
+            $this->assign('img',$img);
+            $this->assign('duibi',$duibi);
+            return $this->view->fetch();
     }
 
-
-    //产品对比 产品详情
+    //产品对比详情
     public function protuct_info(){
-           $data = input('post.');
-           dump($data);
-           exit();
+         //产品对比类型
+         $duibi =Db::name('protuct_cates')->select();
+         $this->assign('duibi',$duibi);
+         return $this->fetch();
     }
+
+
 
 
 /* todo 完成部分  */

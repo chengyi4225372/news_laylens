@@ -209,7 +209,6 @@
                                         </div>
                                     </div>
 
-                                    <!--    -->
                                     <div class="right-pane w-col w-col-medium-12 w-col-8">
                                         <div class="header">
                                             <h3 class="heading-2">Select up to three models for a comparison</h3>
@@ -224,12 +223,12 @@
 
                                                         {else /}
                                                            {volist name="img" id="vv" }
-                                                        <input type="hidden" name="pid" value="{$Think.get.pid}">
+                                                        <input type="hidden" name="id" value="{$Think.get.pid}">
                                                         <div class="product-model w-col w-col-small-12  w-col-4">
                                                             <div>
                                                                 <img class="product-image"  src="{$vv.img}"><br>
                                                             </div>
-                                                            <input type="checkbox" name="protuct[]" value="{$vv.id}"><br>
+                                                            <input type="checkbox" name="protuct" value="{$vv.id}"><br>
                                                             <span data-bind="text: Name">{$vv.title}</span>
                                                         </div>
                                                           {/volist}
@@ -273,7 +272,6 @@
                                         </div>
                                         -->
                                     </div>
-
                                     <!-- todo 注释
                                     <div class="right-pane w-col w-col-medium-12 w-col-8">
                                         <div class="header">
@@ -1201,7 +1199,7 @@
        return false;
     })
 
-    //获取复选框
+    //获取复选框 最多点击三个
          $("input[name='protuct']").click(function(){
              var list=new Array();
              $("input[name='protuct']:checked").each(function(){
@@ -1212,6 +1210,21 @@
                  return false;
              }
          });
+
+    //button 点击 提交
+    $(".btn-compare ").click(function(){
+         var id  = $("input[name='id']").val();
+         var arr = new Array();
+         $("input[name='protuct']:checked").each(function(){
+             arr.push($(this).val());
+             console.log(arr.length);
+             if(arr==''|| arr ==undefined){
+                 return false;
+             }else{
+               window.location.href="{:url('index/protuct_info')}?pid="+id+"&data="+arr;
+             }
+         })
+    })
 
 
 </script>
