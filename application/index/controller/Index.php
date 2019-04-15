@@ -128,7 +128,7 @@ public  function services(){
         $arr['comments'] = $data['Comments'];//备注信息
         $arr['interests'] = implode(',',$data['Interests']); //有兴趣的
         //接入 PHP 邮件类
-        // 或者使用定界符拼接发送的内容
+        // 使用定界符拼接发送的内容
        $sarr= <<<EOT
      Name:{$arr['name']} <br>
      MailingAddress:{$arr['address']} <br>
@@ -143,12 +143,11 @@ EOT;
         // 发送邮箱;邮件标题;邮件内容;发件人
         $result = EmailClass::send_email(config('email.sendmail'), '这是一份来自劳伦斯官网的邮件！', $sarr, '劳伦斯');
         if ($result == 1) {
-            return '发送邮件成功!';
+            return 'success!';
         }else{
-            return '发送邮件失败!';
+            return 'error!';
         }
   }
-
 
     //产品对比 展示
     public function product_comparison(){
@@ -162,7 +161,7 @@ EOT;
             return $this->view->fetch();
     }
 
-    //产品对比详情  todo 待测试
+    //产品对比详情  todo 前台页面待完成
     public function protuct_info(){
          //产品对比类型
          $duibi =Db::name('protuct_cates')->select();
@@ -175,20 +174,17 @@ EOT;
           }else if(strlen($data) >1 && strlen($data) <=3){
               $data = explode(',',$data);
               $info =Db::name('protuct_infos')
+                         ->where('id','in',[$data['0'],$data['1']])
                          ->where('pid',$pid)
-                         ->where('id',$data['0'])
-                         ->where('id',$data['1'])
-                          ->select();
+                         ->select();
           }else{
               $data = explode(',',$data);
               $info =Db::name('protuct_infos')
+                  ->where('id','in',[$data['0'],$data['1'],$data['2']])
                   ->where('pid',$pid)
-                  ->where('id',$data['0'])
-                  ->where('id',$data['1'])
-                  ->where('id',$data['2'])
                   ->select();
           }
-        $this->assign('info',$info);
+         $this->assign('info',$info);
          return $this->fetch();
     }
 
