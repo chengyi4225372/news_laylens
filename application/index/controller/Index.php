@@ -9,8 +9,9 @@ namespace app\index\controller;
 use think\Db;
 use app\index\controller\Common;
 use think\Request;
-use app\index\controller\SendEmail;
 use think\Exception;
+use PHPMailer\Email as EmailClass;
+use think\facade\config;
 class Index extends Common {
 
 
@@ -127,16 +128,25 @@ public  function services(){
         $arr['comments'] = $data['Comments'];//备注信息
         $arr['interests'] = implode(',',$data['Interests']); //有兴趣的
         //接入 PHP 邮件类
-        //todo 发送到 infor@lawren3d.com
-        $email = new SendEmail();
-        $emails =$email->sendMail('localhost','cy732345907@163.com','',$arr['email'],'',$arr,'');
-        if(!$emails){
-            echo 111;
-            exit();
-            //return false;
+        // 或者使用定界符拼接发送的内容
+       $sarr= <<<EOT
+     Name:{$arr['name']} <br>
+     MailingAddress:{$arr['address']} <br>
+     Phone:{$arr['phone']} <br>
+     EmailAddress:{$arr['email']} <br>
+     City:{$arr['city']} <br>
+     State:{$arr['state']} <br>
+     Zipcode:{$arr['zipcode']} <br>
+     comments:{$arr['comments']} <br>
+     interests:{$arr['interests']}
+EOT;
+        // 发送邮箱;邮件标题;邮件内容;发件人
+        $result = EmailClass::send_email(config('email.sendmail'), '这是一份来自劳伦斯官网的邮件！', $sarr, '劳伦斯');
+        if ($result == 1) {
+            return '发送邮件成功!';
+        }else{
+            return '发送邮件失败!';
         }
-        exit(1111);
-        //  return true;
   }
 
 
@@ -152,11 +162,33 @@ public  function services(){
             return $this->view->fetch();
     }
 
-    //产品对比详情
+    //产品对比详情  todo 待测试
     public function protuct_info(){
          //产品对比类型
          $duibi =Db::name('protuct_cates')->select();
          $this->assign('duibi',$duibi);
+         //对比的具体详情
+         $pid = input('get.pid');
+         $data = input('get.data');
+          if(strlen($data) ==1){
+               $info =Db::name('protuct_infos')->where('pid',$pid)->where('id',$data)->find();
+          }else if(strlen($data) >1 && strlen($data) <=3){
+              $data = explode(',',$data);
+              $info =Db::name('protuct_infos')
+                         ->where('pid',$pid)
+                         ->where('id',$data['0'])
+                         ->where('id',$data['1'])
+                          ->select();
+          }else{
+              $data = explode(',',$data);
+              $info =Db::name('protuct_infos')
+                  ->where('pid',$pid)
+                  ->where('id',$data['0'])
+                  ->where('id',$data['1'])
+                  ->where('id',$data['2'])
+                  ->select();
+          }
+        $this->assign('info',$info);
          return $this->fetch();
     }
 
