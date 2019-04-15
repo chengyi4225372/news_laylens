@@ -105,7 +105,6 @@ public  function services(){
   //考虑的事情
   public function things_to_consider(){
       $id = input('get.id','','intval');
-      //echo $id;exit();
       $things = Db::name('things_title')->where('cid',$id)->find();
       $things_info =Db::name('things_info')->where('cid',$id)->select();
       $this->assign('things',$things);
@@ -143,9 +142,9 @@ EOT;
         // 发送邮箱;邮件标题;邮件内容;发件人
         $result = EmailClass::send_email(config('email.sendmail'), '这是一份来自劳伦斯官网的邮件！', $sarr, '劳伦斯');
         if ($result == 1) {
-            return 'success!';
+             return true;
         }else{
-            return 'error!';
+             return false;
         }
   }
 
