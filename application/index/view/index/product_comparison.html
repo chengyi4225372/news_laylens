@@ -1217,20 +1217,17 @@
          var arr = new Array();
          $("input[name='protuct']:checked").each(function(){
              arr.push($(this).val());
-             console.log(arr.length);
-             if(arr==''|| arr ==undefined ){
-                 return false;
-             }else if(arr.length == 1){
-                 alert('Please choose at least two products for comparison!');
-                 return false;
-             }else{
-               window.location.href="{:url('index/protuct_info')}?pid="+id+"&data="+arr;
-             }
          })
+        if(arr==''|| arr ==undefined ){
+            return false;
+        }else if(arr.length <= 1){
+            alert('Please choose at least two products for comparison!');
+        }else{
+            window.location.href="{:url('index/protuct_info')}?pid="+id+"&data="+arr;
+        }
     })
 
 
 </script>
-
 </body>
 </html>

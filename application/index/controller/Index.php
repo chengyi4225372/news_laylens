@@ -168,9 +168,7 @@ EOT;
          //对比的具体详情
          $pid = input('get.pid');
          $data = input('get.data');
-          if(strlen($data) ==1){
-               $info =Db::name('protuct_infos')->where('pid',$pid)->where('id',$data)->find();
-          }else if(strlen($data) >1 && strlen($data) <=3){
+        if(strlen($data) >1 && strlen($data) <=3){
               $data = explode(',',$data);
               $info =Db::name('protuct_infos')
                          ->where('id','in',[$data['0'],$data['1']])
