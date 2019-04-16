@@ -48,7 +48,9 @@ class Common extends Controller {
             $fenlei[$k]['cate_2'] = Db::name('chanping')->where('pid',$fenlei[$k]['id'])->select();
         }
         $this->assign('fenlei',$fenlei);
-
+      //产品顶级分类
+        $pid = Db::name('chanping')->field('id,img,name')->where('pid',0)->select();
+        $this->assign('pid',$pid);
     }
 
     //产品详情

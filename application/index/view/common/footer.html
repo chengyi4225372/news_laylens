@@ -4,10 +4,12 @@
         <div class="w-col w-col-2 w-col-medium-4 w-col-small-6">
             <div class="footer-div-wrapper">
                 <h5 class="heading-2">Product lines</h5>
-                <a class="block link text" href="{:url('index/tz')}">Alignment</a>
-                <a class="block link text" href="{:url('index/luntai_chai')}">Tire Changers</a>
-                <a class="block link text" href="{:url('index/sjj')}">Brake Lathes</a>
-                <a class="block link text" href="{:url('index/brake_lathes')}"> Lifts</a>
+                  {volist name="pid" id="vo" }
+                <a class="block link text" href="{:url('index/tz')}?id={$vo.id}">{$vo.name}</a>
+                   {/volist}
+                <!--<a class="block link text" href="{:url('index/luntai_chai')}">Tire Changers</a>-->
+                <!--<a class="block link text" href="{:url('index/sjj')}">Brake Lathes</a>-->
+                <!--<a class="block link text" href="{:url('index/brake_lathes')}"> Lifts</a>-->
             </div>
         </div>
         <div class="w-col w-col-2 w-col-medium-4 w-col-small-6">
