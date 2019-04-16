@@ -132,14 +132,14 @@
                                 .product-cta-wrapper{height:55px;bottom:130px;}
                             </style>
                             <div class="product-cta-wrapper">
-                                <a class="global-contactus first product-cta-icon-wrapper" href="javascript:void(0);" data-origin="ScheduleDemo" data-contacttype="Sales" data-ga-category="Soft Lead" data-ga-action="Requested Demo" data-ga-label="HawkEye Elite&#174;">
+                                <a class="global-contactus first product-cta-icon-wrapper" href="javascript:void(0);" data-origin="ScheduleDemo" data-contacttype="Sales" data-ga-category="Soft Lead" data-ga-action="Requested Demo" >
                                     <!--<img class="product-cta-icon" src="__HOME__/home/Portals/0/Images/ProductCallsToAction/schedule.svg">-->
                                     <div class="product-cta-text">
                                         INQUIRY
                                     </div>
                                 </a>
                                 <div id="dnn_ctr1126_View_brochureItem1" class="product-cta-icon-wrapper">
-                                    <a id="" class="gaAutoTrack brochureLink"  href="{$pdf.downpdf}" target="_blank">
+                                    <a  class="gaAutoTrack brochureLink"  href="{$pdf.downpdf}" target="_blank">
                                         <div class="product-cta-text">
                                             DOWNLOAD BROCHURE
                                         </div>
@@ -192,36 +192,37 @@
 
 
                     <!-- 展示图 -->
-                    <div id="" class="slider-section">
-                        <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1">
-                            <div class="w-slider-mask">
-                                <div class="user-left-showinfo">
-                                    {volist name="zhan_img" id="zhanshi"}
-                                    <div class="slider-section-wrapper w-slide">
-                                        <div class="slide-wrapper">
-                                            <div class="slider-image-wrapper">
-                                                <a href="#">
-                                                    <img class="slider-image" src="{$zhanshi.img}">
-                                                </a>
+                    <div id="dnn_ctr3957_contentPane" class="containerContent">
+                        <div id="dnn_ctr3957_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                            <div id="dnn_ctr3957_HtmlModule_lblContent" class="Normal">
+                                <div class="product-landing no-padding product-section-white">
+                                    <div class="main-slider w-slider" data-animation="slide" data-duration="500" data-hide-arrows="1" data-infinite="1">
+                                        <div class="w-slider-mask">
+                                            {volist name="zhan_img" id="zhanshi"}
+                                            <div class="slider-section-wrapper w-slide">
+                                                <div class="slide-wrapper">
+                                                    <div class="slider-image-wrapper">
+                                                        <a href="#"><img class="slider-image" src="{$zhanshi.img}"></a>
+                                                    </div>
+                                                    <div>
+                                                        <a class="main-button w-button" href="#" style="border-radius: 15px;">{$zhanshi.title}</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <a class="main-button w-button" href="#{$zhanshi.id}" style="border-radius: 15px;">{$zhanshi.title}</a>
-                                            </div>
+                                            {/volist}
                                         </div>
+                                        <div class="w-slider-arrow-left">
+                                            <div class="left slider-navigation w-icon-slider-left"></div>
+                                        </div>
+                                        <div class="w-slider-arrow-right">
+                                            <div class="right slider-navigation w-icon-slider-right"></div>
+                                        </div>
+                                        <div class="slide-nav-bottom w-round w-slider-nav"></div>
                                     </div>
-                                    {/volist}
                                 </div>
                             </div>
-                            <div class="w-slider-arrow-left">
-                                <div class="left slider-navigation w-icon-slider-left"></div>
-                            </div>
-                            <div class="w-slider-arrow-right">
-                                <div class="right slider-navigation w-icon-slider-right"></div>
-                            </div>
-                            <div class="slide-nav-bottom w-round w-slider-nav"></div>
                         </div>
                     </div>
-
                     <hr id="dnn_ctr3944_View_awardRule">
 
                     <!-- todo 选项卡 Features -->
@@ -493,7 +494,7 @@
                         </div>
                     </div>
                 </div>
-                <script type="text/javascript" src="__STATIC__/home/Portals/_default/Skins/Hunter/includes/Testing Animated Content Slider/AnimatedSlider.js"></script>
+                <!--<script type="text/javascript" src="__STATIC__/home/Portals/_default/Skins/Hunter/includes/Testing Animated Content Slider/AnimatedSlider.js"></script>-->
             </div>
         </div>
     </div>

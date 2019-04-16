@@ -6,6 +6,7 @@
 .user-left-showinfo{
     float: left;
     overflow: hidden;
+    width: 100%;
 }
 .user-right-block{
     width: 100%;
