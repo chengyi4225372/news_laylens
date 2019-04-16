@@ -78,6 +78,9 @@ class BasicAdmin extends Controller {
                 //产品对比 类型
                 $duibi = Db::name('protuct_cates')->select();
                 $this->assign('duibi',$duibi);
+                //专利 标题
+                $patents = Db::name('patents')->field('id,title,tid')->where('tid',0)->select();
+                $this->assign('patents',$patents);
 
 //                $conditions = Db::name('condition')->where('conid',0)->select();
 //                $this->assign('conditions',$conditions);

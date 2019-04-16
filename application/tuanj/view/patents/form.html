@@ -1,32 +1,44 @@
 {extend name='admin@public/content'}
 
 {block name="content"}
-<form class="layui-form layui-box modal-form-box" action="{:request()->param('id')}" data-auto="true" method="post">
+<form class="layui-form layui-box modal-form-box" action="{:request()->url()}" data-auto="true" method="post">
 
     <div class="layui-form-item">
-        <label class="layui-form-label">已有专利标题</label>
+        <label class="layui-form-label">关联专利列表</label>
         <div class="layui-input-inline">
             <select name="tid">
-                <option value="">请选择标题</option>
-                {foreach $data as $key =>$vo}
-                <option value="{$vo.id}">{$vo.title}</option>
-                {/foreach}
+                <option value=""></option>
+                {volist name="patents" id="condition"}
+                {if isset($vo['id'])}
+                <option value="{$condition.id}" {if condition="$condition.id eq $vo.tid"} selected="" {/if}>{$condition.title}</option>
+                {else /}
+                <option value="{$condition.id}">{$condition.title}</option>
+                {/if}
+                {/volist}
             </select>
         </div>
     </div>
 
+    {empty name='vo.id'}
     <div class="layui-form-item">
-        <label class="layui-form-label">新专利标题</label>
+        <label class="layui-form-label">标题</label>
         <div class="layui-input-block">
-            <input type="text" name="title" value='{$vo.title|default=""}'   class="layui-input">
+            <input type="text" name="title" value='{$vo.title|default=""}'  placeholder="请输入专利标题" class="layui-input">
+            <span style="color:#ff524e;">*注意：如果需要新的专利标题，可以在这里添加不需要关联上述专利列表，如果关联一级有的专利标题，直接选择关联列表，再添加图片即可！</span>
         </div>
     </div>
+    {else /}
+
+    {/empty}
+
+
     <div class="layui-form-item">
-        <label class="layui-form-label">展示图</label>
-        <div class="layui-input-block">
-            <input type="text" name="img" value='{$vo.img|default=""}'   class="layui-input">
+        <label class="layui-form-label">属于专利图片</label>
+        <div class="layui-input-inline">
+            <input type="text" name="img" value='{$vo.img|default=""}'  class="layui-input">
         </div>
     </div>
+
 
     <div class="hr-line-dashed"></div>
 
@@ -43,7 +55,5 @@
         window.createEditor('[name="content"]', {height: 500});
     });
 </script>
-
-
 {/block}
 

@@ -1,71 +1,51 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2019/1/26
- * Time: 13:28
- */
 
 namespace app\tuanj\controller;
 
 use think\Db;
 use controller\BasicAdmin;
 use service\DataService;
-use think\Request;
-use think\Paginator;
+
 class Patents extends BasicAdmin {
 
     private $dataform = 'patents';
 
-    public $get_date='';
     public function index() {
-          $this->title = '专利(patents)';
-          list($get, $db) = [$this->request->get(), Db::name($this->dataform)];
-         (isset($get['keywords']) && $get['keywords'] !== '') && $db->whereLike('name|id', "%{$get['keywords']}%");
-          $list=Db::name($this->dataform)->order('id desc')->select();
-          foreach ($list as $k =>$va){
-              if(empty($list[$k]['title'])){
-                  $list[$k]['tids'] = Db::name($this->dataform)->where('id',$list[$k]['tid'])->find();
-              }
-          }
-            $this->assign('list',$list);
-           
-           return $this->view->fetch();
-         //return parent::_list($db->order('id desc'));
+        $this->title = 'patents(专利管理)';
+        list($get, $db) = [$this->request->get(), Db::name($this->dataform)];
+        (isset($get['keywords']) && $get['keywords'] !== '') && $db->whereLike('title', "%{$get['keywords']}%");
+        if (isset($get['date']) && $get['date'] !== '') {
+            list($start, $end) = explode(' - ', $get['date']);
+//            $start_time = strtotime("{$start} 00:00:00");
+//            $end_time = strtotime("{$end} 23:59:59");
+//            $db->whereBetween('create_at', [$start_time, $end_time]);
+            $db->whereBetween('create_at', ["{$start} 00:00:00", "{$end} 23:59:59"]);
+        }
+        return parent::_list($db->order('id desc'));
     }
+
+    //关联顶级分类
+    protected function _data_filter(&$data) {
+        foreach ($data as $key => $val) {
+            $data[$key]['pid'] = Db::name('patents')->where('id', '=', $val['tid'])->value('title');
+        }
+    }
+
 
     /**
      * 添加
      * @return type
      */
     public function add() {
-        if($this->request->isGet()) {
-            $data = Db::name($this->dataform)->where('tid', 0)->select();
-            $this->assign('data', $data);
-            return $this->fetch('patents/forms');
-        }else{
-            $order = input('post.');
-            $res = Db::name($this->dataform)->insert($order);
-            if($res){
-                $this->_form_result($res);
-            }
-        }
-       // return $this->_form($this->dataform, 'form');
+        return $this->_form($this->dataform, 'form');
     }
-
 
     /**
      * 编辑
      * @return type
      */
     public function edit() {
-        //return $this->_form($this->dataform, 'form');
-        $id = $this->request->param('id');
-        $vo = Db::name($this->dataform)->where('id',$id)->find();
-        $data = Db::name($this->dataform)->where('tid', 0)->select();
-        $this->assign('data', $data);
-        $this->assign('vo',$vo);
-        return $this->view->fetch('patents/form');
+        return $this->_form($this->dataform, 'form');
     }
 
     /**
