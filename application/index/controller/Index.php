@@ -37,25 +37,8 @@ class Index extends Common {
     }
     // todo 关于 我们
     public function about_hunter(){
-
         return $this->view->fetch();
     }
-
-    //todo 轮胎机 革命
-    public function revolution(){
-        return $this->view->fetch();
-    }
-
-    //todo 升降机
-    public function scissor_lift_family(){
-        return $this->view->fetch();
-    }
-
-    //todo 制动机床   autocomp
-    public function autocomp(){
-        return $this->view->fetch();
-    }
-
 
 /*
   //todo 底部 获取文档信息 Materials
@@ -75,6 +58,22 @@ class Index extends Common {
 
     //todo we_go 下的具体地址
     public function map_list(){
+        return $this->view->fetch();
+    }
+
+
+    //todo 轮胎机 革命
+    public function revolution(){
+        return $this->view->fetch();
+    }
+
+    //todo 升降机
+    public function scissor_lift_family(){
+        return $this->view->fetch();
+    }
+
+    //todo 制动机床   autocomp
+    public function autocomp(){
         return $this->view->fetch();
     }
 */
@@ -133,9 +132,9 @@ EOT;
         // 发送邮箱;邮件标题;邮件内容;发件人
         $result = EmailClass::send_email(config('email.sendmail'), '这是一份来自劳伦斯官网的邮件！', $sarr, '劳伦斯');
         if ($result == 1) {
-            return true;
+             $this->redirect('index/hawkeye_elite') ;
         }else{
-            return false;
+            $this->error('email error!','');
         }
     }
 
@@ -195,7 +194,7 @@ EOT;
         $this->assign('shipin',$shipin);
         return  $this->view->fetch();
     }
-    //todo patents 专利和认证 后台需要优化
+    //专利和认证
     public function patents(){
         /*一级 */
         $dta = Db::name('patents')->where('tid',0)->select();

@@ -232,6 +232,7 @@ function SubmitTrainerForm($submitButton) {
     contactus.RepEmail = $('#trainer-contactusform #HiddenRepEmail').val();
     $.crud($.service('/index', 'mail'), 'POST', contactus).done(function (data, status, xhr) {
         if (status === "success") {
+             console.log(111);
             $.ga.trackElement($submitButton);
             $('#trainer-contactform-submit').text('Sent');
             $('#trainer-contactusform .required-form-section input').each(function () {
