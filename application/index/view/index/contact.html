@@ -1,0 +1,256 @@
+{include file="common/header" /}
+
+<div class="content">
+    <div>
+        <div class="contactModal" id="global-contactusform">
+            <div class="modal-container">
+            </div>
+            <div class='formWrapper'>
+                <div class="form-group has-feedback required-form-section w-row">
+                    <label for="globalcontactform-name" class="control-label">Name:*</label>
+                    <div class="contact-form-input">
+                        <input type="text" class="form-control" id="globalcontactform-name" name="globalcontactform-name" />
+                    </div>
+                    <div class="form-control-feedback" aria-hidden="true"></div>
+                </div>
+                <div class="form-group has-feedback required-form-section w-row">
+                    <label for="globalcontactform-phone" class="control-label">Phone:*</label>
+                    <div class="contact-form-input">
+                        <input type="tel" class="form-control" id="globalcontactform-phone" name="globalcontactform-phone" />
+                    </div>
+                    <div class="form-control-feedback" aria-hidden="true"></div>
+                </div>
+                <div class="form-group has-feedback required-form-section w-row">
+                    <label for="globalcontactform-email" class=" control-label">Email:*</label>
+                    <div class="contact-form-input">
+                        <input type="email" class="form-control" id="globalcontactform-email" name="globalcontactform-email" />
+                    </div>
+                    <div class="form-control-feedback" aria-hidden="true"></div>
+                </div>
+                <div class="form-group has-feedback required-form-section w-row">
+                    <label for="globalcontactform-zip" class=" control-label">Postal Code:*</label>
+                    <div class="contact-form-input">
+                        <input type="text" class="form-control" id="globalcontactform-zip" name="globalcontactform-zip" />
+                    </div>
+                    <div class="form-control-feedback" aria-hidden="true"></div>
+                </div>
+                <hr />
+                <div class="form-group w-row">
+                    <label for="globalcontactform-address" class=" control-label">Address:</label>
+                    <div class="contact-form-input">
+                        <input type="text" class="form-control" id="globalcontactform-address" name="globalcontactform-address" />
+                    </div>
+                </div>
+                <div class="form-group w-row">
+                    <label for="globalcontactform-city" class="control-label">City:</label>
+                    <div class="contact-form-input">
+                        <input type="text" class="form-control" id="globalcontactform-city" name="globalcontactform-city" />
+                    </div>
+                </div>
+                <div class="form-group w-row">
+                    <label for="globalcontactform-state" class="control-label">State:</label>
+                    <div class="contact-form-input">
+                        <input type="text" class="form-control" id="globalcontactform-state" name="globalcontactform-state" />
+                    </div>
+                </div>
+                <div class="form-group w-row input-comment">
+                    <label for="globalcontactform-comment" class="control-label">Comments:</label>
+                    <div class="contact-form-input">
+                        <textarea class="form-control" id="globalcontactform-comment" name="globalcontactform-comment"></textarea>
+                    </div>
+                </div>
+                <div class="form-group w-row flex-column">
+                    <label class="control-label">Interested in:</label>
+                    <div>
+                        <div class="w-col w-col-4">
+                            <input type="checkbox" name="interest" value="AL" class="interestCheckBox"><span>Alignment Systems</span><br>
+                            <input type="checkbox" name="interest" value="TC" class="interestCheckBox"><span>Tire Changers</span><br>
+                            <input type="checkbox" name="interest" value="BL" class="interestCheckBox"><span>Brake Lathes</span><br>
+                        </div>
+                        <div class="w-col w-col-4">
+                            <input type="checkbox" name="interest" value="HD" class="interestCheckBox"><span>Heavy-Duty</span><br>
+                            <input type="checkbox" name="interest" value="WB" class="interestCheckBox"><span>Wheel Balancers</span><br>
+                            <input type="checkbox" name="interest" value="LR" class="interestCheckBox"><span>Lift Rack</span><br>
+                        </div>
+                        <div class="w-col w-col-4">
+                            <input type="checkbox" name="interest" value="QC" class="interestCheckBox"><span>Inspection</span><br>
+                            <input type="checkbox" name="interest" value="OT" class="interestCheckBox"><span>Other</span><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <input id="globalcontactform-submit" value="Submit" type="submit" class="btn btn-primary" disabled="disabled" />
+                    <input type="hidden" id="HiddenRepNumber" value="" />
+                    <input type="hidden" id="HiddenRepEmail" value="" />
+                    <input type="hidden" id="IsDistributor" value="" />
+                    <input type="hidden" id="ContactType" value="" />
+                    <input type="hidden" id="Origin" value="" />
+                    <input type="hidden" id="Country" value="" />
+                    <input type="hidden" id="GatherFormInfo" value="true" />
+                    <input type="hidden" id="HiddenZipCode" value="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-row expanded">
+        <div id="dnn_LeftPane75" class="left-pane-75 w-col w-col-9 w-col-medium-12">
+            <div class="DnnModule DnnModule-DNN_HTML DnnModule-4502"><a name="4502"></a>
+                <div class="C_Container">
+                    <h1>
+                        <span id="dnn_ctr4502_dnnTITLE_titleLabel" class="TitleText">{$result.title}</span>
+                    </h1>
+                    <div id="dnn_ctr4502_contentPane" class="containerContent">
+                        <div id="dnn_ctr4502_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                            <div id="dnn_ctr4502_HtmlModule_lblContent" class="Normal">
+                                <p><strong>{$result.time|date='Y-M-D,h:i'}</strong></p>
+                                <br>
+
+                                <p>{$result.content| raw}</p>
+                                <!--<div style="text-align: center;">
+                                    <img src="/portals/0/Images/performance-tool-qcd-4.jpg" style="margin: 0 0 15px 0;" alt="Performance Driven Tool Quick Check Drive">
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- 侧边栏 -->
+        <div id="dnn_RightPane25" class="right-pane-25 w-col w-col-3 w-col-medium-12"><div class="DnnModule DnnModule-DNN_HTML DnnModule-4604"><a name="4604"></a>
+            <div class="C_Container">
+                <div id="dnn_ctr4604_contentPane" class="containerContent"><div id="dnn_ctr4604_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                    <div id="dnn_ctr4604_HtmlModule_lblContent" class="Normal">
+                        <div class="post-module-wrapper">
+                            <div class="social-wrapper"><img src="__STATIC__/home/portals/0/Images/social-icon.png">
+                                <p class="text">11250 Hunter Drive
+                                    <br>
+                                    Bridgeton, MO 63044
+                                    <br>
+                                    +1(314) 731-0000</p>
+                                <div class="social-link-wrapper">
+                                    <a class="w-inline-block" href="https://www.facebook.com/hunterengineeringcompany" target="_blank"><img class="social-icon" src="__STATIC__/home/portals/0/Images/facebook.svg">
+                                    </a>
+                                    <a class="w-inline-block" href="https://twitter.com/HunterEngCo" target="_blank"><img class="social-icon" src="__STATIC__/home/portals/0/Images/twitter.svg">
+                                    </a>
+                                    <a class="w-inline-block" href="https://www.youtube.com/user/HunterEngCo" target="_blank"><img class="social-icon" src="__STATIC__/home/portals/0/Images/youtube.svg">
+                                    </a>
+                                    <a class="w-inline-block" href="https://www.linkedin.com/company/hunter-engineering" target="_blank"><img class="social-icon" src="__STATIC__/home/portals/0/Images/linkedin.svg">
+                                    </a>
+                                </div>
+                                <a class="centered main-button product-download w-button" href="https://www.linkedin.com/company/hunter-engineering">Connect</a>
+                            </div>
+                            <div class="recent-article-wrapper">
+                                <h3 class="heading-2 social">Recent Articles</h3>
+                                <br>
+                                <div>
+                                    <div class="about-link-wrapper w-clearfix"><img class="double-arrow-right news-link" src="__STATIC__/home/portals/0/Images/double-arrow-right.svg" style="transform-style: preserve-3d; transition: transform 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s; transform: translateX(0px) translateY(0px) translateZ(0px);">
+                                        <div class="about-content-wrapper" data-ix="double-arrow"><a class="no-decoration-link" href="/about-hunter/news/press/2017/hunter-releases-educational-video-to-answer-the-question-why-do-cars-need-wheel-alignment">Hunter releases educational video to answer the question: Why Do Cars Need Wheel Alignment?</a>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="about-link-wrapper w-clearfix"><img class="double-arrow-right news-link" src="__STATIC__/home/portals/0/Images/double-arrow-right.svg" style="transform-style: preserve-3d; transition: transform 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s; transform: translateX(0px) translateY(0px) translateZ(0px);">
+                                        <div class="about-content-wrapper" data-ix="double-arrow"><a class="no-decoration-link" href="/about-hunter/news/press/2017/hunter-releases-revolution-with-walkaway-operation-video">Hunter releases Revolution<sup>™</sup> with WalkAway<sup>™</sup> operation video</a>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="about-link-wrapper w-clearfix"><img class="double-arrow-right news-link" src="__STATIC__/home/portals/0/Images/double-arrow-right.svg" style="transform-style: preserve-3d; transition: transform 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s; transform: translateX(0px) translateY(0px) translateZ(0px);">
+                                        <div class="about-content-wrapper" data-ix="double-arrow"><a class="no-decoration-link" href="/about-hunter/news/press/2017/hunter-engineering-revolution-tire-changer-with-walkaway-operation-wins-2018-global-media-award-at-the-sema-show">Hunter Engineering's Revolution<sup>™</sup> tire changer with WalkAway<sup>™</sup> operation wins 2018 Global Media Award at the SEMA Show! </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="recent-article-wrapper">
+                                <h3 class="heading-2 social">Recent Video</h3>
+                                <br>
+                                <div id="aboutVideoImage"><a class="video-button" data-ix="reveal-modal" href="#" video="https://www.youtube.com/embed/SPMBB2ID0nY"><img class="drop-shadow" src="__STATIC__/home/portals/0/Media/walkway-video-image.jpg"></a>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                        <div class="modal-wrapper" data-ix="modal-display" style="opacity: 0; transform: scaleX(1.1) scaleY(1.1) scaleZ(1); display: none; transform-style: preserve-3d; transition: opacity 200ms ease 0s, transform 300ms ease 0s;">
+                            <div class="modal-container">
+                                <div class="modal-top w-clearfix">
+                                    <div class="modal-title">&nbsp;</div>
+                                    <div class="modal-close" data-ix="modal-close" style="transition: all 0.3s ease 0s;">x</div>
+                                </div>
+                                <div class="modal-video-wrapper"><iframe class="video-embed" src="" frameborder="0" allowfullscreen=""></iframe></div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('iframe.video-embed').attr('src', '');
+                            });
+                            $('#aboutVideoImage .video-button').click(function() {
+                                var videoPath = $(this).attr('video');
+                                $('iframe.video-embed').attr('src', videoPath);
+                            });
+                            $
+                            $('.modal-close').click(function() {
+                                $('iframe.video-embed').attr('src', '');
+                            });
+                        </script>
+                    </div>
+                </div></div>
+            </div></div></div>
+
+    </div>
+    <div class="w-row expanded">
+        <div id="dnn_ContentPane2" class="content-pane-2 w-col-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row expanded">
+        <div id="dnn_LeftPane25" class="left-pane-25 w-col w-col-3 w-col-small-12 DNNEmptyPane"></div>
+        <div id="dnn_RightPane75" class="right-pane-75 w-col w-col-9 w-col-small-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row expanded">
+        <div id="dnn_ContentPane3" class="content-pane-3 w-col w-col-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row expanded">
+        <div id="dnn_LeftPane33" class="left-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+        <div id="dnn_CenterPane33" class="center-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+        <div id="dnn_RightPane33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row expanded">
+        <div id="dnn_ContentPane4" class="content-pane-4 w-col w-col-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row">
+        <div class="left-pane-66 w-col w-col-8 w-col-small-12">
+            <div class="w-row">
+                <div id="dnn_LeftCol66" class="left-col-66 w-col-12 DNNEmptyPane"></div>
+                <div id="dnn_HalfColumnLeft" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                <div id="dnn_HalfColumnRight" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                <div id="dnn_LeftCol66Middle" class="left-col-66 w-col w-col-12 DNNEmptyPane"></div>
+                <div id="dnn_HalfColumnLeft2" class="half-column-left w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+                <div id="dnn_HalfColumnRight2" class="half-column-right w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+            </div>
+        </div>
+        <div id="dnn_RightCol33" class="right-pane-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row">
+        <div id="dnn_ContentPane5" class="content-pane-5 w-col w-col-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row">
+        <div id="dnn_LeftCol33" class="left-col-33 w-col w-col-4 w-col-small-12 DNNEmptyPane"></div>
+        <div id="dnn_RightCol66" class="right-col-66 w-col w-col-8 w-col-small-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row">
+        <div id="dnn_ContentPane6" class="content-pane-6 w-col w-col-12 w-col-small-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row">
+        <div id="dnn_LeftPane50" class="left-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+        <div id="dnn_RightPane50" class="right-pane-50 w-col w-col-6 w-col-small-12 DNNEmptyPane"></div>
+    </div>
+    <div class="w-row">
+        <div id="dnn_ContentPane7" class="content-pane-7 w-col-12 DNNEmptyPane"></div>
+    </div>
+</div>
+</div>
+
+{include file="common/footer" /}
+
+
+</body>
+</html>

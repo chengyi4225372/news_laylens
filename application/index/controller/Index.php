@@ -15,18 +15,7 @@ use think\facade\config;
 class Index extends Common {
 
 
-    //调整
-    public function tz(){
-        $id = input('get.id');
-        $lists = Db::name('chanping')
-                     ->alias('a')
-                     ->field('a.*,b.info_title')
-                     ->rightJoin('info b','a.id = b.cid')
-                     ->where('pid',$id)
-                     ->select();
-        $this->assign('lists',$lists);
-        return $this->fetch();
-    }
+
 //地图
     public function site_map(){
         return $this->view->fetch();
@@ -68,9 +57,7 @@ class Index extends Common {
     }
 
     //todo 升降机
-    public function scissor_lift_family(){
-        return $this->view->fetch();
-    }
+
 
     //todo 制动机床   autocomp
     public function autocomp(){
@@ -82,6 +69,7 @@ public  function team(){
      return $this->view->fetch();
 }
 
+
 public function history(){
       return $this->view->fetch();
 }
@@ -91,6 +79,20 @@ public  function services(){
 }
 
 /* todo 完成部分  */
+
+
+    //调整
+    public function tz(){
+        $id = input('get.id');
+        $lists = Db::name('chanping')
+            ->alias('a')
+            ->field('a.*,b.info_title')
+            ->rightJoin('info b','a.id = b.cid')
+            ->where('pid',$id)
+            ->select();
+        $this->assign('lists',$lists);
+        return $this->fetch();
+    }
 
     //考虑的事情
     public function things_to_consider(){
